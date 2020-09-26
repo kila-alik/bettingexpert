@@ -12,7 +12,7 @@ class AIndexController extends ASiteController
         $this->bar = 'right';
         $this->template = env('THEME').'.index';
 
-        // dd($this->template);
+        // dd($this->template); 
 
         }
 
