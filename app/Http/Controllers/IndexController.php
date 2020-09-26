@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bett\Http\Controllers;
 
-use App\Forecast;
-use App\Mail\ContactForm;
-use App\Sort;
-use App\User;
+use Bett\Forecast;
+use Bett\Mail\ContactForm;
+use Bett\Sort;
+use Bett\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;

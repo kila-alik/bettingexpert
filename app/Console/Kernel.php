@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Console;
+namespace Bett\Console;
 
-use App\Jobs\SendReminderEmail;
+use Bett\Jobs\SendReminderEmail;
 use Carbon\Carbon;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

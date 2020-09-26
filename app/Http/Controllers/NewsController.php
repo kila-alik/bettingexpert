@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bett\Http\Controllers;
 
-use App\News;
-use App\NewsCategory;
+use Bett\News;
+use Bett\NewsCategory;
 use Illuminate\Http\Request;
 
 class NewsController extends SiteController

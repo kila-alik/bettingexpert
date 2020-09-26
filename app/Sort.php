@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Bett;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +12,6 @@ class Sort extends Model
 
     public function forecasts()
     {
-        return $this->hasMany('App\Forecast', 'sort_id');
+        return $this->hasMany('Bett\Forecast', 'sort_id');
     }
 }

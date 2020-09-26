@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bett\Http\Controllers;
 
-use App\Forecast;
-use App\News;
+use Bett\Forecast;
+use Bett\News;
 use Illuminate\Support\Facades\App;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;

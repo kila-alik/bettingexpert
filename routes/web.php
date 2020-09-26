@@ -2,26 +2,40 @@
 
 /*
 |--------------------------------------------------------------------------
+| Alik Web Routes
+|--------------------------------------------------------------------------
+*/
+
+// Route::resource('/', 'AIndexController', [
+//                                     'only' => ['index'],
+//                                     'names' => [
+//                                           'index'=>'home'
+//                                     ]
+//                                     ]);
+
+Route::get('/', ['uses'=>'AIndexController@index']);
+/*
+|--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 */
 
 
-Route::get('/', ['uses'=>'IndexController@show', 'as'=>'index']);
-Route::get('/news', ['uses'=>'NewsController@index', 'as'=>'news']);
-Route::get('/news/category/{category?}', ['uses'=>'NewsController@index', 'as'=>'news.category']);
-Route::get('/news/{alias}', ['uses'=>'NewsController@show', 'as'=>'newsShow']);
-Route::get('/sort/{sort_alias}', ['uses'=>'ForecastController@ShowForecastsBySort', 'as'=>'sort']);
-Route::get('/sport/{sport_alias?}', ['uses'=>'ForecastController@ShowForecastsBySport', 'as'=>'sport']);
-Route::get('/prognoz/{alias}', ['uses'=>'ForecastController@show', 'as'=>'forecast']);
-Route::get('/prognoz/{sort}/{alias}', ['uses'=>'ForecastController@show', 'as'=>'forecastWsort']);
-Route::get('/about-us', ['uses'=>'IndexController@aboutUs', 'as'=>'aboutUs']);
-Route::get('/our-advantages', ['uses'=>'IndexController@ourAdvantages', 'as'=>'ourAdvantages']);
-Route::get('/guarantees-of-reliability', ['uses'=>'IndexController@guaranteesReliability', 'as'=>'guaranteesReliability']);
-Route::get('/full-statistics', ['uses'=>'IndexController@fullStatistics', 'as'=>'fullStatistics']);
-Route::get('/reviews', ['uses'=>'ReviewController@index', 'as'=>'reviews']);
-Route::get('/contact', ['uses'=>'IndexController@contact','as'=>'contact']);
-Route::post('/contact', ['uses'=>'IndexController@contactSend','as'=>'contact']);
+// Route::get('/', ['uses'=>'IndexController@show', 'as'=>'index']);
+// Route::get('/news', ['uses'=>'NewsController@index', 'as'=>'news']);
+// Route::get('/news/category/{category?}', ['uses'=>'NewsController@index', 'as'=>'news.category']);
+// Route::get('/news/{alias}', ['uses'=>'NewsController@show', 'as'=>'newsShow']);
+// Route::get('/sort/{sort_alias}', ['uses'=>'ForecastController@ShowForecastsBySort', 'as'=>'sort']);
+// Route::get('/sport/{sport_alias?}', ['uses'=>'ForecastController@ShowForecastsBySport', 'as'=>'sport']);
+// Route::get('/prognoz/{alias}', ['uses'=>'ForecastController@show', 'as'=>'forecast']);
+// Route::get('/prognoz/{sort}/{alias}', ['uses'=>'ForecastController@show', 'as'=>'forecastWsort']);
+// Route::get('/about-us', ['uses'=>'IndexController@aboutUs', 'as'=>'aboutUs']);
+// Route::get('/our-advantages', ['uses'=>'IndexController@ourAdvantages', 'as'=>'ourAdvantages']);
+// Route::get('/guarantees-of-reliability', ['uses'=>'IndexController@guaranteesReliability', 'as'=>'guaranteesReliability']);
+// Route::get('/full-statistics', ['uses'=>'IndexController@fullStatistics', 'as'=>'fullStatistics']);
+// Route::get('/reviews', ['uses'=>'ReviewController@index', 'as'=>'reviews']);
+// Route::get('/contact', ['uses'=>'IndexController@contact','as'=>'contact']);
+// Route::post('/contact', ['uses'=>'IndexController@contactSend','as'=>'contact']);
 
 
 /**

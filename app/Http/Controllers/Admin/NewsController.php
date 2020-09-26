@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Bett\Http\Controllers\Admin;
 
-use App\Http\Controllers\SiteController;
-use App\News;
-use App\NewsCategory;
+use Bett\Http\Controllers\SiteController;
+use Bett\News;
+use Bett\NewsCategory;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;

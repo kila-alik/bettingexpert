@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bett\Http\Controllers;
 
-use App\Forecast;
-use App\Payment;
-use App\Subscription;
+use Bett\Forecast;
+use Bett\Payment;
+use Bett\Subscription;
 use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Parser;
-use App\User;
+use Bett\User;
 
 class PayController extends SiteController
 {

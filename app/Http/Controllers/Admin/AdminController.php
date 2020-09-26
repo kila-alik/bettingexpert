@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Bett\Http\Controllers\Admin;
 
-use App\Forecast;
-use App\News;
-use App\Payment;
-use App\User;
-use App\Http\Controllers\SiteController;
+use Bett\Forecast;
+use Bett\News;
+use Bett\Payment;
+use Bett\User;
+use Bett\Http\Controllers\SiteController;
 
 class AdminController extends SiteController
 {

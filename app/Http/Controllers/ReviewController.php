@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bett\Http\Controllers;
 
-use App\Review;
+use Bett\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;

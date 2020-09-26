@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Bett\Http\Controllers\Admin;
 
-use App\Http\Controllers\SiteController;
-use App\NewsCategory;
+use Bett\Http\Controllers\SiteController;
+use Bett\NewsCategory;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 

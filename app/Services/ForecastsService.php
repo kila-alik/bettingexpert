@@ -6,9 +6,9 @@
  * Time: 2:40 PM
  */
 
-namespace App\Services;
+namespace Bett\Services;
 
-use App\Subscription;
+use Bett\Subscription;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 

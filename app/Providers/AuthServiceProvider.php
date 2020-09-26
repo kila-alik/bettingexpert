@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace Bett\Providers;
 
-use App\Subscription;
+use Bett\Subscription;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Gate;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +15,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+        'Bett\Model' => 'Bett\Policies\ModelPolicy',
     ];
 
     /**

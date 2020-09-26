@@ -4,20 +4,20 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <script type="text/javascript" async="" charset="UTF-8">{"ok":false,"isDeleted":true}</script>
-  <script async="" src="index/counter.php"></script><script type="text/javascript" async="" src="js/runtime.2.8.5.js"></script>
-  <script type="text/javascript" src="js/25054244"></script>
-  <script type="text/javascript" async="" src="js/J5trncW2TZ"></script>
-  <script async="" src="js/script.js"></script>
-  <script src="js/counter.js"></script>
-  <script async="" src="js/analytics.js"></script>
-  <script type="text/javascript" async="" src="js/watch.js"></script>
-  <script src="js/analytics.js" type="text/javascript"></script>
+  <script async="" src="{{ env('THEME') }}/index/counter.php"></script><script type="text/javascript" async="" src="{{ env('THEME') }}/js/runtime.2.8.5.js"></script>
+  <script type="text/javascript" src="{{ env('THEME') }}/js/25054244"></script>
+  <script type="text/javascript" async="" src="{{ env('THEME') }}/js/J5trncW2TZ"></script>
+  <script async="" src="{{ env('THEME') }}/js/script.js"></script>
+  <script src="{{ env('THEME') }}/js/counter.js"></script>
+  <script async="" src="{{ env('THEME') }}/js/analytics.js"></script>
+  <script type="text/javascript" async="" src="{{ env('THEME') }}/js/watch.js"></script>
+  <script src="js/analytics.js" type="{{ env('THEME') }}/text/javascript"></script>
 <script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app56.us.archive.org';v.server_ms=570;archive_analytics.send_pageview({});});</script>
-<script type="text/javascript" src="js/playback.bundle.js" charset="utf-8"></script>
-<script type="text/javascript" src="js/wombat.js" charset="utf-8"></script>
+<script type="text/javascript" src="{{ env('THEME') }}/js/playback.bundle.js" charset="utf-8"></script>
+<script type="text/javascript" src="{{ env('THEME') }}/js/wombat.js" charset="utf-8"></script>
 
-<link rel="stylesheet" type="text/css" href="css/banner-styles.css">
-<link rel="stylesheet" type="text/css" href="css/iconochive.css">
+<link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/iconochive.css">
 <!-- End Wayback Rewrite JS Include -->
 
 
@@ -25,9 +25,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="INYfyufzLfeMIvSSADjLR-_U8sFEYUbn6PBiEOKBoXc">
         <link rel="shortcut icon" href="http://betfaq.ru/css/img/favicon.ico" type="image/x-icon">
-        <script type="text/javascript" src="js/openapi.js"></script>
+        <script type="text/javascript" src="{{ env('THEME') }}/js/openapi.js"></script>
 <!--        <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/7c5e2f158aede1286c858f133e96cc19_0.js" async></script>-->
-        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="{{ env('THEME') }}/css/jquery-ui.css">
         <title>Бесплатные прогнозы и ставки на спорт на завтра</title>
 <meta name="keywords" content="прогноз, ставки, матч, завтра, спорт.">
 <meta name="description" content="Прогнозы и ставки на завтрашние матчи. Узнайте первым прогнозируемые результаты на лучшие коэффициенты.">
@@ -38,23 +38,23 @@
 
         <meta property="og:url" content="/tomorrow/">
         <meta property="og:site_name" content="Бесплатные прогнозы на спорт BetFAQ.ru">
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.tools.min.js"></script>
-        <script src="js/js.js"></script>
-        <script src="js/mobile.js"></script>
-        <script src="js/jquery.mask.js"></script>
+        <script src="{{ env('THEME') }}/js/jquery.min.js"></script>
+        <script src="{{ env('THEME') }}/js/jquery.tools.min.js"></script>
+        <script src="{{ env('THEME') }}/js/js.js"></script>
+        <script src="{{ env('THEME') }}/js/mobile.js"></script>
+        <script src="{{ env('THEME') }}/js/jquery.mask.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="css/grid.css">
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" href="css/topbanner.css" type="text/css">
-        <link rel="stylesheet" href="css/landing.css" type="text/css">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link rel="stylesheet" type="text/css" href="css/flipclock.css">
-        <link href="css/style-last-update.css" rel="stylesheet">
-        <link href="css/css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="css/css(1)">
-        <link rel="stylesheet" type="text/css" href="css/css(2)">
-        <link rel="stylesheet" type="text/css" href="css/css(3)">
+        <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/reset.css">
+        <link rel="stylesheet" href="{{ env('THEME') }}/css/topbanner.css" type="text/css">
+        <link rel="stylesheet" href="{{ env('THEME') }}/css/landing.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/flipclock.css">
+        <link href="{{ env('THEME') }}/css/style-last-update.css" rel="stylesheet">
+        <link href="{{ env('THEME') }}/css/css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/css(1)">
+        <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/css(2)">
+        <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/css(3)">
         <!--[if IE]>="
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -72,7 +72,7 @@
   </div>
   <div id="donato" style="position:relative;width:100%;">
     <div id="donato-base">
-      <iframe id="donato-if" src="index/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+      <iframe id="donato-if" src="{{ env('THEME') }}/index/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
       </iframe>
     </div>
   </div>
@@ -82,93 +82,12 @@
   </script>
 <!-- END WAYBACK TOOLBAR INSERT -->
 
+<!-- начало навигации в хедере -->
 
+@yield('navigation')
 
-  <div id="one-time-overlay" class="dialog5s"><!-- --></div>
-  <div id="one-time-banner"><div><a href="/tomorrow/"><!-- --></a><button><!-- --></button></div></div>
-          <!-- subscribe  popup -->
-  <div id="one-time-overlay-subscribe"><!-- --></div>
-  <div id="one-time-subscribe">
-      <div>
-          <a href="javascript:void(0)" onclick="Controller_Subscribe.closePopup();"><!-- close --></a>
-          <form method="post" class="subblock" id="subcribe-form" onsubmit="Controller_Subscribe.sendFromPopup(this); return false;">
-              <label for="semail">Присылать лучшие прогнозы на email?</label>
-              <input type="email" class="subcribe-email" name="subemail" placeholder="Ваш Email..." required="">
-              <input type="submit" value="Отправить" class="button-yellow">
-              <p class="message-subscribe"></p>
-          </form>
-      </div>
-  </div>
-  <div class="container_14">
+<!-- конец навигации -->
 
-<!--            <div id="topbanner">
-            <ins> </ins>
-            <div class="from">BetFAQ.ru<br>прогнозы<br><strong>от 150 руб!</strong></div>
-            <div class="best">
-                Лучшие аналитические спортивные прогнозы от<br>профессиональной команды Betfaq
-                <br><a href="/vip/"><span>в магазине прогнозов</span></a>
-            </div>
-        </div>-->
-      <div id="authblock">
-        <div class="res-text">
-          <span>Вход</span>
-          <ul>
-            <li class="en"><a href="javascript:;" onclick="Controller_Lang.set_domain(&#39;betfaq.com&#39;,&#39;/tomorrow/&#39;);">EN</a></li>
-            <li class="ru active"><a href="javascript:;" onclick="Controller_Lang.set_domain(&#39;betfaq.ru&#39;,&#39;/tomorrow/&#39;);">RU</a></li>
-          </ul>
-        </div>
-        <form onsubmit="Controller_Profile.login (this);return false;" action="/profile/login/" id="form-login">
-          <input type="email" name="email" class="short" placeholder="E-mail">
-          <input type="password" name="password" class="short" placeholder="Пароль">
-          <input type="submit" value="Вход">
-            <a href="https://oauth.vk.com/authorize?client_id=5041736&amp;redirect_uri=http%3A%2F%2Fbetfaq.com%2Fuser%2Fauth%2Fvk%2F&amp;display=page&amp;scope=email&amp;response_type=code&amp;v=5.37" class="vk-button"></a>
-            <div class="register-link" style="margin-top: -3px">
-              <a onclick="User_Service.form ({&#39;onShow&#39;:&#39;OPENREGFORMMAIN&#39;,&#39;onReg&#39;: &#39;CLICKREGFORMMAIN&#39;});" class="form-register-form">Регистрация</a>
-              <a href="javascript:void(0)" class="recovery-password">Забыли пароль?</a>
-            </div>
-        </form>
-      </div>
-      <a href="/" id="logo" class="logo"></a>
-  </div>
-
-  <div class="clear"></div>
-
-  <div id="page">
-    <div id="content" class="container_14">
-
-      <style type="text/css" media="screen">
-          @font-face {
-              font-family: 'gotham_probold';
-              src: url('fonts/GothaProBol.eot');
-              src: local('@'), url('fonts/GothaProBol.woff') format('woff'), url('fonts/GothaProBol.ttf') format('truetype'), url('fonts/GothaProBol.svg') format('svg');
-              font-weight: normal;
-              font-style: normal;
-          }
-      </style>
-
-<nav id="mainmenu" class="fixed">
-  <ul>
-    <li>
-      <a href="/">Все прогнозы </a>
-    </li>
-
-    <li class="vip">
-      <a href="/vip/">VIP прогнозы</a>
-    </li>
-
-    <li class="prem">
-      <a href="/win/premium/">Премиум прогнозы</a>
-    </li>
-
-    <li>
-      <a href="/win/premium/#premium-reviews">Отзывы</a>
-    </li>
-
-    <li class="faq">
-      <a href="/vopros-otvet/">Ответы на вопросы</a>
-    </li>
-  </ul>
-</nav>
 <div id="mainmenu-holder" style="height: 56px; margin-top: 0px;"></div>
 <div class="grid_14 head">
   <h1>Бесплатные прогнозы на спорт на завтра</h1>
@@ -180,18 +99,18 @@
     <div class="badge"></div>
       <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: absolute; top: 0px; right: 0px; bottom: 52px; left: 0px; z-index: 120; width: 400px; height: 356px; margin: 0px; overflow: hidden;">
         <div id="slider" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 10000px; height: 356px; z-index: 120;">
-          <img data-css="basketball" data-kind="Баскетбол" src="img/url_24.png" alt="" data-time="27746" data-team-1="Армани Милан" data-team-2="Галатасарай" data-league="Евролига" rel="/basketball/euroleague/prognoz-na-match-armani-milan-galatasaray-19-01-2017/" style="margin-right: 0px;">
-          <img data-css="tennis" data-kind="теннис" src="img/url_11.jpeg" alt="" data-time="57746" data-team-1="Михаил Зверев" data-team-2="Малек Жазири" data-league="АТП,Одиночные,Открытый чемпионат Австралии" rel="/tennis/atp/singles/australian-open/prognoz-na-match-mihail-zverev-malek-ghaziri-20-01-2017/" style="margin-right: 0px;">
-          <img data-css="soccer" data-kind="футбол" src="img/url_1.jpeg" alt="" data-time="27746" data-team-1="Атлетико М" data-team-2="Эйбар" data-league="Испания,Кубок Короля" rel="/football/spain/copa-del-rey/prognoz-na-match-atletiko-m-eybar-18-01-2017/" style="margin-right: 0px;">
-          <img data-css="hockey" data-kind="Хоккей" src="img/url_19.jpeg" alt="" data-time="21446" data-team-1="СКА" data-team-2="Йокерит" data-league="Россия,КХЛ" rel="/hockey/russia/khl/prognoz-na-match-ska-yokerit-19-01-2017/" style="margin-right: 0px;">
-          <img data-css="basketball" data-kind="Баскетбол" src="img/url_23.png" alt="" data-time="27146" data-team-1="Маккаби" data-team-2="ЦЗ Телеком" data-league="Евролига" rel="/basketball/euroleague/prognoz-na-match-makkabi-kk-crvena-zvezda-mts-19-01-2017/" style="margin-right: 0px;">
-          <img data-css="tennis" data-kind="теннис" src="img/url_12.jpeg" alt="" data-time="81746" data-team-1="Томас Бердых" data-team-2="Роджер Феде..." data-league="АТП,Одиночные,Открытый чемпионат Австралии" rel="/tennis/atp/singles/australian-open/prognoz-na-match-tomas-berdyh-rodgher-federer-20-01-2017/" style="margin-right: 0px;">
-          <img data-css="soccer" data-kind="футбол" src="img/url_8.jpeg" alt="" data-time="34946" data-team-1="Реал Сосьедад" data-team-2="Барселона" data-league="Испания,Кубок Короля" rel="/football/spain/copa-del-rey/prognoz-na-match-real-sosyedad-barselona-18-01-2017/" style="margin-right: 0px;">
-          <img data-css="hockey" data-kind="Хоккей" src="img/url_17.jpeg" alt="" data-time="12446" data-team-1="Автомобилист" data-team-2="Югра" data-league="Россия,КХЛ" rel="/hockey/russia/khl/prognoz-na-match-avtomobilist-yugra-19-01-2017/" style="margin-right: 0px;">
-          <img data-css="basketball" data-kind="Баскетбол" src="img/url_25.png" alt="" data-time="30446" data-team-1="Барселона" data-team-2="Анадолу" data-league="Евролига" rel="/basketball/euroleague/prognoz-na-match-barselona-anadolu-19-01-2017/" style="margin-right: 0px;">
-          <img data-css="tennis" data-kind="теннис" src="img/url_10.jpeg" alt="" data-time="53246" data-team-1="Стив Дарси" data-team-2="Андреас Сеппи" data-league="АТП,Одиночные,Открытый чемпионат Австралии" rel="/tennis/atp/singles/australian-open/prognoz-na-match-stiv-darsi-andreas-seppi-20-01-2017/" style="margin-right: 0px;">
-          <img data-css="soccer" data-kind="футбол" src="img/url_9.jpeg" alt="" data-time="27746" data-team-1="Атлетико М" data-team-2="Эйбар" data-league="Испания,Кубок Короля" rel="/football/spain/copa-del-rey/vip-prognoz-na-match-atletiko-m-eybar-18-01-2017/" style="margin-right: 0px;">
-          <img data-css="hockey" data-kind="Хоккей" src="img/url_18.jpeg" alt="" data-time="19646" data-team-1="Северсталь" data-team-2="Медвечак" data-league="Россия,КХЛ" rel="/hockey/russia/khl/prognoz-na-match-severstaly-medvechak-19-01-2017/" style="margin-right: 0px;">
+          <img data-css="basketball" data-kind="Баскетбол" src="{{ env('THEME') }}/img/url_24.png" alt="" data-time="27746" data-team-1="Армани Милан" data-team-2="Галатасарай" data-league="Евролига" rel="/basketball/euroleague/prognoz-na-match-armani-milan-galatasaray-19-01-2017/" style="margin-right: 0px;">
+          <img data-css="tennis" data-kind="теннис" src="{{ env('THEME') }}/img/url_11.jpeg" alt="" data-time="57746" data-team-1="Михаил Зверев" data-team-2="Малек Жазири" data-league="АТП,Одиночные,Открытый чемпионат Австралии" rel="/tennis/atp/singles/australian-open/prognoz-na-match-mihail-zverev-malek-ghaziri-20-01-2017/" style="margin-right: 0px;">
+          <img data-css="soccer" data-kind="футбол" src="{{ env('THEME') }}/img/url_1.jpeg" alt="" data-time="27746" data-team-1="Атлетико М" data-team-2="Эйбар" data-league="Испания,Кубок Короля" rel="/football/spain/copa-del-rey/prognoz-na-match-atletiko-m-eybar-18-01-2017/" style="margin-right: 0px;">
+          <img data-css="hockey" data-kind="Хоккей" src="{{ env('THEME') }}/img/url_19.jpeg" alt="" data-time="21446" data-team-1="СКА" data-team-2="Йокерит" data-league="Россия,КХЛ" rel="/hockey/russia/khl/prognoz-na-match-ska-yokerit-19-01-2017/" style="margin-right: 0px;">
+          <img data-css="basketball" data-kind="Баскетбол" src="{{ env('THEME') }}/img/url_23.png" alt="" data-time="27146" data-team-1="Маккаби" data-team-2="ЦЗ Телеком" data-league="Евролига" rel="/basketball/euroleague/prognoz-na-match-makkabi-kk-crvena-zvezda-mts-19-01-2017/" style="margin-right: 0px;">
+          <img data-css="tennis" data-kind="теннис" src="{{ env('THEME') }}/img/url_12.jpeg" alt="" data-time="81746" data-team-1="Томас Бердых" data-team-2="Роджер Феде..." data-league="АТП,Одиночные,Открытый чемпионат Австралии" rel="/tennis/atp/singles/australian-open/prognoz-na-match-tomas-berdyh-rodgher-federer-20-01-2017/" style="margin-right: 0px;">
+          <img data-css="soccer" data-kind="футбол" src="{{ env('THEME') }}/img/url_8.jpeg" alt="" data-time="34946" data-team-1="Реал Сосьедад" data-team-2="Барселона" data-league="Испания,Кубок Короля" rel="/football/spain/copa-del-rey/prognoz-na-match-real-sosyedad-barselona-18-01-2017/" style="margin-right: 0px;">
+          <img data-css="hockey" data-kind="Хоккей" src="{{ env('THEME') }}/img/url_17.jpeg" alt="" data-time="12446" data-team-1="Автомобилист" data-team-2="Югра" data-league="Россия,КХЛ" rel="/hockey/russia/khl/prognoz-na-match-avtomobilist-yugra-19-01-2017/" style="margin-right: 0px;">
+          <img data-css="basketball" data-kind="Баскетбол" src="{{ env('THEME') }}/img/url_25.png" alt="" data-time="30446" data-team-1="Барселона" data-team-2="Анадолу" data-league="Евролига" rel="/basketball/euroleague/prognoz-na-match-barselona-anadolu-19-01-2017/" style="margin-right: 0px;">
+          <img data-css="tennis" data-kind="теннис" src="{{ env('THEME') }}/img/url_10.jpeg" alt="" data-time="53246" data-team-1="Стив Дарси" data-team-2="Андреас Сеппи" data-league="АТП,Одиночные,Открытый чемпионат Австралии" rel="/tennis/atp/singles/australian-open/prognoz-na-match-stiv-darsi-andreas-seppi-20-01-2017/" style="margin-right: 0px;">
+          <img data-css="soccer" data-kind="футбол" src="{{ env('THEME') }}/img/url_9.jpeg" alt="" data-time="27746" data-team-1="Атлетико М" data-team-2="Эйбар" data-league="Испания,Кубок Короля" rel="/football/spain/copa-del-rey/vip-prognoz-na-match-atletiko-m-eybar-18-01-2017/" style="margin-right: 0px;">
+          <img data-css="hockey" data-kind="Хоккей" src="{{ env('THEME') }}/img/url_18.jpeg" alt="" data-time="19646" data-team-1="Северсталь" data-team-2="Медвечак" data-league="Россия,КХЛ" rel="/hockey/russia/khl/prognoz-na-match-severstaly-medvechak-19-01-2017/" style="margin-right: 0px;">
         </div>
       </div>
       <div class="overlay">
@@ -389,8 +308,8 @@
             <div id="slider-overlay" style="display: none;"></div>
       </div>
     </div>
-<script src="js/flipclock.js"></script>
-<script src="js/caroufredsel.js"></script>
+<script src="{{ env('THEME') }}/js/flipclock.js"></script>
+<script src="{{ env('THEME') }}/js/caroufredsel.js"></script>
 <script>
     $(function() {
 
@@ -469,7 +388,7 @@
         </thead>
         <tbody>
           <tr rel="tennis">
-            <td class="title" style="background-image:url(&#39;img/middle_url_1242.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/middle_url_1242.png&#39;)">
               <small>АТП,Одиночные,Открытый чемпионат Австралии</small>
               <span class="time">05:35</span>
               <a href="/tennis/atp/singles/australian-open/prognoz-na-match-mihail-zverev-malek-ghaziri-20-01-2017/">Прогноз на матч <span>Михаил Зверев - Малек Жазири</span></a>
@@ -478,7 +397,7 @@
           </tr>
 
           <tr rel="tennis">
-            <td class="title" style="background-image:url(&#39;img/middle_url_1242.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/middle_url_1242.png&#39;)">
               <small>АТП,Одиночные,Открытый чемпионат Австралии</small>
               <span class="time">04:20</span>
               <a href="/tennis/atp/singles/australian-open/prognoz-na-match-stiv-darsi-andreas-seppi-20-01-2017/">Прогноз на матч <span>Стив Дарси - Андреас Сеппи</span></a>
@@ -487,7 +406,7 @@
           </tr>
 
           <tr rel="tennis">
-            <td class="title" style="background-image:url(&#39;img/middle_url_1245.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/middle_url_1245.png&#39;)">
               <small>ВТА,Одиночные,Открытый чемпионат Австралии</small>
               <span class="time">11:00</span>
               <a href="/tennis/wta/singles/australian-open/prognoz-na-match-eshley-barti-mona-bartely-20-01-2017/">Прогноз на матч <span>Эшлей Барти - Мона Бартель</span></a>
@@ -505,7 +424,7 @@
           </tr>
 
           <tr rel="football" style="display: table-row;">
-            <td class="title" style="background-image:url(&#39;img/968.middle.jpg&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)">
               <small>Франция,Лига 2</small>
               <span class="time">22:00</span>
               <a href="/football/france/ligue-2/prognoz-na-match-nyor-amyens-20-01-2017/">Прогноз на матч <span>Ньор - Амьенс</span></a>
@@ -514,7 +433,7 @@
           </tr>
 
           <tr rel="football" style="display: table-row;">
-            <td class="title" style="background-image:url(&#39;img/866.middle.jpg&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/866.middle.jpg&#39;)">
               <small>Греция,Супер Лига</small>
               <span class="time">18:15</span>
               <a href="/football/greece/super-league/prognoz-na-match-paok-levadiakos-19-01-2017/">Прогноз на матч <span>ПАОК - Левадиакос</span></a>
@@ -523,7 +442,7 @@
           </tr>
 
           <tr rel="hockey">
-            <td class="title" style="background-image:url(&#39;img/flag_default.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)">
               <small>США,НХЛ</small>
               <span class="time">06:30</span>
               <a href="/hockey/usa/nhl/prognoz-na-match-sharks-tampa-20-01-2017/">Прогноз на матч <span>Шаркс - Тампа</span></a>
@@ -532,7 +451,7 @@
           </tr>
 
           <tr rel="hockey">
-            <td class="title" style="background-image:url(&#39;img/flag_default.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)">
               <small>США,НХЛ</small>
               <span class="time">03:00</span>
               <a href="/hockey/usa/nhl/prognoz-na-match-kolambus-ottava-20-01-2017/">Прогноз на матч <span>Коламбус - Оттава</span></a>
@@ -541,7 +460,7 @@
           </tr>
 
           <tr rel="hockey">
-            <td class="title" style="background-image:url(&#39;img/1452.middle.jpg&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/1452.middle.jpg&#39;)">
               <small>Россия,КХЛ</small>
               <span class="time">17:00</span>
               <a href="/hockey/russia/khl/prognoz-na-match-avtomobilist-yugra-19-01-2017/">Прогноз на матч <span>Автомобилист - Югра</span></a>
@@ -550,7 +469,7 @@
           </tr>
 
           <tr rel="basketball">
-            <td class="title" style="background-image:url(&#39;img/17255.middle.jpg&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/17255.middle.jpg&#39;)">
               <small>Дания,Баскетлига</small>
               <span class="time">19:30</span>
               <a href="/basketball/denmark/basketligaen/prognoz-na-match-sisu-randers-19-01-2017/">Прогноз на матч <span>Сису - Рандерс</span></a>
@@ -559,7 +478,7 @@
           </tr>
 
           <tr rel="basketball">
-            <td class="title" style="background-image:url(&#39;img/flag_default.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)">
               <small>Евролига Женщины</small>
               <span class="time">17:00</span>
               <a href="/basketball/euroleague-women/prognoz-na-match-hatay-bsb-avenida-19-01-2017/">Прогноз на матч <span>Hatay BSB - Авенида</span></a>
@@ -568,7 +487,7 @@
           </tr>
 
           <tr rel="basketball">
-            <td class="title" style="background-image:url(&#39;img/flag_default.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)">
               <small>Евролига</small>
               <span class="time">21:15</span>
               <a href="/basketball/euroleague/prognoz-na-match-armani-milan-galatasaray-19-01-2017/">Прогноз на матч <span>Армани Милан - Галатасарай</span></a>
@@ -577,7 +496,7 @@
           </tr>
 
           <tr rel="vip">
-            <td class="title" style="background-image:url(&#39;img/flag_default.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)">
               <small>Кубок африканских наций</small>
               <span class="time">22:00</span>
               <a href="/football/africa-cup-of-nations/vip-prognoz-na-match-senegal-zimbabve-19-01-2017/">Прогноз на матч <span>Сенегал - Зимбабве</span></a>
@@ -586,7 +505,7 @@
           </tr>
 
           <tr rel="vip">
-            <td class="title" style="background-image:url(&#39;img/flag_default.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)">
               <small>Евролига</small>
               <span class="time">22:00</span>
               <a href="/basketball/euroleague/vip-prognoz-na-match-barselona-anadolu-19-01-2017/">Прогноз на матч <span>Барселона - Анадолу</span></a>
@@ -595,7 +514,7 @@
           </tr>
 
           <tr rel="vip">
-            <td class="title" style="background-image:url(&#39;img/flag_default.png&#39;)">
+            <td class="title" style="background-image:url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)">
               <small>Евролига</small>
               <span class="time">21:05</span>
               <a href="/basketball/euroleague/vip-prognoz-na-match-makkabi-kk-crvena-zvezda-mts-19-01-2017/">Прогноз на матч <span>Маккаби - ЦЗ Телеком</span></a>
@@ -667,7 +586,7 @@
   <div id="sticky">
   <p></p>
   <div style="margin-top: 20px;"><a target="_blank" href="/win/premium/">
-    <img style="width: 680px;" src="img/url_4360.jpeg"></a>
+    <img style="width: 680px;" src="{{ env('THEME') }}/img/url_4360.jpeg"></a>
   </div>
 
   <section class="soccer">
@@ -702,7 +621,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -719,7 +638,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -736,7 +655,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -753,7 +672,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -770,7 +689,7 @@
       </tr>
 
       <tr class="premium">
-        <td class="flag" style="background-image: url(&#39;img/flag_premium.png&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_premium.png&#39;)"></td>
         <td colspan="3" class="premium-info">
           <span class="premium-text">Premium прогноз, 100% гарантия надежности!</span>
           <a href="/win/premium/#what-price" class="premium-btn">Получить</a>
@@ -778,7 +697,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -795,7 +714,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -810,8 +729,8 @@
           <a class="eshe" href="javascript:void(0)" onclick="Controller_Subscribe.openPopup ();"> Получить по email</a>
         </td>
       </tr>
-      <tr class="premium">
-        <td class="flag-express" style="background-image: url(&#39;img/express-icon.png&#39;)"></td>
+      <tr class="premium">{{ env('THEME') }}/
+        <td class="flag-express" style="background-image: url(&#39;{{ env('THEME') }}/img/express-icon.png&#39;)"></td>
         <td colspan="3" class="express-info">
             <span class="premium-text">Экспресс с коэффициентом 5! со 100% гарантией!</span>
             <a href="/win/express/buy/" class="express-btn">Получить</a>
@@ -819,7 +738,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -836,7 +755,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/894.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/894.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/netherlands/">Голландия (Нидерланды)</a> - <a href="/football/netherlands/eredivisie/">Эредивизион</a>
@@ -853,7 +772,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/flag_default.png&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/africa-cup-of-nations/">Кубок африканских наций</a>
@@ -870,7 +789,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/968.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/france/">Франция</a> - <a href="/football/france/ligue-2/">Лига 2</a>
@@ -887,7 +806,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/952.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/952.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/germany/">Германия</a> - <a href="/football/germany/bundesliga/">Бундеслига</a>
@@ -904,7 +823,7 @@
       </tr>
 
       <tr class="">
-        <td class="flag" style="background-image: url(&#39;img/948.middle.jpg&#39;)"></td>
+        <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/948.middle.jpg&#39;)"></td>
         <td class="title">
           <small>
             <a href="/football/belgium/">Бельгия</a> - <a href="/football/belgium/first-division-a/">First Division A</a>
@@ -958,7 +877,7 @@
         </tr>
 
         <tr class="">
-          <td class="flag" style="background-image: url(&#39;img/flag_default.png&#39;)"></td>
+          <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
           <td class="title">
             <small>
               <a href="/hockey/usa/">США</a> - <a href="/hockey/usa/nhl/">НХЛ</a>
@@ -975,7 +894,7 @@
           </tr>
 
         <tr class="">
-          <td class="flag" style="background-image: url(&#39;img/flag_default.png&#39;)"></td>
+          <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
           <td class="title">
             <small>
               <a href="/hockey/usa/">США</a> - <a href="/hockey/usa/nhl/">НХЛ</a>
@@ -992,7 +911,7 @@
         </tr>
 
         <tr class="">
-          <td class="flag" style="background-image: url(&#39;img/flag_default.png&#39;)"></td>
+          <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
           <td class="title">
             <small>
               <a href="/hockey/usa/">США</a> - <a href="/hockey/usa/nhl/">НХЛ</a>
@@ -1009,7 +928,7 @@
         </tr>
 
         <tr class="">
-          <td class="flag" style="background-image: url(&#39;img/flag_default.png&#39;)"></td>
+          <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
           <td class="title">
             <small>
               <a href="/hockey/usa/">США</a> - <a href="/hockey/usa/nhl/">НХЛ</a>
@@ -1050,7 +969,7 @@
           </tr>
 
           <tr class="">
-            <td class="flag" style="background-image: url(&#39;img/middle_url_1245.png&#39;)"></td>
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/middle_url_1245.png&#39;)"></td>
             <td class="title">
               <small>
                 <a href="/tennis/wta/">ВТА</a> - <a href="/tennis/wta/singles/">Одиночные</a> -                                                                                 <a href="/tennis/wta/singles/australian-open/">Открытый чемпионат Австралии</a>
@@ -1067,7 +986,7 @@
           </tr>
 
           <tr class="">
-            <td class="flag" style="background-image: url(&#39;img/middle_url_1245.png&#39;)"></td>
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/middle_url_1245.png&#39;)"></td>
             <td class="title">
                 <small>
                   <a href="/tennis/wta/">ВТА</a> -                                                                                 <a href="/tennis/wta/singles/">Одиночные</a> -                                                                                 <a href="/tennis/wta/singles/australian-open/">Открытый чемпионат Австралии</a>                                                                            </small>
@@ -1084,7 +1003,7 @@
           </tr>
 
           <tr class="">
-            <td class="flag" style="background-image: url(&#39;img/middle_url_1242.png&#39;)"></td>
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/middle_url_1242.png&#39;)"></td>
             <td class="title">
               <small>
                 <a href="/tennis/atp/">АТП</a> - <a href="/tennis/atp/singles/">Одиночные</a> -                                                                                 <a href="/tennis/atp/singles/australian-open/">Открытый чемпионат Австралии</a>
@@ -1101,7 +1020,7 @@
           </tr>
 
           <tr class="">
-            <td class="flag" style="background-image: url(&#39;img/middle_url_1242.png&#39;)"></td>
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/middle_url_1242.png&#39;)"></td>
             <td class="title">
               <small>
                 <a href="/tennis/atp/">АТП</a> - <a href="/tennis/atp/singles/">Одиночные</a> -                                                                                 <a href="/tennis/atp/singles/australian-open/">Открытый чемпионат Австралии</a>
@@ -1156,7 +1075,7 @@
           </tr>
 
           <tr class="">
-            <td class="flag" style="background-image: url(&#39;img/flag_default.png&#39;)"></td>
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
             <td class="title">
               <small>
                 <a href="/basketball/euroleague/">Евролига</a>
@@ -1173,7 +1092,7 @@
           </tr>
 
           <tr class="">
-            <td class="flag" style="background-image: url(&#39;img/flag_default.png&#39;)"></td>
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
             <td class="title">
               <small>
                 <a href="/basketball/euroleague/">Евролига</a>
@@ -1236,7 +1155,7 @@
 </script>
                 <div class="grid_4">
 <div class="banner-place inner">
-  <a target="_blank" href="/win/express/buy/"><img src="img/url_5149.gif"></a>
+  <a target="_blank" href="/win/express/buy/"><img src="{{ env('THEME') }}/img/url_5149.gif"></a>
   <!--<div class="text-over-banner express"></div> url_5150.gif -->
 
 </div>
@@ -1245,7 +1164,7 @@
   <div class="text-over-banner">19.01</div>
 </div>
 <div class="polling">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="{{ env('THEME') }}/css/style.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         $(document).ready(function() {
 
@@ -1335,7 +1254,7 @@
         <div class="list">
           <ul>
             <li class=" ">
-              <a onclick="return false;" href="/football/mexico/" style="background-image: url(&#39;img/881.small.jpg&#39;)">Мексика</a>
+              <a onclick="return false;" href="/football/mexico/" style="background-image: url(&#39;{{ env('THEME') }}/img/881.small.jpg&#39;)">Мексика</a>
                 <ul>
                   <li>
                     <a href="/football/mexico/copa-mx/">Кубок Мексики (5)</a>
@@ -1346,7 +1265,7 @@
                 </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/costa-rica/" style="background-image: url(&#39;img/935.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/costa-rica/" style="background-image: url(&#39;{{ env('THEME') }}/img/935.small.jpg&#39;)">
                 Коста-Рика
               </a>
               <ul>
@@ -1356,7 +1275,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/england/" style="background-image: url(&#39;img/911.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/england/" style="background-image: url(&#39;{{ env('THEME') }}/img/911.small.jpg&#39;)">
                 Англия
               </a>
               <ul>
@@ -1375,7 +1294,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/cyprus/" style="background-image: url(&#39;img/888.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/cyprus/" style="background-image: url(&#39;{{ env('THEME') }}/img/888.small.jpg&#39;)">
                 Кипр
               </a>
               <ul>
@@ -1385,7 +1304,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/turkey/" style="background-image: url(&#39;./img/878.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/turkey/" style="background-image: url(&#39;{{ env('THEME') }}/img/878.small.jpg&#39;)">
                 Турция
               </a>
               <ul>
@@ -1401,7 +1320,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/scotland/" style="background-image: url(&#39;img/913.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/scotland/" style="background-image: url(&#39;{{ env('THEME') }}/img/913.small.jpg&#39;)">
                 Шотландия
               </a>
               <ul>
@@ -1413,7 +1332,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/italy/" style="background-image: url(&#39;img/900.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/italy/" style="background-image: url(&#39;{{ env('THEME') }}/img/900.small.jpg&#39;)">
                 Италия
               </a>
               <ul>
@@ -1432,7 +1351,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/portugal/" style="background-image: url(&#39;img/891.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/portugal/" style="background-image: url(&#39;{{ env('THEME') }}/img/891.small.jpg&#39;)">
                 Португалия
               </a>
               <ul>
@@ -1448,7 +1367,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/israel/" style="background-image: url(&#39;img/899.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/israel/" style="background-image: url(&#39;{{ env('THEME') }}/img/899.small.jpg&#39;)">
                 Израиль
               </a>
               <ul>
@@ -1458,7 +1377,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/belgium/" style="background-image: url(&#39;img/948.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/belgium/" style="background-image: url(&#39;{{ env('THEME') }}/img/948.small.jpg&#39;)">
                 Бельгия
               </a>
               <ul>
@@ -1471,7 +1390,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/australia/" style="background-image: url(&#39;img/919.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/australia/" style="background-image: url(&#39;{{ env('THEME') }}/img/919.small.jpg&#39;)">
                 Австралия
               </a>
               <ul>
@@ -1481,7 +1400,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/netherlands/" style="background-image: url(&#39;img/894.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/netherlands/" style="background-image: url(&#39;{{ env('THEME') }}/img/894.small.jpg&#39;)">
                 Голландия (Нидерланды)
               </a>
               <ul>
@@ -1494,7 +1413,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/france/" style="background-image: url(&#39;img/968.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/france/" style="background-image: url(&#39;{{ env('THEME') }}/img/968.small.jpg&#39;)">
                 Франция
               </a>
               <ul>
@@ -1507,7 +1426,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/spain/" style="background-image: url(&#39;img/879.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/spain/" style="background-image: url(&#39;{{ env('THEME') }}/img/879.small.jpg&#39;)">
                 Испания
               </a>
               <ul>
@@ -1520,7 +1439,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/greece/" style="background-image: url(&#39;img/866.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/greece/" style="background-image: url(&#39;{{ env('THEME') }}/img/866.small.jpg&#39;)">
                 Греция
               </a>
               <ul>
@@ -1530,7 +1449,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/germany/" style="background-image: url(&#39;img/952.small.jpg&#39;)">
+              <a onclick="return false;" href="/football/germany/" style="background-image: url(&#39;{{ env('THEME') }}/img/952.small.jpg&#39;)">
                 Германия
               </a>
               <ul>
@@ -1540,7 +1459,7 @@
               </ul>
             </li>
             <li class=" ">
-              <a onclick="return false;" href="/football/united-arab-emirates/" style="background-image: url(img/star.png)">
+              <a onclick="return false;" href="/football/united-arab-emirates/" style="background-image: url({{ env('THEME') }}/img/star.png)">
                 Объединенные Арабские Эмираты
               </a>
               <ul>
@@ -1561,7 +1480,7 @@
     <div class="list">
       <ul>
         <li class=" ">
-          <a onclick="return false;" href="/hockey/russia/" style="background-image: url(&#39;img/1452.small.jpg&#39;)">
+          <a onclick="return false;" href="/hockey/russia/" style="background-image: url(&#39;{{ env('THEME') }}/img/1452.small.jpg&#39;)">
             Россия
           </a>
           <ul>
@@ -1574,7 +1493,7 @@
           </ul>
         </li>
         <li class=" ">
-          <a onclick="return false;" href="/hockey/usa/" style="background-image: url(img/star.png)">
+          <a onclick="return false;" href="/hockey/usa/" style="background-image: url({{ env('THEME') }}/img/star.png)">
             США
           </a>
           <ul>
@@ -1584,7 +1503,7 @@
           </ul>
         </li>
         <li class=" ">
-          <a onclick="return false;" href="/hockey/germany/" style="background-image: url(&#39;img/1472.small.jpg&#39;)">
+          <a onclick="return false;" href="/hockey/germany/" style="background-image: url(&#39;{{ env('THEME') }}/img/1472.small.jpg&#39;)">
             Германия
           </a>
           <ul>
@@ -1605,7 +1524,7 @@
   <div class="list">
     <ul>
       <li class=" ">
-        <a onclick="return false;" href="/tennis/challenge/singles/" style="background-image: url(&#39;img/small_url_1248.png&#39;)">
+        <a onclick="return false;" href="/tennis/challenge/singles/" style="background-image: url(&#39;{{ env('THEME') }}/img/small_url_1248.png&#39;)">
           Челленджер - Одиночные
         </a>
         <ul>
@@ -1615,7 +1534,7 @@
         </ul>
       </li>
       <li class=" ">
-        <a onclick="return false;" href="/tennis/wta/pairs/" style="background-image: url(&#39;/small_url_1245.png&#39;)">
+        <a onclick="return false;" href="/tennis/wta/pairs/" style="background-image: url(&#39;{{ env('THEME') }}/img/small_url_1245.png&#39;)">
           ВТА - Пары
         </a>
         <ul>
@@ -1625,7 +1544,7 @@
         </ul>
       </li>
       <li class=" ">
-        <a onclick="return false;" href="/tennis/atp/pairs/" style="background-image: url(&#39;img/small_url_1242.png&#39;)">
+        <a onclick="return false;" href="/tennis/atp/pairs/" style="background-image: url(&#39;{{ env('THEME') }}/img/small_url_1242.png&#39;)">
           АТП - Пары
         </a>
         <ul>
@@ -1635,7 +1554,7 @@
         </ul>
       </li>
       <li class=" ">
-        <a onclick="return false;" href="/tennis/atp/singles/" style="background-image: url(&#39;img/small_url_1242.png&#39;)">
+        <a onclick="return false;" href="/tennis/atp/singles/" style="background-image: url(&#39;{{ env('THEME') }}/img/small_url_1242.png&#39;)">
           АТП - Одиночные
         </a>
         <ul>
@@ -1645,7 +1564,7 @@
         </ul>
       </li>
       <li class=" ">
-        <a onclick="return false;" href="/tennis/wta/singles/" style="background-image: url(&#39;img/small_url_1245.png&#39;)">
+        <a onclick="return false;" href="/tennis/wta/singles/" style="background-image: url(&#39;{{ env('THEME') }}/img/small_url_1245.png&#39;)">
           ВТА - Одиночные
         </a>
         <ul>
@@ -1666,7 +1585,7 @@
     <div class="list">
       <ul>
         <li class=" ">
-          <a onclick="return false;" href="/basketball/usa/" style="background-image: url(img/star.png)">
+          <a onclick="return false;" href="/basketball/usa/" style="background-image: url({{ env('THEME') }}/img/star.png)">
             США
           </a>
           <ul>
@@ -1676,7 +1595,7 @@
           </ul>
         </li>
         <li class=" ">
-          <a onclick="return false;" href="/basketball/south-korea/" style="background-image: url(&#39;img/17317.small.jpg&#39;)">
+          <a onclick="return false;" href="/basketball/south-korea/" style="background-image: url(&#39;{{ env('THEME') }}/img/17317.small.jpg&#39;)">
             Южная Корея
           </a>
           <ul>
@@ -1686,7 +1605,7 @@
           </ul>
         </li>
         <li class=" ">
-          <a onclick="return false;" href="/basketball/denmark/" style="background-image: url(&#39;img/17255.small.jpg&#39;)">
+          <a onclick="return false;" href="/basketball/denmark/" style="background-image: url(&#39;{{ env('THEME') }}/img/17255.small.jpg&#39;)">
             Дания
           </a>
           <ul>
@@ -1990,7 +1909,7 @@
 
   </script>
 
-  <script src="js/arcticmodal.js"></script>
+  <script src="{{ env('THEME') }}/js/arcticmodal.js"></script>
 
   <script>
 
@@ -2059,7 +1978,7 @@
     (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);     t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);   })(window, document, '_gscq','script','http://widgets.getsitecontrol.com/52364/script.js');
   </script>
 
-  <img src="index/rp_counter.php" style="display:none">
+  <img src="{{ env('THEME') }}/index/rp_counter.php" style="display:none">
 
   <style>
   </style>

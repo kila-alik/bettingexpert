@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Bett;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
@@ -18,11 +18,11 @@ class Forecast extends Model
     protected $casts = ['express'=>'array'];
 
     public function forecaster() {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('Bett\User');
     }
 
     public function sort(){
-        return $this->belongsTo('App\Sort');
+        return $this->belongsTo('Bett\Sort');
     }
 
     public function scopePastTime($query) {

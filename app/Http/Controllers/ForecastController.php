@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bett\Http\Controllers;
 
-use App\Forecast;
-use App\News;
-use App\Sort;
+use Bett\Forecast;
+use Bett\News;
+use Bett\Sort;
 use Carbon\Carbon;
 
 

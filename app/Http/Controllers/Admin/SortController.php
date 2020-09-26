@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Bett\Http\Controllers\Admin;
 
-use App\Http\Controllers\SiteController;
-use App\Sort;
+use Bett\Http\Controllers\SiteController;
+use Bett\Sort;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Spatie\LaravelImageOptimizer\Facades\ImageOptimizer;

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Bett\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Controllers\SiteController;
+use Bett\Http\Controllers\Controller;
+use Bett\Http\Controllers\SiteController;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends SiteController

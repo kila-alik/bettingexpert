@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace Bett\Providers;
 
-use App\Sort;
+use Bett\Sort;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 

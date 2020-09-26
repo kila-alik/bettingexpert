@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bett\Http\Controllers;
 
-use App\Forecast;
-use App\Sort;
-use App\Subscription;
+use Bett\Forecast;
+use Bett\Sort;
+use Bett\Subscription;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Gate;

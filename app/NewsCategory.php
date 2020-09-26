@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Bett;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +11,6 @@ class NewsCategory extends Model
     protected $fillable = ['name', 'alias'];
 
     public function news() {
-        return $this->hasMany('App\News', 'category_id', 'id');
+        return $this->hasMany('Bett\News', 'category_id', 'id');
     }
 }

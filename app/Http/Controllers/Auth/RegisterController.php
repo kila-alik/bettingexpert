@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Bett\Http\Controllers\Auth;
 
-use App\Http\Controllers\SiteController;
-use App\User;
+use Bett\Http\Controllers\SiteController;
+use Bett\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -71,7 +71,7 @@ class RegisterController extends SiteController
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \Bett\User
      */
     protected function create(array $data)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Bett;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,12 +9,12 @@ class Payment extends Model
     
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('Bett\User');
     }
 
     public function forecast()
     {
-        return $this->belongsTo('App\Forecast');
+        return $this->belongsTo('Bett\Forecast');
     }
 
     public function scopeVerified($query) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Bett;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -29,7 +29,7 @@ class User extends Authenticatable
     ];
 
     public function forecastsForecaster() {
-        return $this->hasMany('App\Forecast','forecaster_id');
+        return $this->hasMany('Bett\Forecast','forecaster_id');
     }
 
     public function scopeIsForecaster($query, $is_forecaster = 0)
@@ -38,20 +38,20 @@ class User extends Authenticatable
     }
 
     public function sort() {
-        return $this->hasOne('App\Sort', 'id', 'sort_id');
+        return $this->hasOne('Bett\Sort', 'id', 'sort_id');
     }
 
     public function forecasts()
     {
-        return $this->belongsToMany('App\Forecast');
+        return $this->belongsToMany('Bett\Forecast');
     }
 
     public function reviews()
     {
-        return $this->hasMany('App\Review', 'user_id');
+        return $this->hasMany('Bett\Review', 'user_id');
     }
 
     public function payments(){
-        return $this->hasMany('App\Payment');
+        return $this->hasMany('Bett\Payment');
     }
 }

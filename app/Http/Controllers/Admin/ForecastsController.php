@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Bett\Http\Controllers\Admin;
 
-use App\Forecast;
-use App\Http\Controllers\SiteController;
-use App\Http\Requests\ForecastsRequest;
-use App\Mail\ForecastAdd;
-use App\Sort;
-use App\User;
+use Bett\Forecast;
+use Bett\Http\Controllers\SiteController;
+use Bett\Http\Requests\ForecastsRequest;
+use Bett\Mail\ForecastAdd;
+use Bett\Sort;
+use Bett\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;

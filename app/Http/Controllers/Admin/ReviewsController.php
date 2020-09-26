@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Bett\Http\Controllers\Admin;
 
-use App\Http\Controllers\SiteController;
-use App\Review;
+use Bett\Http\Controllers\SiteController;
+use Bett\Review;
 use Illuminate\Http\Request;
 
 class ReviewsController extends SiteController

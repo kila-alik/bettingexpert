@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Bett\Http\Controllers\Admin;
 
-use App\Http\Controllers\SiteController;
-use App\User;
+use Bett\Http\Controllers\SiteController;
+use Bett\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Bett\Http\Controllers\Controller;
 
 class ForecastersController extends SiteController
 {

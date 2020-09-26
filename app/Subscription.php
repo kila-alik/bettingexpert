@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Bett;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

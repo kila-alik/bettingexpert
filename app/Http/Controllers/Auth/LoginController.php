@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Bett\Http\Controllers\Auth;
 
-use App\Http\Controllers\SiteController;
+use Bett\Http\Controllers\SiteController;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
-use App\User;
+use Bett\User;
 
 class LoginController extends SiteController
 {

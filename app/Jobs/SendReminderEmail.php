@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Jobs;
+namespace Bett\Jobs;
 
-use App\Mail\ForecastAdd;
+use Bett\Mail\ForecastAdd;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
