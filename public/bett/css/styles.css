@@ -1050,7 +1050,7 @@ form input + a {
 #content p {
     font-size: 14px;
     line-height: 16px;
-    color: #000;
+    /* color: #000; */
 }
 /* #menu */
 #menu {

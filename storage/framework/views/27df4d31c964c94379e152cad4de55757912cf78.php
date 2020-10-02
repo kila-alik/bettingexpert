@@ -496,6 +496,8 @@ fbq('track', 'PageView');
 </div>-->
 <div class="clear"></div>
 
+<?php echo $__env->yieldContent('baner'); ?>
+
 <?php echo $__env->yieldContent('content'); ?>
 
 

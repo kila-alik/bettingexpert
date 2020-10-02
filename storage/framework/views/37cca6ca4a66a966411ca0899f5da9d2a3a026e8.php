@@ -6,10 +6,14 @@
   <?php echo $navigation; ?>
 
 <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('baner'); ?>
+  <?php echo $__env->make(env('THEME').'.baner', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
   <h1> Страница находится в разработке </h1>
 <?php $__env->stopSection(); ?>
-
 
 <?php $__env->startSection('footer'); ?>
   <?php echo $__env->make(env('THEME').'.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

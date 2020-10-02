@@ -496,6 +496,8 @@ fbq('track', 'PageView');
 </div>-->
 <div class="clear"></div>
 
+@yield('baner')
+
 @yield('content')
 
 
