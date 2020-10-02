@@ -21,21 +21,28 @@ class SiteController extends BaseController
 
     protected $fk_ip_address = ['136.243.38.147', '136.243.38.149', '136.243.38.150', '136.243.38.151', '136.243.38.189', '88.198.88.98'];
 
+//  объявляем переменную в которой будет храниться имя файла представления
+// которая будет использоваться в дочерних контроллерах
     protected $template;
+// заготавливаем массив для последующего заполнения его переменными и последующего передачи в файл представления
     protected $vars = [
         'title' => ''
     ];
 
-
+//  это переменная - ПОКА НЕИЗВЕСТНА
     protected $service;
 
     /**
      * @param $string
      * @return mixed|null|string|string[]
      */
+
+     // эта функция переводит кирилицу в латиницу
     protected function transliterate($string){
+      // mb_strtolower - переводит в нижний регистр
         $str = mb_strtolower($string, 'UTF-8');
 
+      // массив соответствия кирилицы и латиницы
         $letter_array = [
             'ж' => 'zh', 'ч' => 'ch', 'щ' => 'shh', 'ш' => 'sh',
             'ю' => 'yu', 'ё' => 'yo', 'я' => 'ya', 'э' => 'e',
@@ -58,19 +65,22 @@ class SiteController extends BaseController
         ];
 
         foreach($letter_array as $letter => $kyr){
+          // перебирая массив $str и заменяем $letter на $kyr и возвращает результат в $str
             $str = str_replace($letter, $kyr, $str);
         }
 
+        // помоемому убирает два одинаковых символа рядом , УТОЧНИТЬ!
         $str = preg_replace('/(\s|[^A-Za-z0-9\-])+/', '-', $str);
-
+        // удаляет черту - из начала и конца строки
         $str = trim($str, '-');
-
+        // заменяет одну или нескольких черт - и заменяет на одну
         $str = preg_replace('/(-){1,}/', "-", $str);
 
         return $str;
     }
 
-
+    // эта функция наерное составляет карту сайта
+    //  и вывод дневных и месячных новостей
     public function sitemapGenerate()
     {
         $sitemap = App::make("sitemap");
@@ -133,6 +143,7 @@ class SiteController extends BaseController
     /**
      * @return $this
      */
+     // вывод  в представление кторое стоит в переменной $template
     public function renderOutput()
     {
         return view($this->template)->with($this->vars);

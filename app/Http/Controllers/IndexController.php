@@ -20,6 +20,8 @@ class IndexController extends SiteController
      */
     public function __construct()
     {
+      // берем из родительского конструктора настройки Сегодня
+      // и указываем имя шаблона вывода
         $this->template = 'index';
     }
 
@@ -29,7 +31,10 @@ class IndexController extends SiteController
      */
     public function show()
     {
+      // в массив vars добавляем переменную title
         $this->vars['title'] = 'Прогнозы на спорт от професионалов - SportPrognoz.pw';
+
+        // Собираем несколько переменных путем запросов к базе данных
 
         $forecasts = Forecast::where('status', 0)
             ->where('date', '>', Carbon::now())
@@ -44,6 +49,7 @@ class IndexController extends SiteController
                 Carbon::now()->endOfYear(),
             ])
             ->orderBy('date', 'as')->take(6)->paid()->get();
+
         $forecastsFree = Forecast::where('status', '!=', 0)
             ->whereBetween('created_at', [
                 Carbon::now()->startOfYear(),
@@ -63,16 +69,19 @@ class IndexController extends SiteController
 
         $forecasters = User::where('is_forecaster', 1)->get();
 
-        $countOnlineUsers = Activity::usersByMinutes(20)->count()+Activity::guests()->count();      // Count the number of active guests
+        $countOnlineUsers = Activity::usersByMinutes(20)->count()+Activity::guests()->count();
+              // Count the number of active guests
         $countOnlineUsers += rand(132, 139);
 
+
+// передаем в представление index_content сформированные переменные и render-ром представляем их в строку
         $this->vars['content'] = view('index_content')
             ->with([
                     'forecasts' => $forecasts,
-                    'forecasts_statistics'=>$forecasts_statistics,
+                    'forecasts_statistics'=> $forecasts_statistics,
                     'forecastsPaid' => $forecastsPaid,
                     'forecastsFree' => $forecastsFree,
-                    'sort'=>Sort::class,
+                    'sort'=> Sort::class,
                     'forecasts_bank_all' => $forecasts_statistics_graf,
                     'forecasts_bank' => $forecasts_bank,
                     'forecasters' => $forecasters,
@@ -89,8 +98,10 @@ class IndexController extends SiteController
      */
     public function fullStatistics()
     {
+      // создаём тайтел для страницы вывода ПОЛНОЙ СТАТИСТИКИ
         $this->vars['title'] = 'Полная статистика';
 
+      // создаем переменные путем запросов к базе данных
         $forecasts = Forecast::where('status', '!=', 0)
                     ->whereBetween('created_at', [
                             Carbon::now()->startOfYear(),
@@ -103,6 +114,7 @@ class IndexController extends SiteController
                 Carbon::now()->startOfYear(),
                 Carbon::now()->endOfYear(),
             ])
+
             ->orderBy('date', 'as')->paid()->get();
         $forecastsFree = Forecast::where('status', '!=', 0)
             ->whereBetween('created_at', [
@@ -131,14 +143,15 @@ class IndexController extends SiteController
 
         $forecasts_bank = $this->forecastBank($forecasts);
 
+        // передаем в представление fullStatistics_content сформированные переменные и render-ром представляем их в строку
         $this->vars['content'] = view('fullStatistics_content')
             ->with([
                 'forecasts' => $forecasts,
                 'forecastsPaid' => $forecastsPaid,
                 'forecastsFree' => $forecastsFree,
-                'months'=>$months,
-                'sort'=>Sort::class,
-                'forecasts_bank'=>$forecasts_bank
+                'months'=> $months,
+                'sort' => Sort::class,
+                'forecasts_bank' => $forecasts_bank
             ])->render();
 
         return $this->renderOutput();
@@ -149,6 +162,8 @@ class IndexController extends SiteController
      * @return $this
      * @throws \Throwable
      */
+
+     // метод передающий три параметра в страницу О НАС в представление aboutUs_content
     public function aboutUs()
     {
         $this->vars['title'] = 'О нас';
@@ -164,6 +179,8 @@ class IndexController extends SiteController
      * @return $this
      * @throws \Throwable
      */
+
+     // метод передающий 4 параметра в страницу О НАС в представление ourAdvantages_content
     public function ourAdvantages()
     {
         $this->vars['title'] = 'Наши преимущества';
@@ -179,6 +196,8 @@ class IndexController extends SiteController
      * @return $this
      * @throws \Throwable
      */
+
+      // метод передающий 4 параметра в страницу О НАС в представление guaranteesReliability_content
     public function guaranteesReliability()
     {
         $this->vars['title'] = 'Гарантии надежности - Часто задаваемые вопросы';
@@ -209,6 +228,9 @@ class IndexController extends SiteController
      * @param Request $request
      * @return $this|\Illuminate\Http\RedirectResponse
      */
+
+     // функция по приему сообщений и автоматически отправки автоматического письма
+     // и поттом редирект на представление status
     public function contactSend(Request $request)
     {
         $data = $request->except('_token');

@@ -35,8 +35,8 @@ else{var b=a.data("arcticmodal");!1!==b.beforeClose(b,a)&&(a.trigger("beforeClos
 
 }
 /*
-     FILE ARCHIVED ON 22:36:07 Jan 23, 2017 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 13:04:53 Aug 30, 2020.
+     FILE ARCHIVED ON 06:30:46 Aug 28, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:17:14 Oct 01, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -44,14 +44,14 @@ else{var b=a.data("arcticmodal");!1!==b.beforeClose(b,a)&&(a.trigger("beforeClos
 */
 /*
 playback timings (ms):
-  captures_list: 69.812
-  PetaboxLoader3.datanode: 99.029 (5)
-  exclusion.robots: 0.179
-  RedisCDXSource: 1.036
-  esindex: 0.013
-  CDXLines.iter: 15.044 (3)
-  exclusion.robots.policy: 0.166
-  LoadShardBlock: 49.833 (3)
-  PetaboxLoader3.resolve: 102.452 (2)
-  load_resource: 233.134
+  RedisCDXSource: 20.996
+  esindex: 0.015
+  load_resource: 154.249 (2)
+  exclusion.robots: 0.228
+  LoadShardBlock: 121.553 (3)
+  captures_list: 166.385
+  exclusion.robots.policy: 0.215
+  PetaboxLoader3.datanode: 165.303 (5)
+  PetaboxLoader3.resolve: 42.852
+  CDXLines.iter: 19.736 (3)
 */

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'institut';
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/institut/Institut.eot#iefix') format('embedded-opentype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/institut/Institut.otf')  format('opentype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/institut/Institut.woff') format('woff'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/institut/Institut.ttf')  format('truetype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/institut/Institut.svg#Institut') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'OpenSans-Bold';
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans-Bold_gdi.eot');
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans-Bold_gdi.eot#iefix') format('embedded-opentype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans-Bold_gdi.woff') format('woff'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans-Bold_gdi.ttf') format('truetype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans-Bold_gdi.svg#OpenSans-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+@font-face {
+    font-family:'OpenSans-Regular';
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans_gdi.eot');
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans_gdi.eot#iefix') format('embedded-opentype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans_gdi.woff') format('woff'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans_gdi.ttf') format('truetype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/OpenSans_gdi.svg#OpenSans-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+@font-face {
+    font-family:'Roboto-Bold';
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Bold_gdi.eot');
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Bold_gdi.eot#iefix') format('embedded-opentype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Bold_gdi.woff') format('woff'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Bold_gdi.ttf') format('truetype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Bold_gdi.svg#Roboto-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+000D-25CA;
+}
+@font-face {
+    font-family:'Roboto-Thin';
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Thin_gdi.eot');
+    src: url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Thin_gdi.eot#iefix') format('embedded-opentype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Thin_gdi.woff') format('woff'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Thin_gdi.ttf') format('truetype'),
+    url('/web/20190828062913im_/https://betfaq.ru/css/fonts/Roboto-Thin_gdi.svg#Roboto-Thin') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+000D-25CA;
+}
+/*
+     FILE ARCHIVED ON 06:29:13 Aug 28, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:17:09 Oct 01, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  RedisCDXSource: 6.107
+  esindex: 0.015
+  load_resource: 390.99 (2)
+  exclusion.robots: 0.217
+  LoadShardBlock: 140.969 (3)
+  captures_list: 180.479
+  exclusion.robots.policy: 0.201
+  PetaboxLoader3.datanode: 287.604 (5)
+  PetaboxLoader3.resolve: 216.44 (3)
+  CDXLines.iter: 27.965 (3)
+*/

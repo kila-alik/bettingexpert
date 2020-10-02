@@ -143,7 +143,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
   // XDM object
   w.fastXDM = {
     _id: 0,
-    helperUrl: 'https://web.archive.org/web/20170119105254/https://vk.com/js/api/xdmHelper.js',
+    helperUrl: 'https://web.archive.org/web/20190828062809/https://vk.com/js/api/xdmHelper.js',
 
     Server: function(methods, filter, options) {
       this.methods   = methods || {};
@@ -393,6 +393,7 @@ VK.extend = function(target, source, overwrite) {
 };
 
 VK._protocol = 'https:';
+VK._base_domain = '';
 
 if (!VK.xdConnectionCallbacks) {
 
@@ -402,8 +403,8 @@ if (!VK.xdConnectionCallbacks) {
     _session: null,
     _userStatus: 'unknown',
     _domain: {
-      main: 'https://web.archive.org/web/20170119105254/https://oauth.vk.com/',
-      api: 'https://web.archive.org/web/20170119105254/https://api.vk.com/'
+      main: 'https://web.archive.org/web/20190828062809/https://oauth.vk.com/',
+      api: 'https://web.archive.org/web/20190828062809/https://api.vk.com/'
     },
     _path: {
       login: 'authorize',
@@ -525,6 +526,17 @@ if (!VK.xdConnectionCallbacks) {
     };
   }
 
+  function obj2qs(obj) {
+    if (!obj) return '';
+    var qs = [];
+    for (var k in obj) {
+      if (obj.hasOwnProperty(k)) {
+        qs.push(encodeURIComponent(k) + '=' + encodeURIComponent(obj[k].toString() || ''));
+      }
+    }
+    return qs.length ? '?' + qs.join('&') : '';
+  }
+
   if (!VK.Api) {
     VK.Api = {
       _headId: null,
@@ -613,35 +625,47 @@ if (!VK.xdConnectionCallbacks) {
 
       checkMethod: function(method, params, cb, queryTry) {
         var m = method.toLowerCase();
-        if (m == 'wall.post' || m == 'activity.set') {
-          var text = (m == 'activity.set') ? params.text : params.message;
-          if (!text) {
-            text = '';
-          }
-          var query =  VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com/al_apps.php?act=wall_post_box&widget=4&method='+m+'&aid=' + parseInt(VK._apiId, 10) + '&text=' + encodeURIComponent(text);
-          if (m == 'wall.post') {
-            query += '&owner_id=' + parseInt(params.owner_id || 0, 10) + '&attachments=' + (params.attachments || params.attachment || '') + '&publish_date=' + (params.publish_date || '');
-          }
-          var method_access = '_'+(Math.random()).toString(16).substr(2);
-          query += '&method_access='+method_access;
-          var popup = VK.UI.popup({
-            url: query,
-            width: 560,
-            height: 304
-          });
-          var timer = setInterval(function() {
-            if (VK.UI.active.closed) {
-              clearInterval(timer);
-              params.method_access = method_access;
-              VK.Api.call(method, params, cb, queryTry);
-            }
-          }, 500);
-          return false;
-        }
 
-        if (m == 'messages.allowmessagesfromgroup') {
-          var method_access = '_' + (Math.random()).toString(16).substr(2);
-          var query = VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com/widget_allow_messages_from_community.php?act=allow_box&group_id=' + parseInt(params.group_id, 10) + '&app_id=' + parseInt(VK._apiId, 10) + '&method_access=' + method_access;
+        if (m === 'wall.post') {
+          var validAttacheRegexp = /(^https?:\/\/)|(^(poll|album|photo|video|doc|audio|page|note)-?\d+_-?\d+)$/,
+              validAttachments = [],
+              methodAccess,
+              queryParams,
+              query,
+              timer;
+
+          if (!params.v) {
+            params.v = '5.95';
+          }
+
+          params.attachments = params.attachments || params.attachment || [];
+          if (typeof params.attachments === 'string') {
+            params.attachments = params.attachments.split(',')
+          }
+
+          for (var i = 0; i < params.attachments.length; i++) {
+            var attach = params.attachments[i].trim();
+            if (validAttacheRegexp.test(attach)) {
+              validAttachments.push(attach);
+            }
+          }
+
+          params.attachments = validAttachments.length ? validAttachments : '';
+          methodAccess = '_' + (Math.random()).toString(16).substr(2);
+          queryParams = {
+            act: 'wall_post_box',
+            method: m,
+            widget: 4,
+            aid: parseInt(VK._apiId, 10),
+            text: params.message || '',
+            method_access: methodAccess
+          };
+
+          queryParams = VK.extend(queryParams, params);
+          queryParams.owner_id = parseInt(params.owner_id || 0, 10);
+          queryParams.publish_date = params.publish_date || '';
+          query = VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com/al_apps.php';
+          query += obj2qs(queryParams);
 
           VK.UI.popup({
             url: query,
@@ -649,10 +673,30 @@ if (!VK.xdConnectionCallbacks) {
             height: 304
           });
 
-          var timer = setInterval(function () {
+          timer = setInterval(function() {
             if (VK.UI.active.closed) {
               clearInterval(timer);
-              params.method_access = method_access;
+              params.method_access = methodAccess;
+              VK.Api.call(method, params, cb, queryTry);
+            }
+          }, 500);
+          return false;
+        }
+
+        if (m == 'messages.allowmessagesfromgroup') {
+          methodAccess = '_' + (Math.random()).toString(16).substr(2);
+          query = VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com/widget_allow_messages_from_community.php?act=allow_box&group_id=' + parseInt(params.group_id, 10) + '&app_id=' + parseInt(VK._apiId, 10) + '&method_access=' + methodAccess;
+
+          VK.UI.popup({
+            url: query,
+            width: 560,
+            height: 304
+          });
+
+          timer = setInterval(function () {
+            if (VK.UI.active.closed) {
+              clearInterval(timer);
+              params.method_access = methodAccess;
               VK.Api.call(method, params, cb, queryTry);
             }
           }, 500);
@@ -863,7 +907,7 @@ if (!VK.xdConnectionCallbacks) {
 
         VK.Observer.subscribe('auth.statusChange', onLogout);
         if (VK._session && VK._session.sid) {
-          var url = 'https://web.archive.org/web/20170119105254/https://login.vk.com/?act=openapi&oauth=1&aid=' + parseInt(VK._apiId, 10) + '&location=' + encodeURIComponent(window.location.hostname) + '&do_logout=1&token=' + VK._session.sid;
+          var url = 'https://web.archive.org/web/20190828062809/https://login.vk.com/?act=openapi&oauth=1&aid=' + parseInt(VK._apiId, 10) + '&location=' + encodeURIComponent(window.location.hostname) + '&do_logout=1&token=' + VK._session.sid;
           if (VK.Api.supportCORS()) {
             var logoutCallback = function() {
               VK.Auth.setSession(null, 'unknown');
@@ -904,7 +948,7 @@ if (!VK.xdConnectionCallbacks) {
 
         VK.Auth._loadState = 'loading';
 
-        var url = 'https://web.archive.org/web/20170119105254/https://login.vk.com/?act=openapi&oauth=1&aid=' + parseInt(VK._apiId, 10) + '&location=' + encodeURIComponent(window.location.hostname);
+        var url = 'https://web.archive.org/web/20190828062809/https://login.vk.com/?act=openapi&oauth=1&aid=' + parseInt(VK._apiId, 10) + '&location=' + encodeURIComponent(window.location.hostname);
         if (VK.Api.supportCORS()) {
           var loginCallback = function(response) {
             if (!this.JSON) {
@@ -981,6 +1025,123 @@ if (!VK.xdConnectionCallbacks) {
     };
   }
 
+  if (!VK.App) {
+    VK.App = {
+      _appOpened: false,
+      _addToGroupPopup: null,
+
+      open: function (url, params) {
+        if (VK.App._appOpened || !VK._apiId) {
+          return;
+        }
+
+        if (!VK._session) {
+          VK.Auth.login(function(resp) {
+            if (resp && resp.session) {
+              VK.App._openApp(url, params);
+            }
+          });
+        } else {
+          VK.App._openApp(url, params);
+        }
+      },
+
+      _openApp: function (url, params) {
+        var src, box, domain, request = [];
+        params = params || {};
+
+        if (!url || !VK._apiId || VK.App._appOpened) {
+          return;
+
+        }
+
+        if (Object.prototype.toString.call(params.data) === '[object Object]') {
+          try {
+            params.data = JSON.stringify(params.data);
+          } catch (e) {
+            params.data = '';
+          }
+        }
+
+        domain = VK._base_domain || 'vk.com';
+        src = VK._protocol + '//' + domain + '/apps?act=open_external_app_openapi&aid=' + VK._apiId;
+        params['aid'] = VK._apiId;
+
+        for (var arg in params) {
+          var val = '';
+          if (!params.hasOwnProperty(arg)) {
+            continue;
+          }
+          if (params[arg] !== undefined) {
+            val = encodeURIComponent(params[arg]);
+          }
+          request.push(encodeURIComponent(arg) + '=' + val);
+        }
+
+        src += '&url=' + url;
+        src += '&q=' + encodeURIComponent(request.join('&'));
+
+        box = VK.Util.Box(src, {}, {
+          closeExternalApp: function() {
+            if (VK.App._result) {
+              VK.Observer.publish('app.done', VK.App._result);
+              VK.App._result = null;
+            } else {
+              VK.Observer.publish('app.closed');
+            }
+            box.hide();
+            VK.App._appOpened = false;
+          },
+          externalAppDone: function (params, noCloseLayer) {
+            if (noCloseLayer) {
+              VK.App._result = params;
+            } else {
+              VK.Observer.publish('app.done', params);
+              box.hide();
+              VK.App._appOpened = false;
+              VK.App._result = null;
+            }
+          }
+        });
+        box.show();
+        VK.App._appOpened = true;
+        VK.App._result = null;
+      },
+
+      addToGroup: function(appId) {
+        if (this._addToGroupPopup && !this._addToGroupPopup.closed) {
+          return;
+        }
+        var baseUrl = VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com';
+
+        if (this._onAddToGroupDone) {
+          VK.Util.removeEvent('message', this._onAddToGroupDone, window);
+        }
+
+        this._onAddToGroupDone = function(event) {
+          if (event.origin === baseUrl && event.data.method === 'app.addToGroup') {
+            VK.Observer.publish('app.addToGroupDone', {
+              app_id: event.data.app_id,
+              group_ids: event.data.group_ids
+            });
+            VK.Util.removeEvent('message', this._onAddToGroupDone, window);
+            this._onAddToGroupDone = null;
+          }
+        }.bind(this);
+
+        if (window.postMessage) {
+          VK.Util.addEvent('message', this._onAddToGroupDone, window);
+        }
+
+        this._addToGroupPopup = VK.UI.popup({
+          url: baseUrl + '/add_community_app.php?aid=' + appId,
+          width: 560,
+          height: 650
+        });
+      }
+    }
+  }
+
 } else { // if VK.xdConnectionCallbacks
   setTimeout(function() {
     var callback;
@@ -1007,13 +1168,16 @@ if (!VK.UI) {
           height = options.height,
           left = parseInt(screenX + ((outerWidth - width) / 2), 10),
           top = parseInt(screenY + ((outerHeight - height) / 2.5), 10),
-          features = (
-              'width=' + width +
-              ',height=' + height +
-              ',left=' + left +
-              ',top=' + top
-          );
+          features;
+      left = window.screen && window.screenX && screen.left && screen.left > 1000 ? 0 : left; // FF with 2 monitors fix
+      features = (
+          'width=' + width +
+          ',height=' + height +
+          ',left=' + left +
+          ',top=' + top
+      );
       this.active = window.open(options.url, 'vk_openapi', features);
+      return this.active;
     },
     button: function(el, handler) {
       var html = '';
@@ -1029,7 +1193,7 @@ if (!VK.UI) {
       html = (
           '<table cellspacing="0" cellpadding="0" id="openapi_UI_' + index + '" onmouseover="VK.UI._change(1, ' + index + ');" onmouseout="VK.UI._change(0, ' + index + ');" onmousedown="VK.UI._change(2, ' + index + ');" onmouseup="VK.UI._change(1, ' + index + ');" style="cursor: pointer; border: 0px; font-family: tahoma, arial, verdana, sans-serif, Lucida Sans; font-size: 10px;"><tr style="vertical-align: middle">' +
           '<td><div style="border: 1px solid #3b6798;border-radius: 2px 0px 0px 2px;-moz-border-radius: 2px 0px 0px 2px;-webkit-border-radius: 2px 0px 0px 2px;"><div style="border: 1px solid #5c82ab; border-top-color: #7e9cbc; background-color: #6D8DB1; color: #fff; text-shadow: 0px 1px #45688E; height: 15px; padding: 2px 4px 0px 6px;line-height: 13px;">&#1042;&#1086;&#1081;&#1090;&#1080;</div></div></td>' +
-          '<td><div style="background: url(' + VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com/images/btns.png) 0px -42px no-repeat; width: 21px; height: 21px"></div></td>' +
+          '<td><div style="background: url(' + VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com/images/btns.png) 0px -42px no-repeat; width: 21px; height: 21px"></div></td>' +
           '<td><div style="border: 1px solid #3b6798;border-radius: 0px 2px 2px 0px;-moz-border-radius: 0px 2px 2px 0px;-webkit-border-radius: 0px 2px 2px 0px;"><div style="border: 1px solid #5c82ab; border-top-color: #7e9cbc; background-color: #6D8DB1; color: #fff; text-shadow: 0px 1px #45688E; height: 15px; padding: 2px 6px 0px 4px;line-height: 13px;">&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1077;</div></div></td>' +
           '</tr></table>'
       );
@@ -1150,30 +1314,32 @@ if (!VK.Widgets) {
   VK.Widgets.RPC = {};
 
   VK.Widgets.showBoxUrl = function(domain, url) {
-    domain = (domain || VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com').replace(/\/?\s*$/, '');
+    domain = (domain || VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com').replace(/\/?\s*$/, '');
     url = url.replace(/^\s*\/?/, '');
     return domain + '/' + url;
   };
 
   VK.Widgets.loading = function(obj, enabled) {
-    obj.style.background = enabled ? 'url("' + VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com/images/upload.gif") center center no-repeat transparent' : 'none';
+    obj.style.background = enabled ? 'url("' + VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com/images/upload.gif") center center no-repeat transparent' : 'none';
   };
 
   VK.Widgets.Comments = function(objId, options, page) {
     var pData = VK.Util.getPageData();
     if (!VK._apiId) throw Error('VK not initialized. Please use VK.init');
     options = options || {};
-    var params = {
-      limit: options.limit || 10,
-      height: options.height || 0,
-      mini: options.mini === undefined ? 'auto' : options.mini,
-      norealtime: options.norealtime ? 1 : 0
-    }, mouseup = function() {
-      rpc.callMethod('mouseUp');
-      return false;
-    }, move = function(event) {
-      rpc.callMethod('mouseMove', {screenY: event.screenY});
-    }, iframe, rpc;
+
+    var obj = document.getElementById(objId),
+      params = {
+        limit: options.limit || 10,
+        height: options.height || 0,
+        mini: options.mini === undefined ? 'auto' : options.mini,
+        norealtime: options.norealtime ? 1 : 0
+      }, mouseup = function() {
+        rpc.callMethod('mouseUp');
+        return false;
+      }, move = function(event) {
+        rpc.callMethod('mouseMove', {screenY: event.screenY});
+      }, iframe, rpc;
 
     if (options.browse) { // browse all comments
       params.browse = 1;
@@ -1220,8 +1386,7 @@ if (!VK.Widgets) {
       }
     }, {
       startHeight: 133,
-      minWidth: 300,
-      width: '100%'
+      minWidth: 300
     }, function(o, i, r) {iframe = i; rpc = r;});
   };
 
@@ -1245,8 +1410,7 @@ if (!VK.Widgets) {
     };
     return VK.Widgets._constructor('widget_recommended.php', objId, options, params, {}, {
       startHeight: (116 + params.limit * 47 - 15),
-      minWidth: 150,
-      width: '100%'
+      minWidth: 150
     });
   };
 
@@ -1256,13 +1420,8 @@ if (!VK.Widgets) {
       params = {
         owner_id: ownerId,
         post_id: postId,
-        hash: hash || '',
-        width: options.width || (obj && obj.offsetWidth > 0 ? obj.offsetWidth : 500)
+        hash: hash || ''
       }, iframe, rpc, cursorBack;
-    if (options.preview) {
-      params.preview = 1;
-      delete options['preview'];
-    }
     return VK.Widgets._constructor('widget_post.php', objId, options, params, {
       showBox: function(url, props) {
         var box = VK.Util.Box(VK.Widgets.showBoxUrl(options.base_domain, url), [], {
@@ -1281,8 +1440,7 @@ if (!VK.Widgets) {
       }
     }, {
       startHeight: 90,
-      minWidth: 250,
-      width: '100%'
+      minWidth: 250
     }, function(o, i, r) {iframe = i; rpc = r;});
   };
 
@@ -1323,7 +1481,7 @@ if (!VK.Widgets) {
           ttHere = options.ttHere || false,
           isOver = false,
           hideTimeout = null,
-          obj, buttonIfr, buttonRpc, tooltipIfr, tooltipRpc, checkTO, statsBox;
+          obj, buttonIfr, buttonRpc, tooltipIfr, tooltipRpc, checkTO;
       if (type == 'vertical' || type == 'button' || type == 'mini') delete options.width;
       if (autoWidth) params.auto_width = 1;
       function showTooltip(force) {
@@ -1355,12 +1513,6 @@ if (!VK.Widgets) {
         }, 400);
       }
 
-      function handleStatsBox(act) {
-        hideTooltip(true);
-        statsBox = VK.Util.Box(buttonIfr.src + '&act=a_stats_box&widget_width=638&from=wlike');
-        statsBox.show();
-      }
-
       var widgetId = VK.Widgets._constructor('widget_like.php', objId, options, params, {
         initTooltip: function(counter) {
           tooltipRpc = new fastXDM.Server({
@@ -1378,14 +1530,13 @@ if (!VK.Widgets) {
               });
               box.show();
             },
-            statsBox: handleStatsBox
           }, false, {safe: true});
           tooltipIfr = tooltipRpc.append(ttHere ? obj : document.body, {
             src: buttonIfr.src + '&act=a_like_tooltip',
             scrolling: 'no',
             allowTransparency: true,
             id: buttonIfr.id + '_tt',
-            style: {position: 'absolute', padding: 0, display: 'block', opacity: 0.01, filter: 'alpha(opacity=1)', border: '0', width: '274px', height: '130px', zIndex: 5000, overflow: 'hidden'}
+            style: {position: 'absolute', padding: 0, display: 'none', opacity: 0.01, filter: 'alpha(opacity=1)', border: '0', width: '274px', height: '130px', zIndex: 5000, overflow: 'hidden'}
           });
           tooltipIfr.setAttribute('vkhidden', 'yes');
 
@@ -1399,7 +1550,6 @@ if (!VK.Widgets) {
             checkTO = setTimeout(function() {hideTooltip(); }, 200);
           };
         },
-        statsBox: handleStatsBox,
         showTooltip: showTooltip,
         hideTooltip: hideTooltip,
         destroy: function() {
@@ -1411,13 +1561,6 @@ if (!VK.Widgets) {
             tooltipIfr.parentNode.removeChild(tooltipIfr);
           }
           tooltipRpc && tooltipRpc.destroy();
-          if (statsBox) {
-            if (statsBox.iframe) {
-              try {statsBox.iframe.src = 'about: blank;';} catch (e) {}
-              statsBox.iframe.parentNode.removeChild(statsBox.iframe);
-            }
-            statsBox.rpc && statsBox.rpc.destroy();
-          }
         },
         showBox: function(url, props) {
           var box = VK.Util.Box(VK.Widgets.showBoxUrl(options.base_domain, url), [], {
@@ -1471,10 +1614,57 @@ if (!VK.Widgets) {
       title: options.pageTitle || pData.title,
       description: options.pageDescription || pData.description
     };
-    return VK.Widgets._constructor('al_widget_poll.php', objId, options, params, {}, {
+    if (options.preview) {
+      params.is_preview = 1;
+      delete options['preview'];
+    }
+    if (options.share !== undefined) {
+      params.share = options.share ? 1 : 0;
+    }
+    return VK.Widgets._constructor('al_widget_poll.php', objId, options, params, {
+      showBox: function(url, props) {
+        var box = VK.Util.Box(VK.Widgets.showBoxUrl(options.base_domain, url), [], {
+          proxy: function() {
+            rpc.callMethod.apply(rpc, arguments);
+          }
+        });
+        box.show();
+      }
+    }, {
       startHeight: 144,
-      minWidth: 300,
-      width: '100%'
+      minWidth: 300
+    });
+  };
+
+  VK.Widgets.App = function(objId, app_id, options) {
+    if (!app_id) throw Error('No app id passed');
+    if (!options) options = {};
+    var startHeight = void 0,
+        height = void 0,
+        minWidth = void 0,
+        params = {
+          aid: app_id,
+          mode: parseInt(options.mode, 10) || 1,
+        };
+    switch (params.mode) {
+      case 1:
+        options.width = 144;
+        startHeight = 251;
+        break;
+      case 2:
+        options.width = options.width ? Math.max(200, Math.min(10000, parseInt(options.width, 10))) : 200;
+        height = startHeight = 193;
+        break;
+      case 3:
+        options.width = options.width ? Math.max(50, Math.min(10000, parseInt(options.width, 10))) : void 0;
+        height = startHeight = options.height = ({18: 18, 20: 20, 22: 22, 24: 24, 30: 30})[parseInt(options.height, 10) || 30];
+        break;
+    }
+    minWidth = options.width;
+    return VK.Widgets._constructor('widget_app.php', objId, options, params, {}, {
+      startHeight: startHeight,
+      height: height,
+      minWidth: minWidth
     });
   };
 
@@ -1496,6 +1686,7 @@ if (!VK.Widgets) {
     params.color3 = options.color3 || '';
     params.class_name = options.class_name || '';
     if (options.no_head) params.no_head = 1;
+    if (options.no_cover) params.no_cover = 1;
     if (options.wide) {
       params.wide = 1;
       if (!options.width || options.width < 300) {
@@ -1581,11 +1772,13 @@ if (!VK.Widgets) {
         var vars = [];
 
         for (var i in data) {
-          if (i != 'session') vars.push(i+'='+decodeURIComponent(data[i]).replace(/&/g, '%26').replace(/\?/, '%3F'));
+          if (i != 'session') vars.push(i+'='+decodeURIComponent(data[i]).replace(/&/g, '%26').replace(/\#/g, '%23').replace(/\?/, '%3F'));
         }
         window.location.href = href + vars.join('&');
       }
-    }}, {startHeight: 134});
+    }}, {
+      startHeight: 134
+    });
   };
 
   VK.Widgets.Subscribe = function(objId, options, oid) {
@@ -1617,8 +1810,7 @@ if (!VK.Widgets) {
       }
     }, {
       minWidth: 220,
-      startHeight: 22,
-      height: options.height || 22
+      startHeight: 22
     }, function(o, i, r) {
       rpc = r;
     });
@@ -1639,6 +1831,51 @@ if (!VK.Widgets) {
     return VK.Widgets._constructor('widget_contactus.php', objId, options, params, {}, {
       startHeight: params.height,
       height: params.height
+    }, function(o, i, r) {
+      rpc = r;
+    });
+  };
+
+  VK.Widgets.Bookmarks = function(objId, options) {
+    if (!options) {
+      options = {};
+    }
+
+    var params = {
+      height: ({18: 18, 20: 20, 22: 22, 24: 24, 30: 30})[parseInt(options.height, 10) || 30],
+      url: options.url || window.location.href
+    }, rpc;
+
+    return VK.Widgets._constructor('widget_bookmarks.php', objId, options, params, {}, {
+      startHeight: params.height,
+      height: params.height
+    }, function(o, i, r) {
+      rpc = r;
+    });
+  };
+
+  VK.Widgets.Playlist = function(objId, ownerId, playlistId, hash, options) {
+    var params = {
+      oid: parseInt(ownerId, 10),
+      pid: parseInt(playlistId, 10),
+      hash: hash || ''
+    }, rpc;
+
+    if (!options) options = {};
+    if (!params.oid) throw Error('No owner id passed');
+    if (!params.pid) throw Error('No playlist id passed');
+
+    return VK.Widgets._constructor('widget_playlist.php', objId, options, params, {
+      showBox: function(url, props) {
+        var box = VK.Util.Box(VK.Widgets.showBoxUrl(options.base_domain, url), [], {
+          proxy: function() {
+            rpc.callMethod.apply(rpc, arguments);
+          }
+        });
+        box.show();
+      }
+    }, {
+      minWidth: 200
     }, function(o, i, r) {
       rpc = r;
     });
@@ -1716,7 +1953,7 @@ if (!VK.Widgets) {
         window.vk__adsLight = false;
         adsScriptVersion = parseInt(adsScriptVersion);
         var attachScriptFunc = (VK.Api && VK.Api.attachScript || VK.addScript);
-        var base_domain = (options.base_domain || VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com');
+        var base_domain = (options.base_domain || VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com');
         attachScriptFunc(base_domain + '/js/al/aes_light.js?' + adsScriptVersion);
       } else if (window.vk__adsLight && vk__adsLight.userHandlers && vk__adsLight.userHandlers.onInit) {
         vk__adsLight.userHandlers.onInit(false); // false - do not publish initial onInit
@@ -1879,6 +2116,48 @@ if (!VK.Widgets) {
     });
   };
 
+  VK.Widgets.Article = function(id, url, options) {
+    var params = {
+      url: url
+    };
+
+    options = options || {};
+
+    return VK.Widgets._constructor('widget_article.php', id, options, params, {
+      showBox: function(url) {
+        var box = VK.Util.Box(VK.Widgets.showBoxUrl(options.base_domain, url), [], {
+          proxy: function() {
+            rpc.callMethod.apply(rpc, arguments);
+          }
+        });
+        box.show();
+      },
+    });
+  };
+
+  VK.Widgets.Podcast = function(id, episode, hash, options) {
+    var params = {
+      episode: episode,
+      hash: hash,
+    };
+
+    options = options || {};
+
+    return VK.Widgets._constructor('widget_podcast.php', id, options, params, {
+      showBox: function(url) {
+        var box = VK.Util.Box(VK.Widgets.showBoxUrl(options.base_domain, url), [], {
+          proxy: function() {
+            rpc.callMethod.apply(rpc, arguments);
+          }
+        });
+        box.show();
+      },
+    }, {
+      minWidth: 300,
+      startHeight: 150,
+    });
+  };
+
   VK.Widgets.CommunityMessages = (function(CommunityMessages) {
     if (CommunityMessages) return CommunityMessages;
 
@@ -1923,7 +2202,7 @@ if (!VK.Widgets) {
       options.height = 399;
 
       if (!options.base_domain) {
-        options.base_domain = options.base_domain || VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com';
+        options.base_domain = options.base_domain || VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com';
       }
 
       options.expandTimeout = parseInt(options.expandTimeout) || 0;
@@ -1945,6 +2224,9 @@ if (!VK.Widgets) {
       if (!options.welcomeScreen) {
         params.disable_welcome_screen = 1;
       }
+
+      params.ref_source_info = options.ref_source_info;
+      params.ref_source_link = location.href;
 
       var buttonType = options.buttonType;
       if (Object.keys(BUTTONS_CONF).indexOf(buttonType) == -1) {
@@ -2216,6 +2498,15 @@ if (!VK.Widgets) {
         callRpcMethod('minimize');
       }
 
+      function setSourceData(data) {
+        callRpcMethod('setSourceData', VK.extend({
+          link: location.href,
+        }, data));
+      }
+
+      VK.Util.addEvent('popstate', setSourceData.bind(this, {}), window);
+      VK.Util.addEvent('hashchange', setSourceData.bind(this, {}), window);
+
       function destroyChat() {
         stopTitleAnimation();
         CommunityMessages.destroy(objId);
@@ -2225,6 +2516,7 @@ if (!VK.Widgets) {
         expand: expandChat,
         minimize: minimizeChat,
         destroy: destroyChat,
+        setSourceData: setSourceData,
         changeButtonPosition: changeWidgetPosition,
         stopTitleAnimation: stopTitleAnimation,
       };
@@ -2278,12 +2570,20 @@ if (!VK.Widgets) {
       return widgetId;
     }
 
-    var ifr, base_domain, width, url, urlQueryString, encodedParam, rpc, iframe, i;
     options = options || {};
     defaults = defaults || {};
     funcs = funcs || {};
-    base_domain = options.base_domain || VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com';
-    width = (options.width == 'auto') ? obj.clientWidth || '100%' : parseInt(options.width, 10);
+
+    if (options.preview) {
+      params.preview = 1;
+      delete options['preview'];
+    }
+
+    var ifr, url, urlQueryString, encodedParam, rpc, iframe, i,
+      base_domain = options.base_domain || VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com',
+      width = options.width === 'auto' ? (obj.clientWidth || obj.offsetWidth || defaults.minWidth) | 0 : parseInt(options.width || 0, 10);
+    width = width ? (Math.max(defaults.minWidth || 200, Math.min(defaults.maxWidth || 10000, width)) + 'px') : '100%';
+    obj.style.width = width;
 
     if (options.height) {
       params.height = options.height;
@@ -2292,15 +2592,13 @@ if (!VK.Widgets) {
       obj.style.height = (defaults.startHeight || 200) + 'px';
     }
 
-    width = width ? (Math.max(defaults.minWidth || 200, Math.min(10000, width)) + 'px') : '100%';
+    if (width === '100%') params.startWidth = (obj.clientWidth || obj.offsetWidth) | 0;
+    if (!params.url) params.url = options.pageUrl || location.href.replace(/#.*$/, '');
 
-    if (!params.url) {
-      params.url = options.pageUrl || location.href.replace(/#.*$/, '');
-    }
     url = base_domain + '/' + widgetUrl;
     urlQueryString = '';
     if (!options.noDefaultParams) {
-      urlQueryString += '&app=' + (VK._apiId || '0') + '&width=' + width
+      urlQueryString += '&app=' + (VK._apiId || '0') + '&width=' + encodeURIComponent(width)
     }
     urlQueryString += '&_ver=' + VK.version
     if (VK._iframeAppWidget) {
@@ -2327,7 +2625,6 @@ if (!VK.Widgets) {
     urlQueryString += '&' + (+new Date()).toString(16);
     url += '?' + urlQueryString.substr(1);
 
-    obj.style.width = width;
     funcs.onStartLoading && funcs.onStartLoading();
     if (!options.no_loading) {
       VK.Widgets.loading(obj, true);
@@ -2373,7 +2670,7 @@ if (!VK.Widgets) {
     };
     funcs.updateVersion = function(ver) {
       if (ver > 1) {
-        VK.Api.attachScript('//web.archive.org/web/20170119105254/https://vk.com/js/api/openapi_update.js?'+parseInt(ver));
+        VK.Api.attachScript('//web.archive.org/web/20190828062809/https://vk.com/js/api/openapi_update.js?'+parseInt(ver));
       }
     };
     rpc = VK.Widgets.RPC[widgetId] = new fastXDM.Server(funcs, function(origin) {
@@ -2529,7 +2826,7 @@ if (!VK.Util) {
             src: src.replace(/&amp;/g, '&'),
             scrolling: 'no',
             allowTransparency: true,
-            style: {position: 'fixed', left: 0, top: 0, zIndex: 1002, background: VK._protocol + '//web.archive.org/web/20170119105254/https://vk.com/images/upload.gif center center no-repeat transparent', padding: '0', border: '0', width: '100%', height: '100%', overflow: 'hidden', visibility: 'hidden'}
+            style: {position: 'fixed', left: 0, top: 0, zIndex: 1002, background: VK._protocol + '//web.archive.org/web/20190828062809/https://vk.com/images/upload.gif center center no-repeat transparent', padding: '0', border: '0', width: '100%', height: '100%', overflow: 'hidden', visibility: 'hidden'}
           });
       return {
         show: function(scrollTop, height) {
@@ -2545,23 +2842,149 @@ if (!VK.Util) {
       }
     },
 
-    addEvent: function(type, func) {
-      if (window.document.addEventListener) {
-        window.document.addEventListener(type, func, false);
-      } else if (window.document.attachEvent) {
-        window.document.attachEvent('on'+type, func);
+    addEvent: function(type, func, target) {
+      target = target || window.document;
+      if (target.addEventListener) {
+        target.addEventListener(type, func, false);
+      } else if (target.attachEvent) {
+        target.attachEvent('on'+type, func);
       }
     },
 
-    removeEvent: function(type, func) {
-      if (window.document.removeEventListener) {
-        window.document.removeEventListener(type, func, false);
-      } else if (window.document.detachEvent) {
-        window.document.detachEvent('on'+type, func);
+    removeEvent: function(type, func, target) {
+      target = target || window.document;
+      if (target.removeEventListener) {
+        target.removeEventListener(type, func, false);
+      } else if (target.detachEvent) {
+        target.detachEvent('on'+type, func);
       }
     },
 
     ss: function(el, styles) {VK.extend(el.style, styles, true);}
+  };
+}
+
+if (!VK.Retargeting) {
+  VK.Retargeting = {
+    pixelCode: null,
+    Init: function (pixelCode) {
+      this.pixelCode = pixelCode;
+      return this;
+    },
+    Event: function (event) {
+      if (!this.pixelCode) {
+        return;
+      }
+      var pData = VK.Util.getPageData();
+      var metatagUrl = pData.url.substr(0, 500);
+
+      (window.Image ? (new Image()) : document.createElement('img')).src = 'https://web.archive.org/web/20190828062809/https://vk.com/rtrg?p=' + this.pixelCode +
+        (event ? ('&event=' + encodeURIComponent(event)) : '') +
+        (metatagUrl ? ('&metatag_url=' + encodeURIComponent(metatagUrl)) : '');
+    },
+    Hit: function () {
+      this.Event();
+    },
+    Add: function (audienceID) {
+      if (!this.pixelCode || !audienceID) {
+        return;
+      }
+
+      (window.Image ? (new Image()) : document.createElement('img')).src = 'https://web.archive.org/web/20190828062809/https://vk.com/rtrg?p=' + this.pixelCode + '&audience=' + encodeURIComponent(audienceID);
+    },
+    ProductEvent: function (priceListID, event, params, opts) {
+      if (!this.pixelCode || !event || !priceListID) {
+        return;
+      }
+
+      opts = opts || {};
+
+      var canShowErrors = true;
+      if (typeof opts.show_errors !== 'undefined') {
+        canShowErrors = opts.show_errors ? true : false;
+      }
+      var errorsIgnore = '0';
+      if (typeof opts.errors_ignore !== 'undefined') {
+        errorsIgnore = opts.errors_ignore ? '1' : '0';
+      }
+
+      var pData = VK.Util.getPageData();
+      var metatagUrl = pData.url.substr(0, 500);
+      var url = 'https://web.archive.org/web/20190828062809/https://vk.com/rtrg';
+      var productParams = params ? JSON.stringify(params) : '';
+      var requestParams = {
+        'p': this.pixelCode,
+        'products_event': event,
+        'price_list_id': priceListID,
+        'e': '1',
+        'i': errorsIgnore,
+        'metatag_url' : metatagUrl
+      };
+      if (productParams) {
+        requestParams.products_params = productParams;
+      }
+
+      var query = Object.keys(requestParams).map(function(key) {
+        var segment = encodeURIComponent(key) + '=' + encodeURIComponent(requestParams[key]);
+        return segment;
+      }).join('&');
+
+      var requestUrl = url + '?' + query;
+
+      VK.Api.makeRequest(requestUrl, this.onDone.bind(this, canShowErrors));
+    },
+    onDone: function(canShowErrors, response) {
+      if (!response || !canShowErrors) {
+        return;
+      }
+
+      var resp;
+      try {
+        resp = JSON.parse(response);
+      } catch (e) {
+        return;
+      }
+
+      if (!resp || !resp.errors) {
+        return;
+      }
+      this.showErrors(resp.errors);
+    },
+    showErrors: function(errors) {
+      if (!errors && !errors.length) {
+        return;
+      }
+
+      var errorBegin = 'VK Pixel Error (' + this.pixelCode + '): ';
+
+      if (typeof errors === 'string') {
+        console.error(errorBegin + errors);
+        return;
+      }
+
+      var errorsLength = errors.length;
+
+      if (!errorsLength) {
+        return;
+      }
+
+      for (var i = 0; i < errorsLength; i++) {
+        console.error(errorBegin + errors[i]);
+      }
+    }
+  };
+}
+
+if (!VK.Pixel) {
+  VK.Pixel = function (pixelCode) {
+    if (this.constructor != VK.Pixel) {
+      throw Error('VK.Pixel was called without \'new\' operator');
+    }
+
+    VK.extend(this, VK.Retargeting);
+    this.pixelCode = pixelCode;
+
+    return this;
   };
 }
 
@@ -2588,8 +3011,8 @@ try{stManager.done('api/openapi.js');}catch(e){}
 
 }
 /*
-     FILE ARCHIVED ON 10:52:54 Jan 19, 2017 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 13:04:51 Aug 30, 2020.
+     FILE ARCHIVED ON 06:28:09 Aug 28, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:17:10 Oct 01, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -2597,14 +3020,13 @@ try{stManager.done('api/openapi.js');}catch(e){}
 */
 /*
 playback timings (ms):
-  captures_list: 2338.977
-  PetaboxLoader3.datanode: 166.01 (7)
-  exclusion.robots: 0.155
-  RedisCDXSource: 1.419
+  CDXLines.iter: 119.303 (3)
+  PetaboxLoader3.resolve: 55.485 (2)
+  load_resource: 340.623 (2)
+  exclusion.robots.policy: 0.158
   esindex: 0.012
-  CDXLines.iter: 237.173 (5)
-  exclusion.robots.policy: 0.143
-  LoadShardBlock: 253.414 (5)
-  PetaboxLoader3.resolve: 198.262 (3)
-  load_resource: 229.995
+  PetaboxLoader3.datanode: 196.683 (8)
+  RedisCDXSource: 1.836
+  exclusion.robots: 0.174
+  LoadShardBlock: 132.338 (6)
 */

@@ -975,7 +975,6 @@ text-decoration: none;
 
 
 #tariffs.noline {
-    padding-bottom: 50px;
     text-align: center;
     border: 0;
 }
@@ -1090,23 +1089,25 @@ text-decoration: none;
     color: #0f345a;
     text-align: center;
     text-transform: uppercase;
+    height: auto;
+    line-height: initial;
 }
 #slider span {display:inline-block;vertical-align:middle;height:85px;width:333px;text-align:center;line-height:85px;font-size:0;}
 #wrap #slider li {padding:0;background:none;}
 #wrap #slider {padding:0;margin:0;}
 #wrap .anythingSlider {margin:0 auto 0;}
-#wrap .anythingSlider .back {position:absolute;left:-53px;top:-6px;background:url(./img-free/x11.png) no-repeat 0 0;width:53px;height:63px;cursor:pointer;}
+#wrap .anythingSlider .back {position:absolute;left:-53px;top:-6px;background:url(../img/x11.png) no-repeat 0 0;width:53px;height:63px;cursor:pointer;}
 #wrap .anythingSlider .back:hover {background-position:-72px 0;}
 #wrap .anythingSlider .back:active {background-position:-146px 0;}
-#wrap .anythingSlider .forward {position:absolute;right:-53px;top:-6px;background:url(./img-free/x11.png) no-repeat 0 100%;width:53px;height:63px;cursor:pointer;}
+#wrap .anythingSlider .forward {position:absolute;right:-53px;top:-6px;background:url(../img/x11.png) no-repeat 0 100%;width:53px;height:63px;cursor:pointer;}
 #wrap .anythingSlider .forward:hover {background-position:-74px 100%;}
 #wrap .anythingSlider .forward:active {background-position:-146px 100%;}
 
 #smi .pay {text-align:center;padding:57px 0 80px;}
 #smi .pay img {margin:0 15px;display:inline-block;vertical-align:top;}
 /*
-     FILE ARCHIVED ON 22:36:00 Jan 23, 2017 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 13:04:49 Aug 30, 2020.
+     FILE ARCHIVED ON 06:29:25 Aug 28, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:17:09 Oct 01, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1114,14 +1115,14 @@ text-decoration: none;
 */
 /*
 playback timings (ms):
-  CDXLines.iter: 20.819 (3)
-  captures_list: 3308.401
-  PetaboxLoader3.resolve: 3147.215 (3)
-  RedisCDXSource: 6.876
-  exclusion.robots: 0.23
-  exclusion.robots.policy: 0.214
-  LoadShardBlock: 3276.861 (3)
-  load_resource: 223.065
-  esindex: 0.015
-  PetaboxLoader3.datanode: 222.876 (5)
+  exclusion.robots: 0.208
+  PetaboxLoader3.datanode: 525.133 (5)
+  LoadShardBlock: 249.83 (3)
+  CDXLines.iter: 19.398 (3)
+  captures_list: 276.398
+  RedisCDXSource: 2.71
+  esindex: 0.013
+  exclusion.robots.policy: 0.194
+  PetaboxLoader3.resolve: 135.348 (3)
+  load_resource: 475.352 (2)
 */

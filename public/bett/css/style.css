@@ -1,6 +1,6 @@
 @font-face {
     font-family: ArialBlack;
-    src: url(./fonts/ARIBLK.TTF);
+    src: url(../fonts/ARIBLK.TTF);
 }
 
 body {
@@ -548,7 +548,7 @@ a.button2.poll-btn-form{
     font-size: 13px;
     text-align: left;
     cursor: pointer;
-    background: url('./img/radio-poll.png') no-repeat -3px 0;
+    background: url('../img/radio-poll.png') no-repeat -3px 0;
 }
 
 

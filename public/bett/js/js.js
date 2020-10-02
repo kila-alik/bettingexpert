@@ -43,7 +43,7 @@ var Controller_Lang= {
     set_domain: function(host, url)
     {
         var url = url === undefined ? '/' : url;
-        var cReplace = 'http://' +  host + url;
+        var cReplace = (host == 'betfaq.ru' ? 'https://' : 'http://') +  host + url;
         location.replace(cReplace);
     },
 
@@ -468,40 +468,60 @@ var Controller_Profile = {
     },
     login : function (form)
     {
-        $(form).find ('.res-text').html ('');
-        $(form).find ('.res-text').toggleClass ('loader');
-        var data = $(form).serialize ();
+        var name = '__pcnt';
+        var matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        if(!!matches && decodeURIComponent(matches[1])==3 && !$('#recaptcha').is(':visible')){
+            $('#recaptcha').show();
+        }
+        
+        var recaptcha = '';
+        if($('#recaptcha').is(':visible')){
+            var recaptcha_container = document.querySelector ('#recaptcha');
+            if (recaptcha_container)
+            {
+                recaptcha = Controller_Profile._recaptcha.getResponse ();
+                if (!recaptcha)
+                {
+                    $('#login_message').html ('Пожалуйста, поставьте галочку "Я не робот"');
+                    return false;
+                }
+            }
+        }
+
+        var data = {
+            'password'  : $(form).find ('[name="password"]').val (),
+            'email'     : $(form).find ('[name="email"]').val (),
+            'recaptcha' : recaptcha
+        };
         var url = $(form).attr ('action');
         $.post (url, data, function (response){
-            $('.res-text').html (response.message);
+            $('#login_message').html (response.message);
             if (response.status == 'ok')
             {
                 if (response.url)
                 {
-                    $.getScript (response.pixel).done (function (){
-                        window.location.href = response.url;
-                    }).fail (function (){
-                        window.location.href = response.url;
-                    });
-
+                    window.location.href = response.url;
+                    return;
                 }
-                $(form).find ('.sbm').hide ();
+                window.location.href = '/';
                 return false;
             }
+            Controller_Profile._recaptcha.reset ();
         },'json');
     },
+
+
     login_vk : function (pixel)
     {
-        $.getScript ('https://web.archive.org/web/20170123223604/http://betfaq.com/profile/session/' + pixel + '/');
+        //$.getScript ('https://web.archive.org/web/20190828062903/http://betfaq.com/profile/session/' + pixel + '/');
     },
     requestReset : function (form)
     {
-        $(form).find ('.res-text').html ('');
-        $(form).find ('.res-text').toggleClass ('loader');
         var data = $(form).serialize ();
         var url = $(form).attr ('action');
         $.post (url,data,function (response){
-            $(form).find ('.res-text-recovery').toggleClass ('loader');
             $('.res-text-recovery').html (response.message);
             if (response.status == 'ok')
             {
@@ -532,6 +552,68 @@ var Controller_Profile = {
         },'json');
     }
 };
+
+
+var User_Recovery = {
+
+    container_mesage_id : '#recovery_message',
+
+    index : function (form,callback)
+    {
+        callback    = callback || User_Recovery.callback;
+        var action  = $(form).attr ('action');
+        var data    = $(form).serialize ();
+        $.post (action,data,function (resp){
+            callback (resp,form);
+        },'json');
+    },
+
+    ask : function (form)
+    {
+        var callback = function (resp,form)
+        {
+            var messager = $(User_Recovery.container_mesage_id);
+
+            if (resp.status != 'ok')
+            {
+                $(messager).html (resp.message);
+                return ;
+            }
+            $(messager).html ('');
+            document.querySelectorAll('.popup-wrapper__content').forEach(function(item) {
+                item.style.display = 'none';
+            });
+            content = document.querySelector('.popup-wrapper__content.popup-wrapper__content_' + 'reg-thx');
+            content.style.display = 'block';
+//            $(content).find ('h2').html (resp.header);
+            $(content).find ('p').html (resp.message);
+        };
+
+        User_Recovery.index (form,callback);
+    },
+
+    callback: function (resp,form)
+    {
+        var messager = $(form).find ('.error-container');
+        $(messager).html (resp.message);
+
+        if (resp.status != 'ok')
+        {
+            return ;
+        }
+
+        $('.js-header-pwd-recover').html (resp.message);
+
+        $(form).find ('[type="submit"]').remove ();
+
+        if (resp.redirect)
+        {
+            window.location.href = resp.redirect;
+        }
+    }
+};
+
+
 
 
 var Controller_Subscribe = {
@@ -595,7 +677,7 @@ var Controller_Subscribe = {
             if (!data.model.error) {
                 Self.find('.message-subscribe').html(data.model.message);
             }else {
-                Self.find('.message-subscribe').html("Вы уже были подписаны! <a href='https://web.archive.org/web/20170123223604/http://betfaq.ru/secrets/'>Получить секреты успешного прогнозирования</a>")
+                Self.find('.message-subscribe').html("Вы уже были подписаны! <a href='https://web.archive.org/web/20190828062903/http://betfaq.ru/secrets/'>Получить секреты успешного прогнозирования</a>")
             }
             var cookieName = 'is-new-user';
             var times = 60 * 60 * 24 * 30 * 100;
@@ -614,7 +696,6 @@ var Controller_Subscribe = {
 
     }
 };
-
 
 
 var Controller_Storefront = {
@@ -656,6 +737,14 @@ var Controller_Storefront = {
                 return ;
             }
             $(form).find ('.sum').html (resp.price);
+            $(form).find ('.origin').html (resp.origin + ' руб.<div class="strike"></div>');
+            if (resp.price == resp.origin)
+            {
+                $(form).find ('.origin-container').addClass ('hidden');
+                return;
+            }
+            $(form).find ('.origin-container').removeClass ('hidden');
+
         },'json');
     }
 };
@@ -678,10 +767,22 @@ var Controller_Storefront_Epress = {
         {
             if (!resp)
             {
-                $(form).find ('.sum').html (Controller_Storefront_Epress._default);
                 return;
             }
             $(form).find ('.sum').html (resp.price);
+            $(form).find ('.origin').html (resp.origin + ' руб.<div class="strike"></div>');
+            if($('#promo-code').val() == 'hmoGi1'){
+                $('.js-promo-1000').show();
+            }
+            else if($('#promo-code').val() !== 'hmoGi1'){
+                $('.js-promo-1000').hide();
+            }
+            if (resp.price == resp.origin)
+            {
+                $(form).find ('.origin-container').addClass ('hidden');
+                return;
+            }
+            $(form).find ('.origin-container').removeClass ('hidden');
         },'json');
     }
 };
@@ -690,6 +791,7 @@ var Controller_Storefront_Epress = {
 
 var Controller_Vip = {
     order : function (form){
+        console.log(111)
         var data = $(form).serialize ();
         $.post ($(form).attr ('action'),data,function (resp){
             $(form).closest ('div').find ('.result').html (resp);
@@ -913,18 +1015,27 @@ var Controller_Partner  = {
 
         return false;
     },
-
+    _recaptcha : null,
     login : function (form)
     {
         this.form = form;
         var data = $(form).serialize ();
         var url = $(form).attr ('action');
+        if (!Controller_Partner._recaptcha.getResponse ())
+        {
+            Controller_Partner.message ('Пожалуйста, поставьте галочку "Я не робот"');
+            return;
+        }
+
+
         $.post (url, data, function (response){
-            Controller_Partner.message(response.message)
+            Controller_Partner.message(response.message);
             // если с лонигом все ок то делаем redirect
             if (response.message.url) {
                 $(location).attr('href',response.message.url);
+                return;
             }
+            Controller_Partner._recaptcha.reset ();
         },'json');
     },
 
@@ -939,7 +1050,7 @@ var Controller_Operator = {
     cookieName : 'user-operator-say',
     init : function()
     {
-        this.intervalId = setInterval('Controller_Operator.initTimeout()', 1000);
+        return false;
     },
     initTimeout : function()
     {
@@ -990,7 +1101,7 @@ var User_Service = {
 
     form : function (handler)
     {
-        if (handler)
+        if (handler && window.yaCounter25054244 !== undefined)
         {
             yaCounter25054244.reachGoal (handler ['onShow']);
         }
@@ -1016,7 +1127,7 @@ var User_Service = {
     },
     index : function (form)
     {
-        if ($(form).attr ('data-goal'))
+        if ($(form).attr ('data-goal') && window.yaCounter25054244 !== undefined)
         {
             yaCounter25054244.reachGoal ($(form).attr ('data-goal'));
         }
@@ -1038,6 +1149,7 @@ var User_Service = {
                 }
             }
             $(form).find ('.res-text').html (resp.message);
+            $(form).find ('.res-text-register').html (resp.message);
         },'json');
     },
     win_reg : function (form,resp)
@@ -1079,6 +1191,8 @@ var Password_Service = {
                 $('.passwd-block').hide();
                 $('.info-block').show();
                 $('.info-block ins').text ('******');
+                
+                alert('Ваш пароль успешно изменен');
             }
             $(form).find ('.message').html (resp.message);
             $(form).find('[for="new-pass"]').attr ('class',resp.password_class);
@@ -1116,6 +1230,130 @@ var Phone_Service = {
 };
 
 
+
+
+var Subscriber = {
+
+    container_mesage_id : '#reg_message',
+
+    reg : function (form,callback)
+    {
+        yaCounter25054244.reachGoal('regmatch');
+        callback    = callback ||Subscriber.callback;
+        var action  = '/user/registration/index/';
+        var data    = $(form).serialize ();
+        $.post (action,data,function (resp){
+            callback (resp,form);
+        },'json');
+    },
+
+    callback : function (resp,form)
+    {
+        var messager = $('#subscribe_message');
+        if (!resp.ok)
+        {
+            return $(messager).html (resp.message);
+        }
+        var email = $(form).find ('[name="email"]').val ();
+
+        $('.js-tip-subscribe-form').remove ();
+        $('.js-subscribed-result').css ({
+            display: 'block'
+        });
+        $('.js-subscribed-result .js-email-container').html (email);
+
+    }
+};
+
+var User_Resubscribe = {
+
+    container_mesage_id : '#resubscribe_message',
+
+    index : function (e,callback)
+    {
+        yaCounter25054244.reachGoal('resubscribe');
+        callback    = callback || User_Resubscribe.callback;
+        var action  = $(e).attr ('data-action');
+
+        $.post (action,{},function (resp){
+            callback (resp);
+        },'json');
+    },
+
+    callback: function (resp)
+    {
+        $('.js-resubscribed-thx').css ({
+            'display': 'block'
+        });
+        $('.js-resubscribe-container').remove ();
+    }
+};
+
+var User_Registration = {
+
+    container_mesage_id : '#reg_message',
+
+    index : function (form,callback)
+    {
+        callback    = callback || User_Registration.callback;
+        var action  = $(form).attr ('action');
+        var data    = $(form).serialize ();
+        $.post (action,data,function (resp){
+            callback (resp,form);
+        },'json');
+    },
+
+    callback: function (resp,form)
+    {   
+        var messager = $(User_Registration.container_mesage_id);
+        if (!resp.ok)
+        {
+            return $(messager).html (resp.message);
+        }
+        $(messager).html ('');
+        document.querySelectorAll('.popup-wrapper__content').forEach(function(item) {
+            item.style.display = 'none';
+        });
+        content = document.querySelector('.popup-wrapper__content.popup-wrapper__content_' + 'reg-thx');
+        content.style.display = 'block';
+        $(content).find ('h2').html (resp.header);
+        $(content).find ('p').html (resp.message);
+        
+//        window.location.href = "/land_reg/";
+    }
+};
+
+var User_Registration_popup_reg = {
+
+    container_mesage_id : '#reg_message_popup',
+
+    index : function (form,callback)
+    {
+        callback    = callback || User_Registration_popup_reg.callback;
+        var action  = $(form).attr ('action');
+        var data    = $(form).serialize ();
+        // console.log(data)
+        $.post (action,data,function (resp){
+            callback (resp,form);
+        },'json');
+    },
+
+    callback: function (resp,form)
+    {
+        var messager = $(User_Registration_popup_reg.container_mesage_id);
+        if (!resp.ok)
+        {
+            return $(messager).html (resp.message);
+        }
+        else{
+            $(messager).html('');
+            popupbaseShow('popup_success-reg');
+        }
+    }
+};
+
+
+
 $(document).ready(function() {
     Controller_Operator.init();
 });
@@ -1125,8 +1363,8 @@ $(document).ready(function() {
 
 }
 /*
-     FILE ARCHIVED ON 22:36:04 Jan 23, 2017 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 13:04:48 Aug 30, 2020.
+     FILE ARCHIVED ON 06:29:03 Aug 28, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:17:10 Oct 01, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1134,14 +1372,14 @@ $(document).ready(function() {
 */
 /*
 playback timings (ms):
-  PetaboxLoader3.datanode: 142.338 (5)
-  esindex: 0.013
-  PetaboxLoader3.resolve: 65.937 (2)
-  CDXLines.iter: 17.704 (3)
-  captures_list: 228.916
-  exclusion.robots.policy: 0.197
-  LoadShardBlock: 206.989 (3)
-  RedisCDXSource: 0.826
-  exclusion.robots: 0.212
-  load_resource: 178.643
+  load_resource: 415.367 (2)
+  exclusion.robots: 0.192
+  exclusion.robots.policy: 0.178
+  esindex: 0.015
+  LoadShardBlock: 229.133 (3)
+  RedisCDXSource: 19.896
+  PetaboxLoader3.datanode: 124.312 (5)
+  captures_list: 278.037
+  CDXLines.iter: 23.074 (3)
+  PetaboxLoader3.resolve: 469.439 (5)
 */
