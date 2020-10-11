@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/mem5YaGs126MiZpBA-UN_r8OVuhs.ttf) format('truetype');
+}
+
+/*
+     FILE ARCHIVED ON 06:26:55 Aug 28, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:17:10 Oct 01, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots: 0.19
+  load_resource: 853.633 (2)
+  captures_list: 351.362
+  esindex: 0.014
+  LoadShardBlock: 297.506 (3)
+  exclusion.robots.policy: 0.177
+  PetaboxLoader3.resolve: 498.964 (2)
+  RedisCDXSource: 12.862
+  CDXLines.iter: 18.556 (3)
+  PetaboxLoader3.datanode: 454.263 (5)
+*/
