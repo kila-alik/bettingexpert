@@ -3,10 +3,9 @@
 namespace Bett\Http\Controllers\Auth;
 
 use Bett\Http\Controllers\Controller;
-use Bett\Http\Controllers\SiteController;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
-class ResetPasswordController extends SiteController
+class ResetPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +25,7 @@ class ResetPasswordController extends SiteController
      *
      * @var string
      */
-    protected $redirectTo = '/profile';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.

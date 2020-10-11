@@ -152,3 +152,4 @@
 <div class="section-indent section-inside_h _h_sm">
     <div style="border-top: 6px solid #E7EFF1;margin: 0 0 25px 0"></div>
 </div>
+<?php /**PATH W:\domains\bettingexpert.loc\resources\views/bett/baner.blade.php ENDPATH**/ ?>

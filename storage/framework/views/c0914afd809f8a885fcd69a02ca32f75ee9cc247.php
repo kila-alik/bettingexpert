@@ -39,3 +39,4 @@
     </ul>
 </nav>
 <div id="mainmenu-holder" style="height: 56px; margin-top: -56px;"></div>
+<?php /**PATH W:\domains\bettingexpert.loc\resources\views/bett/navigation.blade.php ENDPATH**/ ?>

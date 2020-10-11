@@ -838,3 +838,4 @@ playback timings (ms):
   CDXLines.iter: 25.013 (3)
   PetaboxLoader3.resolve: 99.862 (2)
 --></body></html>
+<?php /**PATH W:\domains\bettingexpert.loc\resources\views/bett/layouts/today.blade.php ENDPATH**/ ?>

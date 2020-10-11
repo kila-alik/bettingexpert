@@ -323,3 +323,4 @@
         </div>
     </div>
 </footer>
+<?php /**PATH W:\domains\bettingexpert.loc\resources\views/bett/footer.blade.php ENDPATH**/ ?>

@@ -2,8 +2,6 @@
 
 namespace Bett\Console;
 
-use Bett\Jobs\SendReminderEmail;
-use Carbon\Carbon;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -26,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        SendReminderEmail::dispatch()->delay(now()->addSeconds(5));
-        $schedule->job(new SendReminderEmail(), 'send-reminder-email')->everyMinute();
+        // $schedule->command('inspire')
+        //          ->hourly();
     }
 
     /**

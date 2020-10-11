@@ -3,8 +3,8 @@
 namespace Bett;
 
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use MongoDB\Driver\Query;
 
 class User extends Authenticatable
 {
@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar', 'is_forecaster', 'information', 'sort_id'
+        'name', 'email', 'password',
     ];
 
     /**
@@ -28,30 +28,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function forecastsForecaster() {
-        return $this->hasMany('Bett\Forecast','forecaster_id');
-    }
-
-    public function scopeIsForecaster($query, $is_forecaster = 0)
-    {
-        return $query->where('is_forecaster', $is_forecaster);
-    }
-
-    public function sort() {
-        return $this->hasOne('Bett\Sort', 'id', 'sort_id');
-    }
-
-    public function forecasts()
-    {
-        return $this->belongsToMany('Bett\Forecast');
-    }
-
-    public function reviews()
-    {
-        return $this->hasMany('Bett\Review', 'user_id');
-    }
-
-    public function payments(){
-        return $this->hasMany('Bett\Payment');
-    }
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }

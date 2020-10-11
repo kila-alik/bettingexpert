@@ -3,6 +3,8 @@
 namespace Bett\Providers;
 
 use Illuminate\Support\Facades\Event;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider
@@ -13,13 +15,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Bett\Events\Event' => [
-            'Bett\Listeners\EventListener',
-        ],
-
-        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            // add your listeners (aka providers) here
-            'SocialiteProviders\VKontakte\VKontakteExtendSocialite@handle',
+        Registered::class => [
+            SendEmailVerificationNotification::class,
         ],
     ];
 

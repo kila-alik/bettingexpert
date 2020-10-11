@@ -2,10 +2,8 @@
 
 namespace Bett\Providers;
 
-use Bett\Subscription;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use Gate;
-use Illuminate\Support\Facades\Auth;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -15,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Bett\Model' => 'Bett\Policies\ModelPolicy',
+        // 'Bett\Model' => 'Bett\Policies\ModelPolicy',
     ];
 
     /**
@@ -26,30 +24,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        $this->registerForecastPolices();
-    }
 
-
-    public function registerForecastPolices()
-    {
-
-        Gate::define('forecast-show', function($user, $forecast){
-            if(Auth::check()){
-                $user_check = $user->forecasts()->where('forecast_id', $forecast->id)->count();
-            }
-
-            if($forecast->status===0 && $forecast->paid===0 && $user_check === 1) {
-               return true;
-            }elseif($forecast->status != 0 || $forecast->paid === 1 || Subscription::subscriptionCheck()) {
-                return true;
-            }
-
-            return false;
-        });
-
-        Gate::define('subscription-check', function(){
-            $subscription = new Subscription;
-            return $subscription->subscriptionCheck();
-        });
+        //
     }
 }

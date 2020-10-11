@@ -2,10 +2,10 @@
 
 namespace Bett\Http\Controllers\Auth;
 
-use Bett\Http\Controllers\SiteController;
+use Bett\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
-class ForgotPasswordController extends SiteController
+class ForgotPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -28,16 +28,5 @@ class ForgotPasswordController extends SiteController
     public function __construct()
     {
         $this->middleware('guest');
-
-        $this->template = 'auth.auth';
-    }
-
-    protected function showLinkRequestForm()
-    {
-        $this->vars['title'] = 'Сброс пароля';
-
-        $this->vars['content'] = view('auth.passwords.email')->render();
-
-        return $this->renderOutput();
     }
 }

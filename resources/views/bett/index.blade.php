@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-  <h1> Страница находится в разработке </h1>
+  Коэффициент игры {!! $content !!}
 @endsection
 
 @section('footer')

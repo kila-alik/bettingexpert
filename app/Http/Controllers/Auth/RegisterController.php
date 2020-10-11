@@ -2,12 +2,13 @@
 
 namespace Bett\Http\Controllers\Auth;
 
-use Bett\Http\Controllers\SiteController;
 use Bett\User;
+use Bett\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class RegisterController extends SiteController
+class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ class RegisterController extends SiteController
      *
      * @var string
      */
-    protected $redirectTo = '/profile';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -37,20 +38,7 @@ class RegisterController extends SiteController
     public function __construct()
     {
         $this->middleware('guest');
-
-        $this->template = 'auth.auth';
     }
-
-
-    protected function showRegistrationForm()
-    {
-        $this->vars['title'] = 'Регистрация';
-
-        $this->vars['content'] = view('auth.register')->render();
-
-        return $this->renderOutput();
-    }
-
 
     /**
      * Get a validator for an incoming registration request.
@@ -61,9 +49,9 @@ class RegisterController extends SiteController
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:50',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|max:60|confirmed',
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -78,7 +66,7 @@ class RegisterController extends SiteController
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => Hash::make($data['password']),
         ]);
     }
 }
