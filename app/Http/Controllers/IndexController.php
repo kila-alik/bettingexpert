@@ -17,9 +17,9 @@ class IndexController extends SiteController
   public function __construct() {
     // чтоб сработали родительский конструктор в него надо
     // передать НОВЫЙ(new) объект типа ForecastRepository с полным путем
-    // и соответственно для него надо НОВЫЙ(new) объект модели Forecast с полым путем
+    // и соответственно для него надо НОВЫЙ(new) объект модели ForecastModel с полым путем
 
-      parent::__construct(new \Bett\Repositories\ForecastRepository(new \Bett\Forecast));
+      parent::__construct(new \Bett\Repositories\ForecastRepository(new \Bett\ForecastModel));
 
       $this->bar = 'right';
       $this->template = env('THEME').'.index';

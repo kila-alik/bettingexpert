@@ -39,12 +39,12 @@ class SiteController extends Controller
     // функция getForecast, которую мы опишем вне функции renderOutput()
     $forecast = $this->getForecast();
     // dd($forecast[1]->coeff);
-    $www = $forecast[1]->coeff;
+    // $www = $forecast[1]->coeff;
     // exit;
 
     // $content = view(env('THEME').'.content')->render();
-    // $this->vars = array_add($this->vars, 'content', $forecast);
-    $this->vars = array_add($this->vars, 'content', $www);
+    $this->vars = array_add($this->vars, 'content', $forecast);
+    // $this->vars = array_add($this->vars, 'content', $www);
     // так например выводим блок навигации в index.blade.php
     // без include , зато добавляем переменные
     // и выводим этот блок сам как переменную

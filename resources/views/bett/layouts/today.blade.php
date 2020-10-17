@@ -11,9 +11,9 @@
     <script type="text/javascript" async="" src="{{ env('THEME') }}/js/watch.js"></script>
     <script async="" src="{{ env('THEME') }}/js/fbevents.js"></script>
     <script src="{{ env('THEME') }}/js/analytics.js" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app31.us.archive.org';v.server_ms=386;archive_analytics.send_pageview({});});</script>
-<script type="text/javascript" src="{{ env('THEME') }}/js/playback.bundle.js" charset="utf-8"></script>
-<script type="text/javascript" src="{{ env('THEME') }}/js/wombat.js" charset="utf-8"></script>
+    <script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app31.us.archive.org';v.server_ms=386;archive_analytics.send_pageview({});});</script>
+    <script type="text/javascript" src="{{ env('THEME') }}/js/playback.bundle.js" charset="utf-8"></script>
+    <script type="text/javascript" src="{{ env('THEME') }}/js/wombat.js" charset="utf-8"></script>
 <!-- <script type="text/javascript">
   __wm.init("https://web.archive.org/web");
   __wm.wombat("https://betfaq.ru/","20190828062649","https://web.archive.org/","web","/_static/",
@@ -810,7 +810,7 @@ fbq('track', 'PageView');
              _gscq.push(['targeting','is_customer', '0']);
              _gscq.push(['targeting','unsubscribed', '0']);
              _gscq.push(['targeting','authed', '0']);
-    </script>        <img src="index/rp_counter.php" style="display:none" alt="#">
+    </script>        <img src="{{ env('THEME') }}/index/rp_counter.php" style="display:none" alt="#">
 
 
         <script src="{{ env('THEME') }}/js/focus-visible.min.js"></script>
