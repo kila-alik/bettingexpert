@@ -5,7 +5,7 @@ namespace Bett\Http\Controllers;
 // namespace Bett\Repository;
 
 use Illuminate\Http\Request;
-use Bett\Repositories\ForecastRepository;
+use Bett\Repositories\ForecastsRepository;
 
 // use Bett\Http\Controllers;
 // use Bett\Repository\ForecastRepository;
@@ -19,7 +19,7 @@ class IndexController extends SiteController
     // передать НОВЫЙ(new) объект типа ForecastRepository с полным путем
     // и соответственно для него надо НОВЫЙ(new) объект модели ForecastModel с полым путем
 
-      parent::__construct(new \Bett\Repositories\ForecastRepository(new \Bett\ForecastModel));
+      parent::__construct(new \Bett\Repositories\ForecastsRepository(new \Bett\ForecastModel));
 
       $this->bar = 'right';
       $this->template = env('THEME').'.index';
