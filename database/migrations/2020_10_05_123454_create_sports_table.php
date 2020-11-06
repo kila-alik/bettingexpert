@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCountryTable extends Migration
+class CreateSportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateCountryTable extends Migration
      */
     public function up()
     {
-        Schema::create('country', function (Blueprint $table) {
-            $table->bigIncrements('id')->unsigned()->comment('на него указывать внешний ключ country_id из таб. championship');
-            $table->string('name')->comment('Имя страны');
+        Schema::create('sports', function (Blueprint $table) {
+            $table->bigIncrements('id')->unsigned()->comment('на него указывает внешний ключ sport_id из таб. championship и из таб. command');
+            $table->string('name')->comment('Имя спорта');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateCountryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('country');
+        Schema::dropIfExists('sports');
     }
 }

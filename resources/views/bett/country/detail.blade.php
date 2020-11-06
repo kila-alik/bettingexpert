@@ -1,6 +1,5 @@
 @extends(env('THEME').'.admin.admin')
 
-
 @section('content')
 
 <b>Страна: </b>

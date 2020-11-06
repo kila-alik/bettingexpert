@@ -42,7 +42,7 @@
         <link rel="icon" type="image/png" href="{{ env('THEME') }}/img/favicon_48x48.png" sizes="48x48">
         <link rel="icon" type="image/svg+xml" href="{{ env('THEME') }}/img/favicon_48x48.svg" sizes="48x48">
         <link rel="icon" type="image/png" href="{{ env('THEME') }}/img/favicon_96x96.png" sizes="96x96">
-        <link rel="icon" type="image/svg+xml" href="img/favicon_96x96.svg" sizes="96x96">
+        <link rel="icon" type="image/svg+xml" href="{{ env('THEME') }}/img/favicon_96x96.svg" sizes="96x96">
         <link rel="icon" type="image/png" href="{{ env('THEME') }}/img/favicon_144x144.png" sizes="144x144">
         <link rel="icon" type="image/svg+xml" href="{{ env('THEME') }}/img/favicon_144x144.svg" sizes="144x144">
         <link rel="icon" type="image/png" href="{{ env('THEME') }}/img/favicon_192x192.png" sizes="192x192">

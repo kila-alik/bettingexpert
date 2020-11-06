@@ -3,6 +3,7 @@
 namespace Bett\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use DB;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,7 +23,9 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        //
-    }
+                  {
+                      DB::listen(function ($query){
+                            // dump($query->sql);
+                      });
+                  }
 }

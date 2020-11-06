@@ -1,12 +1,11 @@
 <?php
 
 namespace Bett\Http\Controllers;
-// namespace Bett\Repository\ForecastRepository;
+// namespace Bett\Repository\ForecastsRepository;
 
 use Illuminate\Http\Request;
-
-use Bett\Repositories\ForecastRepository;
-use Bett\Http\Controllers;
+use Bett\Repositories\ForecastsRepository;
+// use Bett\Http\Controllers;
 
 class SiteController extends Controller
 {
@@ -22,12 +21,12 @@ class SiteController extends Controller
 
 
   // методом внедрения зависимости в конструктор передаем
-  // в переменную $forecast передаем объект репозитория ForecastRepository
-  public function __construct(ForecastRepository $f_rep) {
+  // в переменную $forecast передаем объект репозитория ForecastsRepository
+  public function __construct(ForecastsRepository $f_rep) {
     // в переменную f_rep записываем объект типа
-    // репозиторя ForecastRepository через переменную конструктора $f_rep
+    // репозиторя ForecastsRepository через переменную конструктора $f_rep
     // обратить внимание на конструктор в дочернем IndexController
-    // и добавить в use Bett\Repository\ForecastRepository
+    // и добавить в use Bett\Repository\ForecastsRepository
     $this->f_rep = $f_rep;
     // переменная f_rep будет использоваться ниже в применении метода get()
 
@@ -64,7 +63,7 @@ class SiteController extends Controller
 
   protected function getForecast() {
     // переменная этой функции $forecast и в нее попадет
-    // выборка которую должен релизовать репозторий ForecastRepository
+    // выборка которую должен релизовать репозторий ForecastsRepository
     // и у него потом вызываем метод get() который опишем позже
     $forecast = $this->f_rep->get();
 

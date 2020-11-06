@@ -4,7 +4,6 @@
 <form method="POST" enctype="multipart/form-data">
    {{ csrf_field() }}
 
-
    <br />
    <!-- <b>Вид спорта:</b>
    <p><select size="1" name="sports">
@@ -14,9 +13,9 @@
      <option value="Волейбол">Волейбол</option>
      <option value="Теннис">Теннис</option>
    </select></p> -->
-   <b>Название Страны:</b>
+   <b>Название Вида Спорта:</b>
    <br />
-   <input type="text" name="name" value="{{$country->name}}">
+   <input type="text" name="name" value="{{$sport->name}}">
    <br />
    <br />
    <input type="submit" value={{ Request::is('*/new') ? 'Добавить' : 'Изменить' }} />
@@ -25,7 +24,7 @@
 <br />
 <div class="">
     <!-- <a href="/control-panel/country"><<< Вернуться к списку статей !!!</a> -->
-    <a href={{route('CountryList')}}><<< Вернуться к списку Стран !!!</a>
+    <a href={{route('SportList')}}><<< Вернуться к списку Видов Спорта!!!</a>
 </div>
 
 @endsection

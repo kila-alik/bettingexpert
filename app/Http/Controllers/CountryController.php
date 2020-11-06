@@ -7,6 +7,7 @@ use Bett\CountryModel;
 // use Illuminate\Routing\Route;
 // use Illuminate\Support\Facades\Route;
 // use Illuminate\Routing\URI;
+use Config;
 use Route;
 
 class CountryController extends Controller
@@ -38,12 +39,14 @@ class CountryController extends Controller
 
       if(request()->isMethod('post')) {
            $country->name = request()->input('name');
-           // $country->autor = request()->input('autor');
+           // $country->sports = request()->input('sports');
            // $country->text = request()->input('text');
            $country->save();
            // return redirect('/country/'.$country->id);
            return redirect(route('CountryDetail', ['id' => $country->id]));
       }
+// Это дл создания выпадающего списка видов спорта
+      // $sports = Config::get('settings.sports');
 
       return view(env('THEME').'.country.edit', compact('country'));
   }

@@ -7,7 +7,7 @@ namespace Bett\Http\Controllers;
 use Illuminate\Http\Request;
 use Bett\Repositories\ForecastRepository;
 
-use Bett\Http\Controllers;
+// use Bett\Http\Controllers;
 // use Bett\Repository\ForecastRepository;
 // use Bett\Forecast;
 

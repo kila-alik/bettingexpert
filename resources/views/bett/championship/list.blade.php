@@ -2,20 +2,20 @@
 @section('content')
 
 <div>
-   <h2>Список стран</h2>
-   <p>Заполните и просмотрите список стран для указания в них чемпионптов и игр</p>
+   <h2>Список Чемпионатов</h2>
+   <p>Заполните и просмотрите список Чемпионатов для указания в них Игр</p>
     <!-- <p><a class="btn btn-secondary" href="/control-panel/country/edit/new" role="button">Добавить страну</a></p> -->
-    <p><a class="btn btn-secondary" href={{route('CountryEdit', ['id' => 'new'])}} role="button">Добавить страну</a></p>
-   @foreach($countrys as $country)
+    <p><a class="btn btn-secondary" href={{route('ChampionshipEdit', ['id' => 'new'])}} role="button">Добавить Чемпионат</a></p>
+   @foreach($championships as $championship)
 <ul>
     <li>
-        Страна {{$country['id']}} -- {{isset($country['created_at']) ? "в базе с ".$country['created_at']." -- " : ""}}
-        <!-- <a href="/control-panel/country/{{$country->id}}">{{$country['name']}}</a> -/- -->
-        <a href={{route('CountryDetail', ['id' => $country->id])}}>{{$country['name']}}</a> -/-
-        <!-- <a href="/control-panel/country/edit/{{$country->id}}"><i><b>Изменить СТРАНУ</b></i></a> -->
-        <a href={{route('CountryEdit', ['id' => $country->id])}}><i><b>Изменить СТРАНУ</b></i></a>
-            <!-- <form action="/control-panel/country/del/{{$country->id}}" method="POST"> -->
-            <form action={{route('CountryDel', ['id' => $country->id])}} method="POST">
+        № {{$championship['id']}} -/-
+        <a href={{route('ChampionshipDetail', ['id' => $championship->id])}}>{{$championship['name']}}</a> -/-
+        Вид спорта <a href={{route('SportDetail', ['id' => $championship->sport->id])}}>{{$championship->sport->name}}</a> -/-
+        В стране <a href={{route('CountryDetail', ['id' => $championship->country->id])}}>{{$championship->country->name}}</a> -/-
+        <a href={{route('ChampionshipEdit', ['id' => $championship->id])}}><i><b>Изменить Чемпионат</b></i></a> -/-
+        {{isset($championship['created_at']) ? "в базе с ".$championship['created_at'] : ""}}
+            <form action={{route('ChampionshipDel', ['id' => $championship->id])}} method="POST">
                     {{ csrf_field() }}
                     <input type="submit" value="удалить" />
             </form>

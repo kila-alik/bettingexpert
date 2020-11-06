@@ -169,6 +169,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Collective\Html\HtmlServiceProvider::class,
         Bett\Providers\AppServiceProvider::class,
         Bett\Providers\AuthServiceProvider::class,
         // Bett\Providers\BroadcastServiceProvider::class,
@@ -225,6 +226,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 

@@ -10,6 +10,11 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
 
+    <!-- <link rel="icon" href="{{ env('THEME') }}/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ env('THEME') }}/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ env('THEME') }}/img/favicon.png" type="image/png">
+    <link rel="icon" href="{{ env('THEME') }}/img/favicon.svg" type="image/svg+xml"> -->
+
     <!-- Scripts -->
     <!-- "Это подключение Джава скрипт , чтоб выпадало меню там где область регистрации" -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -57,23 +62,25 @@
     <ul class="navbar-nav mr-auto">
       <!-- <li class="nav-item active"> -->
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('CountryList') }}">
-          <h3>Страны</h3>
+        <a class="nav-link" href="{{ route('SportList') }}">
+          <h4>Вид спорта</h4>
           <!-- <span class="sr-only">(current)</span> -->
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><h3>About</h3></a>
+        <a class="nav-link" href="{{ route('CountryList') }}"><h4>Страны</h4>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><h3>Contact</h3></a>
+        <a class="nav-link" href="{{ route('ChampionshipList') }}"><h4>Чемпионаты</h4></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><h3>News</h3></a>
+        <a class="nav-link" href="{{ route('CommandList') }}"><h4>Команды</h4></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><h3>Articles</h3></a>
+        <a class="nav-link" href="{{ route('ForecastList') }}"><h4>Прогнозы</h4></a>
       </li>
+      <!-- <s -->
       <li class="nav-item">
         <a class="nav-link" href="#">Admin</a>
       </li>
@@ -131,9 +138,8 @@
 </nav>
 
 <div class="clear"></div>
-<br>
-<br>
-<br>
-<br>
-
+<br />
+<br />
+<br />
+<br />
 @yield('content')

@@ -4,7 +4,7 @@ namespace Bett\Repositories;
 
 use Bett\ForecastModel;
 
-class ForecastRepository extends Repository {
+class ForecastsRepository extends Repository {
 
 // через внедрение зависимости
 // берем объект модели Forecast
