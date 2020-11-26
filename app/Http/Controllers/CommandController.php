@@ -7,7 +7,7 @@ use Bett\CommandModel;
 use Bett\SportModel;
 use Bett\CountryModel;
 
-class CommandController extends Controller
+class CommandController extends SiteController
 {
   public function list() {
 
@@ -53,18 +53,10 @@ class CommandController extends Controller
       return view(env('THEME').'.command.edit', compact('command', 'sports', 'countrys'));
   }
 
-  public function del($id) {
-        CommandModel::find($id)->delete();
-        // return redirect('/country');
-        return redirect(route('CommandList'));
-  }
-
-  protected function mass_list($models) {
-        $mass = [];
-        foreach ($models as $model) {
-          $mass[$model->id] = $model->name;
-        }
-        return $mass;
-    }
+  // public function del($id) {
+  //       CommandModel::find($id)->delete();
+  //       // return redirect('/country');
+  //       return redirect(route('CommandList'));
+  // }
 
 }

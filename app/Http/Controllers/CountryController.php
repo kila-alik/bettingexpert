@@ -51,9 +51,9 @@ class CountryController extends Controller
       return view(env('THEME').'.country.edit', compact('country'));
   }
 
-  public function del($id) {
-        CountryModel::find($id)->delete();
-        // return redirect('/country');
-        return redirect(route('CountryList'));
-}
+//   public function del($id) {
+//         CountryModel::find($id)->delete();
+//         // return redirect('/country');
+//         return redirect(route('CountryList'));
+// }
 }

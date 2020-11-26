@@ -48,9 +48,9 @@ class SportController extends Controller
       return view(env('THEME').'.sport.edit', compact('sport'));
   }
 
-  public function del($id) {
-        SportModel::find($id)->delete();
-        // return redirect('/sport');
-        return redirect(route('SportList'));
-}
+//   public function del($id) {
+//         SportModel::find($id)->delete();
+//         // return redirect('/sport');
+//         return redirect(route('SportList'));
+// }
 }

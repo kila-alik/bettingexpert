@@ -19,7 +19,7 @@ class CreateCommandTable extends Migration
             $table->unsignedBigInteger('country_id')->nullable()->comment('внешний ключ указывает на поле id в таб. country');
 
             $table->string('name')->comment('Название команды');
-            $table->string('description')->comment('Описание команды');
+            $table->string('description')->nullable()->comment('Описание команды');
 
 
             // описываем внешную связь поля sports_id с таблицей sports

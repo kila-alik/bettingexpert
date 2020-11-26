@@ -1,10 +1,14 @@
+@php
+//dd(auth()->user());
+@endphp
+
 <header class="header">
   <span class="header__logo">Betfaq - Прогнозы на спорт</span>
 
   <div class="header__auth">
       <div class="header__row">
-          <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/#header-popup" data-toggler="login" class="header__button header__button_login">Вход</a>
-          <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/#header-popup" data-toggler="reg" class="header__button header__button_reg">Регистрация</a>
+          <a href="#header-popup" data-toggler="login" class="header__button header__button_login">Вход</a>
+          <a href="#header-popup" data-toggler="reg" class="header__button header__button_reg">Регистрация</a>
           <!--<a href="#header-popup" data-toggler="reg1000" style="width: 300px;" class="header__button header__button_reg">Зарегистрируйся и получи 1000 руб.</a>-->
       </div>
       <div class="header__row">
@@ -20,13 +24,13 @@
     <div class="popup-wrapper__popup-container">
 
         <div class="popup-wrapper__popup popup-wrapper__popup_header">
-            <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/#" class="popup-wrapper__close"></a>
+            <a href="#" class="popup-wrapper__close"></a>
             <div class="popup-wrapper__popup-inner">
 
                 <div class="popup-wrapper__content popup-wrapper__content_remail">
                     <h2 class="popup-wrapper__title">Подтверждение регистрации</h2>
                     <img src="{{ env('THEME') }}/img/icon-mail.png" alt="">
-                    <form action="https://web.archive.org/web/20190828062649/https://betfaq.ru/user/remail/" class="popup-wrapper__form" method="POST">
+                    <form action="/user/remail/" class="popup-wrapper__form" method="POST">
                         <p class="popup-wrapper__thx-text">Вам необходимо подтвердить ваш email адрес, перейдя по ссылке из письма,
                             которое мы отправляли на вашу почту при регистрации!</p>
                         <button type="submit" class="popup-wrapper__button">Отправить еще раз</button>
@@ -47,14 +51,14 @@
 
                 <div class="popup-wrapper__content popup-wrapper__content_reg">
                     <h2 class="popup-wrapper__title">Регистрация в 1 клик</h2>
-                    <form action="https://web.archive.org/web/20190828062649/https://betfaq.ru/user/registration/index/" onsubmit="User_Registration.index (this);return false;" class="popup-wrapper__form" method="POST">
+                    <form action="/user/registration/index/" onsubmit="User_Registration.index (this);return false;" class="popup-wrapper__form" method="POST">
                         <input type="email" name="email" placeholder="Введите ваш email" required="required" class="popup-wrapper__input">
                         <input type="checkbox" name="agreed" id="agreed">
                         <label for="agreed">
                             Я принимаю
-                                <a target="_blank" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/oferta/">условия Оферты</a>
+                                <a target="_blank" href="/oferta/">условия Оферты</a>
                              и
-                                <a target="_blank" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/privacy/">Политики конфиденциальности</a>
+                                <a target="_blank" href="/privacy/">Политики конфиденциальности</a>
                         </label>
                         <button type="submit" class="popup-wrapper__button">Зарегистрироваться</button>
                         <div id="reg_message"></div>
@@ -64,13 +68,13 @@
 
                 <div class="popup-wrapper__content popup-wrapper__content_login">
                     <h2 class="popup-wrapper__title">Войти</h2>
-                    <form action="https://web.archive.org/web/20190828062649/https://betfaq.ru/profile/login/" onsubmit="Controller_Profile.login (this);return false" class="popup-wrapper__form" method="post">
+                    <form action="/login/" onsubmit="Controller_Profile.login (this);return false" class="popup-wrapper__form" method="post">
                         <input type="email" name="email" placeholder="Введите ваш email" required="required" class="popup-wrapper__input">
                         <input type="password" name="password" placeholder="Введите ваш пароль" required="required" class="popup-wrapper__input">
                         <div id="login_message"></div>
-                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/#" data-toggler="forget" class="popup-wrapper__forget popup-wrapper__button_switcher">Забыли пароль</a>
+                        <a href="#" data-toggler="forget" class="popup-wrapper__forget popup-wrapper__button_switcher">Забыли пароль</a>
                         <br>
-                        <div style="width: 304px; margin: 0px auto; display: none;" id="recaptcha">
+                        <!-- <div style="width: 304px; margin: 0px auto; display: none;" id="recaptcha">
                           <div>
                             <iframe src="index/fallback.html" frameborder="0" scrolling="no" style="width: 302px; height: 422px;">
                             </iframe>
@@ -79,7 +83,7 @@
                               </textarea>
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                         <button type="submit" class="popup-wrapper__button">Войти</button>
                     </form>
                     <!-- <a href="#" data-toggler="reg" class="popup-wrapper__button popup-wrapper__button_switcher">Зарегистрироваться</a> -->
@@ -87,7 +91,7 @@
 
                 <div class="popup-wrapper__content popup-wrapper__content_forget">
                     <h2 class="popup-wrapper__title">Восстановить пароль</h2>
-                    <form id="requestReset" action="https://web.archive.org/web/20190828062649/https://betfaq.ru/profile/requestReset/" onsubmit="User_Recovery.ask (this);return false;" class="popup-wrapper__form" method="post">
+                    <form id="requestReset" action="/requestReset/" onsubmit="User_Recovery.ask (this);return false;" class="popup-wrapper__form" method="post">
                         <input type="email" name="email" placeholder="Введите ваш email" required="required" class="popup-wrapper__input">
                         <button type="submit" class="popup-wrapper__button">Восстановить</button>
                         <div id="recovery_message"></div>

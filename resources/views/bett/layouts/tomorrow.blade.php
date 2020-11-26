@@ -70,12 +70,7 @@
   <script>__wm.rw(0);</script>
   <div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
   </div>
-  <div id="donato" style="position:relative;width:100%;">
-    <div id="donato-base">
-      <iframe id="donato-if" src="{{ env('THEME') }}/index/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
-      </iframe>
-    </div>
-  </div>
+
   <script type="text/javascript">
     __wm.bt(625,27,25,2,"web","http://betfaq.ru/tomorrow/","20170119103235",1996,"/_static/",["/_static/css/banner-styles.css?v=NHuXCfBH","/_static/css/iconochive.css?v=qtvMKcIJ"]);
     __wm.rw(1);

@@ -14,11 +14,8 @@
         вид спорта <a href={{route('SportDetail', ['id' => $command->sport->id])}}>{{$command->sport->name}}</a> -/-
         из страны <a href={{route('CountryDetail', ['id' => $command->country->id])}}>{{$command->country->name}}</a> -/-
         <a href={{route('CommandEdit', ['id' => $command->id])}}><i><b>Изменить Команду</b></i></a> -/-
-        {{isset($command['created_at']) ? "в базе с ".$command['created_at']." -- " : ""}}
-            <form action={{route('CommandDel', ['id' => $command->id])}} method="POST">
-                    {{ csrf_field() }}
-                    <input type="submit" value="удалить" />
-            </form>
+        {{isset($command['created_at']) ? "в базе с ".$command['created_at'] : ""}}
+            
     </li>
 </ul>
    @endforeach

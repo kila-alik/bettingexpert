@@ -15,10 +15,7 @@
         В стране <a href={{route('CountryDetail', ['id' => $championship->country->id])}}>{{$championship->country->name}}</a> -/-
         <a href={{route('ChampionshipEdit', ['id' => $championship->id])}}><i><b>Изменить Чемпионат</b></i></a> -/-
         {{isset($championship['created_at']) ? "в базе с ".$championship['created_at'] : ""}}
-            <form action={{route('ChampionshipDel', ['id' => $championship->id])}} method="POST">
-                    {{ csrf_field() }}
-                    <input type="submit" value="удалить" />
-            </form>
+          
     </li>
 </ul>
    @endforeach

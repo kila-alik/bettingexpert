@@ -13,6 +13,7 @@
   email
   password
   is_admin - boolean (Администратор или нет!)
+  deposit - деньги пользователя
 
 Виды_спорта (sports)
   id - bigIncrements (на него будет указывать внешний ключ "sports_id" из таб. championship и из таб. command)
@@ -61,3 +62,50 @@ php artisan make:migration create_sports_table
 
 изменить таблицу (добавить удалить или изменить столбцы)
 php artisan make:migration change_sports_table --table=sports
+Имя изменяющего файла и метода внутри должны иметь уникальное имя по отношению к предидущим файлам
+
+Если надо добавить компонент на хостинге, то это делать не по коротким командам
+composer install или php artisan migrate:refresh –seed
+На хостинге эти команды вводятся с учетом полного пути к нуной версии php и composer.
+Вводить следует /opt/php74/bin/php /usr/local/bin/composer install
+устанавливает в vender то чего не хватало на сервере и того что уже было на local
+/opt/php74/bin/php artisan migrate:refresh --seed
+
+как создать авторизацию через МИДЕЛВАРЕ
+https://laravel.ru/forum/viewtopic.php?id=1216
+Лично я бы для этой задачи создал свой middleware
+По шагам:
+1) php artisan make:middleware AdminMiddleware
+2) Там уже делаешь свою проверку на админа(это уже твои заморочки как ты его вычисляешь), в моём примере через пакет Zizaco/entrust:
+namespace App\Http\Middleware;
+use Closure;
+class AdminMiddleware
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+        if (!\Auth::user()->hasRole(['admin']))
+        {
+            return redirect()->route('404');
+        }
+
+        return $next($request);
+    }
+}
+3) Добавляешь данный Middleware в app/Http/Kernel.php в поле  $routeMiddleware:
+'admin' => \App\Http\Middleware\AdminMiddleware::class,
+4) Используешь его в роутах, пример:
+Route::group(['middleware' => 'auth'], function(){
+     //тут роуты для которых нужна авторизация
+     Route::group(['middleware' => 'admin'], function(){
+             //тут роуты только для админа + авторизация
+     });
+});
+
+как искать метод в проэкте или в папке - через правую клавишу поиск в папке

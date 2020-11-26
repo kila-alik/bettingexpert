@@ -17,7 +17,7 @@
 
     <!-- Scripts -->
     <!-- "Это подключение Джава скрипт , чтоб выпадало меню там где область регистрации" -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Bootstrap core CSS -->
 <!-- <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
@@ -60,33 +60,38 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <!-- <li class="nav-item active"> -->
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('SportList') }}">
-          <h4>Вид спорта</h4>
-          <!-- <span class="sr-only">(current)</span> -->
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('CountryList') }}"><h4>Страны</h4>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('ChampionshipList') }}"><h4>Чемпионаты</h4></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('CommandList') }}"><h4>Команды</h4></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('ForecastList') }}"><h4>Прогнозы</h4></a>
-      </li>
-      <!-- <s -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">Admin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">User</a>
-      </li>
+@can('list-menu')
+          <!-- <li class="nav-item active"> -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('SportList') }}">
+              <h4>Вид спорта</h4>
+              <!-- <span class="sr-only">(current)</span> -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('CountryList') }}"><h4>Страны</h4>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('ChampionshipList') }}"><h4>Чемпионаты</h4></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('CommandList') }}"><h4>Команды</h4></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('ForecastList') }}"><h4>Прогнозы</h4></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('UsersList') }}"><h4>Клиенты</h4></a>
+          </li>
+      @else
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('ChangePass', ['id' => Auth::user()->id])}}"><h4>Профиль</h4></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('Deposit', ['id' => Auth::user()->id])}}"><h4>Депозит</h4></a>
+          </li>
+      @endcan
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -99,27 +104,27 @@
 
     <!-- Right Side Of Navbar -->
     <ul class="navbar-nav ml-auto">
-        <!-- Authentication Links -->
-              <!-- @guest
+      <!-- Authentication Links -->
+              @guest
                   <li class="nav-item">
-                      <a class="nav-link" href=" route('login') ">{{ __('Login') }}</a>
+                      <a class="nav-link" href=" route('login') ">{{ __('Login (Войти)') }}</a>
                   </li>
                   @if (Route::has('register'))
                       <li class="nav-item">
-                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register (Зарегистрироваться)') }}</a>
                       </li>
                   @endif
                   @else
                   <li class="nav-item dropdown">
                       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                          {{ Auth::user()->name }} <span class="caret"></span>
+                          <h7>{{ Auth::user()->name }}</h7> <span class="caret"></span>
                       </a>
 
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                           <a class="dropdown-item" href="{{ route('logout') }}"
                              onclick="event.preventDefault();
                                            document.getElementById('logout-form').submit();">
-                              {{ __('Logout (Выйти)') }}
+                              <h6>{{ __('Logout (Выйти)') }}</h6>
                           </a>
 
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -127,13 +132,13 @@
                           </form>
                       </div>
                   </li>
-              @endguest -->
+              @endguest
       </ul>
-
-    <form class="form-inline my-2 my-lg-0">
+<!-- Окно поиска -->
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> -->
   </div>
 </nav>
 
@@ -143,3 +148,5 @@
 <br />
 <br />
 @yield('content')
+</body>
+</html>

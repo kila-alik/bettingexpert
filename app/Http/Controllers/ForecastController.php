@@ -20,7 +20,6 @@ class ForecastController extends SiteController
 
       ForecastModel::whereNull('champ_id')->delete();
       // на стороне клиента сделать whereNotNull - TODO
-      // $f = ForecastModel::select('champ_id', '')->delete();
       // dd($f);
       $forecasts = ForecastModel::all();
       $forecasts->load('country', 'command_one', 'command_two', 'championship');
@@ -43,6 +42,7 @@ class ForecastController extends SiteController
       // }
       //
       // return view(env('THEME').'.forecast.list', compact('arSports'));
+      // dd(env('THEME').'.forecast.list');
       return view(env('THEME').'.forecast.list', compact('forecasts', 'sports'));
   }
 
@@ -121,17 +121,60 @@ if(request()->isMethod('post') && !empty(request()->input('champ'))) {
     return view(env('THEME').'.forecast.edit2', compact('forecast', 'champ_mass', 'command_mass', 'sport_name'));
  }
 
+  public function editOnePage($id) {
+     $forecast = ForecastModel::find($id);
+
+     // ПРИ НОВОЙ - представили первую страницу
+     if(empty($forecast)) {
+       $forecast = new ForecastModel;
+
+       // передадим в представление список видов спорта при первом обращении на страницу
+       $sport_all = SportModel::all();
+       $sports = $this->mass_list($sport_all);
+
+       // передадим в представление список стран при первом обращении на страницу
+       $country_all = CountryModel::all();
+       $countrys = $this->mass_list($country_all);
+     } else {
+       $championship = $forecast->championship;
+       $sports = $championship->sport->name;
+       $countrys = $championship->country->name;
+     }
+     // dd($countrys);
+     // dd($forecast);
+
+     // TODO - сохранение
+     //
+
+     return view(env('THEME').'.forecast.edit_ajax', compact('id', 'forecast', 'sports', 'countrys'));
+
+ }
+
+  public function getChampsCommandsAjax($sport, $country) {
+    // Это для select-ов на второй странице
+    $champs = ChampionshipModel::where([
+      ['sports_id', $sport],
+      ['country_id', $country]
+    ])->get();
+    $champ_mass = $this->mass_list($champs);
+    // dd(count($champ_mass));
+    $commands = CommandModel::where([
+      ['sports_id', $sport],
+      ['country_id', $country]
+    ])->get();
+    $command_mass = $this->mass_list($commands);
+    return json_encode(['champs'=>$champ_mass, 'commands'=>$command_mass]);
+  }
+
   public function del($id) {
         ForecastModel::find($id)->delete();
         // return redirect('/country');
         return redirect(route('ForecastList'));
     }
 
-  protected function mass_list($models) {
-        $mass = [];
-        foreach ($models as $model) {
-          $mass[$model->id] = $model->name;
-        }
-        return $mass;
-    }
+  // public function one($id) {
+  //       ForecastModel::find($id)->delete();
+  //       // return redirect('/country');
+  //       return redirect(route('ForecastList'));
+  //   }
 }

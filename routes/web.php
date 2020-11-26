@@ -18,44 +18,60 @@ Route::resource('/', 'IndexController', [
                                                     ]
                                           ]);
 
-/*
-*   /control-panel
-*/
-Route::group(['prefix' => 'control-panel'], function(){
+Auth::routes();
+
+Route::get('/profile', 'HomeController@index')->name('profile');
+Route::match (['get', 'post'], 'profile/pass/{id}', 'Admin\AdminController@change_pass')->name('ChangePass');
+Route::match (['get', 'post'], 'profile/deposit/{id}', 'Admin\AdminController@deposit')->name('Deposit');
+
+//admin
+// Route::group(['prefix' => 'admin', 'middleware'=>['auth']], function(){
+Route::group(['prefix' => 'admin', 'middleware'=>['auth','admin']], function(){
+  //    /admin/
   Route::get ('/', 'Admin\AdminController@index')->name('AdminList');
 
-  //    /control-panel/sport
+  //    /admin/users
+  Route::get ('users', 'Admin\AdminController@list')->name('UsersList');
+  Route::get ('user/{id}', 'Admin\AdminController@detail')->name('UserDetail');
+  Route::match (['get', 'post'], 'user/edit/{id}', 'Admin\AdminController@edit')->name('UserEdit');
+  Route::post ('user/del/{id}', 'Admin\AdminController@del')->name('UserDel');
+  Route::post ('user/pass/{id}', 'Admin\AdminController@pass')->name('UserPass');
+
+  //    /admin/sport
   Route::get ('sport', 'SportController@list')->name('SportList');
   Route::get ('sport/{id}', 'SportController@detail')->name('SportDetail');
   Route::match (['get', 'post'], 'sport/edit/{id}', 'SportController@edit')->name('SportEdit');
-  Route::match (['get', 'post'], 'sport/del/{id}', 'SportController@del')->name('SportDel');
+  // Route::match (['get', 'post'], 'sport/del/{id}', 'SportController@del')->name('SportDel');
 
-  //    /control-panel/country
+  //    /admin/country
   Route::get ('country', 'CountryController@list')->name('CountryList');
   Route::get ('country/{id}', 'CountryController@detail')->name('CountryDetail');
   Route::match (['get', 'post'], 'country/edit/{id}', 'CountryController@edit')->name('CountryEdit');
-  Route::match (['get', 'post'], 'country/del/{id}', 'CountryController@del')->name('CountryDel');
+  // Route::match (['get', 'post'], 'country/del/{id}', 'CountryController@del')->name('CountryDel');
 
-  //    /control-panel/championship
+  //    /admin/championship
   Route::get ('championship', 'ChampionshipController@list')->name('ChampionshipList');
   Route::get ('championship/{id}', 'ChampionshipController@detail')->name('ChampionshipDetail');
   Route::match (['get', 'post'], 'championship/edit/{id}', 'ChampionshipController@edit')->name('ChampionshipEdit');
-  Route::match (['get', 'post'], 'championship/del/{id}', 'ChampionshipController@del')->name('ChampionshipDel');
+  // Route::match (['get', 'post'], 'championship/del/{id}', 'ChampionshipController@del')->name('ChampionshipDel');
 
-  //    /control-panel/command
+  //    /admin/command
   Route::get ('command', 'CommandController@list')->name('CommandList');
   Route::get ('command/{id}', 'CommandController@detail')->name('CommandDetail');
   Route::match (['get', 'post'], 'command/edit/{id}', 'CommandController@edit')->name('CommandEdit');
-  Route::match (['get', 'post'], 'command/del/{id}', 'CommandController@del')->name('CommandDel');
+  // Route::match (['get', 'post'], 'command/del/{id}', 'CommandController@del')->name('CommandDel');
 
-  //    /control-panel/forecast
+  //    /admin/forecast
   Route::get ('forecast', 'ForecastController@list')->name('ForecastList');
   Route::get ('forecast/{id}', 'ForecastController@detail')->name('ForecastDetail');
   Route::match (['get', 'post'], 'forecast/edit/{id}', 'ForecastController@edit')->name('ForecastEdit');
   Route::match (['get', 'post'], 'forecast/edit1/{id}', 'ForecastController@edit')->name('ForecastEdit1');
   Route::match (['get', 'post'], 'forecast/edit2/{id}', 'ForecastController@edit')->name('ForecastEdit2');
+  // спросить у Леши про get , можно ли им удалять
   Route::match (['get', 'post'], 'forecast/del/{id}', 'ForecastController@del')->name('ForecastDel');
 
+  Route::match (['get', 'post'], 'forecast/edit_one_page/{id}', 'ForecastController@editOnePage')->name('ForecastEditOnePage');
+  Route::match (['get', 'post'], 'forecast/getChampsCommandsAjax/{sport}/{country}', 'ForecastController@getChampsCommandsAjax')->name('ForecastChampsCommandsAjax');
 });
 
 

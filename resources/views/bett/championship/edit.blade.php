@@ -11,7 +11,7 @@
    <br />
    <b>Вид спорта:</b>
    <br />
-   {!! Form::select('sport', $sports, Request::is('*/new') ? '1' : $championship->sport->id) !!}
+     {!! Form::select('sport', $sports, Request::is('*/new') ? '1' : $championship->sport->id) !!}
    <br />
    <b>Страна:</b>
    <br />

@@ -17,9 +17,10 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable()->comment('Когда верифицирован пользователь');
+            $table->timestamp('verified_at')->nullable()->comment('Когда верифицирован пользователь');
             $table->string('password');
 
+            $table->float('deposit', 8, 2)->nullable()->comment('Доступные средства клиента');
             $table->boolean('is_admin')->default(false)->comment('Администратор или нет!');
 
             $table->rememberToken();

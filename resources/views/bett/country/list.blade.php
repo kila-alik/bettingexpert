@@ -9,18 +9,13 @@
    @foreach($countrys as $country)
 <ul>
     <li>
-       <br />
         Страна: {{$country['id']}}
         <!-- <a href="/control-panel/country/{{$country->id}}">{{$country['name']}}</a> -/- -->
         <a href={{route('CountryDetail', ['id' => $country->id])}}><b>{{$country['name']}}</b></a> -/-
         <!-- <a href="/control-panel/country/edit/{{$country->id}}"><i><b>Изменить СТРАНУ</b></i></a> -->
         <a href={{route('CountryEdit', ['id' => $country->id])}}><i><b>Изменить СТРАНУ</b></i></a>
-        -- {{isset($country['created_at']) ? "в базе с ".$country['created_at']." -- " : ""}}
-            <!-- <form action="/control-panel/country/del/{{$country->id}}" method="POST"> -->
-            <form action={{route('CountryDel', ['id' => $country->id])}} method="POST">
-                    {{ csrf_field() }}
-                    <input type="submit" value="удалить" />
-            </form>
+        -- {{isset($country['created_at']) ? "в базе с ".$country['created_at'] : ""}}
+            
     </li>
 </ul>
    @endforeach

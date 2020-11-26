@@ -12,11 +12,8 @@
         Страна: {{$sport['id']}}
         <a href={{route('SportDetail', ['id' => $sport->id])}}><b>{{$sport['name']}}</b></a> -/-
         <a href={{route('SportEdit', ['id' => $sport->id])}}><i><b>Изменить Спорт</b></i></a>
-        -- {{isset($sport['created_at']) ? "в базе с ".$sport['created_at']." -- " : ""}}
-            <form action={{route('SportDel', ['id' => $sport->id])}} method="POST">
-                    {{ csrf_field() }}
-                    <input type="submit" value="удалить" />
-            </form>
+        -- {{isset($sport['created_at']) ? "в базе с ".$sport['created_at'] : ""}}
+            
     </li>
 </ul>
    @endforeach

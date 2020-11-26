@@ -70,4 +70,12 @@ class SiteController extends Controller
     return $forecast;
   }
 
+  protected function mass_list($models) {
+        $mass = [];
+        foreach ($models as $model) {
+          $mass[$model->id] = $model->name;
+        }
+        return $mass;
+    }
+
 }

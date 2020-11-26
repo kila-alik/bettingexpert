@@ -478,7 +478,7 @@
     <div class="text_page" style="">
             </div>
 
-                        <br><div class="yashare-auto-init" data-yasharel10n="ru" data-yasharequickservices="yaru,vkontakte,facebook,twitter,moimir" data-yasharetheme="counter"></div>
+    <!-- <br><div class="yashare-auto-init" data-yasharel10n="ru" data-yasharequickservices="yaru,vkontakte,facebook,twitter,moimir" data-yasharetheme="counter"></div> -->
     <br>
     <div class="clear"></div>
     <div class="clear"></div>

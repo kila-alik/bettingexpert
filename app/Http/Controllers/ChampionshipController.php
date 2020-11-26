@@ -9,7 +9,7 @@ use Bett\CountryModel;
 // Спросить у Леши как дать доступ к Carbon в представлении в Blade
 use Carbon\Carbon;
 
-class ChampionshipController extends Controller
+class ChampionshipController extends SiteController
 {
   public function list() {
 
@@ -50,21 +50,13 @@ class ChampionshipController extends Controller
 
       // передадим в представление список видов спорта
       $sport_all = SportModel::all();
-      $sports = [];
-      foreach ($sport_all as $s => $sport) {
-        $sports[$s + 1] = $sport->name;
-      }
-      // array_combine — Создает новый массив, используя один массив в качестве ключей, а другой для его значений
-      // Мы взяли один и тот же массив $sports и для ключей и для значений массива
-      // $sports = array_combine($sports, $sports);
-      // dd($sports);
+      $sports = $this->mass_list($sport_all);
+
 
       // передадим в представление список стран
       $country_all = CountryModel::all();
-      $countrys = [];
-      foreach ($country_all as $c => $country) {
-        $countrys[$c + 1] = $country->name;
-      }
+      $countrys = $this->mass_list($country_all);
+
       // array_combine — Создает новый массив, используя один массив в качестве ключей, а другой для его значений
       // Мы взяли один и тот же массив $countrys и для ключей и для значений массива
       // $countrys = array_combine($countrys, $countrys);
@@ -74,9 +66,9 @@ class ChampionshipController extends Controller
       return view(env('THEME').'.championship.edit', compact('championship', 'sports', 'countrys'));
   }
 
-  public function del($id) {
-        ChampionshipModel::find($id)->delete();
-        // return redirect('/country');
-        return redirect(route('ChampionshipList'));
-}
+//   public function del($id) {
+//         ChampionshipModel::find($id)->delete();
+//         // return redirect('/country');
+//         return redirect(route('ChampionshipList'));
+// }
 }
