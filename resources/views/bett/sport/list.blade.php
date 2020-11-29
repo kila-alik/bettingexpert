@@ -13,7 +13,12 @@
         <a href={{route('SportDetail', ['id' => $sport->id])}}><b>{{$sport['name']}}</b></a> -/-
         <a href={{route('SportEdit', ['id' => $sport->id])}}><i><b>Изменить Спорт</b></i></a>
         -- {{isset($sport['created_at']) ? "в базе с ".$sport['created_at'] : ""}}
-            
+
+      ///////////  {{Date::now()->format('l j F Y H:i:s')}}
+
+        <!-- {{Date::parse('-1 day')->diffForHumans()}}
+
+        {{ Date::parse($sport['created_at'])->format('j F Y г.') }} -->
     </li>
 </ul>
    @endforeach

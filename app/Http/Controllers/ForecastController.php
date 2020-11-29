@@ -140,11 +140,26 @@ if(request()->isMethod('post') && !empty(request()->input('champ'))) {
        $sports = $championship->sport->name;
        $countrys = $championship->country->name;
      }
-     // dd($countrys);
+     // dump($championship->sport);
      // dd($forecast);
+     // dd($championship);
 
-     // TODO - сохранение
-     //
+     // сохранение
+     if(request()->isMethod('post')) {
+       if(empty($forecast->id)){ // новый
+         // $forecast->sport = request()->input('sport');
+         $forecast->country_id = request()->input('country');
+       }
+       $forecast->champ_id = request()->input('champ');
+       $forecast->command_1 = request()->input('command1');
+       $forecast->command_2 = request()->input('command2');
+       $forecast->data_game = request()->input('date_game');
+       $forecast->coeff = request()->input('coeff');
+       $forecast->result = request()->input('result');
+       $forecast->status = request()->input('status');
+       $forecast->save();
+       return redirect(route('ForecastEditOnePage', ['id' => $forecast->id]));
+     }
 
      return view(env('THEME').'.forecast.edit_ajax', compact('id', 'forecast', 'sports', 'countrys'));
 

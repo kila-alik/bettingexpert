@@ -68,7 +68,7 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth','admin']], function(){
   Route::match (['get', 'post'], 'forecast/edit1/{id}', 'ForecastController@edit')->name('ForecastEdit1');
   Route::match (['get', 'post'], 'forecast/edit2/{id}', 'ForecastController@edit')->name('ForecastEdit2');
   // спросить у Леши про get , можно ли им удалять
-  Route::match (['get', 'post'], 'forecast/del/{id}', 'ForecastController@del')->name('ForecastDel');
+  Route::post ('forecast/del/{id}', 'ForecastController@del')->name('ForecastDel');
 
   Route::match (['get', 'post'], 'forecast/edit_one_page/{id}', 'ForecastController@editOnePage')->name('ForecastEditOnePage');
   Route::match (['get', 'post'], 'forecast/getChampsCommandsAjax/{sport}/{country}', 'ForecastController@getChampsCommandsAjax')->name('ForecastChampsCommandsAjax');

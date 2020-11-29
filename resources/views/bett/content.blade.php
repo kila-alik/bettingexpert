@@ -1,128 +1,125 @@
+@if($forecast)
+@ php
+<!-- dd($forecast); -->
+@ endphp
+
 <div class="clear"></div>
 <div class="grid_10" id="day">
     <div class="tabs">
-                    <div class="tab active">
-                <div>
-                    <span>
-                                                    <span class="tab-button">
-                                Сегодня                            </span>
-                                            </span>
-                </div>
-            </div>
-          <div class="tab ">
-      <div>
+      <div class="tab active">
+        <div>
           <span>
-                                          <a class="tab-button" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/tomorrow/#scroll">
-                      Завтра                            </a>
-                                  </span>
+            <span class="tab-button">Сегодня</span>
+          </span>
+        </div>
       </div>
-  </div>
-                    <div class="tab ">
-                <div>
-                    <span>
-                                                    <a class="tab-button" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/aftertomorrow/#scroll">
-                                Послезавтра                            </a>
-                                            </span>
-                </div>
-            </div>
-            </div>
+      <div class="tab ">
+        <div>
+          <span>
+            <a class="tab-button" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/tomorrow/#scroll">Завтра</a>
+          </span>
+        </div>
+      </div>
+      <div class="tab ">
+        <div>
+          <span>
+            <a class="tab-button" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/aftertomorrow/#scroll">Послезавтра</a>
+          </span>
+        </div>
+      </div>
+    </div>
 
-        <div id="sticky">
-        <p></p>
-
-                        <section class="soccer">
-                    <div class="follow-wrapper" style="height: 60px;"><header class="">
-                        <h2 class="soccer">
-                                                        Прогнозы на Футбол 28 августа 2019                        </h2>
-                    </header></div>
-
-                    <table class="fore-bets">
-                                                <tbody><tr class="statistics ">
-                            <td class="flag"></td>
-                            <td colspan="3" class="statistics-info">
-                                <span class="statistics-text">
-                                Используя VIP прогнозы, за 10  дней Вы могли заработать на футболе<br>
-                                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/statistic/1/">Статистика</a>
-                                </span>
-                                <span class="statistics-count">
-                                    <span class="plus">+</span>
-                                    <span class="count">1030%</span>
-                                </span>
-                            </td>
-                        </tr>
-                                                <tr class="head">
-                            <td class="pin"><div class="br"></div></td>
-                            <td><div class="br">Игра</div></td>
-                            <td class="coef"><div class="br tc">коэфф.</div></td>
-                            <td><div class="rez">Результат</div></td>
-                        </tr>
-
-                            <tr class="" onclick="location.href = &#39;/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019&#39;;" style="cursor: pointer;">
-                                <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
-                                <td class="title">
-                                    <small>
-                                                                                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/">Лига Чемпионов АФК</a>                                                                            </small>
-                                    <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019/">
-                                        <span class="time">15:00</span>
-                                        <span class="fore">Прогноз на матч  <ins>Гуанчжоу Эвергранд - Касима Антлерс</ins></span>
-                                    </a>
-                                </td>
-                                <td class="coeff main-coeff">
-                                    <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019/">
-                                        1.53                                    </a>
-                                </td>
-                                <td class="result">
-                                                                            <a class="eshe _show" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019/">
-                                            Читать
-                                        </a>
-                                                                    </td>
-                            </tr>
-
-
-
-                            <tr class="" onclick="location.href = &#39;/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019&#39;;" style="cursor: pointer;">
-                                <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/853.middle.jpg&#39;)"></td>
-                                <td class="title">
-                                    <small>
-                                                                                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/">Норвегия</a> -                                                                                 <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/">1. Дивизион</a>                                                                            </small>
-                                    <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019/">
-                                        <span class="time">19:00</span>
-                                        <span class="fore">Прогноз на матч  <ins>Олессун - Хам-Кам</ins></span>
-                                    </a>
-                                </td>
-                                <td class="coeff main-coeff">
-                                    <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019/">
-                                        1.41                                    </a>
-                                </td>
-                                <td class="result">
-                                                                            <a class="eshe _show" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019/">
-                                            Читать
-                                        </a>
-                                                                    </td>
-                            </tr>
-
-
-
-                            <tr class="" onclick="location.href = &#39;/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019&#39;;" style="cursor: pointer;">
-                                <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
-                                <td class="title">
-                                    <small>
-                                                                                <a href={{ env('THEME') }}/"https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/">Франция</a> -                                                                                 <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/">Лига 1</a>                                                                            </small>
-                                    <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019/">
-                                        <span class="time">20:00</span>
-                                        <span class="fore">Прогноз на матч  <ins>Лилль - Сент-Этьен</ins></span>
-                                    </a>
-                                </td>
-                                <td class="coeff main-coeff">
-                                    <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019/">
-                                        1.4                                    </a>
-                                </td>
-                                <td class="result">
-                                                                            <a class="eshe _show" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019/">
-                                            Читать
-                                        </a>
-                                                                    </td>
-                            </tr>
+    <div id="sticky">
+    <p></p>
+    <section class="soccer">
+      <div class="follow-wrapper" style="height: 60px;">
+        <header class="">
+          <h2 class="soccer">Прогнозы на Футбол {{Date::now()->format('j F Y г.')}}</h2>
+        </header>
+      </div>
+      <table class="fore-bets">
+        <tbody>
+          <tr class="statistics ">
+            <td class="flag"></td>
+            <td colspan="3" class="statistics-info">
+              <span class="statistics-text">Используя VIP прогнозы, за 10  дней Вы могли заработать на футболе<br>
+                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/statistic/1/">Статистика</a>
+              </span>
+              <span class="statistics-count">
+                <span class="plus">+</span>
+                <span class="count">1030%</span>
+              </span>
+            </td>
+          </tr>
+          <tr class="head">
+            <td class="pin">
+              <div class="br"></div>
+            </td>
+            <td>
+              <div class="br">Игра</div>
+            </td>
+            <td class="coef">
+              <div class="br tc">коэфф.</div>
+            </td>
+            <td>
+              <div class="rez">Результат</div>
+            </td>
+          </tr>
+          <tr class="" onclick="location.href = &#39;/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019&#39;;" style="cursor: pointer;">
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/flag_default.png&#39;)"></td>
+            <td class="title">
+              <small>
+                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/">Лига Чемпионов АФК</a>
+              </small>
+                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019/">
+                  <span class="time">15:00</span>
+                  <span class="fore">Прогноз на матч  <ins>Гуанчжоу Эвергранд - Касима Антлерс</ins></span>
+                </a>
+            </td>
+            <td class="coeff main-coeff">
+              <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019/">1.53</a>
+            </td>
+            <td class="result">
+              <a class="eshe _show" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/afc-champions-league/prognoz-na-match-guangghu-kashima-antlers-28-08-2019/">Читать</a>
+            </td>
+          </tr>
+          <tr class="" onclick="location.href = &#39;/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019&#39;;" style="cursor: pointer;">
+            <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/853.middle.jpg&#39;)"></td>
+              <td class="title">
+                <small>
+                  <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/">Норвегия</a>
+                   - <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/">1. Дивизион</a>
+                </small>
+                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019/">
+                  <span class="time">19:00</span>
+                  <span class="fore">Прогноз на матч  <ins>Олессун - Хам-Кам</ins></span>
+                </a>
+              </td>
+              <td class="coeff main-coeff">
+                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019/">1.41</a>
+              </td>
+              <td class="result">
+                <a class="eshe _show" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/norway/1st-division/prognoz-na-match-olesund-hamarkameraten-28-08-2019/">Читать</a>
+              </td>
+            </tr>
+            <tr class="" onclick="location.href = &#39;/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019&#39;;" style="cursor: pointer;">
+              <td class="flag" style="background-image: url(&#39;{{ env('THEME') }}/img/968.middle.jpg&#39;)"></td>
+              <td class="title">
+                <small>
+                  <a href={{ env('THEME') }}/"https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/">Франция</a> -                                                                                 <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/">Лига 1</a>
+                </small>
+                  <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019/">
+                    <span class="time">20:00</span>
+                    <span class="fore">Прогноз на матч  <ins>Лилль - Сент-Этьен</ins></span>
+                  </a>
+              </td>
+              <td class="coeff main-coeff">
+                <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019/">1.4</a>
+              </td>
+              <td class="result">
+                <a class="eshe _show" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/france/ligue-1/prognoz-na-match-lilly-sent-etyen-28-08-2019/">Читать</a>
+              </td>
+            </tr>
 
 
 
@@ -633,3 +630,7 @@
 </script>	<div class="bannerSideSticky-anchor"></div>
 </div>
             </div>
+@else
+<p>Прогнозов на данный момент нет!!!</p>
+
+@endif

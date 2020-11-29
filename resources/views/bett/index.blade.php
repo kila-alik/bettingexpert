@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-  Коэффициент игры {!! $content !!}
+  {!! $content !!}
 @endsection
 
 @section('footer')

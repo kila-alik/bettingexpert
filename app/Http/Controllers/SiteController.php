@@ -41,8 +41,8 @@ class SiteController extends Controller
     // $www = $forecast[1]->coeff;
     // exit;
 
-    // $content = view(env('THEME').'.content')->render();
-    $this->vars = array_add($this->vars, 'content', $forecast);
+    $content = view(env('THEME').'.content', compact('forecast'))->render();
+    $this->vars = array_add($this->vars, 'content', $content);
     // $this->vars = array_add($this->vars, 'content', $www);
     // так например выводим блок навигации в index.blade.php
     // без include , зато добавляем переменные

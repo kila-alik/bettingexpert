@@ -4,7 +4,7 @@
 
 <h3 align="center">Редактирование Прогноза</h3>
 
-<form method="POST" action="{{route('ForecastEdit1', ['id' => $id])}}" enctype="multipart/form-data">
+<form method="POST" action="{{route('ForecastEditOnePage', ['id' => $id])}}" enctype="multipart/form-data">
   {{ csrf_field() }}
   <table width="600" border="1" align="center">
       <tbody align="center">
@@ -30,21 +30,15 @@
         </tr>
       </tbody>
         <tr>
-           <td align="center">{{$forecast->id}}</td>
-           <td>
-             @if($forecast->id)
-               {{$sports}}
-             @else
-               {!! Form::select('sport', $sports, '1') !!}
-             @endif
-           </td>
-           <td align="center">
-             @if($forecast->id)
-               {{$countrys}}
-             @else
-               {!! Form::select('country', $countrys, '1') !!}
-             @endif
-           </td>
+          @if($forecast->id)
+            <td align="center">{{$forecast->id}}</td>
+            <td>{{$sports}}</td>
+            <td align="center">{{$countrys}}</td>
+          @else
+            <td align="center">-</td>
+            <td>{!! Form::select('sport', $sports, '1') !!}</td>
+            <td align="center">{!! Form::select('country', $countrys, '1') !!}</td>
+          @endif
            <td>{!! Form::select('champ', [], '') !!}</td>
            <td>{!! Form::select('command1', [], '') !!}</td>
            <td>{!! Form::select('command2', [], '') !!}</td>
@@ -75,8 +69,10 @@
 <script type="text/javascript">
 
 function getChampsCommandsAjax(sport, country){
+  let tplUrl = '{{route('ForecastChampsCommandsAjax', ['sport' => '_sport_', 'country'=>'_country_'])}}';
+  let url = tplUrl.replace('_sport_',sport).replace('_country_',country);
 
-  $.get('/control-panel/forecast/getChampsCommandsAjax/' + sport + '/' + country,
+  $.get(url,
     function(data){
       let select = '';
       for (let id in data.champs) {

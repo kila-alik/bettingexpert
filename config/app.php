@@ -67,7 +67,8 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    // 'timezone' => 'Etc/UTC',
+    'timezone' => 'Europe/Moscow',
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,6 +170,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Jenssegers\Date\DateServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Bett\Providers\AppServiceProvider::class,
         Bett\Providers\AuthServiceProvider::class,
@@ -228,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Date' => Jenssegers\Date\Date::class,
 
     ],
 

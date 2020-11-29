@@ -63,7 +63,14 @@ php artisan make:migration create_sports_table
 изменить таблицу (добавить удалить или изменить столбцы)
 php artisan make:migration change_sports_table --table=sports
 Имя изменяющего файла и метода внутри должны иметь уникальное имя по отношению к предидущим файлам
-
+---------------------------------------------
+Редактировать файл в МС
+1.	F4 –
+2.	Буква I – появился режим INSERT - редактируем
+3.	Esc – закончили редактировать
+4.	: - закрыли
+5.	wq – записали и вышли
+---------------------------------------------
 Если надо добавить компонент на хостинге, то это делать не по коротким командам
 composer install или php artisan migrate:refresh –seed
 На хостинге эти команды вводятся с учетом полного пути к нуной версии php и composer.
@@ -71,6 +78,8 @@ composer install или php artisan migrate:refresh –seed
 устанавливает в vender то чего не хватало на сервере и того что уже было на local
 /opt/php74/bin/php artisan migrate:refresh --seed
 
+!!!! иногда надо работать через браузер на https://webconsole.timeweb.ru/
+----------------------------------------------
 как создать авторизацию через МИДЕЛВАРЕ
 https://laravel.ru/forum/viewtopic.php?id=1216
 Лично я бы для этой задачи создал свой middleware
@@ -107,5 +116,17 @@ Route::group(['middleware' => 'auth'], function(){
              //тут роуты только для админа + авторизация
      });
 });
-
+---------------------
 как искать метод в проэкте или в папке - через правую клавишу поиск в папке
+---------------------
+локализованные даты – https://github.com/jenssegers/date
+Устанавлиеваем через composer:
+composer require jenssegers/date
+добавляем строки в config/app.php:
+
+Jenssegers\Date\DateServiceProvider::class,
+You can also add it as a Facade in config/app.php:
+'Date' => Jenssegers\Date\Date::class,
+
+таймзона настраивается в config/app.php там меняем   'timezone' => 'Europe/Moscow',
+-----------------------------------

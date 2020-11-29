@@ -9,6 +9,12 @@ use Route;
 
 class SportController extends Controller
 {
+// Date::setLocale('ru');
+
+// echo Date::now()->format('l j F Y H:i:s'); // zondag 28 april 2013 21:58:16
+
+// echo Date::parse('-1 day')->diffForHumans();
+
   public function list() {
 
       $sports = SportModel::all();
