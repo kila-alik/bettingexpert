@@ -781,16 +781,21 @@ h2.rupor {
 
 h2.soccer {
     padding-left: 32px;
-    background: url('../img/icons/h2/soccer.png') no-repeat 0 50%;
+    /* background: url('../img/icons/h2/soccer.png') no-repeat 0 50%; */
+    background: url('../img/soccer.png') no-repeat 0 50%;
 }
 
 h2.tennis {
     padding-left: 32px;
-    background: url('../img/icons/h2/tennis.png') no-repeat 0 50%;
+    background: url('../img/tennis.png') no-repeat 0 50%;
 }
-h2.basketball {
+h2.basket {
     padding-left: 32px;
-    background: url('../img/icons/h2/basketball.png') no-repeat 0 50%;
+    background: url('../img/basketball.png') no-repeat 0 50%;
+}
+h2.volleyball {
+    padding-left: 32px;
+    background: url('../img/volleyball.png') no-repeat 0 50%;
 }
 
 h3 {

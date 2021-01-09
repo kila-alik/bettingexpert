@@ -13,21 +13,26 @@ class SportsSeeder extends Seeder
     public function run()
     {
       SportModel::create([
-                          'name'=>'Футбол'
+                          'name'=>'Футбол',
+                          'alias'=>'soccer'
                         ]);
       SportModel::create([
-                          'name'=>'Хоккей'
+                          'name'=>'Хоккей',
+                          'alias'=>'hockey'
                         ]);
       SportModel::create([
-                          'name'=>'Баскетбол'
+                          'name'=>'Баскетбол',
+                          'alias'=>'basket'
                         ]);
       SportModel::create([
-                          'name'=>'Волейбол'
-                        ]);
-      SportModel::create([
-                          'name'=>'Теннис'
+                          'name'=>'Теннис',
+                          'alias'=>'tennis'
                         ]);
 
+      SportModel::create([
+                          'name'=>'Волейбол',
+                          'alias'=>'volley'
+                        ]);
       // SportModel::create([
       //                     'name'=>'Январь',
       //                     'autor'=>'Сидоров',

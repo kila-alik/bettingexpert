@@ -26,7 +26,7 @@
 <b>{{$forecasts->status}}</b>
 <br />
 Дата игры:
-<b>{!! \Carbon\Carbon::parse($forecasts->data_game)->format('d.m.Y H:i') !!}</b>
+<b>{!! \Carbon\Carbon::parse($forecasts->date_game)->format('d.m.Y H:i') !!}</b>
 <hr noshade align="left" size="2" width="15%">
 <br />
 

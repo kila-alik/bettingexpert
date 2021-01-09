@@ -96,5 +96,17 @@ class CommandSeeder extends Seeder
                           'sports_id'=>'2',
                           'country_id'=>'4'
                         ]);
+      CommandModel::create([
+                          'name'=>'Курникова',
+                          'description'=>'Русская Тенисная чика',
+                          'sports_id'=>'4',
+                          'country_id'=>'1'
+                        ]);
+      CommandModel::create([
+                          'name'=>'Вильямс',
+                          'description'=>'Английская герл',
+                          'sports_id'=>'4',
+                          'country_id'=>'30'
+                        ]);
     }
 }

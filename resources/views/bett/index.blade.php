@@ -1,4 +1,4 @@
-@extends(env('THEME').'.layouts.today')
+@extends(env('THEME').'.layouts.all')
 
 @section('header')
   @include(env('THEME').'.header')

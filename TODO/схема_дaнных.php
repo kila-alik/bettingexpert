@@ -18,10 +18,12 @@
 Виды_спорта (sports)
   id - bigIncrements (на него будет указывать внешний ключ "sports_id" из таб. championship и из таб. command)
   name - string
+  alias - string
 
 Страна (country) - таблица
   id - bigIncrements (на него будет указывать внешний ключ "country_id" из таб. championship и из таб. command и из таб. forecast)
   name - string
+  file - string (имя файла с флагом страны)
 
 Чемпионат (championship) - таблица
   id - bigIncrements (на него будет указывать внешний ключ "champ_id" из таб. forecast)
@@ -80,6 +82,20 @@ composer install или php artisan migrate:refresh –seed
 
 !!!! иногда надо работать через браузер на https://webconsole.timeweb.ru/
 ----------------------------------------------
+если на сторне сервера (продакшена) были произведены изменения, которые потом
+мешают команде git pull (ошибка говорит что у вас уже произошли изменения на
+продакшине и залив с git сервера невозможно)
+тогда на ПРОДАКШИНЕ в putty или браузере https://webconsole.timeweb.ru/
+надо запустить откат к предидущей сохраненной копии git-а
+git reset --hard именно --hard а не --soft
+после возврата сново накатываем git pull
+если loc-але мы устанавливали надстройку то делаем
+сначало (например) composer require jenssegers/date
+потом прописываем в config/app.php пару строк см. ниже
+а потом когда сделали git pull
+на продакшине чтоб та же надстройка появилась делаем
+/opt/php74/bin/php /usr/local/bin/composer install
+----------------------------------------------
 как создать авторизацию через МИДЕЛВАРЕ
 https://laravel.ru/forum/viewtopic.php?id=1216
 Лично я бы для этой задачи создал свой middleware
@@ -103,7 +119,6 @@ class AdminMiddleware
         {
             return redirect()->route('404');
         }
-
         return $next($request);
     }
 }

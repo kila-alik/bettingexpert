@@ -28,7 +28,7 @@ class CreateForecastsTable extends Migration
             $table->float('coeff', 8, 2)->nullable()->comment('Коэффициент прогноза');
             $table->string('result')->nullable()->comment('Результат игры(встречи)');
             $table->boolean('status')->default(false)->comment('Платные 1 или бесплатные 0 прогнозы');
-            $table->timestamp('data_game')->nullable()->comment('Дата игры');
+            $table->timestamp('date_game')->nullable()->comment('Дата игры');
             // спросить у Леши timestamp или date
             // $table->date('data_game')->nullable()->comment('Дата игры');
 

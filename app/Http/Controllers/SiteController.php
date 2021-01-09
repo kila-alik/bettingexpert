@@ -1,10 +1,17 @@
 <?php
-
 namespace Bett\Http\Controllers;
 // namespace Bett\Repository\ForecastsRepository;
+// require 'vendor/autoload.php';
 
 use Illuminate\Http\Request;
 use Bett\Repositories\ForecastsRepository;
+use Illuminate\Support\Facades\Storage;
+use Bett\SportModel;
+use Bett\ChampionshipModel;
+use Bett\ForecastModel;
+// use Bett\Image;
+// use Intervention\Image\ImageManager;
+use Intervention\Image\ImageManagerStatic as Image;
 // use Bett\Http\Controllers;
 
 class SiteController extends Controller
@@ -36,28 +43,47 @@ class SiteController extends Controller
 
     // подборку прогнозов - $forecast будет выводить на разные страницы
     // функция getForecast, которую мы опишем вне функции renderOutput()
-    $forecast = $this->getForecast();
-    // dd($forecast[1]->coeff);
-    // $www = $forecast[1]->coeff;
-    // exit;
+    $forecasts = $this->getForecast();
 
-    $content = view(env('THEME').'.content', compact('forecast'))->render();
+    // передадим в представление список видов спорта
+    $sport_all = SportModel::all();
+    $sport_all->load('championships', 'commands');
+    $sports = $this->mass_list($sport_all);
+
+    // эта функция создает массив имени Леши
+    // он описан внизу SiteController.php
+    // для прогнозов по центру
+    $arSports = $this->ar_sports($forecasts);
+    // для стран справо
+    $arCountrys = $this->ar_countrys($forecasts);
+
+    // dd($arSports[1]['forecasts'][1]->championship->sport->name);
+
+    $content = view(env('THEME').'.content', compact('arSports', 'arCountrys'))->render();
+    // $content = view(env('THEME').'.content', compact('forecasts', 'images'))->render();
     $this->vars = array_add($this->vars, 'content', $content);
     // $this->vars = array_add($this->vars, 'content', $www);
     // так например выводим блок навигации в index.blade.php
     // без include , зато добавляем переменные
     // и выводим этот блок сам как переменную
-    $navigation = view(env('THEME').'.navigation')->render();
+    $navigation = view(env('THEME').'.layouts.navigation_all')->render();
     $this->vars = array_add($this->vars, 'navigation', $navigation);
 
+    Image::configure(array('driver' => 'gd'));
 
-// $qwer = $this->vars;
-// $www = $qwer['content'][1]->command_1;
-// $www->load('command');
+    // $counrtysa = ForecastModel::all();
+    // $counrtysw = ForecastModel::find(1)->championship->country;
+    // dd($counrtysw);
+    // $counrtysw = ForecastModel::all()->championship()->where('sports_id', 1)->get();
+    // ->championship()->where('sports_id', '=', 1)->get();
+    // $counrtysw = ForecastModel::find(1)->championship;
 
-// dd($www);
-// var_dump($this->vars);
-// exit;
+    // $counrtysw = ForecastModel::where('champ_id', 1)->get();
+    // $counrtysw = ForecastModel::has('champ_id.championship.sports_id', 'футбол');
+    // $counrtysw = $counrtysa->where('championship->name', 'футбол');
+    // $counrtysw = where($counrtysa->championship->name, 'футбол');
+    // $counrtysu = $counrtysw->unique('country_id');
+
     return view($this->template)->with($this->vars);
   }
 
@@ -71,11 +97,139 @@ class SiteController extends Controller
   }
 
   protected function mass_list($models) {
-        $mass = [];
-        foreach ($models as $model) {
-          $mass[$model->id] = $model->name;
-        }
-        return $mass;
-    }
+      $mass = [];
+      foreach ($models as $model) {
+        $mass[$model->id] = $model->name;
+      }
+      return $mass;
+  }
 
+  protected function ar_sports($forecasts) {
+    // это массив ИМЕНИ Леши, вместо моих двух массивов  forecasts sports
+    // он такой и его легче и быстрее перебрать, и не будет на выдаче пустых видов спорта
+    // ===============================
+    // 1 =>
+    //     name => футбол
+    //     alias => soccer
+    //     forecasts =>
+    //                 forecast1
+    //                 forecast2
+    //                 ...
+    // 2 =>
+    //     name => хоккей
+    //     alias => hockey
+    //     forecasts =>
+    //                 forecast1
+    //                 forecast2
+    //                 ...
+    // ...
+    // =================================
+    $arSports = [];
+    foreach ($forecasts as $forecast) {
+      // берем через динамические свойства ИМЕННО МОДЕЛЬ спорта
+      $sport = $forecast->championship->sport;
+      // если нет блока для записи по одному виду спорта - создаем ее
+      // при этом заполняем имя , алиас и создаем пустой массив forecasts
+      if (!isset($arSports[$sport->id])) {
+        $arSports[$sport->id] = [
+          'name'=>$sport->name,
+          'alias'=>$sport->alias,
+          'forecasts'=>[]
+        ];
+      }
+      // при каждом проходе (в том числе и первом) Записываем в пустой подмассив ИМЕННО МОДЕЛИ прогнозов
+      $arSports[$sport->id]['forecasts'][] = $forecast;
+    }
+    return $arSports;
+  }
+
+
+  protected function ar_countrys($forecasts) {
+
+    // ===============================
+    // 1 =>
+    //     name => футбол
+    //     alias => soccer
+    //     list =>
+    //                 country1 - имя страны ($country->name)
+    //                 country2
+    //                 ...
+    //
+    //     countrys =>
+    //                 0 ($country->id) =>
+    //                                   0 => модель страны ($country)
+    //                                   1 => n - здесь будет количество встреченных одинаковых стран
+    //                                   3 => модель чемпионата в этой стране ($championship)
+    //                 1 =>
+    //                                   0 => name
+    //                                   1 => m
+    //                                   3 => модель чемпионата
+    //                ...
+    // 2 =>
+    //     name => хоккей
+    //     alias => hockey
+    //     list =>
+    //                 country1 - имя страны ($country->name)
+    //                 country2
+    //                 ...
+    //
+    //     countrys =>
+    //                 0 ($country->id) =>
+    //                                   0 => name - имя страны ($country)
+    //                                   1 => n - здесь будет количество встреченных одинаковых стран
+    //                                   3 => модель чемпионата
+    //                 1 =>
+    //                                   0 => name
+    //                                   1 => m
+    //                                   3 => модель чемпионата
+    //                ...
+    // ...
+    // =================================
+
+    // $counter = [];
+    $arCountrys = [];
+    foreach ($forecasts as $forecast) {
+      // берем через динамические свойства ИМЕННО МОДЕЛЬ спорта
+      $sport = $forecast->championship->sport;
+      // берем через динамические свойства ИМЕННО МОДЕЛЬ стран
+      $country = $forecast->championship->country;
+      // берем через динамические свойства ИМЕННО МОДЕЛЬ чемпионата
+      $championship = $forecast->championship;
+      // dd($country);
+      // если нет блока для записи по одному виду спорта - создаем ее
+      // при этом заполняем имя , алиас и создаем пустой массив countrys
+      if (!isset($arCountrys[$sport->id])) {
+        $arCountrys[$sport->id] = [
+          'name'=>$sport->name,
+          'alias'=>$sport->alias,
+          'countrys'=>[],
+          // list - нужен для проверки встречалась ли страна при переборе
+          'list'=>[]
+        ];
+      }
+
+        // dd($country->name);
+        // $www = in_array("Германия", $arCountrys[$sport->id]['list']);
+      // при каждом проходе (в том числе и первом) Записываем в пустой подмассив ИМЕННО МОДЕЛИ стран
+      if (in_array($country->name, $arCountrys[$sport->id]['list'])) {
+        $arCountrys[$sport->id]['countrys'][$country->id][1] = $arCountrys[$sport->id]['countrys'][$country->id][1] + 1;
+        // continue;
+      } else {
+        $arCountrys[$sport->id]['countrys'][$country->id][0] = $country;
+        $arCountrys[$sport->id]['countrys'][$country->id][1] = 1;
+        $arCountrys[$sport->id]['countrys'][$country->id][2] = $championship;
+        $arCountrys[$sport->id]['list'][] = $country->name;
+      }
+    }
+    // dd($arCountrys);
+    return $arCountrys;
+  }
+
+  // неработающая функция
+  public function resizeImg($src, $width, $heght){
+    // $manager = new ImageManager(array('driver' => 'imagick'));
+    $manager = new ImageManager(array('driver' => 'gd'));
+    $image = $manager->make('/flag/'.$src)->resize($width, $heght);
+    dd($image);
+  }
 }

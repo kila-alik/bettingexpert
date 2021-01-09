@@ -16,6 +16,7 @@ class CreateSportsTable extends Migration
         Schema::create('sports', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned()->comment('на него указывает внешний ключ sport_id из таб. championship и из таб. command');
             $table->string('name')->comment('Имя спорта');
+            $table->string('alias')->comment('Alias спорта');
             $table->timestamps();
         });
     }

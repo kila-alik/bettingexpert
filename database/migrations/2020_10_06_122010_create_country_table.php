@@ -16,6 +16,7 @@ class CreateCountryTable extends Migration
         Schema::create('country', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned()->comment('на него указывать внешний ключ country_id из таб. championship');
             $table->string('name')->comment('Имя страны');
+            $table->string('file')->comment('Имя файла флага страны в папке flag');
             $table->timestamps();
         });
     }

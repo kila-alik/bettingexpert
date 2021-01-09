@@ -18,6 +18,10 @@
    <br />
    <input type="text" name="name" value="{{$country->name}}">
    <br />
+   <hr noshade align="left" size="2" width="15%">
+   <b>Флаг:  </b>
+   <img src="{{ asset(env('THEME')) }}/flag/{{$country->file}}" width="80" height="45" alt="flag {{$country->name}}">
+   <hr noshade align="left" size="2" width="15%">
    <br />
    <input type="submit" value={{ Request::is('*/new') ? 'Добавить' : 'Изменить' }} />
 </form>

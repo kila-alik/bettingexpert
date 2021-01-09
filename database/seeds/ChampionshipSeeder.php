@@ -15,42 +15,52 @@ class ChampionshipSeeder extends Seeder
       ChampionshipModel::create([
                           'name'=>'Европейский',
                           'sports_id'=>'1',
-                          'country_id'=>'4'
+                          'country_id'=>'43'
                         ]);
       ChampionshipModel::create([
                           'name'=>'Российский',
                           'sports_id'=>'1',
-                          'country_id'=>'1'
+                          'country_id'=>'131'
                         ]);
       ChampionshipModel::create([
                           'name'=>'Американский',
                           'sports_id'=>'1',
-                          'country_id'=>'7'
+                          'country_id'=>'150'
                         ]);
       ChampionshipModel::create([
                           'name'=>'Континентальный',
                           'sports_id'=>'2',
-                          'country_id'=>'3'
+                          'country_id'=>'194'
                         ]);
       ChampionshipModel::create([
                           'name'=>'КХЛ',
                           'sports_id'=>'2',
-                          'country_id'=>'7'
+                          'country_id'=>'173'
                         ]);
       ChampionshipModel::create([
                           'name'=>'Южно-Американский',
                           'sports_id'=>'2',
-                          'country_id'=>'6'
+                          'country_id'=>'180'
                         ]);
       ChampionshipModel::create([
                           'name'=>'НБА',
                           'sports_id'=>'3',
-                          'country_id'=>'5'
+                          'country_id'=>'188'
                         ]);
       ChampionshipModel::create([
                           'name'=>'Северный',
                           'sports_id'=>'3',
-                          'country_id'=>'2'
+                          'country_id'=>'117'
+                        ]);
+      ChampionshipModel::create([
+                          'name'=>'Евро-Теннисный',
+                          'sports_id'=>'4',
+                          'country_id'=>'30'
+                        ]);
+      ChampionshipModel::create([
+                          'name'=>'Америка-Теннисный',
+                          'sports_id'=>'4',
+                          'country_id'=>'150'
                         ]);
     }
 }

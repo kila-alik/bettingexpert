@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class SportModel extends Model
 {
   // -------------------Это разрешения при массовом заполнении полей
-  protected $fillable = ['name'];
+  protected $fillable = ['name', 'alias'];
   // protected $fillable = ['title', 'text_new'];
   // protected $guarded = ['autor'];
 

@@ -5,15 +5,31 @@ namespace Bett;
 use Illuminate\Database\Eloquent\Model;
 use Bett\CountryModel;
 use Bett\Repositories\ForecastRepository;
+use Carbon\Carbon;
 
 class ForecastModel extends Model
 {
   // -------------------Это разрешения при массовом заполнении полей
-  protected $fillable = ['command_1', 'command_2', 'country_id', 'champ_id', 'coeff', 'status', 'result', 'data_game'];
+  protected $fillable = ['command_1', 'command_2', 'country_id', 'champ_id', 'coeff', 'status', 'result', 'date_game'];
   // protected $fillable = ['title', 'text_new'];
   // protected $guarded = ['autor'];
   //---------------Это указываем с какой таблицей работать этой модели
   protected $table='forecasts';
+
+  //----------Это указывет что данные в этих столбцах примедены к типу данных Carbon
+  protected $dates = ['date_game'];
+
+// !!! ВНИМАНИЕ СОБЛЮДАЙТЕ ПРИ ЗАПИСИ И ЧТЕНИИ ИМЕННО ЭТОТ Y-m-d H:i ФОРМАТ, БЕЗ СЕКУНД
+// ИЛИ ЕСЛИ С СЕКУНДАМИ ДОБАВЛЯЙТЕ ПРИ ЗАПИСИ ":00" в контроллере Forecast
+  // protected $dateFormat = 'Y-m-d H:i:s';
+
+// ---Этой функцией Мы меняем формат хранения данных с Y-m-d на Y-m-d H:i:s в поле data_game
+// !!! ВНИМАНИЕ СОБЛЮДАЙТЕ ПРИ ЗАПИСИ И ЧТЕНИИ ИМЕННО ЭТОТ Y-m-d H:i ФОРМАТ, БЕЗ СЕКУНД
+// ИЛИ ЕСЛИ С СЕКУНДАМИ ДОБАВЛЯЙТЕ ПРИ ЗАПИСИ ":00" в контроллере Forecast
+  public function setDateGameAttribute($date)
+    {
+    $this->attributes['date_game'] = Carbon::createFromFormat('Y-m-d H:i', $date);
+    }
 
   // опишем отношения модели Прогнозов с другими Моделями
 

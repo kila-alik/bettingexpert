@@ -98,7 +98,7 @@
         <meta property="og:image" content="img/ognew.png">
         <script src="{{ env('THEME') }}/js/jquery.min.js"></script>
         <script src="{{ env('THEME') }}/js/jquery.tools.min.js"></script>
-                <script src="{{ env('THEME') }}/js/js.js"></script>
+        <script src="{{ env('THEME') }}/js/js.js"></script>
         <script src="{{ env('THEME') }}/js/mobile.js"></script>
         <script src="{{ env('THEME') }}/js/jquery.mask.js"></script>
         <link rel="stylesheet" type="text/css" href="{{ env('THEME') }}/css/fonts.css">

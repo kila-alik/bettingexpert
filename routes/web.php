@@ -18,6 +18,9 @@ Route::resource('/', 'IndexController', [
                                                     ]
                                           ]);
 
+Route::get ('sport', 'SportIndexController@index')->name('SportIndex');
+
+
 Auth::routes();
 
 Route::get('/profile', 'HomeController@index')->name('profile');

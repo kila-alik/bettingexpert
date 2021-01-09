@@ -22,13 +22,11 @@
              <th>Изменить</th>
              <th>Удалить</th>
            </tr>
-            @if($sports && $forecasts)
-               @foreach($sports as $skey => $sport)
-               <tr><td colspan="12" align="center" bgcolor="#dbdbdb">{{ $sport }}</td></tr>
-               @foreach($forecasts as $key => $forecast)
-               <!-- @ php dd() @ endphp -->
 
-                      @if($forecast->championship->sport->name == $sport)
+            @if($arSports)
+               @foreach($arSports as $akey => $sport)
+                 <tr><td colspan="12" align="center" bgcolor="#dbdbdb">{{ $sport['name'] }}</td></tr>
+                 @foreach($sport['forecasts'] as $fkey => $forecast)
                             <tr>
                                <td>{{$forecast['id']}}</td>
                                <td>{{$forecast['status']}}</td>
@@ -36,7 +34,7 @@
                                <td><a href={{route('ChampionshipDetail', ['id' => $forecast->championship->id])}}>{{$forecast->championship->name}}<a/></td>
                                <td><a href={{route('CommandDetail', ['id' => $forecast->command_one->id])}}>{{$forecast->command_one->name}}<a/></td>
                                <td><a href={{route('CommandDetail', ['id' => $forecast->command_two->id])}}>{{$forecast->command_two->name}}<a/></td>
-                               <td><font size="1">{!! $forecast->data_game ? \Carbon\Carbon::parse($forecast->data_game)->format('d.m.Y H:i') : ''!!}</font></td>
+                               <td><font size="1">{!! $forecast->date_game ? \Carbon\Carbon::parse($forecast->date_game)->format('d.m.Y H:i') : ''!!}</font></td>
                                <td>{{$forecast->coeff}}</td>
                                <td>{{$forecast->result}}</td>
                                <td><a href={{route('ForecastDetail', ['id' => $forecast->id])}}>Подробно</a></td>
@@ -48,7 +46,6 @@
                                  </form>
                                </td>
                              </tr>
-                      @endif
                 @endforeach
              @endforeach
           @else

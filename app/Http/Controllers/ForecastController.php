@@ -25,25 +25,19 @@ class ForecastController extends SiteController
       $forecasts->load('country', 'command_one', 'command_two', 'championship');
 
       // передадим в представление список видов спорта
-      $sport_all = SportModel::all();
-      $sport_all->load('championships', 'commands');
-      $sports = $this->mass_list($sport_all);
+      // пока это не надо
+      // $sport_all = SportModel::all();
+      // $sport_all->load('championships', 'commands');
+      // $sports = $this->mass_list($sport_all);
 
-      // $arSports = [];
-      // foreach ($forecasts as $forecast) {
-      //   $sport = $forecast->championship->sport;
-      //   if (!isset($arSports[$sport->id])) {
-      //     $arSports[$sport->id] = [
-      //       'name'=>$sport->name,
-      //       'forecasts'=>[]
-      //     ];
-      //   }
-      //   $arSports[$sport->id]['forecasts'][] = $forecast;
-      // }
+      // эта функция создает массив имени Леши
+      // он описан внизу SiteController.php
+      $arSports = $this->ar_sports($forecasts);
+
       //
-      // return view(env('THEME').'.forecast.list', compact('arSports'));
+      return view(env('THEME').'.forecast.list', compact('arSports'));
       // dd(env('THEME').'.forecast.list');
-      return view(env('THEME').'.forecast.list', compact('forecasts', 'sports'));
+      // return view(env('THEME').'.forecast.list', compact('forecasts', 'sports'));
   }
 
   public function detail($id) {
@@ -96,7 +90,9 @@ if(request()->isMethod('post') && !empty(request()->input('champ'))) {
   $forecast->champ_id = request()->input('champ');
   $forecast->command_1 = request()->input('command1');
   $forecast->command_2 = request()->input('command2');
-  $forecast->data_game = request()->input('date_game');
+  // $forecast->date_game = request()->input('date_game')." ".request()->input('time_game').":00";
+  // для пробела между датой и временем пробел именно из двойных кавычек а не одинарных
+  $forecast->date_game = request()->input('date_game')." ".request()->input('time_game');
   $forecast->coeff = request()->input('coeff');
   $forecast->result = request()->input('result');
   $forecast->status = request()->input('status');
@@ -141,8 +137,6 @@ if(request()->isMethod('post') && !empty(request()->input('champ'))) {
        $countrys = $championship->country->name;
      }
      // dump($championship->sport);
-     // dd($forecast);
-     // dd($championship);
 
      // сохранение
      if(request()->isMethod('post')) {
@@ -153,7 +147,8 @@ if(request()->isMethod('post') && !empty(request()->input('champ'))) {
        $forecast->champ_id = request()->input('champ');
        $forecast->command_1 = request()->input('command1');
        $forecast->command_2 = request()->input('command2');
-       $forecast->data_game = request()->input('date_game');
+       // для пробела между датой и временем пробел именно из двойных кавычек а не одинарных
+       $forecast->date_game = request()->input('date_game')." ".request()->input('time_game');
        $forecast->coeff = request()->input('coeff');
        $forecast->result = request()->input('result');
        $forecast->status = request()->input('status');

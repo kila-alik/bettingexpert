@@ -2,10 +2,13 @@
 
 @section('content')
 
-<b>Страна: </b>
+<b>Страна:  </b>
 {{$countrys->name}}
 <hr noshade align="left" size="2" width="15%">
-
+<br />
+<b>Флаг:  </b>
+<img src="{{ asset(env('THEME')) }}/flag/{{$countrys->file}}" width="80" height="45" alt="flag {{$countrys->name}}">
+<hr noshade align="left" size="2" width="15%">
 <br />
 
 <form action={{route('CountryEdit', ['id' => $countrys->id])}} method="get" enctype="multipart/form-data">

@@ -1,6 +1,3 @@
-@php
-//dd(auth()->user());
-@endphp
 
 <header class="header">
   <span class="header__logo">Betfaq - Прогнозы на спорт</span>

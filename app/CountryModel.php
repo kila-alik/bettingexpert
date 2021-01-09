@@ -3,12 +3,14 @@
 namespace Bett;
 
 use Illuminate\Database\Eloquent\Model;
+use Intervention\Image\ImageManager;
+
 // use Bett\Repositories\ForecastRepository;
 
 class CountryModel extends Model
 {
   // -------------------Это разрешения при массовом заполнении полей
-  protected $fillable = ['name'];
+  protected $fillable = ['name', 'file'];
   // protected $fillable = ['title', 'text_new'];
   // protected $guarded = ['autor'];
 

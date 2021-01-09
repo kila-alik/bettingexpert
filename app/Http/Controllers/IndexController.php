@@ -6,10 +6,10 @@ namespace Bett\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Bett\Repositories\ForecastsRepository;
-
+// use Intervention\Image\ImageManager;
+// use Bett\Image;
+use Intervention\Image\ImageManagerStatic as Image;
 // use Bett\Http\Controllers;
-// use Bett\Repository\ForecastRepository;
-// use Bett\Forecast;
 
 class IndexController extends SiteController
 {
