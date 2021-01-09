@@ -30,7 +30,7 @@ class CountrySeeder extends Seeder
       // $counterFlag = file_get_contents($counterIndex);
 
       // это список флагов стран в папке flag в той последовательности в какой присвоины имена флагам
-      $listFlag = dirname(__FILE__).'\country_flag\flags_name.txt';
+      $listFlag = dirname(__FILE__). DIRECTORY_SEPARATOR . 'country_flag' . DIRECTORY_SEPARATOR . 'flags_name.txt';
       $Flag_list = file_get_contents($listFlag);
 
       $arResult = explode("\n", $Flag_list);
