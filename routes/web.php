@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get ('sport/{id}', 'IndexController@indexsport')->name('IndexSport');
 
+// Route::get('/', 'IndexController@index')->name('Index');
+// Route::get('/{id?}', 'IndexController@index')->name('Index');
+// Route::resource('/', 'IndexController');
 Route::resource('/', 'IndexController', [
                                           'only' => ['index'],
                                           'names' => [
@@ -18,8 +22,8 @@ Route::resource('/', 'IndexController', [
                                                     ]
                                           ]);
 
-Route::get ('sport', 'SportIndexController@index')->name('SportIndex');
-
+// Route::get ('sport/{id}', 'IndexController@index')->name('IndexSport');
+// Route::get ('sport/{id}', 'SportController@indexsport')->name('IndexSport');
 
 Auth::routes();
 

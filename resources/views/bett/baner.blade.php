@@ -2,7 +2,7 @@
     <div class="cols-clear">
         <div class="cols _items-stretch">
             <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/express-bet10/">
-              <img src="{{ env('THEME') }}/img/url_13315.jpeg" class="posterside-image" alt="Проверено Рейтингом Букмекеров">
+              <img src="{{ asset(env('THEME')) }}/img/url_13315.jpeg" class="posterside-image" alt="Проверено Рейтингом Букмекеров">
             </a>
 
 <!--            <div class="col-temp _static col-static_6">

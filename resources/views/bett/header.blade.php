@@ -11,7 +11,7 @@
       <div class="header__row">
           <span class="header__text">Войти через:</span>
           <div class="header__social-login">
-              <a href="https://web.archive.org/web/20190828062649/https://oauth.vk.com/authorize?client_id=5041736&amp;redirect_uri=http%3A%2F%2Fbetfaq.com%2Fuser%2Fauth%2Fvk%2F&amp;display=page&amp;scope=email&amp;response_type=code&amp;v=5.37" class="header__oauth header__oauth_vk" rel="nofollow" target="_blank">Вконтакте</a>
+              <!-- <a href="https://web.archive.org/web/20190828062649/https://oauth.vk.com/authorize?client_id=5041736&amp;redirect_uri=http%3A%2F%2Fbetfaq.com%2Fuser%2Fauth%2Fvk%2F&amp;display=page&amp;scope=email&amp;response_type=code&amp;v=5.37" class="header__oauth header__oauth_vk" rel="nofollow" target="_blank">Вконтакте</a> -->
           </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
 
                 <div class="popup-wrapper__content popup-wrapper__content_remail">
                     <h2 class="popup-wrapper__title">Подтверждение регистрации</h2>
-                    <img src="{{ env('THEME') }}/img/icon-mail.png" alt="">
+                    <img src="{{ asset(env('THEME')) }}/img/icon-mail.png" alt="">
                     <form action="/user/remail/" class="popup-wrapper__form" method="POST">
                         <p class="popup-wrapper__thx-text">Вам необходимо подтвердить ваш email адрес, перейдя по ссылке из письма,
                             которое мы отправляли на вашу почту при регистрации!</p>
@@ -97,7 +97,7 @@
 
                 <div class="popup-wrapper__content popup-wrapper__content_reg-thx js-form-success">
                     <!-- <h2 class="popup-wrapper__title"></h2> -->
-                    <img src="{{ env('THEME') }}/img/icon-mail.png" alt="">
+                    <img src="{{ asset(env('THEME')) }}/img/icon-mail.png" alt="">
                     <p class="popup-wrapper__thx-text"></p>
                 </div>
             </div>

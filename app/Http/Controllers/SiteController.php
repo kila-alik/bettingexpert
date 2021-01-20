@@ -26,7 +26,6 @@ class SiteController extends Controller
   protected $contentLeftBar = False;
   protected $bar = false;
 
-
   // методом внедрения зависимости в конструктор передаем
   // в переменную $forecast передаем объект репозитория ForecastsRepository
   public function __construct(ForecastsRepository $f_rep) {
@@ -36,65 +35,18 @@ class SiteController extends Controller
     // и добавить в use Bett\Repository\ForecastsRepository
     $this->f_rep = $f_rep;
     // переменная f_rep будет использоваться ниже в применении метода get()
-
   }
 
-  protected function renderOutput() {
+  
 
-    // подборку прогнозов - $forecast будет выводить на разные страницы
-    // функция getForecast, которую мы опишем вне функции renderOutput()
-    $forecasts = $this->getForecast();
-
-    // передадим в представление список видов спорта
-    $sport_all = SportModel::all();
-    $sport_all->load('championships', 'commands');
-    $sports = $this->mass_list($sport_all);
-
-    // эта функция создает массив имени Леши
-    // он описан внизу SiteController.php
-    // для прогнозов по центру
-    $arSports = $this->ar_sports($forecasts);
-    // для стран справо
-    $arCountrys = $this->ar_countrys($forecasts);
-
-    // dd($arSports[1]['forecasts'][1]->championship->sport->name);
-
-    $content = view(env('THEME').'.content', compact('arSports', 'arCountrys'))->render();
-    // $content = view(env('THEME').'.content', compact('forecasts', 'images'))->render();
-    $this->vars = array_add($this->vars, 'content', $content);
-    // $this->vars = array_add($this->vars, 'content', $www);
-    // так например выводим блок навигации в index.blade.php
-    // без include , зато добавляем переменные
-    // и выводим этот блок сам как переменную
-    $navigation = view(env('THEME').'.layouts.navigation_all')->render();
-    $this->vars = array_add($this->vars, 'navigation', $navigation);
-
-    Image::configure(array('driver' => 'gd'));
-
-    // $counrtysa = ForecastModel::all();
-    // $counrtysw = ForecastModel::find(1)->championship->country;
-    // dd($counrtysw);
-    // $counrtysw = ForecastModel::all()->championship()->where('sports_id', 1)->get();
-    // ->championship()->where('sports_id', '=', 1)->get();
-    // $counrtysw = ForecastModel::find(1)->championship;
-
-    // $counrtysw = ForecastModel::where('champ_id', 1)->get();
-    // $counrtysw = ForecastModel::has('champ_id.championship.sports_id', 'футбол');
-    // $counrtysw = $counrtysa->where('championship->name', 'футбол');
-    // $counrtysw = where($counrtysa->championship->name, 'футбол');
-    // $counrtysu = $counrtysw->unique('country_id');
-
-    return view($this->template)->with($this->vars);
-  }
-
-  protected function getForecast() {
-    // переменная этой функции $forecast и в нее попадет
-    // выборка которую должен релизовать репозторий ForecastsRepository
-    // и у него потом вызываем метод get() который опишем позже
-    $forecast = $this->f_rep->get();
-
-    return $forecast;
-  }
+  // protected function getForecast() {
+  //   // переменная этой функции $forecast и в нее попадет
+  //   // выборка которую должен релизовать репозторий ForecastsRepository
+  //   // и у него потом вызываем метод get() который опишем позже
+  //   $forecast = $this->f_rep->get();
+  //
+  //   return $forecast;
+  // }
 
   protected function mass_list($models) {
       $mass = [];
@@ -104,7 +56,7 @@ class SiteController extends Controller
       return $mass;
   }
 
-  protected function ar_sports($forecasts) {
+  protected function ar_sports($forecasts, $sportId = FALSE) {
     // это массив ИМЕНИ Леши, вместо моих двух массивов  forecasts sports
     // он такой и его легче и быстрее перебрать, и не будет на выдаче пустых видов спорта
     // ===============================
@@ -128,6 +80,11 @@ class SiteController extends Controller
     foreach ($forecasts as $forecast) {
       // берем через динамические свойства ИМЕННО МОДЕЛЬ спорта
       $sport = $forecast->championship->sport;
+      // если есть второй параметр, то пропустит все спорты кроме с индексом равным $sportId
+      if ($sportId && $sportId <> $sport->id) {
+      // if ($sportId) {
+        continue;
+      }
       // если нет блока для записи по одному виду спорта - создаем ее
       // при этом заполняем имя , алиас и создаем пустой массив forecasts
       if (!isset($arSports[$sport->id])) {
@@ -140,9 +97,9 @@ class SiteController extends Controller
       // при каждом проходе (в том числе и первом) Записываем в пустой подмассив ИМЕННО МОДЕЛИ прогнозов
       $arSports[$sport->id]['forecasts'][] = $forecast;
     }
+    // dd($arSports);
     return $arSports;
   }
-
 
   protected function ar_countrys($forecasts) {
 
@@ -185,8 +142,6 @@ class SiteController extends Controller
     //                ...
     // ...
     // =================================
-
-    // $counter = [];
     $arCountrys = [];
     foreach ($forecasts as $forecast) {
       // берем через динамические свойства ИМЕННО МОДЕЛЬ спорта
@@ -207,9 +162,6 @@ class SiteController extends Controller
           'list'=>[]
         ];
       }
-
-        // dd($country->name);
-        // $www = in_array("Германия", $arCountrys[$sport->id]['list']);
       // при каждом проходе (в том числе и первом) Записываем в пустой подмассив ИМЕННО МОДЕЛИ стран
       if (in_array($country->name, $arCountrys[$sport->id]['list'])) {
         $arCountrys[$sport->id]['countrys'][$country->id][1] = $arCountrys[$sport->id]['countrys'][$country->id][1] + 1;

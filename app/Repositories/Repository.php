@@ -1,8 +1,6 @@
 <?
-
 namespace Bett\Repositories;
 // namespace Bett\Http\Controllers;
-
 use Config;
 use Bett\ForecastModel;
 // use Bett\Http\Controllers;
@@ -32,9 +30,4 @@ abstract class Repository {
     // exit;
     return $builder->get();
   }
-
-
 }
-
-
- ?>

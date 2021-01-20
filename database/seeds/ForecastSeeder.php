@@ -26,12 +26,12 @@ class ForecastSeeder extends Seeder
       ForecastModel::create([
                           'command_1'=>'2',
                           'command_2'=>'3',
-                          'country_id'=>'43',
+                          'country_id'=>'30',
                           'champ_id'=>'1',
                           'coeff'=>'1.43',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-29' . ' ' . '15:30'
+                          'date_game'=>'2021-01-29' . ' ' . '09:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'1',
@@ -46,7 +46,7 @@ class ForecastSeeder extends Seeder
       ForecastModel::create([
                           'command_1'=>'2',
                           'command_2'=>'6',
-                          'country_id'=>'150',
+                          'country_id'=>'182',
                           'champ_id'=>'3',
                           'coeff'=>'1.2',
                           'status'=>'1',
@@ -221,6 +221,16 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.5',
                           'status'=>'0',
                           'result'=>'',
+                          'date_game'=>'2021-02-28' . ' ' . '10:30'
+                        ]);
+      ForecastModel::create([
+                          'command_1'=>'8',
+                          'command_2'=>'9',
+                          'country_id'=>'188',
+                          'champ_id'=>'7',
+                          'coeff'=>'1.7',
+                          'status'=>'0',
+                          'result'=>'',
                           'date_game'=>'2021-02-30' . ' ' . '14:30'
                         ]);
       ForecastModel::create([
@@ -232,6 +242,16 @@ class ForecastSeeder extends Seeder
                           'status'=>'0',
                           'result'=>'',
                           'date_game'=>'2021-01-30' . ' ' . '10:30'
+                        ]);
+      ForecastModel::create([
+                          'command_1'=>'15',
+                          'command_2'=>'17',
+                          'country_id'=>'150',
+                          'champ_id'=>'10',
+                          'coeff'=>'1.36',
+                          'status'=>'0',
+                          'result'=>'',
+                          'date_game'=>'2021-02-10' . ' ' . '11:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'4',

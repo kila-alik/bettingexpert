@@ -108,5 +108,11 @@ class CommandSeeder extends Seeder
                           'sports_id'=>'4',
                           'country_id'=>'30'
                         ]);
+      CommandModel::create([
+                          'name'=>'Макрон',
+                          'description'=>'Франц герл',
+                          'sports_id'=>'4',
+                          'country_id'=>'174'
+                        ]);
     }
 }

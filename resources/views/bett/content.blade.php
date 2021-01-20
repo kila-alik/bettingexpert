@@ -53,7 +53,7 @@
           @endif
           <tr class="head">
             <td class="pin">
-              <div class="br" style="background-image: url('{{ env('THEME') }}/img/pimpa.png')"></div>
+              <div class="br" style="background-image: url('{{ asset(env('THEME')) }}/img/pimpa.png')"></div>
             </td>
             <td>
               <div class="br">Игра</div>
@@ -70,7 +70,7 @@
 
                 @if ($fkey == 4 && $akey == 1)
                   <tr class="premium">
-                    <td class="flag" style="background-image: url('{{ env('THEME') }}/img/flag_premium.png')"></td>
+                    <td class="flag" style="background-image: url('{{ asset(env('THEME')) }}/img/flag_premium.png')"></td>
                     <td colspan="3" class="premium-info">
                       <span class="premium-text">ПЛАТНЫЙ ПРОГНОЗ ОТ НАШИХ АНАЛИТИКОВ</span>
                       <a onclick="ga('send', 'pageview', '/goal-table-premium'); return true;" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/win/premium/" rel="nofollow" class="premium-btn">КУПИТЬ</a>
@@ -80,7 +80,7 @@
 
                 @if ($fkey == 7 && $akey == 1)
                   <tr class="premium">
-                      <td class="flag-express" style="background-image: url('{{ env('THEME') }}/img/express-icon.png')"></td>
+                      <td class="flag-express" style="background-image: url('{{ asset(env('THEME')) }}/img/express-icon.png')"></td>
                       <td colspan="3" class="express-info">
                           <span class="premium-text">Экспресс с коэффициентом 5! Максимальная прибыль!</span>
                           <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/vip/buy/realexpress/1/" rel="nofollow" class="express-btn">Получить</a>
@@ -97,7 +97,7 @@
                     </small>
                       <a href="{{$forecast->result}}">
                         <span class="time">{{$forecast->date_game ? Date::parse($forecast->date_game)->format('H:i') : "00:00"}}</span>
-                        <span class="fore">Прогноз на матч  <ins>{{$forecast->command_one->name}} - {{$forecast->command_two->name}}</ins></span>
+                        <span class="fore">Прогноз на матч:  <ins>{{$forecast->command_one->name}} - {{$forecast->command_two->name}}</ins></span>
                       </a>
                   </td>
                   <td class="coeff main-coeff">
@@ -110,7 +110,7 @@
           @endforeach
 
           <tr class="foot">
-            <td colspan="4"><a href="#">Все прогнозы на {{ $sport['name'] }}</a></td>
+            <td colspan="4"><a href="{{route('IndexSport', ['id' => $akey])}}">Все прогнозы на {{ $sport['name'] }}</a></td>
           </tr>
         </tbody>
       </table>
@@ -156,9 +156,9 @@
 <div class="grid_4">
 	<div class="bannerSideSticky js-bannerSideSticky">
 			<div class="sidespot">
-			<a onclick="ga('send', 'pageview', '/goal-banner-rb');" target="_blank" rel="nofollow" href="https://web.archive.org/web/20190828062649/https://bookmaker-ratings.ru/kappers/betfaq-ru/"><img src="{{ env('THEME') }}/img/img_79.jpeg" class="posterside-image" alt="Проверено Рейтингом Букмекеров"></a>		</div>
+			<a onclick="ga('send', 'pageview', '/goal-banner-rb');" target="_blank" rel="nofollow" href="https://web.archive.org/web/20190828062649/https://bookmaker-ratings.ru/kappers/betfaq-ru/"><img src="{{ asset(env('THEME')) }}/img/img_79.jpeg" class="posterside-image" alt="Проверено Рейтингом Букмекеров"></a>		</div>
 			<div class="sidespot">
-			<a onclick="ga('send', 'pageview', '/goal-banner-5prem');" target="_blank" rel="nofollow" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/no-risk/"><img src="{{ env('THEME') }}/img/img_68.jpeg" class="posterside-image" alt="5 Премиум прогнозов по цене трёх!"></a>		</div>
+			<a onclick="ga('send', 'pageview', '/goal-banner-5prem');" target="_blank" rel="nofollow" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/no-risk/"><img src="{{ asset(env('THEME')) }}/img/img_68.jpeg" class="posterside-image" alt="5 Премиум прогнозов по цене трёх!"></a>		</div>
 	</div><div class="side-selector" style="margin-bottom: 20px">
     <div class="header">Все прогнозы на спорт</div>
 
@@ -184,7 +184,7 @@
                 @endforeach
 
                   <!-- <li class=" ">
-                      <a class="list__link" onclick="return false;" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/brazil/" style="background-image: url('{{ env('THEME') }}/img/945.small.jpg')">
+                      <a class="list__link" onclick="return false;" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/brazil/" style="background-image: url('{{ asset(env('THEME')) }}/img/945.small.jpg')">
                         Бразилия</a>
                       <ul>
                         <li>

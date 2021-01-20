@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use Bett\SportModel;
 use Config;
 use Route;
+use Bett\ForecastModel;
+use Bett\Repositories\ForecastsRepository;
 
-class SportController extends Controller
+class SportController extends SiteController
 {
 // Date::setLocale('ru');
 
