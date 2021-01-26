@@ -2,24 +2,24 @@
 <div class="clear"></div>
 <div class="grid_10" id="day">
     <div class="tabs">
-      <div class="tab active">
+      <div class="tab {{ \Carbon\Carbon::parse($idData)->format('Y-m-d') == \Carbon\Carbon::now()->format('Y-m-d') ? 'active' : '' }}">
         <div>
           <span>
-            <span class="tab-button">Сегодня</span>
+            <a class="tab-button" href="{{route('IndexSport', ['id' => 0, 'date' => \Carbon\Carbon::now()->format('Y-m-d')])}}">Сегодня</a>
           </span>
         </div>
       </div>
-      <div class="tab ">
+      <div class="tab {{ \Carbon\Carbon::parse($idData)->format('Y-m-d') == \Carbon\Carbon::now()->addDays(1)->format('Y-m-d') ? 'active' : '' }}">
         <div>
           <span>
-            <a class="tab-button" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/tomorrow/#scroll">Завтра</a>
+            <a class="tab-button" href="{{route('IndexSport', ['id' => 0, 'date' => \Carbon\Carbon::now()->addDays(1)->format('Y-m-d')])}}">Завтра</a>
           </span>
         </div>
       </div>
-      <div class="tab ">
+      <div class="tab {{ \Carbon\Carbon::parse($idData)->format('Y-m-d') == \Carbon\Carbon::now()->addDays(2)->format('Y-m-d') ? 'active' : '' }}">
         <div>
           <span>
-            <a class="tab-button" href="https://web.archive.org/web/20190828062649/https://betfaq.ru/aftertomorrow/#scroll">Послезавтра</a>
+            <a class="tab-button" href="{{route('IndexSport', ['id' => 0, 'date' => \Carbon\Carbon::now()->addDays(2)->format('Y-m-d')])}}">Послезавтра</a>
           </span>
         </div>
       </div>
@@ -31,7 +31,7 @@
     <section class="soccer">
       <div class="follow-wrapper" style="height: 60px;">
         <header class="">
-          <h2 class="{{ $sport['alias'] }}">Прогнозы на {{ $sport['name'] }} {{Date::now()->format('j F Y г.')}}</h2>
+          <h2 class="{{ $sport['alias'] }}">Прогнозы на {{ $sport['name'] }} {{Date::parse($idData)->format('j F Y г.')}}</h2>
         </header>
       </div>
 
@@ -110,7 +110,7 @@
           @endforeach
 
           <tr class="foot">
-            <td colspan="4"><a href="{{route('IndexSport', ['id' => $akey])}}">Все прогнозы на {{ $sport['name'] }}</a></td>
+            <td colspan="4"><a href="{{route('IndexSport', ['id' => $akey, 'date' => $idData])}}">Все прогнозы на {{ $sport['name'] }}</a></td>
           </tr>
         </tbody>
       </table>

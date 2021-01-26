@@ -704,7 +704,8 @@ body.page-tennis {
     background: #17181c url('../img/main-bg-tennis.jpg') no-repeat 50% 0 !important;
 }
 
-body.page-basketball {
+/* body.page-basketball { */
+body.page-basket {
     background-image: url('../img/grad_175.png'), url('../img/main-bg-basketball.jpg');
     background-repeat: repeat-x, no-repeat;
     background-position: 0 0, 50% 0;
@@ -4694,7 +4695,8 @@ table.fore-bets .comments {
 }
 .page-hockey .text_page,
 .page-soccer .text_page,
-.page-basketball .text_page,
+/* .page-basketball .text_page, */
+.page-basket .text_page,
 .page-tennis .text_page {
     margin-top: 25px;
 }

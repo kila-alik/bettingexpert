@@ -28,15 +28,9 @@ class SportsSeeder extends Seeder
                           'name'=>'Теннис',
                           'alias'=>'tennis'
                         ]);
-
-      SportModel::create([
-                          'name'=>'Волейбол',
-                          'alias'=>'volley'
-                        ]);
       // SportModel::create([
-      //                     'name'=>'Январь',
-      //                     'autor'=>'Сидоров',
-      //                     'text'=>'Январь 2020 года выдался бесснежным!'
+      //                     'name'=>'Волейбол',
+      //                     'alias'=>'volley'
       //                   ]);
     }
 }

@@ -7,6 +7,7 @@ namespace Bett\Http\Controllers;
 use Illuminate\Http\Request;
 use Bett\Repositories\ForecastsRepository;
 use Bett\ForecastModel;
+use Carbon\Carbon;
 // use Intervention\Image\ImageManager;
 // use Bett\Image;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -33,53 +34,61 @@ class IndexController extends SiteController
      * @return \Illuminate\Http\Response
      */
     public function index()
-    // public function index($id=false)
-    {
-      // подборку прогнозов - $forecast будет выводить на разные страницы
-      // функция getForecast, которую мы опишем вне функции renderOutput()
-        return $this->renderOutput();
-    }
+      // public function index($id=false)
+      {
+        // подборку прогнозов - $forecast будет выводить на разные страницы
+        // функция getForecast, которую мы опишем вне функции renderOutput()
+          return $this->renderOutput(0, \Carbon\Carbon::now()->format('Y-m-d'));
+      }
 
-    protected function renderOutput($id=false) {
+    // public function indexsport($idSport=false)
+    public function indexsport($idSport=false, $idData=false)
+      {
+        return $this->renderOutput($idSport, $idData);
+      }
 
-      $forecasts = $this->getForecast();
+    protected function renderOutput($idSport=false, $idData=false) {
+
+    // dd($idData);
+      // $forecasts = $this->getForecast();
       // $forecasts = ForecastModel::all();
+      $forecasts = ForecastModel::whereDate('date_game', $idData)->get();
+      $arrMenu = ['1' => 'Футбол', '2' => 'Хоккей', '3' => 'Баскетбол', '4' => 'Теннис'];
+      // dd($arrMenu);
 
-      if($id) {
-        $arSports = $this->ar_sports($forecasts, $id);
+      // для прогнозов по центру
+      if($idSport && $idSport !== 0) {
+        $arSports = $this->ar_sports($forecasts, $idSport);
+        // эта проверка на то что есть ли прогноз по ЭТОМУ виду спорта в ЭТУ дату
+        if(count($arSports) > 0) $body = $arSports[$idSport]['alias'];
+        else $body = false;
+        $this->vars = array_add($this->vars, 'body', $body);
       } else {
         $arSports = $this->ar_sports($forecasts);
       }
-      // для стран справо
-      $arCountrys = $this->ar_countrys($forecasts);
 
-      $content = view(env('THEME').'.content', compact('arSports', 'arCountrys'))->render();
+      // для стран справо, и для видов спорта в меню
+      $arCountrys = $this->ar_countrys($forecasts);
+      // $body = view(env('THEME').'.layouts.all', compact('arSports'))->render();
+
+      $content = view(env('THEME').'.content', compact('arSports', 'arCountrys', 'idData'))->render();
       $this->vars = array_add($this->vars, 'content', $content);
-      $navigation = view(env('THEME').'.layouts.navigation_all')->render();
+      // dd(\Carbon\Carbon::parse($idData)->format('Y-m-d'));
+      $navigation = view(env('THEME').'.layouts.navigation_all', compact('arCountrys', 'idData', 'arrMenu'))->render();
       $this->vars = array_add($this->vars, 'navigation', $navigation);
       // Image::configure(array('driver' => 'gd'));
       return view($this->template)->with($this->vars);
     }
 
     protected function getForecast() {
-      // переменная этой функции $forecast и в нее попадет
-      // выборка которую должен релизовать репозторий ForecastsRepository
-      // и у него потом вызываем метод get() который опишем позже
-      $forecast = $this->f_rep->get();
-      return $forecast;
-    }
+        // переменная этой функции $forecast и в нее попадет
+        // выборка которую должен релизовать репозторий ForecastsRepository
+        // и у него потом вызываем метод get() который опишем позже
+        $forecast = $this->f_rep->get();
+        return $forecast;
+      }
 
-    /**
-    * Display a listing of the resource.
-    *
-    * @return \Illuminate\Http\Response
-    */
-    public function indexsport($id=false)
-    {
-        return $this->renderOutput($id);
-    }
-
-    /**
+      /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

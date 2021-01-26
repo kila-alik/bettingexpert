@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get ('sport/{id}', 'IndexController@indexsport')->name('IndexSport');
+Route::get ('sport/{id}/{date}', 'IndexController@indexsport')->name('IndexSport');
 
 // Route::get('/', 'IndexController@index')->name('Index');
 // Route::get('/{id?}', 'IndexController@index')->name('Index');

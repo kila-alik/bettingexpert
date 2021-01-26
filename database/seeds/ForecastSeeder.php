@@ -21,7 +21,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.5',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '12:30'
+                          'date_game'=>'2021-01-26' . ' ' . '12:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
@@ -31,7 +31,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.43',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2021-01-29' . ' ' . '09:30'
+                          'date_game'=>'2021-01-27' . ' ' . '09:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'1',
@@ -41,7 +41,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.64',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-29' . ' ' . '15:30'
+                          'date_game'=>'2021-01-28' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
@@ -51,7 +51,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.2',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '12:30'
+                          'date_game'=>'2021-01-26' . ' ' . '12:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'5',
@@ -61,7 +61,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.12',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-30' . ' ' . '14:00'
+                          'date_game'=>'2021-01-27' . ' ' . '14:00'
                         ]);
       ForecastModel::create([
                           'command_1'=>'11',
@@ -71,7 +71,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.17',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-29' . ' ' . '15:30'
+                          'date_game'=>'2021-01-28' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'13',
@@ -81,7 +81,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.3',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '12:30'
+                          'date_game'=>'2021-01-26' . ' ' . '12:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'11',
@@ -91,7 +91,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.4',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-30' . ' ' . '14:00'
+                          'date_game'=>'2021-01-27' . ' ' . '14:00'
                         ]);
       ForecastModel::create([
                           'command_1'=>'3',
@@ -101,7 +101,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.1',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-29' . ' ' . '15:30'
+                          'date_game'=>'2021-01-28' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
@@ -111,7 +111,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.73',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '12:30'
+                          'date_game'=>'2021-01-26' . ' ' . '12:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'1',
@@ -121,7 +121,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.61',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-30' . ' ' . '14:00'
+                          'date_game'=>'2021-01-27' . ' ' . '14:00'
                         ]);
       ForecastModel::create([
                           'command_1'=>'3',
@@ -131,7 +131,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.2',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-29' . ' ' . '15:30'
+                          'date_game'=>'2021-01-28' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'7',
@@ -141,7 +141,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.12',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '12:30'
+                          'date_game'=>'2021-01-26' . ' ' . '12:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'10',
@@ -151,7 +151,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.15',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '12:30'
+                          'date_game'=>'2021-01-27' . ' ' . '12:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'3',
@@ -161,7 +161,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.3',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-29' . ' ' . '15:30'
+                          'date_game'=>'2021-01-28' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'4',
@@ -171,7 +171,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.4',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-30' . ' ' . '14:00'
+                          'date_game'=>'2021-01-26' . ' ' . '14:00'
                         ]);
       ForecastModel::create([
                           'command_1'=>'1',
@@ -181,7 +181,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.1',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '12:30'
+                          'date_game'=>'2021-01-27' . ' ' . '12:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
@@ -191,7 +191,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.3',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-28' . ' ' . '09:30'
+                          'date_game'=>'2021-01-28' . ' ' . '09:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'1',
@@ -201,7 +201,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.68',
                           'status'=>'1',
                           'result'=>'',
-                          'date_game'=>'2020-12-29' . ' ' . '15:30'
+                          'date_game'=>'2021-01-26' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
@@ -211,7 +211,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.4',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2020-12-30' . ' ' . '14:00'
+                          'date_game'=>'2021-01-27' . ' ' . '14:00'
                         ]);
       ForecastModel::create([
                           'command_1'=>'7',
@@ -221,7 +221,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.5',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2021-02-28' . ' ' . '10:30'
+                          'date_game'=>'2021-01-28' . ' ' . '10:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'8',
@@ -231,7 +231,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.7',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2021-02-30' . ' ' . '14:30'
+                          'date_game'=>'2021-01-26' . ' ' . '14:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'15',
@@ -241,7 +241,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.16',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2021-01-30' . ' ' . '10:30'
+                          'date_game'=>'2021-01-27' . ' ' . '10:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'15',
@@ -251,7 +251,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.36',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2021-02-10' . ' ' . '11:30'
+                          'date_game'=>'2021-01-28' . ' ' . '11:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'4',
@@ -261,7 +261,7 @@ class ForecastSeeder extends Seeder
                           'coeff'=>'1.1',
                           'status'=>'0',
                           'result'=>'',
-                          'date_game'=>'2021-01-20' . ' ' . '10:00'
+                          'date_game'=>'2021-01-26' . ' ' . '10:00'
                         ]);
     }
 }

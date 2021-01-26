@@ -4,20 +4,18 @@
 <nav id="mainmenu" class="nav">
     <ul class="nav-list">
         <li class="nav-list__item nav-list__dropdown">
-                        <span class="nav-list__button _active">Бесплатные прогнозы</span>
-                        <ul class="nav-list__dropdown-list">
-                <li class="nav-list__dropdown-item">
-                                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/football/" class="nav-list__dropdown-button">Прогнозы на футбол</a>
-                                    </li>
-                <li class="nav-list__dropdown-item">
-                                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/basketball/" class="nav-list__dropdown-button">Прогнозы на баскетбол</a>
-                                    </li>
-                <li class="nav-list__dropdown-item">
-                                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/hockey/" class="nav-list__dropdown-button">Прогнозы на хоккей</a>
-                                    </li>
-                <li class="nav-list__dropdown-item">
-                                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/tennis/" class="nav-list__dropdown-button">Прогнозы на теннис</a>
-                                    </li>
+                        <!-- <span class="nav-list__button _active">Бесплатные прогнозы</span> -->
+                        <a href="{{route('home')}}"><span class="nav-list__button _active">Бесплатные прогнозы</span></a>
+                        <!-- <a href="{{route('home')}}"><span class="nav-list__text">Бесплатные прогнозы</span></a> -->
+            <ul class="nav-list__dropdown-list">
+              <!-- @foreach($arCountrys as $menukey => $sport) -->
+              <!-- <a href="{{route('IndexSport', ['id' => $menukey, 'date' => $idData])}}" class="nav-list__dropdown-button">Прогнозы на {{ $sport['name'] }}</a> -->
+              <!-- @endforeach -->
+              @foreach($arrMenu as $menukey => $sport)
+                  <li class="nav-list__dropdown-item">
+                      <a href="{{route('IndexSport', ['id' => $menukey, 'date' => $idData])}}" class="nav-list__dropdown-button">Прогнозы на {{ $sport }}</a>
+                  </li>
+              @endforeach
             </ul>
         </li>
         <li class="nav-list__item">

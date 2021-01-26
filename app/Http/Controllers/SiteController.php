@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Bett\SportModel;
 use Bett\ChampionshipModel;
 use Bett\ForecastModel;
+use Carbon\Carbon;
 // use Bett\Image;
 // use Intervention\Image\ImageManager;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -37,7 +38,7 @@ class SiteController extends Controller
     // переменная f_rep будет использоваться ниже в применении метода get()
   }
 
-  
+
 
   // protected function getForecast() {
   //   // переменная этой функции $forecast и в нее попадет
