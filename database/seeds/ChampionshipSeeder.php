@@ -38,6 +38,11 @@ class ChampionshipSeeder extends Seeder
                           'country_id'=>'173'
                         ]);
       ChampionshipModel::create([
+                          'name'=>'Канадский',
+                          'sports_id'=>'1',
+                          'country_id'=>'70'
+                        ]);
+      ChampionshipModel::create([
                           'name'=>'Южно-Американский',
                           'sports_id'=>'2',
                           'country_id'=>'180'

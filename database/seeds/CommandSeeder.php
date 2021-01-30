@@ -91,6 +91,12 @@ class CommandSeeder extends Seeder
                           'country_id'=>'3'
                         ]);
       CommandModel::create([
+                          'name'=>'Эль',
+                          'description'=>'Канадская команда',
+                          'sports_id'=>'1',
+                          'country_id'=>'70'
+                        ]);
+      CommandModel::create([
                           'name'=>'Берлин',
                           'description'=>'Немецкая команда',
                           'sports_id'=>'2',

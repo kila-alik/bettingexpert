@@ -45,7 +45,7 @@ class CountrySeeder extends Seeder
                             ]);
       }
         CountryModel::create([
-                              'name'=>'По умолчанию',
+                              'name'=>'Не определено',
                               'file'=>'flag_default.png'
                             ]);
 

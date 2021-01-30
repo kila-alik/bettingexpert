@@ -25,6 +25,8 @@
       </div>
     </div>
 
+    <!-- {{ MyHalper::flagResize('vip-icon.png', 84, 25) }} -->
+
     @foreach($arSports as $akey => $sport)
     <div id="sticky">
 
@@ -89,8 +91,10 @@
                 @endif
 
                 <tr class="" style="cursor: pointer;">
-                  <td class="flag" style="background-image: url('{{ MyHalper::flagResize( $forecast->country->file, 22, 16)}}')"></td>
-                  <td class="title">
+                  <td class="flag" style="background-image: url('{{ MyHalper::flagResize($forecast->country->file, 22, 16)}}')"></td>
+                  <!-- {{$forecast->status}} -->
+                  <!-- <td class="title vip-event"> -->
+                  <td class="title {{$forecast->status > 0 ? $forecast->status == 1 ? "vip-event" : "premium-event" : "free-event"}}">
                     <small>
                       <a href="{{$forecast->country->id}}">{{$forecast->country->name}}</a>
                       - <a href="{{$forecast->championship->id}}">{{$forecast->championship->name}}</a>
@@ -101,7 +105,8 @@
                       </a>
                   </td>
                   <td class="coeff main-coeff">
-                    <a href="#">{{$forecast->coeff}}</a>
+                    <a href="#">{{$forecast->status == 0 ? $forecast->coeff : ""}}</a>
+                    <!-- <a href="#">{{$forecast->coeff}}</a> -->
                   </td>
                   <td class="result">
                     <a class="eshe _show" href="{{$forecast->result}}">Читать</a>
@@ -226,6 +231,6 @@
 </div>
             </div>
 @else
-<p>Прогнозов на данный момент нет!!!</p>
+<p>Прогнозов на выбранную дату по выбранному виду спорта в данный момент Нет!!!</p>
 
 @endif

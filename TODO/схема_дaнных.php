@@ -48,7 +48,7 @@
   coeff - float (Коэффициент прогноза)
   result - string - (результат игры)
   data_game - timestamp (дата игры)
-  status - boolean (платные или бесплатные прогнозы)
+  status - integer (платные или бесплатные прогнозы)
 
 
 миграции

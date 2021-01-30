@@ -994,19 +994,41 @@ color:#1b3c5e;
     position: relative;
     display: block;
 }
+.vip-event{
+    position: relative;
+    display: block;
+}
+.free-event{
+    position: relative;
+    display: block;
+}
 .premium-event::after{
     position: absolute;
     content: '';
-    top: -10px;
-    right: -20px;
+    /* top: -10px;
+    right: -20px; */
+    top: 0px;
+    right: 0px;
     width: 84px;
     height: 23px;
     background: url(../img/premium-icon.png) repeat-x;
+}
+.vip-event::after{
+    position: absolute;
+    content: '';
+    top: 0px;
+    right: 0px;
+    width: 35px;
+    height: 23px;
+    background: url(../img/84_25/vip-icon.png) no-repeat;
 }
 
 .premium-event:hover::after{
     background-position: 0 -30px;
 }
+/* .vip-event:hover::after{
+    background-position: 0 -30px;
+} */
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 background: #eeeeee;
