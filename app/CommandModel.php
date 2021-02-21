@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CommandModel extends Model
 {
     // -------------------Это разрешения при массовом заполнении полей
-    protected $fillable = ['name', 'description', 'sports_id', 'country_id'];
+    protected $fillable = ['name', 'description', 'sports_id', 'country_id', 'logo'];
     // protected $fillable = ['title', 'text_new'];
     // protected $guarded = ['autor'];
 

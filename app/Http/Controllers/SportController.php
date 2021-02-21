@@ -9,7 +9,7 @@ use Route;
 use Bett\ForecastModel;
 use Bett\Repositories\ForecastsRepository;
 
-class SportController extends SiteController
+class SportController extends Controller
 {
 // Date::setLocale('ru');
 

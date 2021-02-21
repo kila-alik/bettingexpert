@@ -8,12 +8,9 @@
                         <a href="{{route('home')}}"><span class="nav-list__button _active">Бесплатные прогнозы</span></a>
                         <!-- <a href="{{route('home')}}"><span class="nav-list__text">Бесплатные прогнозы</span></a> -->
             <ul class="nav-list__dropdown-list">
-              <!-- @foreach($arCountrys as $menukey => $sport) -->
-              <!-- <a href="{{route('IndexSport', ['id' => $menukey, 'date' => $idData])}}" class="nav-list__dropdown-button">Прогнозы на {{ $sport['name'] }}</a> -->
-              <!-- @endforeach -->
-              @foreach($arrMenu as $menukey => $sport)
+              @foreach(config('settings.sports') as $menukey => $sport)
                   <li class="nav-list__dropdown-item">
-                      <a href="{{route('IndexSport', ['id' => $menukey, 'date' => $idData])}}" class="nav-list__dropdown-button">Прогнозы на {{ $sport }}</a>
+                      <a href="{{route('IndexSport', ['id' => $menukey, 'date' => $idDataMenu])}}" class="nav-list__dropdown-button">Прогнозы на {{ $sport }}</a>
                   </li>
               @endforeach
             </ul>

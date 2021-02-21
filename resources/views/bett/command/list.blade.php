@@ -14,8 +14,9 @@
         вид спорта <a href={{route('SportDetail', ['id' => $command->sport->id])}}>{{$command->sport->name}}</a> -/-
         из страны <a href={{route('CountryDetail', ['id' => $command->country->id])}}>{{$command->country->name}}</a> -/-
         <a href={{route('CommandEdit', ['id' => $command->id])}}><i><b>Изменить Команду</b></i></a> -/-
-        {{isset($command['created_at']) ? "в базе с ".$command['created_at'] : ""}}
-            
+        {{isset($command['created_at']) ? "в базе с ".$command['created_at'] : ""}} -/-
+        <img src="{{ asset(env('THEME')) }}/logos/{{ $command->logo ? $command->logo : 'icon-excl.png'}}" width="20" height="20" alt="">
+
     </li>
 </ul>
    @endforeach

@@ -2240,8 +2240,7 @@ table#forebets .comments {
 
 .prognoz .teams {
     position: relative;
-    /*height: 440px;*/
-    height:366px;
+    height: 440px;
     background: #131416 url(../img/prognoz-bg.png) no-repeat 50% 0;
 }
 body .prognoz .teams.blackout {
@@ -2345,7 +2344,8 @@ body .prognoz .teams.blackout {
     text-transform: uppercase;
 }
 
-.prognoz .teams .won,.prognoz .teams .draw {
+/* .prognoz .teams .won,.prognoz .teams .draw { */
+.prognoz .teams .won {
     position: absolute;
     left: 50%;
     top: 220px;
@@ -2356,7 +2356,7 @@ body .prognoz .teams.blackout {
     line-height: 26px;
     color: #fff;
     text-align: center;
-    border: 2px solid #46d901;
+    /* border: 2px solid #46d901; */
     border-radius: 4px;
 }
 
@@ -2441,7 +2441,8 @@ body .prognoz .teams.blackout {
 }
 
 .prognoz .teams .var {
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     left: 50%;
     height: 60px;
     font-size: 14px;
@@ -2451,14 +2452,17 @@ body .prognoz .teams.blackout {
     border-width:1px;
     border-style:solid;
     border-radius: 5px;
-    color: #fff;
-    background: url('../img/coeff-hover.png') repeat-x 50% 50%;
+    color: #666;
+    border: 1px solid #000;
     width: 600px;
     margin-left: -300px;
     top: 286px;
 }
-.var.active{
+/* .var.active{ */
+.prognoz .teams .var.active{
     border-color: #137509;
+    color: #fff;
+    background: url('../img/coeff-hover.png') repeat-x 50% 50%;
 }
 .var.personal{
     border-color:rgba(255,125,13,1);

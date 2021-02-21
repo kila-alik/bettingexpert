@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://web.archive.org/web/20160326042719im_/http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTfOEPOIfcPv-fZ-WyMUtx48.ttf) format('truetype');
+}
+
+/*
+     FILE ARCHIVED ON 04:27:19 Mar 26, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:31:00 Jan 31, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1401.424
+  exclusion.robots: 0.078
+  exclusion.robots.policy: 0.072
+  RedisCDXSource: 231.78
+  esindex: 0.008
+  LoadShardBlock: 1115.309 (3)
+  PetaboxLoader3.datanode: 1160.59 (4)
+  CDXLines.iter: 38.682 (3)
+  load_resource: 126.457
+  PetaboxLoader3.resolve: 47.707
+*/

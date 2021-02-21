@@ -1,0 +1,78 @@
+#topbanner {
+    position: relative;
+    float: right;
+    width: 630px;
+    height: 110px;
+    margin: 23px -60px 0 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ccc;
+    background: #323232;
+}
+
+    #topbanner ins {
+        position: absolute;
+        right: 9px;
+        bottom: 0;
+        width: 117px;
+        height: 118px;
+        background: url('/web/20160328110424im_/http://betfaq.ru/css/img/topbanner/banner-kubok.png') no-repeat 0 0;
+    }
+
+    #topbanner .from {
+        float: right;
+        width: 80px;
+        height: 57px;
+        margin: 27px 140px 0 0;
+        padding: 2px 0 0 17px;
+        font-size: 13px;
+        color: #ffc700;
+        background: url('/web/20160328110424im_/http://betfaq.ru/css/img/topbanner/banner-line.png') no-repeat 0 0;
+        text-transform: uppercase;
+    }
+
+    #topbanner .best {
+        padding: 26px 0 0 20px;
+        line-height: 18px;
+    }
+
+        #topbanner .best a {
+            display: inline-block;
+            line-height: 24px;
+            padding-right: 28px;
+            font-weight: 700;
+            color: #ccc;
+            background: url('/web/20160328110424im_/http://betfaq.ru/css/img/topbanner/banner-icon.png') no-repeat 100% 2px;
+        }
+
+            #topbanner .best a span {
+                display: inline-block;
+                line-height: 18px;
+                border-bottom: 2px solid #ccc;
+            }
+
+                #topbanner .best a:hover span {
+                    border-color: transparent;
+                }
+
+/*
+     FILE ARCHIVED ON 11:04:24 Mar 28, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:30:59 Jan 31, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  PetaboxLoader3.resolve: 155.635 (2)
+  LoadShardBlock: 91.235 (3)
+  exclusion.robots: 0.268
+  captures_list: 128.072
+  load_resource: 265.347 (2)
+  esindex: 0.013
+  exclusion.robots.policy: 0.253
+  CDXLines.iter: 28.335 (3)
+  RedisCDXSource: 3.617
+  PetaboxLoader3.datanode: 148.074 (5)
+*/

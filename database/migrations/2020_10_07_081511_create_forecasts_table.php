@@ -25,7 +25,15 @@ class CreateForecastsTable extends Migration
             $table->unsignedBigInteger('command_2')->nullable()->comment('внешний ключ указывает на поле id из таб. command');
             $table->unsignedBigInteger('country_id')->nullable()->comment('внешний ключ указывает на поле id в таб. country');
             $table->unsignedBigInteger('champ_id')->nullable()->comment('внешний ключ указывает на поле id из таб. championship');
-            $table->float('coeff', 8, 2)->nullable()->comment('Коэффициент прогноза');
+            $table->float('coeff', 8, 2)->nullable()->comment('Основной коэффициент прогноза');
+            $table->float('lwin', 8, 2)->nullable()->comment('Победа 1-й команды');
+            $table->float('draw', 8, 2)->nullable()->comment('Ничья');
+            $table->float('rwin', 8, 2)->nullable()->comment('Победа 2-й команды');
+            $table->float('lwdraw', 8, 2)->nullable()->comment('Победа 1-й или ничья');
+            $table->float('rwdraw', 8, 2)->nullable()->comment('Победа 2-й или ничья');
+            $table->text('text_before')->nullable()->comment('Описание игры до фото');
+            $table->text('text_after')->nullable()->comment('Описание игры после фото');
+            $table->string('foto')->nullable()->comment('Фото в тексте');
             $table->string('result')->nullable()->comment('Результат игры(встречи)');
             $table->integer('status')->default(0)->comment('Premium 2, Vip 1, free 0');
             $table->timestamp('date_game')->nullable()->comment('Дата игры');

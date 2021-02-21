@@ -1,0 +1,114 @@
+#one-time-overlay.dialog5s {
+    display: none;
+    opacity: 0.95;
+}
+
+#regform.dialog5s {
+    display: none;
+    width: 440px;
+    height: 400px;
+    margin-left: -220px;
+    position: absolute;
+    margin-top: 125px;
+}
+
+
+#regform.dialog5s a.close {
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+#regform.dialog5s .res-text
+{
+    margin-top: -25px;
+    display: block;
+}
+
+#regform.dialog5s .body {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+#regform.dialog5s .body .screen {
+    width: 360px;
+    height: auto;
+}
+
+#regform.dialog5s .body h2 {
+    display: block;
+    margin-bottom: 60px;
+    margin-top: 9px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#regform.dialog5s .body h2 span {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+#regform.dialog5s .body .inputs {
+    float: none;
+}
+
+#regform.dialog5s .body .inputs input {
+    width: 360px;
+}
+
+#regform.dialog5s .body button {
+    position: relative;
+    width: 100%;
+    margin-top: 90px;
+}
+
+#regform.dialog5s .body button + button {
+    margin-top: 10px;
+}
+
+#regform.dialog5s .body .checks {
+    float: none;
+    margin: 10px 0 0 0;
+    text-align: left;
+}
+
+#trigger5s {
+    clear: both;
+    height: 1px;
+    font-size: 0;
+}
+
+.teams.coeff-selector .vars {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 223px;
+    font-size: 0;
+    text-align: center;
+}
+
+.teams.coeff-selector .vars .var {
+    position: static;
+    display: inline-block;
+    margin: 0 5px 10px;
+    font-size: 14px;
+}
+/*
+     FILE ARCHIVED ON 05:48:18 Apr 12, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:31:04 Jan 31, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  PetaboxLoader3.resolve: 58.171 (2)
+  exclusion.robots: 0.131
+  LoadShardBlock: 68.202 (3)
+  RedisCDXSource: 24.684
+  PetaboxLoader3.datanode: 1122.223 (5)
+  captures_list: 112.24
+  esindex: 0.009
+  CDXLines.iter: 16.877 (3)
+  exclusion.robots.policy: 0.122
+  load_resource: 1185.796 (2)
+*/

@@ -12,6 +12,10 @@
 <b>Страна: </b>
 {{ $commands->country->name }}
 <br />
+<b>Логотип: {{ $commands->logo ? 'выбран' : 'НЕ выбран'}}</b> 
+{{ $commands->logo }} изображение
+<img src="{{asset(env('THEME')) }}/logos/{{ $commands->logo ? $commands->logo : 'icon-excl.png'}}" width="150" height="150" alt="">
+<br />
 <b>Описание Команды: </b>
 {{$commands->description}}
 

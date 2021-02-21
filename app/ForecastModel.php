@@ -10,7 +10,10 @@ use Carbon\Carbon;
 class ForecastModel extends Model
 {
   // -------------------Это разрешения при массовом заполнении полей
-  protected $fillable = ['command_1', 'command_2', 'country_id', 'champ_id', 'coeff', 'status', 'result', 'date_game'];
+  protected $fillable = ['command_1', 'command_2', 'country_id', 'champ_id', 'coeff', 'status',
+                         'result', 'date_game', 'lwin', 'draw', 'rwin', 'lwdraw', 'rwdraw', 'text_before',
+                         'text_after', 'foto'
+                        ];
   // protected $fillable = ['title', 'text_new'];
   // protected $guarded = ['autor'];
   //---------------Это указываем с какой таблицей работать этой модели

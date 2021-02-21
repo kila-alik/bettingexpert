@@ -1,0 +1,6676 @@
+a
+{
+    cursor: pointer;
+}
+body {
+    font: 12px Arial, sans-serif;
+    color: #777;
+    background: #18171c url('/web/20160408052053im_/http://betfaq.ru/css/img/main-bg.jpg') no-repeat 50% -95px;
+}
+
+body.page-tennis {
+    background: #17181c url('/web/20160408052053im_/http://betfaq.ru/css/img/main-bg-tennis.jpg') no-repeat 50% 0;
+}
+
+body.page-hockey {
+    background: #17181c url('/web/20160408052053im_/http://betfaq.ru/css/img/main-bg-hockey.jpg') no-repeat 50% 0;
+}
+body.page-basketball {
+    background: #17181c url('/web/20160408052053im_/http://betfaq.ru/css/img/main-bg-basketball.jpg') no-repeat 50% 0;
+}
+body.page-magazin {
+    background: #17181c url('/web/20160408052053im_/http://betfaq.ru/css/img/bg-magazin.png') no-repeat 50% -99px;
+}
+
+body.page-magazin.notice {
+    padding-top: 50px;
+    background-position: 50% -49px;
+}
+
+.roboto {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.opensans {
+    font-family: 'Open Sans Condensed', Arial, sans-serif;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+}
+h1.nouc {
+    text-transform: none;
+}
+
+h2 {
+    height: 25px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #000;
+}
+h2 a:hover
+{
+    text-decoration: none;
+}
+
+h2.hockey {
+    padding-left: 35px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/puck.png') no-repeat 0 50%;
+}
+
+h2.rupor {
+    padding-left: 30px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/rupor.png') no-repeat 0 50%;
+}
+
+h2.soccer {
+    padding-left: 32px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/h2/soccer.png') no-repeat 0 50%;
+}
+
+h2.tennis {
+    padding-left: 32px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/h2/tennis.png') no-repeat 0 50%;
+}
+h2.basketball {
+    padding-left: 32px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/h2/basketball.png') no-repeat 0 50%;
+}
+
+h3 {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+}
+
+h3 a {
+    display: inline-block;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #066ecf;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/larr.png') no-repeat 0 50%;
+}
+
+h4 {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+h4.yellow {
+    margin-bottom: 10px;
+    color: #fc0;
+}
+
+h5 {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+h6 {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+}
+
+input {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    font: 14px Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, .5);
+}
+
+.input-textarea {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    font: 14px Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, .5);
+}
+
+
+
+input[type=file]{
+    border: 0;
+    border-radius: 0px;
+    box-shadow: none;
+    padding:0px
+}
+
+form input + a {
+    float: left;
+    margin: 5px 0 0 25px;
+    line-height: 32px;
+    font-size: 12px;
+    color: #6ccaff;
+}
+
+.hidden {
+    display: none;
+}
+
+.lfloat {
+    float: left;
+}
+
+.rfloat {
+    float: right;
+}
+
+.w250 {
+    width: 250px;
+}
+
+.w270 {
+    width: 270px;
+}
+
+.w340 {
+    width: 340px;
+}
+
+.cgray {
+    color: #666;
+}
+
+#content .cgray {
+    color: #777;
+    line-height: 15px;
+}
+
+.clgray {
+    color: #999;
+}
+
+.f11 {
+    font-size: 11px;
+}
+
+#content .f13 {
+    font-size: 13px;
+}
+
+.tooltip {
+    z-index: 1000000;
+    display: none;
+    width: 164px;
+    height: 40px;
+    padding: 20px;
+    line-height: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/tooltip.png") no-repeat 50% 50%;
+}
+
+.tooltip2 {
+    z-index: 1000000;
+    display: none;
+    width: 200px;
+    height: 69px;
+    padding-top: 15px;
+    line-height: 20px;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/tooltip2.png") no-repeat 50% 0;
+}
+
+.tooltip2 strong {
+    font-size: 14px;
+}
+
+.tbl-tooltip {
+    z-index: 1000000;
+    display: none;
+    width: 192px;
+    height: 60px;
+    line-height: 52px;
+    font-size: 12px;
+    text-align: center;
+    color: #222;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/tbl-tooltip-new.png") no-repeat 50% 50%;
+}
+
+.shadow {
+    box-shadow: 0 0 15px 0 rgba(50, 50, 50, .5);
+}
+
+#subscribe {
+    position: relative;
+    float: right;
+    width: 400px;
+    height: 140px;
+    margin: 20px -60px 22px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/subscribe.png") no-repeat 50% 50%;
+}
+
+#subscribe p {
+    position: absolute;
+    left: 55px;
+    top: 66px;
+    width: 275px;
+    height: 45px;
+    line-height: 20px;
+    text-indent: 25px;
+}
+
+#subscribe p a {
+    display: block;
+    height: 45px;
+    color: #fff;
+}
+
+#subscribe p a span {
+    color: #6ae81d;
+}
+
+#subscribe small {
+    position: absolute;
+    left: 100px;
+    top: 16px;
+    width: 280px;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#subscribe small a {
+    color: #f3ff70;
+}
+
+#content {
+    overflow: hidden;
+    padding: 20px 10px 0px;
+    background: #fff;
+}
+
+#content .line {
+    clear: both;
+    margin: 20px 0;
+    border-top: 1px solid #c4c4c4;
+}
+
+#content .blackline {
+    clear: both;
+    border-top: 1px solid #000;
+}
+
+#content p {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+}
+
+#footer {
+    position: relative;
+    height: 158px;
+    font-size: 11px;
+    color: #777;
+    background: #2d2d2d no-repeat 100% 21px;
+    border-top: 1px solid #363636;
+    border-bottom: 1px solid #363636;
+}
+
+.footer-min {
+    background: #2d2d2d no-repeat 100% 21px !important;
+}
+
+#footer .logos {
+    margin-top: -12px;
+}
+
+#footer .logos .separator {
+    clear: both;
+}
+
+#footer .logos .pay2pay {
+    width: 104px;
+    height: 25px;
+    margin: 2px 0 0 2px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/pay2pay.png') no-repeat 0 0;
+}
+#footer ul {
+    overflow: hidden;
+    margin: 27px 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#footer ul li {
+    float: left;
+    margin-right: 12px;
+}
+
+#footer ul li a {
+    color: #6ccaff;
+}
+
+#footer p {
+    margin-bottom: 4px;
+}
+
+#footer .subscribe {
+    position: absolute;
+    right: 45px;
+    bottom: 45px;
+    width: 225px;
+    height: 75px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #fff;
+}
+
+#footer .subscribe a {
+    display: block;
+    height: 75px;
+    color: #fff;
+}
+
+#footer .subscribe a span {
+    color: #6ae81d;
+}
+
+#footer .copyright {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+
+#footer .logos {
+    float: left;
+    width: 280px;
+    height: 40px;
+    margin-top: 5px;
+    line-height: 40px;
+}
+
+#footer .logos span {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#footer .logos span + span {
+    margin-left: 5px;
+}
+
+#footer .logos span.p18 {
+    width: 33px;
+    height: 34px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/footer/logo-footer-18plus.png');
+}
+
+#footer .logos span.itech {
+    width: 32px;
+    height: 32px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/footer/logo-footer-itech.png');
+}
+
+#footer .logos span.copy {
+    width: 33px;
+    height: 34px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/footer/logo-footer-copyright.png');
+}
+
+#footer .logos span.lock {
+    width: 27px;
+    height: 32px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/footer/logo-footer-lock.png');
+}
+
+#footer .logos span.p80 {
+    width: 35px;
+    height: 35px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/footer/logo-footer-80percent.png');
+}
+
+#footer .logos span.scape {
+    width: 63px;
+    height: 40px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/footer/logo-footer-copyscape.png');
+}
+
+#menu {
+    height: 36px;
+    margin: 0 10px 15px;
+    text-transform: uppercase;
+}
+
+#menu ul {
+    display: block;
+    height: 36px;
+    border-bottom: 1px solid #454545;
+}
+
+#menu ul li {
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #e1e1e1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 0;
+}
+
+#menu ul li + li {
+    margin-left: -1px;
+}
+
+#menu ul li.active,#menu ul li.clickable:hover {
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/menu-bg.png") repeat-x 50% 50%;
+    border-color: #000;
+    border-bottom: 1px solid #000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#menu ul li a {
+    display: block;
+    height: 36px;
+    padding: 0 17px;
+    text-align: center;
+    color: #777;
+}
+
+#menu ul li.active a,#menu ul li.clickable a:hover {
+    color: #fff;
+}
+
+#menu ul li a:hover {
+    text-decoration: none;
+}
+#menu ul li a ins {
+    float: left;
+    width: 25px;
+    height: 14px;
+    margin: 10px 10px 0 0;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/vip-yell.png') no-repeat 0 0;
+}
+
+#menu ul li a .rule_success {
+    float: left;
+    width: 14px;
+    height: 18px;
+    margin: 10px 10px 0 0;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/ico_pay.png') no-repeat 0 0;
+}
+
+#menu ul li a span {
+    float: left;
+    width: 54px;
+    height: 14px;
+    margin: 10px 10px 0 0;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/premium.png') no-repeat 0 0;
+}
+
+#best-fores {
+    position: relative;
+    z-index: 100;
+    width: 400px;
+    height: 408px;
+    background: #202020 url('/web/20160408052053im_/http://betfaq.ru/css/img/slider-bg.png') repeat-x 50% 356px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+#best-fores .badge {
+    position: absolute;
+    z-index: 200;
+    left: -17px;
+    top: -13px;
+    width: 160px;
+    height: 160px;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/badge-bg.png") no-repeat 50% 50%;
+}
+
+#best-fores .badge_en {
+    position: absolute;
+    z-index: 200;
+    left: -17px;
+    top: -13px;
+    width: 160px;
+    height: 160px;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/badge-bg-en.png") no-repeat 50% 50%;
+}
+
+
+
+#best-fores .overlay {
+    position: absolute;
+    z-index: 150;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 356px;
+    color: #fff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/overlay-bg.png") no-repeat 50% 50%;
+}
+
+#best-fores .overlay ins {
+    position: absolute;
+    left: 50%;
+    top: 142px;
+    width: 71px;
+    height: 71px;
+    margin-left: -36px;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/tp-vs.png") no-repeat 0 0;
+}
+
+#best-fores .overlay ins.tennis {
+    background-image: url("/web/20160408052053im_/http://betfaq.ru/css/img/tp-vs-tennis.png");
+}
+#best-fores .overlay ins.hockey {
+    background-image: url("/web/20160408052053im_/http://betfaq.ru/css/img/tp-vs-hockey.png");
+}
+#best-fores .overlay ins.basketball {
+    background-image: url("/web/20160408052053im_/http://betfaq.ru/css/img/tp-vs-basket.png");
+}
+
+#best-fores .overlay .title {
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    width: 221px;
+    margin-left: -111px;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#best-fores .overlay #clock {
+    position: absolute;
+    left: 50%;
+    top: 85px;
+    width: 221px;
+    margin-left: -111px;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#best-fores .overlay .team1,
+#best-fores .overlay .team2 {
+    position: absolute;
+    left: 50%;
+    top: 162px;
+    width: 120px;
+    margin-left: -165px;
+    font-size: 17px;
+    text-align: center;
+    color: #000;
+}
+
+#best-fores .overlay .team2 {
+    margin-left: 45px;
+}
+
+#best-fores .overlay a.forecast {
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: 98px;
+    width: 195px;
+    height: 50px;
+    margin-left: -97px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/forecast-bg.png") no-repeat 50% 0;
+    text-transform: lowercase;
+}
+
+#best-fores .overlay a.forecast:hover {
+    background-position: 50% 100%;
+    text-decoration: none;
+}
+
+#best-fores .overlay .league {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    width: 260px;
+    margin-left: -130px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    opacity: .5;
+}
+
+#slider {
+    position: absolute;
+    overflow: hidden;
+    z-index: 120;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 356px;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#slider-overlay {
+    position: absolute;
+    display: none;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 356px;
+    background: #fff;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    opacity: .5;
+}
+
+#slider-kind {
+    position: absolute;
+    z-index: 180;
+    right: 20px;
+    bottom: 1px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#slider-pager {
+    position: absolute;
+    z-index: 180;
+    left: 20px;
+    bottom: 1px;
+    width: 240px;
+    height: 48px;
+    font-size: 0;
+}
+
+#slider-pager a {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin: 12px -2px 0;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/slider-bull-inactive.png") no-repeat 50% 50%;
+}
+
+#slider-pager a.selected {
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/slider-bull.png") no-repeat 50% 50%;
+}
+
+#tabmenu-overlay {
+    position: absolute;
+    display: none;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 538px;
+    height: 408px;
+    background: #fff;
+    border-radius: 3px;
+    opacity: .5;
+}
+
+#best-coeffs {
+    position: relative;
+    width: 538px;
+    height: 408px;
+    background: #202020 url('/web/20160408052053im_/http://betfaq.ru/css/img/slider-bg.png') repeat-x 50% 101px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+#best-coeffs .header {
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 60px;
+    color: #fc0;
+    text-indent: 20px;
+    text-transform: uppercase;
+}
+
+#best-coeffs table {
+    display: block;
+    width: 538px;
+    color: #fff;
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+#best-coeffs thead th {
+    border-top: 1px solid #121212;
+}
+
+#best-coeffs thead .tabmenu {
+    height: 40px;
+    padding-left: 15px;
+    border-right: 1px solid #070707;
+    overflow: hidden;
+}
+
+#best-coeffs thead .tabmenu a {
+    float: left;
+    width: 56px;
+    height: 40px;
+}
+
+#best-coeffs thead .tabmenu a.active {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/tabmenu-bg.png') no-repeat 0 0;
+}
+
+#best-coeffs thead .tabmenu a:hover {
+    background: #333;
+}
+
+#best-coeffs thead .tabmenu a span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 12px auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#best-coeffs thead .tabmenu a:hover span,
+#best-coeffs thead .tabmenu a.active span {
+    background-position: 0 100%;
+}
+
+#best-coeffs thead .tabmenu a.soccer span {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tabmenu-soccer.png');
+}
+
+#best-coeffs thead .tabmenu a.tennis span {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tabmenu-tennis.png');
+}
+
+#best-coeffs thead .tabmenu a.hockey span {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tabmenu-hockey.png');
+}
+
+#best-coeffs thead .tabmenu a.basketball span {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tabmenu-basket.png');
+}
+
+#best-coeffs thead .tabmenu a.f1 span {
+    width: 33px;
+    height: 14px;
+    margin: 13px auto;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tabmenu-f1.png');
+}
+#best-coeffs thead .tabmenu a.vip span {
+    width: 25px;
+    height: 14px;
+    margin: 13px auto;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tabmenu-vip.png');
+}
+
+#best-coeffs tbody tr {
+    display: none;
+}
+
+#best-coeffs tbody tr td {
+    padding: 15px 0;
+    border-bottom: 1px solid #323232;
+}
+
+#best-coeffs tbody tr td {
+    padding: 15px 0;
+    border-bottom: 1px solid #323232;
+}
+#best-coeffs tbody tr td.coeff {
+    vertical-align: middle;
+}
+
+
+
+#best-coeffs .title {
+    width: 339px;
+    padding-left: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 9px 50%;
+    border-right: 1px solid #070707;
+}
+
+#best-coeffs .title small {
+    display: block;
+    font-size: 10px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+#best-coeffs .title span.time {
+    color: #fc0;
+}
+
+#best-coeffs .title a {
+    color: #fff;
+}
+
+#best-coeffs .title a span {
+    color: #6ccaff;
+}
+
+#best-coeffs .coeff {
+    width: 58px;
+    text-align: center;
+    font-size: 14px;
+    color: #9bff51;
+    border-left: 1px solid #2d2d2d;
+    border-right: 1px solid #070707;
+}
+
+#best-coeffs thead .coeff {
+    line-height: 40px;
+    font-size: 10px;
+}
+
+#best-coeffs .prize {
+    width: 117px;
+    text-align: center;
+    font-size: 10px;
+    border-left: 1px solid #2d2d2d;
+}
+
+#best-coeffs thead .prize {
+    padding-top: 8px;
+}
+
+#best-coeffs .subscribe {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 500px;
+    height: 20px;
+    margin-left: -250px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #c9f9ff;
+    text-transform: uppercase;
+}
+
+#best-coeffs .subscribe a {
+    display: inline-block;
+    padding-left: 25px;
+    color: #6ccaff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/subscribe-arrow.png") no-repeat 0 50%;
+}
+
+#best-coeffs tbody .flag {
+    margin-bottom: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #777;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#best-coeffs tbody .time {
+    color: #fff;
+}
+
+#best-coeffs tbody a.fore {
+    color: #fff;
+    font-weight: bold;
+}
+
+#best-coeffs tbody a.fore span {
+    color: #6ccaff;
+}
+
+#best-coeffs tbody .prize {
+    padding-top: 25px;
+    text-transform: uppercase;
+}
+
+#best-coeffs tbody .prize a {
+    display: inline-block;
+    width: 111px;
+    height: 30px;
+    margin-top: 5px;
+    line-height: 30px;
+    font-size: 10px;
+    color: #fff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/make-bet-bg.png") no-repeat 50% 0;
+    text-transform: none;
+}
+
+#best-coeffs tbody .prize a:hover {
+    text-decoration: none;
+    background-position: 50% 100%;
+}
+
+.flag span {
+    position: relative;
+    display: inline-block;
+    top: 1px;
+    width: 14px;
+    height: 11px;
+    margin-right: 5px;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 1);
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/default_flag_v3.png');
+}
+
+.banner {
+    margin: 30px 0 20px;
+}
+
+.banner.inner {
+    margin-top: 0;
+}
+.banner-place {
+    margin: 0;
+    margin-bottom: 15px;
+}
+.banner-place img {
+    display: block;
+    margin: 0 auto;
+}
+
+.tabs {
+    height: 50px;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+.tabs .tab {
+    position: relative;
+    z-index: 10;
+    float: left;
+    height: 40px;
+    margin: 9px 0 0 11px;
+    /* padding: 0 24px; */
+    line-height: 40px;
+    font-size: 14px;
+    color: #1b3c5e;
+    background: #f0f0f0;
+    border: 1px solid #c6c6c6;
+    border-bottom: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    cursor: pointer;
+}
+.tabs .tab a
+{
+    display: block;
+    padding: 0 24px;
+    color: #1b3c5e;
+    text-decoration: none;
+}
+.tabs .tab + .tab {
+    margin-left: -1px;
+}
+
+.tabs .tab.active {
+    z-index: 20;
+    height: 41px;
+    background: #fff;
+    cursor: default;
+}
+
+.tabs .coeff {
+    float: right;
+    margin-right: 108px;
+    line-height: 32px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #696969;
+}
+
+table#forebets {
+    width: 680px;
+    border-spacing: 0;
+    border-collapse: separate;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+}
+table#forebets tr.head {
+    height: 31px;
+    font-size: 9px;
+    color: #696969;
+}
+
+table#forebets tr.head td {
+    height: 31px;
+    padding: 0;
+    line-height: 21px;
+    text-align: left;
+}
+
+table#forebets tr.head td div {
+    height: 21px;
+    margin-top: 5px;
+    padding: 0 9px;
+}
+
+table#forebets tr.head td div.br {
+    border-right: 1px dotted #ccc;
+}
+
+table#forebets tr.head td div.tc {
+    text-align: center;
+}
+
+table#forebets tr.head td.pin div {
+    width: 22px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/pimpa.png') no-repeat 50% 50%;
+}
+
+table#forebets tr.head td.coef div {
+    width: 49px;
+}
+
+table#forebets tr.foot {
+    font-size: 11px;
+    border-top: 1px solid #ccc;
+    text-transform: uppercase;
+}
+
+table#forebets tr.foot td {
+    padding-right: 10px;
+    text-align: right;
+}
+
+table#forebets tr.foot td a {
+    display: inline-block;
+    padding-right: 15px;
+    color: #1b3c5e;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/ugolok.png') no-repeat 100% 50%;
+}
+
+table#forebets td.flag {
+    width: 22px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-right: 1px solid #ccc;
+}
+
+table#forebets td.flag.sco {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/sco.png');
+}
+
+table#forebets td.flag.por {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/por.png');
+}
+
+table#forebets td.flag.rus {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/rus.png');
+}
+
+table#forebets td.flag.afk {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/afk.png');
+}
+
+table#forebets td.flag.wim {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/wimble.png');
+}
+
+table#forebets td.flag.cre {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/cremlin.png');
+}
+
+table#forebets tr:hover {
+    background: #fff;
+}
+
+table#forebets tr.head:hover,
+table#forebets tr.foot:hover {
+    background: #f7f7f7;
+}
+
+table#forebets td {
+    padding: 9px 0;
+}
+
+table#forebets tr + tr td {
+    border-top: 1px solid #ccc;
+}
+
+table#forebets tr.forehead {
+    background: #fff;
+}
+
+table#forebets tr.forehead td {
+    height: 56px;
+    padding: 0;
+    padding-left: 13px;
+}
+
+table#forebets tr.forehead.pt td {
+    padding-top: 25px;
+}
+
+table#forebets tr.forehead .rfloat {
+    margin-top: 14px;
+}
+
+table#forebets tr.forehead h2 {
+    height: 56px;
+    line-height: 56px;
+}
+
+table#forebets tr.forehead h2 .rfloat {
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+table#forebets td.title {
+    width: 479px;
+    padding-left: 20px;
+    border-right: 1px solid #d5d5d5;
+}
+
+table#forebets td.title small {
+    display: block;
+    font-size: 10px;
+    color: #1b3c5e;
+    text-transform: uppercase;
+
+}
+
+table#forebets td.title .time {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+table#forebets td.title .fore {
+    font-size: 12px;
+    color: #000;
+}
+
+table#forebets td.title a {
+    color: #000;
+}
+
+table#forebets td.title ins {
+    color: #006bce;
+    text-decoration: none;
+}
+
+table#forebets td.coeff {
+    width: 49px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    color: #000;
+    border-right: 1px solid #ccc;
+}
+
+
+table#forebets tr.success td.coeff {
+    padding-top: 13px;
+    font-size: 12px;
+    color: #000;
+    border-left: 0;
+    border-right: 0;
+}
+
+table#forebets tr.finished td.coeff {
+    padding-top: 13px;
+    font-size: 12px;
+}
+
+
+table#forebets td.result {
+    width: 111px;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#forebets td.result a {
+    color: #1b3c5e;
+    text-decoration: underline;
+}
+
+table#forebets .comments {
+    display: inline-block;
+    margin-left: 7px;
+    padding-left: 20px;
+    line-height: 13px;
+    color: #1b3c5e;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/comments.png") no-repeat 0 50%;
+}
+
+.expandable {
+    line-height: 43px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1b3c5e;
+    background-repeat: no-repeat;
+    background-position: 650px 10px;
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+}
+
+.expandable:hover {
+    background-image: url("/web/20160408052053im_/http://betfaq.ru/css/img/collapsed.png");
+    cursor: pointer;
+    background-position: right;
+}
+
+.expandable.expanded,
+.expandable.expanded:hover {
+    background-color: #f5f5f5;
+    background-image: url("/web/20160408052053im_/http://betfaq.ru/css/img/expanded.png");
+    background-position: top right;
+}
+
+.expandable .flag {
+    padding-left: 20px;
+}
+
+.expandable .flag span {
+    margin-right: 10px;
+}
+
+.expandable ul.collapsed {
+    display: none;
+    padding-left: 20px;
+    font-size: 12px;
+    background: #fff;
+    text-transform: none;
+}
+
+.expandable.expanded ul.collapsed {
+    display: block;
+}
+
+.expandable ul.collapsed li {
+    display: block;
+    width: 640px;
+    height: 43px;
+}
+
+.expandable ul.collapsed li + li {
+    border-top: 1px dotted #999;
+}
+
+.expandable ul.collapsed li .count {
+    float: right;
+    margin: 7px 0 0 30px;
+    width: 50px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #acacac;
+    border-radius: 5px;
+}
+
+.expandable ul.collapsed li .result {
+    float: right;
+    width: 70px;
+    margin-top: 6px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    color: #858585;
+}
+
+.expandable ul.collapsed li .title {
+    float: left;
+}
+
+.expandable ul.collapsed li .time {
+    color: #000;
+}
+
+.expandable ul.collapsed li a {
+    color: #006bce;
+}
+
+@media all and (min-width: 1101px) {
+    #logo {
+        float: left;
+        width: 252px;
+        height: 135px;
+        margin: 15px 0px 5px 50px;
+    }
+
+    .logo {
+        background: url('/web/20160408052053im_/http://betfaq.ru/css/img/logo_betfaq.png') no-repeat 0 0;
+    }
+
+    .logo_en {
+        background: url('/web/20160408052053im_/http://betfaq.ru/css/img/logo_betfaq_en.png') no-repeat 0 0;
+    }
+
+    #page {
+        position: relative;
+        z-index: 1000;
+        width: 1000px;
+        left: 50%;
+        margin-left: -450px;
+        margin-top: 20px;
+    }
+
+    #main-menu {
+        position: absolute;
+        top: 0;
+        margin-left: -101px;
+        width: 101px;
+        background: #202020;
+    }
+
+    #main-menu a {
+        display: block;
+        width: 101px;
+        height: 100px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+
+    #main-menu a:hover {
+        background-position: 50% 0;
+    }
+
+    #main-menu a.active {
+        background-position: 100% 0;
+    }
+
+    #main-menu a.mi1 {
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mi-1.png');
+    }
+
+    #main-menu a.mi2 {
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mi-2.png');
+    }
+
+    #main-menu a.mi3 {
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mi-3.png');
+    }
+
+    #main-menu a.mi4 {
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mi-4.png');
+    }
+    #main-menu a.mi5 {
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mi-5.png');
+    }
+    #main-menu a.mi6 {
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mi-6.gif');
+    }
+    #main-menu a.mi7 {
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mi-7.png');
+    }
+}
+
+@media all and (max-width: 1100px) {
+    #logo {
+        float: left;
+        width: 252px;
+        height: 135px;
+        margin-left: -7px;
+        margin-top: 17px;
+        background: url('/web/20160408052053im_/http://betfaq.ru/css/img/logo_betfaq.png') no-repeat 0 0;
+    }
+
+    .page-tennis #logo {
+        width: 173px;
+        height: 157px;
+        margin-top: 14px;
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/logo-tennis.png');
+    }
+
+    #page {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    #main-menu {
+        overflow: hidden;
+        height: 60px;
+        background: #202020;
+    }
+
+    #main-menu a {
+        float: left;
+        height: 60px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+
+    #main-menu a:hover {
+        background-position: 0 50%;
+    }
+
+    #main-menu a.active {
+        background-position: 0 100%;
+    }
+
+    #main-menu a.mi1 {
+        width: 168px;
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mih-1.png');
+    }
+
+    #main-menu a.mi2 {
+        width: 149px;
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mih-2.png');
+    }
+
+    #main-menu a.mi3 {
+        width: 102px;
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mih-3.png');
+    }
+
+    #main-menu a.mi4 {
+        width: 276px;
+        background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/mih-4.png');
+    }
+}
+
+.gray-bg {
+    /*overflow: hidden;*/
+    background: #f1f1f1;
+}
+
+
+.text-blackout {
+    color: rgba(10, 9, 9, 0);
+    -webkit-filter: blur(2px);
+}
+
+.gray-bg .inner {
+    padding: 0 20px;
+    padding-top: 20px;
+}
+
+.gray-bg .inner.shad-bg {
+    padding: 45px 20px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/shad-bg.png') no-repeat 50% 0;
+}
+
+.gray-bg .inner.grad-bg {
+    padding: 25px 20px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/grad-bg.png') repeat-x 50% 0;
+}
+
+.gray-bg .inner.h24 {
+    width: 640px;
+    height: 146px;
+    padding: 25px 20px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/bg-24.png') no-repeat 50% 50%;
+    border-top: 1px solid #333;
+}
+
+
+.prognoz {
+    position: relative;
+    width: 680px;
+    margin-bottom: 0px;
+    background: #1a1b1c url('/web/20160408052053im_/http://betfaq.ru/css/img/prognoz-bg.png') no-repeat 50% 0;
+}
+
+.prognoz.vip:before {
+    position: absolute;
+    content: '';
+    right: -13px;
+    top: -12px;
+    width: 159px;
+    height: 160px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/vipp.png') no-repeat 0 0;
+    z-index: 200;
+}
+
+
+.prognoz.premium:before {
+    position: absolute;
+    content: '';
+    right: -13px;
+    top: -12px;
+    width: 159px;
+    height: 160px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/premium-angle.png') no-repeat 0 0;
+    z-index: 200;
+}
+
+.text-over-banner{
+    position: absolute;
+    top: 24px;
+    left: 124px;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(103, 171, 24);
+}
+
+
+
+
+.prognoz.lite:before {
+    position: absolute;
+    content: '';
+    right: -13px;
+    top: -12px;
+    width: 159px;
+    height: 160px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/plite.png') no-repeat 0 0;
+    z-index: 200;
+}
+
+/*.prognoz.lite .teams{*/
+/*height: 365px;*/
+/*}*/
+
+.prognoz .teams {
+    position: relative;
+    height: 500px;
+}
+
+.prognoz.tennis .teams {
+    position: relative;
+    height: 410px;
+}
+.prognoz .teams > div {
+    position: absolute;
+    top: 37px;
+    width: 176px;
+    height: 280px;
+    text-align: center;
+}
+
+.prognoz .teams .vs {
+    position: absolute;
+    left: 50%;
+    top: 105px;
+    width: 90px;
+    height: 74px;
+    margin-left: -45px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/vs.png') no-repeat 0 0;
+}
+
+.prognoz.tennis .teams .vs {
+    top: 90px;
+    width: 113px;
+    height: 96px;
+    margin-left: -57px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/vs-tennis.png');
+}
+
+.prognoz.hockey .teams .vs {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/vs-hockey.png');
+    top: 90px;
+    width: 113px;
+    height: 96px;
+    margin-left: -57px;
+}
+
+.prognoz.basketball .teams .vs {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/vs-basket.png');
+    top: 90px;
+    width: 113px;
+    height: 96px;
+    margin-left: -48px;
+}
+
+.prognoz .teams .team1 .marker
+{
+    right: -15px;
+}
+.prognoz .teams .team2 .marker
+{
+    right: -10px;
+}
+
+.prognoz .teams .res {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    width: 140px;
+    margin-left: -70px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+}
+.prognoz.basketball .teams .res {
+    font-size: 33px;
+    margin-top: 20px;
+}
+
+
+
+.prognoz .teams .fin {
+    position: absolute;
+    left: 50%;
+    top: 125px;
+    width: 180px;
+    margin-left: -90px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.prognoz .teams .fin strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffd100;
+    text-transform: uppercase;
+}
+
+.prognoz .teams .won,.prognoz .teams .draw {
+    position: absolute;
+    left: 50%;
+    top: 220px;
+    width: 130px;
+    height: 26px;
+    margin-left: -70px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #46d901;
+    border-radius: 4px;
+}
+
+.prognoz .teams .loss{
+    position: absolute;
+    left: 50%;
+    top: 220px;
+    width: 146px;
+    height: 26px;
+    margin-left: -78px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #ee3224;
+    border-radius: 4px;
+}
+
+.prognoz .teams > div .logo {
+    margin-top: 45px;
+}
+
+.prognoz.tennis .teams > div .logo {
+    margin-top: 28px;
+}
+
+.prognoz .teams > div .title {
+    position: absolute;
+    left: 50%;
+    top: 184px;
+    width: 200px;
+    margin-left: -100px;
+    font-size: 20px;
+    text-align: center;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.prognoz .teams > div.victory .title {
+    color: #fff;
+}
+
+.prognoz .teams a.makebet {
+    position: absolute;
+    left: 50%;
+    top: 188px;
+    width: 122px;
+    height: 45px;
+    margin-left: -61px;
+    line-height: 45px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/makebet-small-bg.png') no-repeat 50% 0;
+}
+
+.prognoz .teams a.makebet:hover {
+    background-position: 50% 100%;
+    text-decoration: none;
+}
+
+.prognoz .teams > div .marker {
+    position: absolute;
+    top: 24px;
+    width: 65px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/victory-marker.png') no-repeat 50% 50%;
+    text-transform: uppercase;
+}
+
+.prognoz .teams > div .marker.left {
+    right: -15px;
+}
+
+.prognoz .teams > div .marker.right {
+    right: -10px;
+}
+
+.prognoz .teams .var {
+    position: absolute;
+    left: 50%;
+    height: 60px;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    color: #666;
+    background: #141414;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.prognoz .teams .var.active {
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/coeff-hover.png') repeat-x 50% 50%;
+    border-color: #137509;
+}
+
+.prognoz .teams .var.lwin,
+.prognoz .teams .var.draw,
+.prognoz .teams .var.rwin {
+    top: 261px;
+    width: 198px;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.prognoz .teams .var.lwin {
+    margin-left: -301px;
+}
+
+.prognoz .teams .var.rwin {
+    margin-left: 102px;
+}
+
+.prognoz .teams .var.draw {
+    width: 184px;
+    margin-left: -92px;
+}
+
+.prognoz .teams .var.lwdraw,
+.prognoz .teams .var.rwdraw {
+    top: 332px;
+    width: 295px;
+    margin-left: -301px;
+}
+.prognoz .teams .var.ttwo
+{
+    top: 332px;
+    width: 600px;
+    margin-left: -300px;
+}
+.prognoz .teams .var.rwdraw {
+    margin-left: 5px;
+}
+
+.prognoz .teams .var.tless,
+.prognoz .teams .var.tmore {
+    top: 403px;
+    width: 245px;
+    margin-left: -251px;
+}
+
+.prognoz .teams .var.tmore {
+    margin-left: 5px;
+}
+.prognoz .teams .var.tone
+{
+    width: 600px;
+    margin-left: -300px;
+    top: 403px;
+}
+
+
+
+.prognoz .teams .team1 {
+    left: 48px;
+    background-repeat: no-repeat;
+    background-position: 50% 50px;
+}
+
+.prognoz .teams .team1.empty {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/football_empty.png') no-repeat 50% 50px;
+}
+
+.prognoz.tennis .teams .team1.empty {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tennis_empty.png');
+}
+.prognoz.hockey .teams .team1.empty {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/hockey_empty.png');
+}
+
+.prognoz.basketball .teams .team1.empty {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/basket_empty.png');
+}
+
+.prognoz .teams .team2 {
+    right: 48px;
+    background-repeat: no-repeat;
+    background-position: 50% 50px;
+}
+
+.prognoz .teams .team2.empty {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/football_empty.png') no-repeat 50% 50px;
+}
+
+.prognoz.tennis .teams .team2.empty {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tennis_empty.png');
+}
+.prognoz.hockey .teams .team2.empty {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/hockey_empty.png');
+}
+.prognoz.basketball .teams .team2.empty {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/basket_empty.png');
+}
+
+.prognoz .description {
+    margin-top: -4px;
+    padding: 25px 20px 0px;
+    font-size: 16px;
+    color: #fff;
+    background: #FBFBFB url(data:application/octet-stream;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAIAAAÃ¢â‚¬Â¦R5ccllPAAAABpJREFUeNpiYGZhZWJhZmKSlZVlEhYWBggwAAO+AKyzJlqQAAAAAElFTkSuQmCC) repeat-x 0 0;
+}
+.prognoz .description.vip
+{
+    background: none;
+}
+
+
+.prognoz .description .bk-link {
+    right: 20px;
+    position: absolute;
+    margin-top: -15px;
+    color: #313131;
+    font-size: 15px;
+}
+
+.prognoz .description .bk-link a {
+    color: black;
+    text-decoration: underline;
+}
+
+.prognoz .description .bk-link a:hover{
+    text-decoration: none;
+}
+
+#content .prognoz .description p a{
+    color:#FFA100;
+}
+
+#content .prognoz .description p.link-prognose a {
+    color: #006BCE;
+}
+
+.prognoz .description .strong {
+    display: block;
+    margin-bottom: 15px;
+
+}
+.prognoz .description p a
+{
+    color : #fc0;
+}
+
+
+.prognoz .description p + .strong {
+    margin-bottom: 20px;
+}
+
+.prognoz .description p {
+    margin-bottom: 25px;
+    color: #313131;
+}
+
+.prognoz .description img{
+    max-width: 620px;
+    display: block;
+    margin: 0 auto !important;
+}
+
+#content .prognoz .description p {
+    color: #313131;
+    line-height: 1.5;
+    margin-bottom: 15px;
+
+}
+
+.big-clock {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.flip-clock-wrapper.big-clock {
+    width: 380px;
+}
+
+.makebet-place {
+    margin-left: 380px;
+    width: 235px;
+    padding: 3px 0 5px;
+    text-align: center;
+    height: 100px;
+}
+
+.makebet-container + span {
+    position: relative;
+    z-index: 100;
+    display: block;
+    top: -13px;
+    width: 235px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 40px;
+    color: #6a6a6a;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.makebet-container a.makebet {
+    position: relative;
+    z-index: 200;
+    display: inline-block;
+    width: 235px;
+    height: 62px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 62px;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/makebet-big-bg.png') no-repeat 50% 0;
+    text-decoration: none;
+}
+
+.makebet-container a.makebet:hover {
+    background-position: 50% 100%;
+}
+
+.makebet-container ul {
+    position: absolute;
+    display: none;
+    z-index: 10000;
+    left: 50%;
+    top: 43px;
+    width: 190px;
+    margin-left: -115px;
+    padding: 31px 20px 20px;
+    font-size: 12px;
+}
+
+.makebet-container:hover ul {
+    display: block;
+}
+
+.makebet-container ul.items-1 {
+    height: 40px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/toolbonus1.png') no-repeat 50% 0;
+}
+
+.makebet-container ul.items-2 {
+    height: 81px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/toolbonus2.png') no-repeat 50% 0;
+}
+
+.makebet-container ul.items-3 {
+    height: 122px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/toolbonus3.png') no-repeat 50% 0;
+}
+
+.makebet-container ul.items-4 {
+    height: 163px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/toolbonus4.png') no-repeat 50% 0;
+}
+
+.makebet-container ul li {
+    display: block;
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.makebet-container ul li + li {
+    margin-top: 1px;
+}
+
+.makebet-container ul li a {
+    display: block;
+    width: 190px;
+    height: 40px;
+    color: #222;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/toolbonus-item.png') no-repeat 50% 0;
+    text-decoration: none;
+}
+
+.makebet-container ul li a:hover {
+    background-position: 50% 100%;
+}
+
+.flip-clock-wrapper.big-clock ul {
+    width: 50px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.flip-clock-wrapper.big-clock ul li {
+    width: 50px;
+    height: 80px;
+}
+
+.flip-clock-wrapper.big-clock ul li .inn {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.flip-clock-wrapper.big-clock .flip-clock-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 1px;
+}
+
+.flip-clock-wrapper.big-clock .flip-clock-divider {
+    width: 12px;
+    height: 80px;
+}
+
+.flip-clock-divider.hours {
+    display: none;
+}
+
+.flip-clock-wrapper.big-clock .flip-clock-divider.hours > span,
+.flip-clock-wrapper.big-clock .flip-clock-divider.minutes > span,
+.flip-clock-wrapper.big-clock .flip-clock-divider.seconds > span {
+    color: #1a1b1c;
+}
+
+.last-games {
+    clear: both;
+    height: 100px;
+    margin-bottom: 10px;
+    border-top: 1px solid #d8d8d8;
+}
+
+.last-games .logo {
+    float: right;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
+    display: inline-block;
+}
+
+.last-games.hockey .logo
+{
+    background-position: 50% 10px;
+}
+.last-games.soccer .logo {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/football_empty.png');
+}
+.last-games.basketball .logo {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/basket_empty.png');
+}
+
+
+
+.last-games.tennis .logo {
+    background-position: 50% 0;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tennis_empty.png');
+}
+
+.last-games .player-rating {
+    position: relative;
+    float: right;
+    width: 50px;
+    margin-right: 20px;
+    padding-top: 23px;
+    text-align: center;
+    color: #000;
+}
+
+.last-games .player-rating em {
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    width: 48px;
+    height: 48px;
+    margin-left: -24px;
+    line-height: 48px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/rating-circle.png') no-repeat 0 0;
+}
+
+.last-games .player-rating span {
+    position: absolute;
+    left: 50%;
+    top: 62px;
+    width: 50px;
+    margin-left: -25px;
+    font-size: 11px;
+}
+
+.last-games span {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #000;
+}
+
+.last-games strong {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.last-games strong span {
+    margin: 0;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.last-games strong span.win {
+    color: #267a00;
+}
+
+.last-games strong span.lost {
+    color: #cb371f;
+}
+
+.last-games strong span.draw {
+    color: #555;
+}
+
+.last-games ul {
+    /*overflow: hidden;*/
+    margin: -6px 0 0 -6px;
+}
+
+.last-games ul li {
+    float: left;
+    width: 19px;
+    height: 19px;
+    border: 6px solid #f1f1f1;
+    border-radius: 19px;
+}
+
+.last-games ul li + li {
+    margin-left: 2px;
+}
+
+.last-games ul li.win {
+    background: #82d202;
+}
+
+.last-games ul li.lost {
+    background: #f34529;
+}
+
+.last-games ul li.draw {
+    background: #aaa;
+}
+
+.last-games ul li:hover {
+    border-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.lg-tooltip {
+    display: none;
+    width: 200px;
+    height: 79px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/tbl-tooltip.png") no-repeat 50% 50%;
+}
+
+.games-history {
+    overflow: hidden;
+    background: #f9f9f9;
+    border: 1px solid #d7d7d7;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.games-history .game-item {
+    height: 70px;
+    text-align: center;
+}
+
+.games-history .game-item + .game-item {
+    border-top: 1px solid #d7d7d7;
+}
+
+.games-history .game-item .date {
+    margin: 3px 0;
+    height: 25px;
+    line-height: 23px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/date-bg.png') no-repeat 50% 50%;
+}
+
+.games-history .game-item .date span {
+    display: inline-block;
+    padding: 0 3px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #888;
+    background: #f9f9f9;
+}
+
+.games-history .game-item .teams {
+    position: relative;
+    height: 30px;
+    color: #000;
+}
+
+.games-history .game-item .teams .count {
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    height: 30px;
+    margin-left: -50px;
+    line-height: 28px;
+    font-size: 18px;
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+.games-history .game-item .teams .team1,
+.games-history .game-item .teams .team2 {
+    position: absolute;
+    left: 0;
+    width: 250px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+
+.games-history .game-item .teams .team1 {
+    text-align: right;
+}
+
+.games-history .game-item .teams .team2 {
+    left: auto;
+    right: 0;
+    text-align: left;
+}
+
+#content .tech-prognoz p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#content .tech-prognoz p span.yellow {
+    color: #fc0;
+}
+
+.tech-prognoz .results {
+    position: relative;
+    width: 680px;
+    height: 195px;
+    margin: 10px 0 0 -20px;
+}
+
+.tech-prognoz .results.lock {
+    height: 135px;
+}
+
+.tech-prognoz .results .teams {
+    position: absolute;
+    z-index: 200;
+    width: 680px;
+    height: 70px;
+    line-height: 63px;
+    font-size: 20px;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/bg-vs.png') no-repeat 50% 50%;
+    text-transform: uppercase;
+}
+
+.tech-prognoz .results .teams ins {
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    left: 50%;
+    top: 50%;
+    margin: -36px 0 0 -36px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/tp-vs.png') no-repeat 0 0;
+}
+
+.tech-prognoz .results .teams.tennis ins {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tp-vs-tennis.png');
+}
+.tech-prognoz .results .teams.hockey ins {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tp-vs-hockey.png');
+}
+
+.tech-prognoz .results .teams > div {
+    position: absolute;
+    top: 0;
+    width: 270px;
+    text-align: center;
+}
+
+.tech-prognoz .results .teams > div.team1 {
+    left: 20px;
+}
+
+.tech-prognoz .results .teams > div.team2 {
+    right: 20px;
+}
+
+.tech-prognoz .results .banner {
+    position: absolute;
+    z-index: 100;
+    left: 18px;
+    top: 27px;
+    width: 643px;
+    height: 135px;
+    line-height: 27px;
+    text-align: center;
+    color: #000;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/makebet-banner-bg.png') no-repeat 50% 50%;
+}
+
+.tech-prognoz .results.lock .banner {
+    height: 75px;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/lock-banner-bg.png') no-repeat 50% 50%;
+}
+
+.tech-prognoz .results .banner small {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.tech-prognoz .results .banner big {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.tech-prognoz .results .banner a.makebet {
+    display: inline-block;
+    width: 122px;
+    height: 45px;
+    margin-top: -4px;
+    line-height: 45px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/makebet-small-bg.png') no-repeat 50% 0;
+}
+
+.tech-prognoz .results .banner a.makebet:hover {
+    background-position: 50% 100%;
+    text-decoration: none;
+}
+
+.tech-prognoz .results.lock .banner > div {
+    height: 55px;
+    padding: 20px 0 0 63px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-lock.png') no-repeat 15px 50%;
+}
+
+.tech-prognoz .results.lock .banner > div a {
+    color: #006bce;
+}
+
+.inner.h24 .title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #fff798;
+}
+
+.inner.h24 a {
+    display: inline-block;
+    height: 32px;
+    margin-bottom: 6px;
+    padding: 0 15px 0 40px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #191919;
+    background-position: 12px 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.inner.h24 a.mail {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-white-mail.png');
+}
+
+.inner.h24 a.vk {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-white-vk.png');
+}
+
+.inner.h24 a.tw {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-white-tw.png');
+}
+
+.biglinks {
+    overflow: hidden;
+    margin: 0 -20px;
+    padding-top: 50px;
+    width: 680px;
+}
+
+.biglinks a {
+    float: left;
+    width: 338px;
+    height: 198px;
+    line-height: 270px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: #006bce;
+    background-color: #fff;
+    background-position: 50% 45px;
+    background-repeat: no-repeat;
+    border: 1px solid #aeaeae;
+}
+
+.biglinks a + a {
+    width: 339px;
+    border-left: 0;
+}
+
+.biglinks a:hover {
+    background-color: #f7f7f7;
+    text-decoration: none;
+}
+
+.biglinks a.today {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-big-today.png');
+}
+
+.biglinks a.tomorrow {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-big-tomorrow.png');
+}
+
+.faqmenu {
+    width: 258px;
+    color: #fff;
+    background: #202020 url('/web/20160408052053im_/http://betfaq.ru/css/img/faq-title.png') no-repeat 50% 0;
+    border: 1px solid #000;
+    border-radius: 2px;
+    box-shadow:  0 0 10px 0 rgba(50, 50, 50, .5);
+}
+
+.faqmenu .title {
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.faqmenu ul {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.faqmenu ul ul {
+    display: none;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 12px;
+}
+
+.faqmenu ul ul.expanded {
+    display: block;
+}
+
+.faqmenu li {
+    display: block;
+}
+
+.faqmenu li.plusminus {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/plus.png') no-repeat 0 4px;
+    cursor: pointer;
+}
+
+.faqmenu li.plusminus.expanded {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/minus.png');
+}
+
+.faqmenu a {
+    display: block;
+    color: #6ccaff;
+}
+
+.faqmenu ul ul li {
+    padding-left: 22px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.faqmenu ul ul li.plusminus {
+    background-position: 0 0;
+}
+
+.faqmenu a:hover,
+.faqmenu a.active {
+    color: #efb73e;
+    text-decoration: none;
+}
+
+.sideblock {
+    width: 258px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    background: #202020 url('/web/20160408052053im_/http://betfaq.ru/css/img/faq-title.png') no-repeat 50% 0;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba(50, 50, 50, .5);
+}
+
+.sideblock.brown {
+    background: #fff;
+    border-color: #754410;
+}
+
+.sideblock .title {
+    height: 40px;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sideblock.brown .title {
+    color: #fc0;
+    background: #4a351e url('/web/20160408052053im_/http://betfaq.ru/css/img/crown.png') no-repeat 210px 50%;
+}
+
+.sideblock .title span {
+    display: block;
+    font-weight: normal;
+    color: #fc0;
+}
+
+.sideblock.brown .title span {
+    color: #fff;
+}
+
+.sideblock .block {
+    overflow: hidden;
+    padding: 15px 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #000;
+}
+
+.sideblock.brown .block {
+    border-color: #754410;
+}
+
+.sideblock .block.last {
+    border-bottom: 0;
+}
+
+.sideblock .block + .block {
+    border-top: 1px solid #323232;
+}
+
+.sideblock.brown .block + .block {
+    border-top: 0;
+}
+
+.sideblock .block > span {
+    display: block;
+    padding-bottom: 5px;
+    font-size: 11px;
+    color: #fff;
+}
+
+.sideblock.brown .block > span {
+    color: #000;
+}
+
+.sideblock .block a {
+    display: block;
+    font-weight: bold;
+    color: #6ccaff;
+    text-decoration: none;
+}
+
+.sideblock.brown .block a {
+    color: #006bce;
+}
+
+.sideblock .block a:hover {
+    text-decoration: underline;
+}
+
+.sideblock .block a span {
+    font-weight: normal;
+    color: #fc0;
+}
+
+.sideblock.brown .block a span {
+    color: #000;
+}
+
+
+.arcticmodal-overlay,
+.arcticmodal-container {
+    position: fixed;
+    z-index: 1000000;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.arcticmodal-container {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border: 0;
+}
+
+*:first-child + html .arcticmodal-container {
+    height: 100%
+}
+
+.arcticmodal-container_i {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.arcticmodal-container_i2 {
+    margin: 0;
+    padding: 24px;
+    vertical-align: middle;
+    border: 0;
+}
+
+.arcticmodal-error {
+    padding: 20px;
+    color: #fff;
+    background: #000;
+    border-radius: 10px;
+}
+
+.arcticmodal-loading {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background: #000 url('/web/20160408052053im_/http://betfaq.ru/css/img/loading.gif') no-repeat 50% 50%;
+}
+
+#popups {
+    display: none;
+}
+
+#sign-box {
+    width: 640px;
+}
+
+#lostpwd-box {
+    width: 600px;
+}
+#lostpwd-box-register {
+    width: 500px;
+}
+
+#resetpwd-box {
+    width: 600px;
+}
+
+#resetok-box {
+    width: 600px;
+    height: 300px;
+    line-height: 180px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.box-modal {
+    font-size: 14px;
+    background: #202020;
+    border-radius: 3px;
+    box-shadow: -3px 3px 8px 0 rgba(1, 1, 1, .8);
+}
+
+.box-modal .box-modal_header {
+    position: relative;
+    height: 60px;
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 24px;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/box-header-bg.png') repeat-x 50% 50%;
+    border-bottom: 1px solid #000;
+    border-radius: 3px;
+}
+
+.box-modal .box-modal_header .box-modal_close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/cross.png') no-repeat 50% 0;
+}
+
+.box-modal .box-modal_header .box-modal_close:hover {
+    background-position: 50% 100%;
+}
+
+.box-modal .box-modal_content{
+    overflow: hidden;
+    padding: 30px;
+    border-top: 1px solid #333;
+}
+
+.box-modal-register{
+
+}
+
+.button-cell {
+    display: inline-block;
+    height: 32px;
+    margin-top: 10px;
+    padding: 0 20px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #dadada;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+}
+
+.button-cell:hover {
+    color: #fc0;
+    text-decoration: none;
+}
+
+.button-yellow {
+    display: inline-block;
+    height: 32px;
+    margin: 5px 0 0;
+    padding: 0 20px;
+    font-weight: bold;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/yellow-button.png') repeat-x 50% 0;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.button-yellow:hover {
+    background-position: 50% 100%;
+    text-decoration: none;
+}
+
+.b-share__text {
+    color: #000;
+    font-size: 12px;
+}
+
+article {
+    padding: 10px 0 50px;
+    font-size: 13px;
+}
+
+article a {
+    color: #006bce;
+}
+
+#content article p {
+    display: block;
+    margin-bottom: 30px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #000;
+}
+
+#content article p.f15 {
+    font-size: 15px;
+}
+
+article ol {
+    display: block;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-weight: bold;
+    list-style: decimal;
+    color: #000;
+}
+
+article ol li {
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+article ol li span {
+    font-weight: normal;
+}
+
+article ul {
+    display: block;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+article ul li {
+    padding-left: 20px;
+    line-height: 25px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/yellow-bull.png') no-repeat 0 50%;
+}
+
+article cite {
+    display: block;
+    margin: -10px 0 20px;
+    padding-left: 70px;
+    font: 16px 'Open Sans Condensed', Arial, sans-serif;
+    font-weight: 700;
+    color: #000;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-excl.png') no-repeat 0 5px;
+}
+
+article q {
+    float: right;
+    width: 270px;
+    margin: 10px 0 10px 20px;
+    padding: 20px 30px;
+    font: 18px 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    color: #000;
+    background: #f0f0f0;
+}
+
+article blockquote {
+    display: block;
+    width: 540px;
+    margin: 0 0 20px -20px;
+    padding: 20px 50px;
+    font: 18px 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    color: #000;
+    background: #f0f0f0;
+}
+
+.faq-blocks {
+    height: 272px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.faq-blocks a {
+    position: relative;
+    display: inline-block;
+    width: 290px;
+    height: 260px;
+    padding: 6px;
+    font-size: 22px;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/faq-block-bg.png') no-repeat 50% 50%;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 rgba(50, 50, 50, .8);
+}
+
+.faq-blocks a + a {
+    margin-left: 22px;
+}
+
+.faq-blocks a table {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 290px;
+    height: 260px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/faq-grad-bg.png') no-repeat 50% 50%;
+}
+
+.faq-blocks a:hover table {
+    color: #6ccaff;
+}
+
+.faq-blocks a table td.text {
+    height: 80px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.faq-blocks a ins {
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    width: 84px;
+    height: 84px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/faq-ioff-bg.png') no-repeat 50% 50%;
+}
+
+.faq-blocks a:hover ins {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/faq-ion-bg.png');
+}
+
+.table-container {
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+}
+
+.table-container table {
+    width: 100%;
+    font: 14px 'Open Sans', sans-serif;
+}
+
+.table-container table thead {
+    color: rgb(73, 68, 68);
+    background: #f3f3f3;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.table-container table tbody tr + tr {
+    border-top: 1px solid #d7d7d7;
+}
+
+.table-container table tbody tr:hover {
+    background-color: #FAFAFA
+}
+
+
+
+.table-container table td,
+.table-container table th {
+    padding: 10px;
+}
+
+.table-container table td {
+    padding: 15px 10px;
+    color: #000;
+}
+
+.table-container table td a {
+    color: #006bce;
+}
+
+.table-container table.compress td {
+    padding: 10px;
+}
+
+.table-container table td.gray {
+    background: #7FD371;
+}
+
+.table-container table td.blue {
+    color: #4b78bb;
+}
+
+.table-container table td.win, .table-container table td.draw {
+    color: #08b204;
+}
+.table-container table td.win,.table-container table td.draw
+{
+    font-size: 14px;
+}
+.table-container table td.loss
+{
+    font-size: 13px;
+}
+.table-container table td.loss {
+    color: #ccc;
+}
+
+
+.table-container table td.center {
+    text-align: center;
+}
+
+.table-container table th {
+    font-weight: 700;
+    text-align: center;
+}
+
+.table-container table th.left {
+    text-align: left;
+}
+
+.comments {
+    overflow: hidden;
+    color: #000;
+    margin-top: 20px;
+}
+
+.comments .title {
+    margin-bottom: 8px;
+    padding-left: 32px;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icon-comments.png') no-repeat 0 0;
+}
+
+.comments .title span {
+    font-weight: normal;
+}
+
+.comments .comment {
+    overflow: hidden;
+    padding: 8px 0 10px;
+    font-size: 12px;
+    border-top: 1px solid #d8d8d8;
+}
+
+.comments .comment .name {
+    float: left;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comments .comment .date {
+    float: left;
+    color: #999;
+}
+
+.comments .comment .text {
+    clear: both;
+    padding-top: 8px;
+    line-height: 16px;
+}
+
+.comments form {
+    display: none;
+    width: 260px;
+    margin-top: 5px;
+    padding-top: 25px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/comments-bg.png') repeat-x 0 0;
+}
+
+.comments form label {
+    position: relative;
+    display: block;
+    height: 27px;
+    margin-bottom: 4px;
+    line-height: 27px;
+    text-indent: 10px;
+}
+
+.comments form sup {
+    position: relative;
+    top: -4px;
+    font-size: 11px;
+    color: #ee3224;
+}
+
+.comments form label input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 180px;
+    height: 25px;
+    padding: 0 10px;
+    font: 12px Arial, sans-serif;
+    color: #000;
+    background: #f5f5f5;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+}
+
+.comments form textarea {
+    display: block;
+    width: 238px;
+    height: 140px;
+    margin: 2px 0 8px;
+    padding: 5px 10px;
+    font: 12px Arial, sans-serif;
+    color: #000;
+    background: #f5f5f5;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+    resize: none;
+}
+
+.comments a {
+    color: #006bce;
+}
+
+.comments a.button {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+.comments a.button:hover {
+    background-position: 50% 100%;
+}
+
+.comments a.button.try {
+    width: 205px;
+    margin-top: 10px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/comment-try.png');
+}
+
+.comments a.button.ok {
+    float: left;
+    width: 114px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/comment-ok.png');
+}
+
+.comments a.cancel {
+    float: right;
+    margin-right: 5px;
+    line-height: 32px;
+}
+
+.gray-block {
+    width: 958px;
+    font-size: 14px;
+    color: #fff;
+    background: #252525;
+    border: 1px solid #000;
+    border-top-color: #454545;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 0 rgba(50, 50, 50, .5);
+}
+
+.gray-block a {
+    color: #6ccaff;
+}
+
+.gray-block .intro {
+    padding: 25px 20px 15px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.gray-block .stavka {
+    padding: 0 20px 25px;
+    font-size: 18px;
+}
+
+.gray-block .dark-gray-block {
+    padding: 25px 20px 60px;
+    background: #111;
+    border-top: 1px solid #000;
+}
+
+.gray-block .dark-gray-block .title {
+    position: relative;
+    height: 8px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #fff;
+}
+
+.gray-block .dark-gray-block .title span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 12px;
+    padding-right: 10px;
+    background: #111;
+}
+
+.gray-block .dark-gray-block ul {
+    display: block;
+    list-style: none;
+}
+
+.gray-block .dark-gray-block ul li {
+    position: relative;
+    overflow: hidden;
+    min-height: 70px;
+    padding: 15px 30px 15px 160px;
+    background-color: #212121;
+    background-repeat: no-repeat;
+    background-position: 30px 50%;
+}
+
+.gray-block .dark-gray-block ul li + li {
+    margin-top: 1px;
+}
+
+.gray-block .dark-gray-block ul li:hover {
+    background-color: #454545;
+}
+
+.gray-block .dark-gray-block ul li a.make-bet {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+.gray-block .dark-gray-block ul li .name {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fc0;
+}
+
+.gray-block .dark-gray-block ul li .bonus {
+    margin-bottom: 8px;
+}
+
+.gray-block .dark-gray-block ul li .span {
+    color: #43dd16;
+}
+
+.gray-block .dark-gray-block ul li .text {
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.popup-banner {
+    display: none;
+    position: fixed;
+    z-index: 10000000;
+    left: 0;
+    bottom: 0;
+    width: 294px;
+    cursor: pointer;
+}
+
+.popup-banner .header {
+    position: relative;
+    height: 86px;
+    padding-top: 12px;
+    line-height: 35px;
+    font-family: 'Open Sans Condensed', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #fc0;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/pb-bg.png') repeat-x 50% 100%;
+    text-transform: uppercase;
+}
+
+.popup-banner .header.big {
+    position: relative;
+    height: 109px;
+    padding-top: 2px;
+}
+
+.popup-banner .header.big img {
+    position: relative;
+    top: -2px;
+}
+
+.popup-banner .header a.close {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/x.png') no-repeat 50% 50%;
+}
+
+.popup-banner .subheader {
+    height: 34px;
+    line-height: 34px;
+    font-size: 13px;
+    text-align: center;
+    color: #6ccaff;
+    border-bottom: 1px solid #323232;
+}
+
+.popup-banner ul {
+    display: block;
+    margin: 22px 26px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/pb-ul.png') no-repeat 0 50%;
+}
+
+.popup-banner ul li {
+    display: block;
+    height: 32px;
+    padding-left: 44px;
+    line-height: 16px;
+}
+
+.popup-banner ul li + li {
+    margin-top: 11px;
+}
+
+.popup-banner ul li .green {
+    color: #9bff51;
+}
+
+.popup-banner ul li .orange {
+    color: #f75601;
+}
+
+.sidefaq {
+    margin-top: 20px;
+}
+
+.sidefaq a {
+    float: left;
+    width: 125px;
+    height: 150px;
+    color: #fff;
+    background: #111;
+    border: 1px solid #363636;
+    border-radius: 4px;
+}
+
+.sidefaq a + a {
+    margin-left: 6px;
+}
+
+.sidefaq a span {
+    display: block;
+    height: 61px;
+    font-size: 13px;
+}
+
+.sidefaq a span td {
+    height: 61px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.bc {
+    overflow: hidden;
+    height: 40px;
+    margin-top: -10px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.bc a {
+    float: left;
+    color: #365c94;
+}
+
+.bc a + a {
+    padding-left: 24px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/gt.png') no-repeat 11px 16px;
+}
+
+.start {
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #000;
+    display: block;
+    line-height: 15px;
+}
+
+.side-selector {
+    width: 260px;
+    margin-top: 20px;
+    background: #343434;
+    border: 1px solid #202020;
+    border-radius: 3px;
+}
+
+.side-selector .header {
+    height: 59px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 59px;
+    color: #fc0;
+    border-bottom: 1px solid #202020;
+    text-indent: 20px;
+}
+
+.side-selector .section {
+    cursor: pointer;
+}
+
+.side-selector .section.active {
+    background: #606060 url('/web/20160408052053im_/http://betfaq.ru/css/img/aside-title-bg.png') no-repeat 0 42px;
+}
+
+.side-selector .section + .section {
+    border-top: 1px solid #202020;
+}
+
+.side-selector .section .title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-indent: 60px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: 20px 50%;
+}
+.side-selector .section .title a { color: #FFF; display: block;}
+.side-selector .section .title:hover {
+    background-color: #606060;
+}
+
+.side-selector .section .title.soccer {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/aside-soccer.png');
+}
+
+.side-selector .section .title.tennis {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/aside-tennis.png');
+}
+
+.side-selector .section .title.hockey {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/aside-hockey.png');
+}
+
+.side-selector .section .title.basket {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/aside-basket.png');
+}
+
+.side-selector .section .title.f1 {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/aside-f1.png');
+}
+
+.side-selector .section .list {
+    display: none;
+    padding: 10px;
+    background: #e4e4e4;
+}
+
+.side-selector .section.active .list {
+    display: block;
+}
+
+.side-selector .section .list a {
+    display: block;
+    height: 20px;
+    padding-left: 25px;
+    line-height: 20px;
+    color: #555;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}
+
+
+
+.side-selector .section .list li ul { display: none;}
+.side-selector .section .list .active ul { display: block;}
+.side-selector .section .list li li  { background: url('/web/20160408052053im_/http://betfaq.ru/css/img/marker.png') left no-repeat; padding-left: 0px; margin-left: 11px;}
+.side-selector .section .list li li a { padding-left: 14px;display: inline-block;}
+.side-selector .section li.continent.first { margin-top: 20px;}
+
+.side-selector .section .champions li a { padding-left: 0px; display: inline-block;}
+.side-selector .section .champions li li { background: url(/web/20160408052053im_/http://betfaq.ru/css/img/marker.png) left no-repeat; padding-left: 14px; margin-left: -14px;}
+.side-selector .section .champions li li a { padding-left: 0px;}
+.side-selector .section .continent.active a { color: #333333; font-weight: bold;}
+.side-selector .section .continent.active li a { font-weight: normal; color: #1b3c5e;}
+.side-selector .section .champions li li a { color: #1b3c5e;}
+.side-selector .section .champions li a span { color: #777777;}
+.side-selector .section .champions li ul { display: none;}
+.side-selector .section .champions .active ul { display: block;}
+
+h2 img { vertical-align: middle; margin-right: 13px; position: relative; margin-top: -2px;}
+h2 a[href] { color: #1b3c5e;}
+.pad_bottom_15 { padding-bottom: 15px;}
+.date_table { background: #e6e6e6; font-size: 11px!important; color: #777777!important;  text-shadow: 1px 1px #f6f6f6; line-height: 10px!important; width: 40px; text-align: center!important; border-right: 1px solid #dedede;}
+.date_table span { color: #909090; font-size: 16px; font-weight: bold; display: block; line-height: 14px;}
+.date_table p {font-size: 11px!important; color: #777777!important; line-height: 10px!important;}
+.date_table img {
+    margin-top: 9px;
+}
+
+.breadcrumbs { font-size: 17px; color: #000; font-family: Tahoma, Geneva, sans-serif; padding-bottom: 20px; border-bottom: 1px solid #000; margin-bottom: 25px;}
+.breadcrumbs a {text-decoration: none}
+.breadcrumbs a.clickable {
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/breadcrumbs_a.gif) right 6px no-repeat;
+    padding-right: 15px;
+    margin-right: 8px;
+    color: #365c94;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+
+#one-time-overlay, #one-time-overlay-subscribe {
+    position: fixed;
+    display: none;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .75;
+}
+
+#one-time-banner{
+    position: absolute;
+    display: none;
+    z-index: 1000000;
+    left: 50%;
+    top: 50%;
+    width: 1160px;
+    height: 654px;
+    margin: -327px 0 0 -580px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/banner/banner_bg.png') no-repeat 0 0;
+    border-radius: 3px;
+}
+
+
+
+#one-time-banner div {
+    position: relative;
+    left: 180px;
+    top: 127px;
+    width: 800px;
+    height: 400px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/banner/banner_body.jpg') no-repeat 0 0;
+    border-radius: 3px;
+}
+
+
+
+#one-time-banner div a {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    width: 30px;
+    height: 34px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/banner/banner_close.png') no-repeat 0 0;
+}
+
+#one-time-banner div a:hover{
+    background-position: 0 100%;
+}
+
+#one-time-banner div button {
+    position: absolute;
+    right: 30px;
+    bottom: 27px;
+    width: 133px;
+    height: 38px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/banner/banner_subscribe.png') no-repeat 0 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#one-time-banner div button:hover {
+    background-position: 0 100%;
+}
+
+/* subscribe                  popup */
+#one-time-subscribe div {
+    position: relative;
+    left: 180px;
+    top: 127px;
+    width: 500px;
+    height: 300px;
+    border-radius: 3px;
+}
+
+#one-time-subscribe {
+    position: fixed;
+    display: none;
+    z-index: 1000000;
+    left: 55%;
+    top: 55%;
+    width: 1160px;
+    height: 654px;
+    margin: -327px 0 0 -580px;
+    border-radius: 3px;
+}
+
+
+#one-time-subscribe div a {
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    width: 30px;
+    height: 34px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/banner/banner_close.png') no-repeat 0 0;
+}
+
+#one-time-subscribe div a:hover {
+    background-position: 0 100%;
+}
+
+#one-time-subscribe div button  {
+    position: absolute;
+    right: 30px;
+    bottom: 27px;
+    width: 133px;
+    height: 38px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/banner/banner_subscribe.png') no-repeat 0 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#one-time-subscribe div button:hover {
+    background-position: 0 100%;
+}
+
+/* end popup */
+
+table.fore-bets {
+    width: 680px;
+    border-spacing: 0;
+    border-collapse: separate;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 35px;
+}
+table.fore-bets tr.head {
+    height: 31px;
+    font-size: 9px;
+    color: #696969;
+}
+
+table.fore-bets tr.head td {
+    height: 31px;
+    padding: 0;
+    line-height: 21px;
+    text-align: left;
+}
+
+table.fore-bets tr.head td div {
+    height: 21px;
+    margin-top: 5px;
+    padding: 0 9px;
+}
+
+table.fore-bets tr.head td div.br {
+    border-right: 1px dotted #ccc;
+}
+
+table.fore-bets tr.head td div.tc,
+table.fore-bets tr.head td div.rez{
+    text-align: center;
+}
+
+table.fore-bets tr.head td.pin div {
+    width: 22px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/pimpa.png') no-repeat 50% 50%;
+}
+
+table.fore-bets tr.head td.coef div {
+    width: 49px;
+}
+
+table.fore-bets tr.foot {
+    font-size: 11px;
+    border-top: 1px solid #ccc;
+    text-transform: uppercase;
+}
+
+table.fore-bets tr.foot td {
+    padding-right: 10px;
+    text-align: right;
+}
+
+table.fore-bets tr.foot td a {
+    display: inline-block;
+    padding-right: 15px;
+    color: #1b3c5e;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/ugolok.png') no-repeat 100% 50%;
+}
+
+table.fore-bets td.flag {
+    width: 22px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-right: 1px solid #ccc;
+}
+
+table.fore-bets td.flag.sco {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/sco.png');
+}
+
+table.fore-bets td.flag.por {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/por.png');
+}
+
+table.fore-bets td.flag.rus {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/rus.png');
+}
+
+table.fore-bets td.flag.afk {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/afk.png');
+}
+
+table.fore-bets td.flag.wim {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/wimble.png');
+}
+
+table.fore-bets td.flag.cre {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/flags/big/cremlin.png');
+}
+
+table.fore-bets tr:hover {
+    background: #fff;
+}
+
+table.fore-bets tr.head:hover,
+table.fore-bets tr.foot:hover {
+    background: #f7f7f7;
+}
+
+table.fore-bets td {
+    padding: 9px 0;
+}
+
+table.fore-bets tr + tr td {
+    border-top: 1px solid #ccc;
+}
+
+table.fore-bets tr.forehead {
+    background: #fff;
+}
+
+table.fore-bets tr.forehead td {
+    height: 56px;
+    padding: 0;
+    padding-left: 13px;
+}
+
+table.fore-bets tr.forehead.pt td {
+    padding-top: 25px;
+}
+
+table.fore-bets tr.forehead .rfloat {
+    margin-top: 14px;
+}
+
+table.fore-bets tr.forehead h2 {
+    height: 56px;
+    line-height: 56px;
+}
+
+table.fore-bets tr.forehead h2 .rfloat {
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+table.fore-bets tr.forehead h2.soccer {
+    padding-left: 32px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/h2/soccer.png') no-repeat 0 50%;
+}
+
+table.fore-bets tr.forehead h2.tennis {
+    padding-left: 32px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/h2/tennis.png') no-repeat 0 50%;
+}
+table.fore-bets tr.forehead h2.hockey {
+    padding-left: 32px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/h2/hockey.png') no-repeat 0 50%;
+}
+
+table.fore-bets td.title {
+    width: 479px;
+    padding-left: 20px;
+    border-right: 1px solid #d5d5d5;
+    position: relative;
+}
+
+table.fore-bets td.title .recommend {
+    position: absolute;
+    right: 12px;
+    color: #079b0d;
+}
+
+
+table.fore-bets td.title small {
+    display: block;
+    margin-bottom: 6px;
+}
+table.fore-bets td.title small a
+{
+    font-size: 10px;
+    color: #1b3c5e;
+    text-transform: uppercase;
+}
+table.fore-bets td.title .time {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+table.fore-bets td.title .fore {
+    font-size: 12px;
+    color: #000;
+}
+
+table.fore-bets td.title a {
+    color: #000;
+}
+
+table.fore-bets td.title ins {
+    color: #006bce;
+    text-decoration: none;
+}
+
+table.fore-bets td.coeff {
+    width: 49px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    color: #000;
+    border-right: 1px solid #ccc;
+}
+
+table.fore-bets tr.success td.coeff {
+    padding-top: 13px;
+    font-size: 12px;
+    color: #000;
+    border-left: 0;
+    border-right: 0;
+
+}
+
+table.fore-bets tr.finished td.coeff {
+    padding-top: 13px;
+    font-size: 12px;
+}
+table.fore-bets td.coeff.empty {
+    padding-top: 13px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/load1.png');
+    background-repeat: no-repeat;
+    background-position: 50% 17px;
+}
+
+table.fore-bets td.result {
+    width: 111px;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.fore-bets td.result a {
+    color: #1b3c5e;
+    text-decoration: underline;
+}
+
+table.fore-bets .comments {
+    display: inline-block;
+    margin-left: 7px;
+    padding-left: 20px;
+    line-height: 13px;
+    color: #1b3c5e;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/comments.png") no-repeat 0 50%;
+}
+
+#sticky {
+    position: relative;
+    /*min-height: 450px;*/
+}
+
+#sticky section header {
+    width: 680px;
+    height: 40px;
+    padding-top: 20px;
+    background: #fff;
+}
+
+#sticky section header.fixed {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+#sticky section header.fixed.absolute {
+    /*                position: absolute;*/
+}
+.text_page {
+    color: #222222;
+    font-size: 14px;
+    margin-top: -10px;
+}
+.text_page p
+{
+    margin-bottom: .5em;
+}
+div.head
+{
+    margin-bottom: 10px;
+}
+
+.koeff-place {
+    overflow: hidden;
+    margin: 0 0 -8px -20px;
+    padding: 30px 20px 50px;
+    font-size: 16px;
+    color: #fff;
+    background: #27292a;
+    border-top: 1px solid #1a1b1c;
+    width: 640px;
+    margin-bottom: -20px;
+}
+
+.koeff-place > strong {
+    display: block;
+    margin-bottom: 20px;
+    color: #88cd79;
+}
+
+.koeff-place a.bonus {
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    width: 228px;
+    height: 50px;
+    margin: 20px 40px 0 0;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #5d5d5d;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.koeff-place a.bonus:hover {
+    background-color: #323537;
+    text-decoration: none;
+}
+
+.koeff-place a.bonus strong {
+    font-size: 24px;
+    color: #ffc635;
+}
+
+.koeff-place a.bonus ins {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 50px;
+    height: 43px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/bonus-badge.png') no-repeat 0 0;
+}
+
+.koeff-place ul {
+    float: left;
+    width: 310px;
+}
+
+.koeff-place ul li {
+    position: relative;
+    height: 15px;
+    margin-bottom: 10px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/list-ul-bg.png') repeat-x 0 100%;
+}
+
+.koeff-place ul li a {
+    display: block;
+    color: #6ccaff;
+}
+
+.koeff-place ul li a span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    padding-right: 4px;
+    background: #27292a;
+}
+
+.koeff-place ul li a span + span {
+    left: auto;
+    right: 0;
+    padding-left: 4px;
+    padding-right: 0;
+    color: #fff;
+}
+.link-signup
+{
+    cursor: pointer;
+}
+.res-text.loader
+{
+    background-image: url(/web/20160408052053im_/http://betfaq.ru/css/img/loader.gif);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    width: 16px;
+    height: 16px;
+}
+
+.login-link{
+    float:left;
+    margin-left: 40px;
+    display: none;
+}
+
+.lostpwd-link{
+    color:#ffffff;
+    margin-left:70px;
+}
+
+
+.subblock-subscribe {
+    display: block;
+    height: 110px;
+    margin: 0 -20px;
+    padding: 20px 20px 0;
+    margin-top:20px;
+    float:left;
+    width: 350px;
+}
+
+.subblock-subscribe label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgb(233, 111, 20);
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-left: -13px;
+}
+
+.subblock-subscribe .message-subscribe{
+    clear: left;
+    padding-top: 10px;
+    width: 350px;
+    color: #000 !important
+}
+
+.subblock-subscribe{
+
+}
+
+.subblock-subscribe .button-center {
+    margin: 20px 0px 0px 90px;
+}
+
+
+.subblock-subscribe input {
+    box-sizing: border-box;
+}
+
+.subblock-subscribe input[type="text"]{
+    height: 32px;
+    width: 310px;
+    margin: 5px 10px 0 0;
+}
+
+.subblock-subscribe input[type="email"] {
+    height: 32px;
+    width: 310px;
+    margin: 5px 10px 0 0;
+}
+
+.subcribe-email {
+    height: 32px;
+    width: 310px;
+    margin: 5px 10px 0 0;
+}
+
+
+
+.subblock {
+    display: block;
+    height: 110px;
+    margin: 0 -20px;
+    padding: 30px 20px 0;
+    background: #27292a;
+    border-top: 1px solid #333;
+    margin-top:20px;
+}
+
+.subblock label {
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/subscribe-arrow.png') no-repeat 0 50%;
+}
+
+.subblock input {
+    box-sizing: border-box;
+    float: left;
+}
+
+.subblock input[type="text"] {
+    height: 32px;
+    width: 310px;
+    margin: 5px 10px 0 0;
+}
+
+.message-subscribe{
+    clear: left;
+    padding-top: 10px;
+    width: 350px;
+    color:#fff !important;
+}
+
+
+#authblock {
+    position: relative;
+    float: right;
+    width: 416px;
+    height: 140px;
+    margin: 15px -60px 0px 0px;
+    font-size: 14px;
+    color: #000;
+    background: #202020;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+#authblock.logout {
+    width: 416px;
+}
+
+#authblock label {
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    width: 260px;
+    padding-left: 30px;
+    font: 14px Arial, sans-serif;
+    line-height: 30px;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/ppl.png') no-repeat 0 7px;
+}
+
+#authblock .link-vk {
+    float:right;
+    margin-right: 20px;
+}
+
+#authblock label a{
+    color:#fff;
+    font-weight: 100;
+    text-decoration: underline;
+}
+
+#authblock label a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+
+#authblock .register-link a{
+    color:#fff;
+    font-size: 14px;
+}
+
+#authblock .vip-link{
+    margin-top: -11px;
+    position: absolute;
+    font-weight: 100;
+}
+
+
+#authblock .res-text {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    text-indent: 20px;
+    text-transform: uppercase;
+    background: rgb(255, 215, 71);
+    background: -moz-linear-gradient(90deg, rgb(255, 215, 71) 30%, rgb(255, 150, 43) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(255, 215, 71) 30%, rgb(255, 150, 43) 100%);
+    background: -o-linear-gradient(90deg, rgb(255, 215, 71) 30%, rgb(255, 150, 43) 100%);
+    background: -ms-linear-gradient(90deg, rgb(255, 215, 71) 30%, rgb(255, 150, 43) 100%);
+    background: linear-gradient(180deg, rgb(255, 215, 71) 30%, rgb(255, 150, 43) 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#authblock form {
+    position: relative;
+    display: block;
+    padding: 5px 20px 0;
+}
+
+#authblock form input {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 30px;
+}
+
+#authblock form input[type="text"],
+#authblock form input[type="email"],
+#authblock form input[type="password"] {
+    width: 225px;
+    margin-right: 7px;
+}
+
+#authblock form input[type="text"].short,
+#authblock form input[type="email"].short,
+#authblock form input[type="password"].short {
+    width: 130px;
+}
+
+#authblock form input[type="submit"] {
+    float: right;
+    width: 94px;
+    height: 32px;
+    margin-top: 3px;
+    font-weight: 700;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/submit-button-bg.png') repeat-x 50% 0;
+    box-shadow: none;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+
+#authblock .vk-button{
+    float: right;
+    width: 94px;
+    height: 28px;
+    margin-top: 3px;
+    font-weight: 700;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/vk_one.png') repeat-x 50% 0;
+    box-shadow: none;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    float: right;
+    position: absolute;
+    top: 45px;
+    right: 20px;
+}
+
+#authblock .submit-top{
+    margin-top: 20px !important;
+}
+
+#authblock form input[type="submit"]:hover {
+    background-position: 50% 100%;
+    cursor: pointer;
+}
+
+#tariffs {
+    margin: 0 10px;
+    padding-top: 25px;
+    border-top: 1px solid #000;
+}
+
+#tariffs .header2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    text-transform: none;
+}
+
+#tariffs ul {
+    position: relative;
+    height: 347px;
+    margin-bottom: 35px;
+}
+
+#tariffs li {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 227px;
+    height: 332px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-bg.png') no-repeat 0 0;
+    transition: .25s;
+}
+
+#tariffs li + li {
+    left: 244px;
+}
+
+#tariffs li + li + li {
+    left: 489px;
+}
+
+#tariffs li + li + li + li {
+    left: 733px;
+}
+
+#tariffs li.active {
+    width: 227px;
+    height: 342px;
+    margin-top: -5px;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-over-bg.png');
+    transition: .25s;
+}
+
+#tariffs li ins {
+    display: inline-block;
+    width: 79px;
+    height: 80px;
+    margin-top: 36px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#tariffs li.premium ins {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-premium.png');
+    background-position: 40% 76%;
+}
+
+#tariffs li.bronze ins {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-bronze.png');
+}
+
+#tariffs li.silver ins {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-silver.png');
+}
+
+#tariffs li.gold ins {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-gold.png');
+}
+
+#tariffs li.platinum ins {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-platinum.png');
+}
+
+
+
+
+#tariffs li small {
+    display: inline-block;
+    width: 167px;
+    height: 7px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 8px;
+    color: #999;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    text-transform: uppercase;
+}
+
+#tariffs li.active small {
+    color: #fff;
+    background-position: 50% 100%;
+}
+
+#tariffs li.bronze small {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-line-bronze.png');
+}
+
+#tariffs li.silver small {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-line-silver.png');
+}
+
+#tariffs li.gold small {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-line-gold.png');
+}
+
+#tariffs li.platinum small {
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/tariff-line-platinum.png');
+}
+
+#tariffs li strong {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fc0;
+    text-transform: uppercase;
+}
+
+#tariffs li > span {
+    display: block;
+    margin-top: 15px;
+}
+
+#tariffs li span + span {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#tariffs a.button-yellow {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 32px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+
+.paysystems {
+    clear: both;
+    height: 38px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+    font-size: 0;
+}
+
+
+.paysystems.like-tabs {
+    border: 0;
+}
+
+.paysystems a {
+    display: inline-block;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/paysystems.png');
+}
+
+.paysystems.like-tabs a {
+    height: 60px;
+    margin-left: 5px !important;
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(191, 191, 191, .5);
+}
+
+.paysystems.like-tabs a.active {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/ps_bg_active.png') repeat-x 0 0;
+    border-color: #f9f9f9;
+    box-shadow: inset 0 2px 2px 2px rgba(167, 167, 167, 0.25);
+}
+
+.paysystems.like-tabs a span {
+    display: block;
+    height: 38px;
+    margin: 11px 0 11px 0 !important;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/paysystems.png');
+}
+
+.paysystems.like-tabs a:hover span,
+.paysystems.like-tabs a.active span {
+    background-position-y: 100%;
+}
+
+.paysystems a.sberbank,
+.paysystems a.sberbank span {
+    width: 151px;
+    background-position: 0 0;
+}
+
+.paysystems.like-tabs a.sberbank {
+    margin-left: 0 !important;
+}
+
+.paysystems a.visa,
+.paysystems a.visa span {
+    width: 78px;
+    margin-left: 30px;
+    background-position: -181px 0;
+}
+
+.paysystems a.mastercard,
+.paysystems a.mastercard span {
+    width: 51px;
+    margin-left: 30px;
+    background-position: -288px 0;
+}
+
+.paysystems.like-tabs a.mastercard {
+    padding: 0 11px;
+}
+
+.paysystems a.qiwi,
+.paysystems a.qiwi span {
+    width: 71px;
+    margin-left: 30px;
+    background-position: -368px 0;
+}
+
+.paysystems.like-tabs a.qiwi {
+    padding: 0 11px;
+}
+
+.paysystems a.yandex,
+.paysystems a.yandex span {
+    width: 85px;
+    margin-left: 30px;
+    background-position: -469px 0;
+}
+
+.paysystems a.webmoney,
+.paysystems a.webmoney span {
+    width: 117px;
+    margin-left: 30px;
+    background-position: -584px 0;
+}
+
+.paysystems a.contact,
+.paysystems a.contact span {
+    width: 90px;
+    margin-left: 30px;
+    background-position: -730px 0;
+}
+
+.paysystems a.elexnet,
+.paysystems a.elexnet span {
+    width: 100px;
+    margin-left: 30px;
+    background-position: 100% 0;
+}
+
+.paysystems a:hover {
+    background-position-y: 100%;
+}
+
+.comments a.allcomments {
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+.comments a.allcomments:hover {
+    border-color: transparent;
+}
+
+.grid_4 .alert {
+    position: relative;
+    width: 262px;
+    height: 156px;
+    margin-top: 20px;
+    padding-top: 165px;
+    font-size: 14px;
+    text-align: center;
+    color: #fbfbfb;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/aside-alert-bg.png') no-repeat 0 0;
+}
+
+.grid_4 .alert a.close {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    width: 12px;
+    height: 12px;
+}
+
+.grid_4 .alert span {
+    display: block;
+    line-height: 20px;
+}
+
+.grid_4 .alert small {
+    display: block;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.grid_4 .alert a {
+    color: #c4ab71;
+}
+
+header.tall {
+    height: 40px;
+}
+
+table.fore-bets td.coeff del {
+    display: inline-block;
+    width: 11px;
+    height: 13px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/prog-lock.png') no-repeat 0 0;
+}
+
+table.fore-bets td.result a.price {
+    display: inline-block;
+    width: 101px;
+    height: 43px;
+    margin: -5px 0;
+    font-size: 14px;
+    line-height: 43px;
+    color: #49a640;
+    text-decoration: none;
+}
+
+table.fore-bets tr:hover td.result a.price {
+    text-indent: -9999em;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/buybtn2.png') no-repeat 0 0;
+}
+
+table.fore-bets td.title small a.nouc {
+    font-size: 12px;
+    text-transform: none;
+}
+
+section .header {
+    height: 44px;
+    margin-bottom: 13px;
+    font-size: 22px;
+    line-height: 44px;
+    color: #fff;
+    background: #292929;
+    text-indent: 10px;
+}
+
+section .header.nobg {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    background: transparent;
+}
+
+table.fore-bets + header.tall {
+    margin-top: -20px;
+}
+
+.megaslider {
+    position: relative;
+    width: 960px;
+    height: 412px;
+    clear: both;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/megaslide.png') no-repeat 0 0;
+}
+
+.megaslider .slides {
+    position: absolute;
+    z-index: 5;
+    left: 130px;
+    top: 0;
+    width: 700px;
+    height: 340px;
+}
+
+.megaslider .slides .slide {
+    float: left;
+    width: 700px;
+    height: 340px;
+}
+
+.megaslider .slides .slide .coupon {
+    position: relative;
+    width: 700px;
+    height: 270px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/coupon.png') no-repeat 50% 15px;
+}
+
+.megaslider .slides .slide .coupon .type {
+    position: absolute;
+    left: 50%;
+    top: 54px;
+    width: 211px;
+    height: 24px;
+    margin-left: -106px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.megaslider .slides .slide .coupon .risk {
+    position: absolute;
+    left: 50%;
+    bottom: 62px;
+    width: 180px;
+    height: 24px;
+    margin-left: -90px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fbff96;
+    text-align: center;
+    text-transform: lowercase;
+    text-shadow: 0 0 8px rgba(0, 0, 0, .75);
+}
+
+.megaslider .slides .slide .coupon .bet {
+    position: absolute;
+    right: 112px;
+    top: 90px;
+    width: 70px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2e0e03;
+    text-shadow: 1px 1px 1px #a75834;
+}
+
+.megaslider .slides .slide .coupon .win {
+    position: absolute;
+    right: 112px;
+    top: 162px;
+    width: 70px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2e0e03;
+    text-shadow: 1px 1px 1px #a75834;
+}
+
+.megaslider .slides .slide .coupon .price {
+    position: absolute;
+    left: 50%;
+    top: 88px;
+    width: 178px;
+    height: 82px;
+    margin-left: -89px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 75px;
+    color: #fff;
+    text-align: center;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/green-fon.png') no-repeat 0 0;
+}
+
+.megaslider .slides .slide .coupon .price a {
+    position: absolute;
+    left: 50%;
+    top: 52px;
+    width: 124px;
+    height: 42px;
+    margin-left: -62px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/buybtn.png') no-repeat 50% 0;
+}
+
+.megaslider .slides .slide .coupon .price a:hover {
+    background-position: 50% 100%;
+}
+
+.megaslider .slides .slide .game {
+    position: relative;
+    width: 700px;
+    height: 270px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/pair.png') no-repeat 50% 50%;
+}
+
+.megaslider .slides .slide .game .anal {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 200px;
+    margin-left: -100px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.megaslider .slides .slide .game .team1 {
+    position: absolute;
+    overflow: hidden;
+    left: 48px;
+    top: 40px;
+    width: 200px;
+    height: 200px;
+    font: 20px 'Open Sans Condensed';
+    font-weight: 700;
+    color: #666;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.megaslider .slides .slide .game .logo {
+    height: 150px;
+    line-height: 150px;
+}
+
+.megaslider .slides .slide .game .logo.soccer {
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/football_empty.png) no-repeat 50% 50%;
+}
+.megaslider .slides .slide .game .logo.tennis {
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/tennis_empty.png) no-repeat 50% 50%;
+}
+
+.megaslider .slides .slide .game .team1 .name {
+    height: 50px;
+    line-height: 50px;
+}
+
+.megaslider .slides .slide .game .team2 {
+    position: absolute;
+    overflow: hidden;
+    right: 48px;
+    top: 40px;
+    width: 200px;
+    height: 200px;
+    font: 20px 'Open Sans Condensed';
+    font-weight: 700;
+    color: #666;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.megaslider .slides .slide .game .team2 .name {
+    height: 50px;
+    line-height: 50px;
+}
+
+.megaslider .slides .slide .game a.viewprog {
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    width: 160px;
+    height: 64px;
+    margin-left: -80px;
+    color: #fff;
+    text-align: center;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/view-prog.png') no-repeat 0 0;
+}
+
+.megaslider .slides .slide .game .price {
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    width: 178px;
+    height: 82px;
+    margin-left: -89px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 75px;
+    color: #fff;
+    text-align: center;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/green-fon.png') no-repeat 0 0;
+}
+
+.megaslider .slides .slide .game .price a {
+    position: absolute;
+    left: 50%;
+    top: 52px;
+    width: 124px;
+    height: 42px;
+    margin-left: -62px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/buybtn.png') no-repeat 50% 0;
+}
+
+.megaslider .slides .slide .game .price a:hover {
+    background-position: 50% 100%;
+}
+
+.megaslider .slides .slide .brief {
+    position: absolute;
+    z-index: 300;
+    left: 52px;
+    top: 240px;
+    width: 600px;
+    height: 58px;
+    font-size: 14px;
+    line-height: 55px;
+    text-align: center;
+    color: #777;
+}
+
+.megaslider .slides .slide .brief a {
+    color: #6ccaff;
+    text-decoration: none;
+}
+
+.megaslider .slides .slide .brief a:hover {
+    text-decoration: underline;
+}
+
+.megaslider .slides .title {
+    height: 42px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #fff;
+    text-align: center;
+}
+
+.megaslider .slides .title span {
+    display: inline-block;
+    color: #fc0;
+    margin-right: 4px;
+    padding-left: 32px;
+}
+
+.megaslider .slides .title.soccer span {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/myach.png') no-repeat 0 50%;
+}
+
+.megaslider .slides .title.tennis  span {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/raketka.png') no-repeat 0 50%;
+}
+
+.megaslider a.prev,
+.megaslider a.next {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 41px;
+    width: 140px;
+    height: 340px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/megaleft.png') no-repeat 0 0;
+}
+
+.megaslider a.prev:hover,
+.megaslider a.next:hover {
+    background-position-y: 100%;
+}
+
+.megaslider a.next {
+    left: auto;
+    right: 0;
+    background-position-x: 100%;
+    background-image: url('/web/20160408052053im_/http://betfaq.ru/css/img/megaright.png');
+}
+
+.megaslider .pager {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    font-size: 0;
+    text-align: center;
+}
+
+.megaslider .pager a {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-top: 3px;
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/slider-bull-inactive.png") no-repeat 50% 50%;
+}
+
+.megaslider .pager a.selected {
+    background: url("/web/20160408052053im_/http://betfaq.ru/css/img/slider-bull.png") no-repeat 50% 50%;
+}
+
+table.fore-bets tr.locked td.coeff {
+    background: #eee url('/web/20160408052053im_/http://betfaq.ru/css/img/prog-lock.png') no-repeat 50% 50%;
+}
+
+table.fore-bets tr.locked.with-coeff td.coeff {
+    background-image: none;
+}
+
+table.fore-bets tr.locked td.title {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/locked-vip.png') no-repeat 100% 0;
+}
+
+/* licked ÃÂ´ÃÂ»Ã‘Â ÃÂ·ÃÂ°ÃÂ»ÃÂ¾ÃÂ³ÃÂ¸ÃÂ½ÃÂ¸ÃÂ½ÃÂ¾ÃÂ³ÃÂ¾ */
+table.fore-bets tr.locked-vip td.coeff {
+
+}
+
+table.fore-bets tr.locked-vip.with-coeff td.coeff {
+    background-image: none;
+}
+
+table.fore-bets tr.locked-vip td.title {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/locked-vip.png') no-repeat 100% 0;
+}
+
+
+table.fore-bets td.like {
+    width: 42px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/like-in-circle.png') no-repeat 50% 50%;
+    border-right: 1px solid #ccc;
+}
+
+table.fore-bets td a.won,table.fore-bets td a.draw {
+    font-size: 14px;
+    color: #08b204;
+}
+
+table.fore-bets td a.loss {
+    font-size: 13px;
+    color: #c9c9c9;
+}
+
+table.fore-bets td a.eshe {
+    font-size: 11px;
+    line-height: 14px;
+    color: transparent;
+    text-decoration: underline;
+}
+
+table.fore-bets tr:hover td a.eshe {
+    color: #1b3c5e;
+}
+
+table.fore-bets tr:hover td a.eshe:hover {
+    text-decoration: none;
+}
+
+table.fore-bets tr.head.empty {
+    height: 0;
+}
+
+table.fore-bets tr.head.empty td {
+    height: 0;
+    background: #fff;
+}
+
+table.fore-bets tr.head.empty div {
+    height: 0;
+}
+
+.description.vip {
+    overflow: hidden;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.description.vip .timer {
+    position: relative;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.description.vip .timer strong {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.description.vip .timer #clock {
+    position: absolute;
+    left: 50%;
+    margin-left: -168px;
+}
+
+.vip-only {
+    position: relative;
+    width: 640px;
+    height: auto;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    background-position-y: 115px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background: #131415 url('/web/20160408052053im_/http://betfaq.ru/css/img/biglock.png') no-repeat 50% 275px;
+    border-radius: 7px;
+}
+
+.vip-only .preim {
+    width: 590px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.vip-only .preim strong {
+    font-size: 16px;
+}
+#vip-block.animation {
+    position: fixed;
+    top: 20px;
+}
+
+/*.vip-only:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 70px;
+        height: 39px;
+        background: url('/web/20160408052053im_/http://betfaq.ru/css/img/vip-blue.png') no-repeat 0 0;
+    }*/
+
+.vip-only .title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #f5c503;
+}
+
+.vip-only .note {
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.vip-only .more {
+    font-size: 16px;
+    color: #b0b0b0;
+}
+
+.vip-only .more a {
+    color: #6ccaff;
+}
+
+.vip-only ol {
+    display: block;
+    margin: 15px 0 30px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.vip-only ol li {
+    display: block;
+    margin-bottom: 15px;
+    color: #b0b0b0;
+}
+
+.vip-only ol li em {
+    display: inline-block;
+    margin-right: 5px;
+    font-style: normal;
+    color: #ebbc05;
+}
+
+.vip-only ol li span {
+    color: #fff;
+}
+
+.vip-only a.bigbutton {
+    display: inline-block;
+    width: 593px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/bigbutton.png') no-repeat 0 0;
+}
+
+.vip-only a.bigbutton span {
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    margin-right: 10px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/korzina.png') no-repeat 0 0;
+}
+
+.vip-only a.buy {
+    display: block;
+    margin: 150px auto 30px;
+}
+
+.premium-center {
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+    padding:20px;
+    border-radius: 3px;
+    background: #131415;
+}
+
+.premium-center .preim {
+    width: 590px;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.premium-center strong {
+    font-size: 16px;
+    color:#fff;
+}
+
+
+
+.premium-center ol li {
+    margin-bottom: 15px;
+    color: #b0b0b0;
+}
+
+.premium-center ol li em {
+    margin-right: 5px;
+    font-style: normal;
+    color: #ebbc05;
+}
+
+.premium-center li span {
+    color: #fff;
+}
+
+
+.premium-center ol {
+    margin: 15px 0 30px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+a.buyed {
+    display: inline-block;
+    width: 175px;
+    height: 34px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 34px;
+    color: #fff !important;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/buyed.png') no-repeat 0 0;
+    text-decoration: none !important;
+}
+
+a.buy {
+    width: 173px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff !important;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/buybtn4.png') no-repeat 0 0;
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+a.buy span {
+    float: left;
+    margin-left: 32px;
+}
+
+a.buy span + span {
+    margin-left: 10px;
+}
+
+.vip-only a.buy {
+    display: block;
+    margin: 200px auto 30px;
+}
+
+#notice {
+    position: fixed;
+    z-index: 10000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/pattern_head.png');
+}
+
+#notice a.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/notice-close.png');
+}
+
+table.fore-bets td.title small {
+    font-size: 12px;
+    color: #000;
+}
+
+table.fore-bets td.tostart {
+    width: 186px;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    color: #202020;
+    background: #faebd1;
+    border-right: 1px solid #ccc;
+}
+
+table.fore-bets td.tostart.active {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/waves2.gif') no-repeat 50% 50%;
+}
+
+table.fore-bets tr.head td.tostart {
+    font-size: 9px;
+    line-height: 21px;
+    color: #696969;
+    background: none;
+    border: 0;
+}
+
+.grid_14 table.fore-bets {
+    width: 960px;
+}
+
+.grid_14 table.fore-bets tr.head td {
+    padding: 0;
+}
+
+.grid_14 table.fore-bets tr.head td.pin,
+.grid_14 table.fore-bets tr.head td.like {
+    width: 42px;
+}
+
+.grid_14 table.fore-bets tr.head td.coef,
+.grid_14 table.fore-bets tr.head td.coeff {
+    width: 52px;
+}
+
+.grid_14 table.fore-bets tr.head td.tostart {
+    width: 186px;
+    padding: 0;
+}
+
+.grid_14 table.fore-bets tr.head td.result {
+    width: 204px;
+}
+
+.winline {
+    clear: both;
+    height: 60px;
+    margin: 0 0 40px 10px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/winlist.png') no-repeat 50% -10px;
+}
+
+.blb {
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    text-align: center;
+    color: #3f4458;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/liniya.png') no-repeat 50% 100%;
+}
+
+.blb strong {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.blb span {
+    display: block;
+    font-size: 12px;
+}
+
+.header2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+
+table.winners {
+    width: 680px;
+    margin-bottom: 15px;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-bottom: 1px solid #ccc;
+}
+
+table.winners td {
+    padding: 9px 0;
+}
+
+table.winners tr + tr td {
+    border-top: 1px solid #ccc;
+}
+
+table.winners td.title small {
+    display: block;
+    margin-bottom: 6px;
+}
+
+table.winners td.title small a
+{
+    font-size: 10px;
+    color: #1b3c5e;
+    text-transform: uppercase;
+}
+
+table.winners td.title .time {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+table.winners td.title a {
+    color: #000;
+}
+
+table.winners td.title ins {
+    color: #006bce;
+    text-decoration: none;
+}
+
+table.winners td.title small a.nouc {
+    font-size: 12px;
+    text-transform: none;
+}
+
+table.winners td.result {
+    width: 210px;
+    font-size: 14px;
+}
+
+table.winners td.result span {
+    display: inline-block;
+    width: 206px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    color: #fff;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/greenblock.png') no-repeat 0 0;
+}
+
+table.winners td.result span em{
+    padding-right: 10px;
+    color: #fff;
+    font-style: normal;
+}
+
+a.button-yellow {
+    font-size: 14px;
+    line-height: 32px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+.gimmelike {
+    clear: both;
+    font: 16px/40px Georgia, serif;
+    color: #000;
+}
+
+.reviews {
+    overflow: hidden;
+    padding-top: 30px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/cb-top.png') no-repeat 0 0;
+}
+
+.reviews a.button-yellow {
+    float: right;
+}
+
+.reviews .review {
+    overflow: hidden;
+    margin-bottom: 1px;
+    padding: 20px;
+    font-size: 14px;
+    color: #000;
+    background: #f2f3f8;
+    border-top: 1px solid #d8d8d8;
+}
+
+.reviews .review .author {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.reviews .review .date {
+    display: inline-block;
+    color: #999;
+}
+
+.reviews .review p {
+    display: block;
+    margin: 15px 0;
+}
+
+.reviews .review .reply {
+    position: relative;
+    margin-left: 120px;
+    padding: 15px 15px 1px;
+    font-size: 12px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 0 rgba(50, 50, 50, .1);
+}
+
+#content .review .reply p {
+    font-size: 12px;
+}
+
+.reviews .review .reply:before {
+    position: absolute;
+    content: '';
+    left: -50px;
+    top: 22px;
+    width: 30px;
+    height: 7px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/dots.png') no-repeat 0 0;
+}
+
+.reviews .review .reply:after {
+    position: absolute;
+    content: '';
+    right: 24px;
+    top: -13px;
+    width: 20px;
+    height: 13px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/kozyavka.png') no-repeat 0 0;
+}
+
+.quick-link {
+
+}
+
+.quick-link h2{
+    margin-top: 15px;
+}
+
+.quick-link a{
+    color:#365c94;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.koeff-place {
+    width: 640px;
+    margin: 0 0 0 -20px;
+}
+
+.all-reviews {
+    height: 70px;
+    line-height: 70px;
+    font-size: 16px;
+}
+
+.all-reviews a {
+    color: #006bce;
+    border-bottom: 1px dotted;
+}
+
+.all-reviews a:hover{
+    text-decoration: none;
+    border-color: transparent;
+}
+
+.add-review {
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-top: 30px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/cb-top.png') no-repeat 0 0;
+}
+
+.add-review label {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+    width: 257px;
+    height: 27px;
+    margin-bottom: 13px;
+    font-size: 12px;
+    color: #000;
+    background: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px;
+}
+
+.add-review label span {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 55px;
+    line-height: 27px;
+    text-indent: 10px;
+    color: #000;
+    box-shadow: none;
+}
+
+.add-review label span:after {
+    content: '*';
+    color: #ee3224;
+}
+
+.add-review label input {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 200px;
+    height: 27px;
+    padding: 0 10px;
+    font: 12px Arial, sans-serif;
+    background: #f5f5f5;
+    border-left: 1px solid #c7c7c7;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+.add-review textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 680px;
+    height: 152px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font: 12px Arial, sans-serif;
+    color: #000;
+    background: #f5f5f5;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+}
+.subblock {
+    display: block;
+    height: 110px;
+    margin: 0 -20px;
+    padding: 30px 20px 0;
+    background: #27292a;
+    border-top: 1px solid #333;
+}
+
+.subblock label {
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/subscribe-arrow.png') no-repeat 0 50%;
+}
+
+.subblock input {
+    box-sizing: border-box;
+    float: left;
+}
+
+.subblock input[type="text"] {
+    height: 32px;
+    width: 310px;
+    margin: 5px 10px 0 0;
+}
+
+.sumblock {
+    box-sizing: border-box;
+    clear: both;
+    height: 140px;
+    margin: 0 -10px;
+    padding: 20px 10px 30px;
+    color: #000;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/pattern_oplata.png');
+}
+
+.sumblock .total {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-right: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/basket.png') no-repeat 100% 0;
+}
+
+.sumblock .subject {
+    font-size: 18px;
+}
+
+.sumblock .subject small {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #777;
+}
+
+.payblock {
+    box-sizing: border-box;
+    clear: both;
+    margin: 0 -10px -80px;
+    padding: 1px 20px 100px;
+    background: #eee;
+}
+
+.payblock .warning{
+    margin-top: 20px;
+}
+
+.payblock form
+{
+    display: none;
+}
+.payblock .note {
+    margin-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+}
+
+.payblock .note a {
+    color: #006bce;
+}
+
+.payblock form {
+    display: block;
+    width: 860px;
+    margin-top: 15px;
+    padding: 30px 50px;
+    background: #d9d9d9;
+    border-radius: 5px;
+}
+
+.payblock form .line {
+    border-color: #b6b6b6;
+}
+
+.payblock form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+.payblock form label.input-radio {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.payblock form label.input-checkbox {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+.payblock form label.input-checkbox a {
+    margin: 0px 0px 0px 0px;
+    float: none;
+    color: #365c94;
+}
+
+.payblock form input[type="email"] {
+    display: block;
+    width: 265px;
+    height: 32px;
+    margin-top: 10px;
+    border: 1px solid #b6b6b6;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.input-radio,
+.input-checkbox {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 35px;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.input-radio:focus,
+.input-checkbox:focus {
+    outline: 0;
+}
+
+.input-radio input,
+.input-checkbox input {
+    position: absolute;
+    left: -9999em;
+}
+
+.input-radio {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/radio.png') no-repeat -3px 0;
+}
+
+.input-radio:hover {
+    background-position: -3px -31px;
+}
+
+.input-radio.on {
+    background-position: -3px -61px;
+}
+
+.input-checkbox {
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/checkbox.png') no-repeat -3px 0;
+}
+
+.input-checkbox:hover {
+    background-position: -3px -30px;
+}
+
+.input-checkbox.on {
+    background-position: -3px -60px;
+}
+
+.input-checkbox.on:hover {
+    background-position: -3px 100%;
+}
+#topbanner {
+    position: relative;
+    float: right;
+    width: 630px;
+    height: 110px;
+    margin: 23px -60px 0 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ccc;
+    background: #323232;
+}
+
+#topbanner ins {
+    position: absolute;
+    right: 9px;
+    bottom: 0;
+    width: 117px;
+    height: 118px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/topbanner/banner-kubok.png') no-repeat 0 0;
+}
+
+#topbanner .from {
+    float: right;
+    width: 80px;
+    height: 57px;
+    margin: 27px 140px 0 0;
+    padding: 2px 0 0 17px;
+    font-size: 13px;
+    color: #ffc700;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/topbanner/banner-line.png') no-repeat 0 0;
+    text-transform: uppercase;
+}
+
+#topbanner .best {
+    padding: 26px 0 0 20px;
+    line-height: 18px;
+}
+
+#topbanner .best a {
+    display: inline-block;
+    line-height: 24px;
+    padding-right: 28px;
+    font-weight: 700;
+    color: #ccc;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/topbanner/banner-icon.png') no-repeat 100% 2px;
+}
+
+#topbanner .best a span {
+    display: inline-block;
+    line-height: 18px;
+    border-bottom: 2px solid #ccc;
+}
+
+#topbanner .best a:hover span {
+    border-color: transparent;
+}
+.today-block {
+    width: 680px;
+    height: 55px;
+    margin: 0 -20px;
+    margin-bottom: -10px;
+    font-size: 16px;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(104, 167, 50);
+}
+
+.today-block a {
+    display: inline-block;
+    height: 30px;
+    padding-right: 28px;
+    line-height: 30px;
+    color: #CFE7F1;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/topbanner/banner-icon.png') no-repeat 100% 50%;
+}
+
+.about {
+    box-sizing: border-box;
+    position: relative;
+    clear: both;
+    height: 250px;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    background: #202020;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .25);
+}
+
+.about h2 {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#content .about p {
+    color: #fff;
+    width: 590px;
+    line-height: 19px;
+}
+
+.about .links {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.about .links a {
+    float: left;
+    color: #6ccaff;
+}
+
+.about .links ins {
+    float: left;
+    width: 1px;
+    height: 11px;
+    margin: 1px 8px 0;
+    color: #6ccaff;
+    background: #b9b9b9;
+}
+
+.about .htb {
+    box-sizing: border-box;
+    position: absolute;
+    right: 15px;
+    top: 35px;
+    width: 295px;
+    height: 175px;
+    padding: 20px 0 0 25px;
+    background: rgb(51, 51, 51);
+    background: -moz-linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    background: -o-linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    background: -ms-linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    border: 1px solid #000;
+    border-radius: 1px;
+    box-shadow: inset 0 0 4px 2px rgba(255, 255, 255, 0.25);
+    font-size: 13px;
+    color: #fff;
+}
+
+.about .htb .title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.about .htb  a {
+    color: #6ccaff;
+}
+
+.about .htb ul {
+    display: block;
+}
+
+.about .htb ul li {
+    position: relative;
+    display: block;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+.about .htb ul li:before {
+    position: absolute;
+    width: 6px;
+    height: 7px;
+    left: 0;
+    top: 50%;
+    margin-top: -4px;
+    content: '';
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/htwb.png') no-repeat 0 0;
+}
+
+
+.form-register-form{
+    margin-top: -15px;
+}
+
+.recovery-password{
+    margin-left: 54px;
+}
+
+
+.header.slt {
+    font-size: 28px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+tr.protd .flag,
+tr.protd .title,
+tr.protd .result {
+    background: #fdf3cb;
+}
+
+tr.protd .title {
+    position: relative;
+}
+
+tr.protd .title del {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #ff9600;
+    text-transform: uppercase;
+    padding-left: 12px;
+    text-decoration: none;
+    line-height: 11px;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/tstart.png') no-repeat 0 0;
+}
+
+.prnote {
+    box-sizing: border-box;
+    padding: 15px 30px;
+    background: rgb(51, 51, 51);
+    background: -moz-linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    background: #FFC124;
+    background: -o-linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    background: -ms-linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%);
+    /* background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgb(29, 29, 29) 100%); /
+    / box-shadow: inset 0 0 4px 2px rgba(255, 255, 255, 0.1), 0 0 15px 0 rgba(0, 0, 0, .5); */
+    color: #000000;
+    font-size: 14px;
+    border-radius: 1px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.isset-vip{
+    background: linear-gradient(180deg, rgb(0, 180, 0) 0%, rgb(21, 105, 21) 100%) !important;
+    color:#ffffff;
+}
+
+.prnote a {
+    color: #FEFEFE;
+}
+.green-button,
+.green-button:hover {
+    display: block;
+    margin: 0 auto 30px;
+    width: 580px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 30px;
+    line-height: 60px;
+    height: 60px;
+    background: rgb(0, 209, 0);
+    background: -moz-linear-gradient(90deg, rgb(0, 209, 0) 0%, rgb(0, 133, 0) 80%);
+    background: -webkit-linear-gradient(90deg, rgb(0, 209, 0) 0%, rgb(0, 133, 0) 80%);
+    background: -o-linear-gradient(90deg, rgb(0, 209, 0) 0%, rgb(0, 133, 0) 80%);
+    background: -ms-linear-gradient(90deg, rgb(0, 209, 0) 0%, rgb(0, 133, 0) 80%);
+    background: linear-gradient(180deg, rgb(0, 209, 0) 0%, rgb(0, 133, 0) 80%);
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: inset 0 0 4px 2px rgba(0, 171, 0, 0.75);
+}
+
+#outer_alignment form label.input-checkbox {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#outer_alignment form label.input-checkbox a {
+    margin: 0px 0px 0px 0px;
+    float: none;
+    color: #365c94;
+}
+
+
+.sumblock {
+    height: 76px;
+    background: #eee;
+    margin-top: -20px;
+}
+
+.sumblock.low {
+    height: 100px;
+}
+
+.sumblock .total {
+    font-weight: 400;
+}
+
+.sumblock .total.nobasket {
+    background: none;
+}
+
+.payblock form {
+    background: transparent;
+    border: 1px solid #b8b8b8;
+}
+
+.payblock form .att {
+    margin-top: 25px;
+    padding-left: 40px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #888;
+    background: url('/web/20160408052053im_/http://betfaq.ru/css/img/icons/att.png') no-repeat 0 50%;
+}
+
+#content .payblock form .line {
+    margin: 30px 0;
+}
+
+#content .payblock form .line.special {
+    margin: 10px 0;
+}
+
+.payblock form input {
+    font-size: 12px;
+}
+
+.payblock form label span {
+    font-weight: 400;
+}
+
+.payblock form label td.time {
+    width: 60px;
+    text-align: center;
+}
+
+.payblock form label td.sum {
+    width: 120px;
+    text-align: center;
+}
+
+.payblock form label td.what {
+    padding-left: 10px;
+    text-align: left;
+    color: #555;
+}
+
+.payblock form a {
+    display: inline;
+    color: #1b3c5e;
+}
+
+
+.vip-text-empty-prognose {
+    font-weight: bold;
+    text-align: left;
+    line-height: 20pt !important;
+    margin-left: 10px
+}
+
+#authblock label.subscribe-form-title
+{
+    background: transparent;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+.res-text-register {
+    color: black;
+    margin-top: 10px;
+    height: 20px;
+    color:red;
+    width: 700px;
+    font-size: 12px;
+
+}
+
+
+
+.error-message {
+    color:red;
+    border: 1px solid #e72654;
+    padding: 15px 10px;
+}
+
+.success-message {
+    border: 1px solid #00c51c;
+    margin-top: 20px;
+    padding: 15px 10px;
+    font-size: 14px;
+    line-height: 16px;
+    width: 850px;
+}
+
+.today_2015 span {color:#ebbc05}
+.today_2015 {padding:4px 0 0 0;}
+.today_2015 .who {font-size:26px;line-height:26px;color:#ebbc05;padding:29px 0 6px 0;}
+.quote {font-style:italic;font-size:17px;line-height:26px;text-align:left;border:2px solid #292929;background:#1a1b1c;margin:7px 30px 0;padding:22px 18px 25px;}
+.vip-only {background:#131415;}
+.vip-only a.buy {margin:0;}
+.get-ak {padding:34px 0 9px 190px;text-align:left;background:url(/web/20160408052053im_/http://betfaq.ru/css/img/biglock.png) no-repeat 66px 65%;}
+#content .prognoz .description .get-ak p {font-size:14px;line-height:21px;color: #fff;}
+.get-ak p span {color:#ebbc05}
+.latest {border-top:1px solid #333333;border-bottom:1px solid #333333;margin:43px 0 29px 0;text-align:left;padding:15px 20px 20px;}
+.latest .tl {display:block;font-size:16px;font-weight:700;padding:0 0 18px;}
+.latest table {width:100%;border-collapse:collapse;}
+.latest table td {border-collapse:collapse;border:1px solid #131415;vertical-align:middle;background:#212426;}
+.latest table td.flag {width:60px;height:60px;text-align:center;font-size:0;border-right:none;border-left:none;}
+.latest table td.flag img{
+    max-height: 40px;
+    max-width: 40px;
+}
+.latest table td.name1 {height:60px;text-align:left;font-size:18px;line-height:18px;border-right:none;border-left:none;}
+.latest table td.name2 {height:60px;text-align:right;font-size:18px;line-height:18px;border-right:none;border-left:none;}
+.latest table td a{color:#ffffff; font-size: 13px}
+.latest table td.ok {width:60px;height:60px;text-align:center;font-size:0;border-right:none;}
+
+/*--------NOTIFICATIONS BEGIN---------*/
+.notifications{
+    margin: 0 10px 30px;
+}
+.notifications .green,
+.notifications .red{
+    border: 1px solid #00c51c;
+    margin-top: 5px;
+    padding: 15px 10px;
+}
+
+.notifications .green a,
+.notifications .red a{
+    color:#202020;
+}
+.notifications .red{
+    border: 1px solid #e72654;
+}
+
+/*--------NOTIFICATIONS GREEB---------*/
+
+.notifications-green{
+    margin: 0 10px 30px;
+}
+.notifications-green .green,
+.notifications-green .red{
+    border: 1px solid #00c51c;
+    margin-top: 5px;
+    padding: 15px 10px;
+    background-color: #1C9D12;
+}
+
+.notifications-green .green p{
+    color: #FFFFFF !important;
+}
+
+.notifications-green .green p:before{
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/notif-top.png) no-repeat 0 0 !important;
+}
+
+
+.notifications-green .green a,
+.notifications-green .red a{
+    color:#FFFFFF;
+    text-decoration: underline;
+}
+
+
+#content .green p,
+#content .red p{
+    color: #00a824;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    line-height: 18px;
+    max-width: 840px;
+    padding-left: 40px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 65px;
+}
+#content .red p{
+    color: #e72653;
+}
+.del{
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/notif.png) no-repeat -48px 0;
+    height: 7px;
+    width: 7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#content .red.ok p:before,
+#content .green.ok p:before,
+#content .red.info p:before,
+#content .green.info p:before{
+    content: '';
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/notif.png) no-repeat 0 -24px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 12px);
+}
+#content .green.ok p:before{
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/notif.png) no-repeat 0 0;
+}
+#content .red.info p:before{
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/notif.png) no-repeat -24px -24px;
+}
+#content .green.info p:before{
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/notif.png) no-repeat -24px 0;
+}
+.notif_title span{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 12px;
+    color: #404040;
+    text-transform: uppercase;
+}
+.notif_title a{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    color: #099aee;
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 1px dotted #099aee;
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    float: right;
+}
+.notif_title a:hover{
+    border-bottom: 1px solid transparent;
+}
+/*--------NOTIFICATIONS END---------*/
+.pay-text-prognose-note{
+    font-size: 16px;
+    color: red;
+    background:#eee;
+}
+
+/* LANGUAGE */
+.res-text{
+    overflow: hidden;
+}
+.res-text span{
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+.res-text ul{
+    float: right;
+    font-size: 0;
+    margin-right: 15px;
+}
+.res-text ul li{
+    display: inline-block;
+    vertical-align: top;
+    text-indent: 0;
+    position: relative;
+}
+.res-text ul li.active a:after{
+    content: '';
+    width: 100%;
+    height: 7px;
+    display: block;
+    z-index: 99;
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/arrow.png) no-repeat top center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.res-text ul li.en:before{
+    content: '';
+    width: 2px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/lang_line.png) no-repeat left;
+}
+.res-text ul li.en:after{
+    content: '';
+    width: 2px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/lang_line.png) no-repeat left;
+}
+.res-text ul li.ru:after{
+    content: '';
+    width: 2px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/lang_line.png) no-repeat left;
+}
+.res-text ul li.en a:before{
+    content: '';
+    width: 16px;
+    height: 11px;
+    margin: 15px 5px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/en_ru.png) no-repeat top;
+}
+.res-text ul li.ru a:before{
+    content: '';
+    width: 16px;
+    height: 11px;
+    margin: 15px 5px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/en_ru.png) no-repeat bottom;
+}
+.res-text ul li a{
+    line-height: 40px;
+    font-weight: 300;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    font-family: "arial";
+}
+
+/* MAIN MENU */
+#mainmenu {
+    width: 960px;
+    height: 56px;
+    margin: -20px -20px 30px -10px;
+    padding: 0 20px;
+    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/menu/menu-bg.png) repeat-x 50% 0;
+}
+
+    #mainmenu.fixed {
+        position: fixed;
+        z-index: 100000;
+        top: 0;
+        margin-top: 0;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .5);
+    }
+
+    #mainmenu ul {
+        display: block;
+        height: 56px;
+        font: 15px 'gotham_probold', sans-serif;
+        font-weight: 700;
+        line-height: 56px;
+        text-transform: uppercase;
+    }
+
+        #mainmenu ul li {
+            float: left;
+            height: 56px;
+            font-size: 15px;
+        }
+
+            #mainmenu ul li + li {
+                margin-left: 25px;
+            }
+
+            #mainmenu ul li a {
+                display: block;
+                height: 56px;
+                padding: 0 10px;
+                color: #fff;
+                opacity: .3;
+            }
+
+                #mainmenu ul li a:hover {
+                    opacity: .6;
+                    text-decoration: none;
+                }
+
+                #mainmenu ul li.active a {
+                    opacity: 1;
+                }
+
+            #mainmenu ul li.vip,
+            #mainmenu ul li.prem {
+                position: relative;
+                background: url(/web/20160408052053im_/http://betfaq.ru/css/img/menu/menu-active-bg.png) repeat-x 50% 0;
+            }
+
+            #mainmenu ul li.prem {
+                margin-left: 15px;
+            }
+
+                #mainmenu ul li.vip a,
+                #mainmenu ul li.prem a {
+                    padding: 0 20px;
+                }
+
+                #mainmenu ul li.vip::before {
+                    position: absolute;
+                    content: '';
+                    left: -17px;
+                    top: 0;
+                    width: 17px;
+                    height: 56px;
+                    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/menu/menu-active-l.png) no-repeat 0 0;
+                }
+
+                #mainmenu ul li.prem::before {
+                    position: absolute;
+                    content: '';
+                    left: -17px;
+                    top: 0;
+                    width: 17px;
+                    height: 56px;
+                    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/menu/menu-active-sep.png) no-repeat 0 0;
+                }
+
+                #mainmenu ul li.prem::after {
+                    position: absolute;
+                    content: '';
+                    right: -17px;
+                    top: 0;
+                    width: 17px;
+                    height: 56px;
+                    background: url(/web/20160408052053im_/http://betfaq.ru/css/img/menu/menu-active-r.png) no-repeat 0 0;
+                }
+
+                #mainmenu ul li.vip a,
+                #mainmenu ul li.prem a {
+                    position: relative;
+                    padding-left: 35px;
+                    color: #262626;
+                    opacity: 1;
+                }
+
+                    #mainmenu ul li.vip a:hover,
+                    #mainmenu ul li.vip.active a,
+                    #mainmenu ul li.prem a:hover {
+                        color: #fff;
+                    }
+
+                    #mainmenu ul li.vip a::before {
+                        position: absolute;
+                        content: '';
+                        left: 10px;
+                        top: 50%;
+                        width: 17px;
+                        height: 17px;
+                        margin-top: -9px;;
+                        background: url(/web/20160408052053im_/http://betfaq.ru/css/img/menu/diam.png) no-repeat 0 0;
+                    }
+
+                    #mainmenu ul li.prem a::before {
+                        position: absolute;
+                        content: '';
+                        left: 10px;
+                        top: 50%;
+                        width: 18px;
+                        height: 18px;
+                        margin-top: -9px;;
+                        background: url(/web/20160408052053im_/http://betfaq.ru/css/img/menu/prem.png) no-repeat 0 0;
+                    }
+
+                        #mainmenu ul li.vip a:hover::before,
+                        #mainmenu ul li.vip.active a::before,
+                        #mainmenu ul li.prem a:hover::before {
+                            background-position: 0 100%;
+                        }
+
+/*  END LANGUAGE */
+#regform .res-text-register,#regform .res-text
+{
+    width : 300px;
+    display: block;
+    width: 300px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+#regform.dialog5s .res-text {
+    margin-top: -25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label-padding{
+    margin-bottom: 5px;
+}
+/*
+     FILE ARCHIVED ON 05:20:53 Apr 08, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:31:00 Jan 31, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots.policy: 0.179
+  PetaboxLoader3.datanode: 1819.292 (4)
+  esindex: 0.013
+  exclusion.robots: 0.191
+  PetaboxLoader3.resolve: 166.79 (2)
+  CDXLines.iter: 24.703 (3)
+  captures_list: 260.689
+  LoadShardBlock: 230.692 (3)
+  RedisCDXSource: 1.985
+  load_resource: 1831.353
+*/

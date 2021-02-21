@@ -9,7 +9,7 @@ use Bett\CountryModel;
 // Спросить у Леши как дать доступ к Carbon в представлении в Blade
 use Carbon\Carbon;
 
-class ChampionshipController extends SiteController
+class ChampionshipController extends Controller
 {
   public function list() {
 

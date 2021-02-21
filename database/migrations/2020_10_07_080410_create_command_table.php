@@ -19,6 +19,7 @@ class CreateCommandTable extends Migration
             $table->unsignedBigInteger('country_id')->nullable()->comment('внешний ключ указывает на поле id в таб. country');
 
             $table->string('name')->comment('Название команды');
+            $table->string('logo')->nullable()->comment('Имя файла с логотипом команды в папке logo');
             $table->string('description')->nullable()->comment('Описание команды');
 
 

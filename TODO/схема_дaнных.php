@@ -37,6 +37,7 @@
   sports_id - bigInteger - вид спорта (это внешний ключ, он будет указывать на поле id в таб. sports)
   country_id - bigInteger - страна (это внешний ключ, он будет указывать на поле id в таб. country)
   name - string
+  logo - string (имя файла с логотипом команды)
   description - string (описание команды)
 
 прогноз (forecast) - таблица

@@ -10,19 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get ('sport/{id}/{date}', 'IndexController@indexsport')->name('IndexSport');
+Route::get ('sport/{id}/{date}', 'ForecastController@indexsport')->name('IndexSport');
+Route::get ('forecast/{id}', 'ForecastController@forecast')->name('Forecast');
 
-// Route::get('/', 'IndexController@index')->name('Index');
-// Route::get('/{id?}', 'IndexController@index')->name('Index');
-// Route::resource('/', 'IndexController');
-Route::resource('/', 'IndexController', [
+// Route::get('/', 'ForecastController@index')->name('Index');
+// Route::get('/{id?}', 'ForecastController@index')->name('Index');
+// Route::resource('/', 'ForecastController');
+Route::resource('/', 'ForecastController', [
                                           'only' => ['index'],
                                           'names' => [
                                                     'index'=>'home'
                                                     ]
                                           ]);
 
-// Route::get ('sport/{id}', 'IndexController@index')->name('IndexSport');
+// Route::get ('sport/{id}', 'ForecastController@index')->name('IndexSport');
 // Route::get ('sport/{id}', 'SportController@indexsport')->name('IndexSport');
 
 Auth::routes();
@@ -66,19 +67,20 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth','admin']], function(){
   Route::get ('command', 'CommandController@list')->name('CommandList');
   Route::get ('command/{id}', 'CommandController@detail')->name('CommandDetail');
   Route::match (['get', 'post'], 'command/edit/{id}', 'CommandController@edit')->name('CommandEdit');
+  Route::match (['get', 'post'], 'command/edit/{id}/{folder}', 'CommandController@logo')->name('CommandLogo');
   // Route::match (['get', 'post'], 'command/del/{id}', 'CommandController@del')->name('CommandDel');
 
   //    /admin/forecast
-  Route::get ('forecast', 'ForecastController@list')->name('ForecastList');
-  Route::get ('forecast/{id}', 'ForecastController@detail')->name('ForecastDetail');
-  Route::match (['get', 'post'], 'forecast/edit/{id}', 'ForecastController@edit')->name('ForecastEdit');
-  Route::match (['get', 'post'], 'forecast/edit1/{id}', 'ForecastController@edit')->name('ForecastEdit1');
-  Route::match (['get', 'post'], 'forecast/edit2/{id}', 'ForecastController@edit')->name('ForecastEdit2');
+  Route::get ('forecast', 'ForecastAdminController@list')->name('ForecastList');
+  Route::get ('forecast/{id}', 'ForecastAdminController@detail')->name('ForecastDetail');
+  Route::match (['get', 'post'], 'forecast/edit/{id}', 'ForecastAdminController@edit')->name('ForecastEdit');
+  Route::match (['get', 'post'], 'forecast/edit1/{id}', 'ForecastAdminController@edit')->name('ForecastEdit1');
+  Route::match (['get', 'post'], 'forecast/edit2/{id}', 'ForecastAdminController@edit')->name('ForecastEdit2');
   // спросить у Леши про get , можно ли им удалять
-  Route::post ('forecast/del/{id}', 'ForecastController@del')->name('ForecastDel');
+  Route::post ('forecast/del/{id}', 'ForecastAdminController@del')->name('ForecastDel');
 
-  Route::match (['get', 'post'], 'forecast/edit_one_page/{id}', 'ForecastController@editOnePage')->name('ForecastEditOnePage');
-  Route::match (['get', 'post'], 'forecast/getChampsCommandsAjax/{sport}/{country}', 'ForecastController@getChampsCommandsAjax')->name('ForecastChampsCommandsAjax');
+  Route::match (['get', 'post'], 'forecast/edit_one_page/{id}', 'ForecastAdminController@editOnePage')->name('ForecastEditOnePage');
+  Route::match (['get', 'post'], 'forecast/getChampsCommandsAjax/{sport}/{country}', 'ForecastAdminController@getChampsCommandsAjax')->name('ForecastChampsCommandsAjax');
 });
 
 

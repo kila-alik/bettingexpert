@@ -10,4 +10,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    protected function mass_list($models) {
+        $mass = [];
+        foreach ($models as $model) {
+          $mass[$model->id] = $model->name;
+        }
+        return $mass;
+    }
 }
