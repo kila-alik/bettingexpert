@@ -100,16 +100,15 @@ class ForecastController extends Controller
       // $forecasts = ForecastModel::all();
       $forecasts = ForecastModel::whereDate('date_game', $idDataMenu)->get();
       // для прогнозов по центру
+      $bodyImage = false;
       if($idSportMenu && $idSportMenu !== 0) {
           $arSports = $this->ar_sports($forecasts, $idSportMenu);
           // эта проверка на то что есть ли прогноз по ЭТОМУ виду спорта в ЭТУ дату
           if(count($arSports) > 0) {
             $bodyImage = $arSports[$idSportMenu]['alias'];
-            dd($arSports);
             }
-          else
-            $bodyImage = false;
-          // $vars = array_add($vars, 'bodyImage', $bodyImage);
+          // else
+            // $bodyImage = false;
       } else {
           $arSports = $this->ar_sports($forecasts);
       }
