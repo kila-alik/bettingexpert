@@ -33,25 +33,28 @@ class CommandController extends Controller
       }
 
       if(request()->isMethod('post')) {
+        dd(getimagesize($_FILES['logo']['name']));
            $command->name = request()->input('name');
+           // dd(request()->input('name'));
            $command->sports_id = request()->input('sport');
            $command->country_id = request()->input('country');
            $command->description = request()->input('description');
-           // if(!empty(request()->input('logo'))) {
-           //   $command->logo = request()->input('logo');
-           // }
+        dd(request()->input('logo'));
+           if(!empty(request()->input('logo'))) {
+             $command->logo = request()->input('logo');
+           }
            // $nameDirCountryLogos = public_path(env('THEME') . DIRECTORY_SEPARATOR . 'logos');
            // $mass_logo_folders = $this->mass_logo($nameDirCountryLogos);
            // dd($mass_logo_folders[request()->input('logo_folder')]);
            // dd(request()->input('logo_folder'));
 
-           $dirLogoFolder = request()->input('logo_folder');
+           // $dirLogoFolder = request()->input('logo_folder');
            // dd($dirLogoFolder);
 
            $command->save();
            // return redirect('/country/'.$country->id);
-           // return redirect(route('CommandDetail', ['id' => $command->id]));
-           return redirect(route('CommandLogo', ['id' => $command->id, 'folder' => $dirLogoFolder]));
+           return redirect(route('CommandDetail', ['id' => $command->id]));
+           // return redirect(route('CommandLogo', ['id' => $command->id, 'folder' => $dirLogoFolder]));
       }
 
       $sport_all = SportModel::all();
@@ -59,17 +62,10 @@ class CommandController extends Controller
 
       $country_all = CountryModel::all();
       $mass_countrys = $this->mass_list($country_all);
-      // dd($countrys);
-
-      $nameDirCountryLogos = public_path(env('THEME') . DIRECTORY_SEPARATOR . 'logos');
-      $mass_logo_folders = $this->mass_logo($nameDirCountryLogos);
-
-
-      // $ar1 = pathinfo($command->logo, PATHINFO_DIRNAME);
-      // dd($ar1['dirname']);
-      // dd($ar1);
-
-      return view(env('THEME').'.command.edit', compact('command', 'mass_sports', 'mass_countrys', 'mass_logo_folders'));
+      // две следующие строки были в первой версии двухстраничного диалога редактирования
+      // $nameDirCountryLogos = public_path(env('THEME') . DIRECTORY_SEPARATOR . 'logos');
+      // $mass_logo_folders = $this->mass_logo($nameDirCountryLogos);
+      return view(env('THEME').'.command.edit', compact('command', 'mass_sports', 'mass_countrys'));
   }
 
   protected function mass_logo($folder) {

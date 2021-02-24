@@ -1,7 +1,7 @@
 @extends(env('THEME').'.admin.admin')
 @section('content')
 
-<form method="POST" enctype="multipart/form-data">
+<form name="myform" method="POST" enctype="multipart/form-data">
    {{ csrf_field() }}
    <b>Название Команды:</b>
    <br>
@@ -23,9 +23,11 @@
      <img src="{{ asset(env('THEME')) }}/logos/{{ $command->logo ? $command->logo : 'icon-excl.png' }}" width="150" height="150" alt="flag {{$command->name}}">
    </a>
    <br>
-   <b>Папка с логотипами:</b>
+   <b>Выберите логот на локальном компьютере:</b>
    <br>
-   {!! Form::select('logo_folder', $mass_logo_folders, Request::is('*/new') ? '1' : pathinfo($command->logo, PATHINFO_DIRNAME)) !!}
+   <input type="file" name="logo" value="{{$command->logo}}" />
+   <!-- { !! Form::file('logo') !! } -->
+   <!-- { ! ! Form::select('logo_folder', $mass_logo_folders, Request::is('*/new') ? '1' : pathinfo($command->logo, PATHINFO_DIRNAME)) ! ! } -->
    <br>
 
    <br>
