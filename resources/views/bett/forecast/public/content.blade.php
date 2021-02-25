@@ -90,7 +90,7 @@
                 @endif
 
                 <tr class="" style="cursor: pointer;">
-                  <td class="flag" style="background-image: url('{{ MyHalper::flagResize($forecast->country->file, 22, 16) }}')"></td>
+                  <td class="flag" style="background-image: url('{{ MyHalper::flag_logoResize('flag',$forecast->country->file, 22, 16) }}')"></td>
                   <!-- {{$forecast->status}} -->
                   <!-- <td class="title vip-event"> -->
                   <td class="title {{$forecast->status > 0 ? $forecast->status == 1 ? "vip-event" : "premium-event" : "free-event"}}">
@@ -174,7 +174,7 @@
                 @foreach($sport_right['countrys'] as $sr => $country)
 
                     <li class=" ">
-                        <a class="list__link" onclick="return false;" href="#" style="background-image: url('{{ MyHalper::flagResize($country[0]->file, 14, 11)}}')">
+                        <a class="list__link" onclick="return false;" href="#" style="background-image: url('{{ MyHalper::flag_logoResize('flag', $country[0]->file, 14, 11)}}')">
                           {{ $country[0]->name }}</a>
                         <ul>
                           <li>

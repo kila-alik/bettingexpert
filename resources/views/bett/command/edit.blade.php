@@ -23,7 +23,7 @@
      <img src="{{ asset(env('THEME')) }}/logos/{{ $command->logo ? $command->logo : 'icon-excl.png' }}" width="150" height="150" alt="flag {{$command->name}}">
    </a>
    <br>
-   <b>Выберите логот на локальном компьютере:</b>
+   <b>Выберите логотип на локальном компьютере:</b>
    <br>
    <input type="file" name="logo" value="{{$command->logo}}" />
    <!-- { !! Form::file('logo') !! } -->

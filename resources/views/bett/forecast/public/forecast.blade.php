@@ -19,13 +19,13 @@
         <div class="res">{{ MyHalper::tablo($forecast->result) }}</div>
         <!-- <div class="res">{ { MyHalper::tablo($forecast->result) } }</div> -->
         <div class="loss">Прогноз не сбылся</div>
-        <div class="team1 " style="background-image: url('{{ MyHalper::logoResize(pathinfo($forecast->command_one->logo, PATHINFO_DIRNAME) . DIRECTORY_SEPARATOR . pathinfo($forecast->command_one->logo, PATHINFO_BASENAME), 120, 120) }}')">
+        <div class="team1 " style="background-image: url('{{ MyHalper::flag_logoResize('logos', $forecast->command_one->logo, 120, 120) }}')">
           <div class="title opensans">{{$forecast->command_one->name}}</div>
           @if (MyHalper::resultGame($forecast->result) > 0)
             <div class="marker">Победа </div>
           @endif
         </div>
-        <div class="team2 " style="background-image: url('{{ MyHalper::logoResize(pathinfo($forecast->command_two->logo, PATHINFO_DIRNAME) . DIRECTORY_SEPARATOR . pathinfo($forecast->command_two->logo, PATHINFO_BASENAME), 120, 120) }}')">
+        <div class="team2 " style="background-image: url('{{ MyHalper::flag_logoResize('logos', $forecast->command_two->logo, 120, 120) }}')">
           <div class="title opensans">{{$forecast->command_two->name}}</div>
           @if (MyHalper::resultGame($forecast->result) < 0)
             <div class="marker">Победа </div>

@@ -33,15 +33,19 @@ class CommandController extends Controller
       }
 
       if(request()->isMethod('post')) {
-        dd(getimagesize($_FILES['logo']['name']));
            $command->name = request()->input('name');
            // dd(request()->input('name'));
            $command->sports_id = request()->input('sport');
            $command->country_id = request()->input('country');
            $command->description = request()->input('description');
-        dd(request()->input('logo'));
-           if(!empty(request()->input('logo'))) {
-             $command->logo = request()->input('logo');
+        // dd(request()->input('logo'));
+           if(!empty($_FILES['logo']['name'])) {
+             // dd($_FILES['logo']);
+             $upload = env('THEME') . '/logos/' . $_FILES['logo']['name'];
+             if (move_uploaded_file($_FILES['logo']['tmp_name'], $upload)) {
+               $command->logo = $_FILES['logo']['name'];
+             }
+             else echo 'Ошибка при загрузке файла';
            }
            // $nameDirCountryLogos = public_path(env('THEME') . DIRECTORY_SEPARATOR . 'logos');
            // $mass_logo_folders = $this->mass_logo($nameDirCountryLogos);
