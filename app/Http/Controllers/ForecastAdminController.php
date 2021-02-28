@@ -181,7 +181,7 @@ if(request()->isMethod('post') && !empty(request()->input('champ'))) {
   }
 
   public function del($id) {
-        ForecastModel::find($id)->delete();
+        if(request()->isMethod('post')) ForecastModel::find($id)->delete();
         // return redirect('/country');
         return redirect(route('ForecastList'));
     }

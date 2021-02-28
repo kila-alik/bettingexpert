@@ -19,6 +19,30 @@
 Коэффициент прогноза:
 <b>{{$forecasts->coeff}}</b>
 <br />
+Коэффициент победы 1-й команды:
+<b>{{$forecasts->lwin}}</b>
+<br />
+Коэффициент ничьи:
+<b>{{$forecasts->draw}}</b>
+<br />
+Коэффициент победы 2-й команды:
+<b>{{$forecasts->rwin}}</b>
+<br />
+Коэффициент Победа 1-й или ничья:
+<b>{{$forecasts->lwdraw}}</b>
+<br />
+Коэффициент Победа 2-й или ничья:
+<b>{{$forecasts->rwdraw}}</b>
+<br />
+Текст до фото:
+<b>{{$forecasts->text_before}}</b>
+<br />
+Текст после фото:
+<b>{{$forecasts->text_after}}</b>
+<br />
+Имя файла картинки:
+<b>{{$forecasts->foto}}</b>
+<br />
 Результат прогноза:
 <b>{{$forecasts->result}}</b>
 <br />
