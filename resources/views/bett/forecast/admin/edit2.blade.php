@@ -113,7 +113,7 @@
                    <td align="center">
                      <a href={{route('ForecastDetail', ['id' => $forecast->id])}}>Подробно</a>
                    </td>
-             </form>
+                 </form>
                    <td valign="center">
                        <form method="POST" action="{{ route('ForecastDel', ['id' => $forecast->id]) }}">
                          {{ csrf_field() }}

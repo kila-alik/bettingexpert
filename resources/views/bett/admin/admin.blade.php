@@ -26,8 +26,13 @@
     <script src="{{ asset(env('THEME'))}}/js/mobile.js"></script>
     <script src="{{ asset(env('THEME'))}}/js/jquery.mask.js"></script>
     <script src="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.js"></script>
-    <!-- <script src="{{ asset(env('THEME'))}}/js/bootstrap.min.js"></script> -->
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.css">
 
+    <!-- <script src="{{ asset(env('THEME'))}}/js/bootstrap.min.js"></script> -->
     <!-- <script type="text/javascript" async="" src="{{ env('THEME') }}/js/J5trncW2TZ"></script>
     <script type="text/javascript" src="{{ env('THEME') }}/js/25054244" async=""></script>
     <script type="text/javascript" async="" src="{{ env('THEME') }}/js/runtime.2.8.5.js"></script>
@@ -40,11 +45,6 @@
     <script type="text/javascript" src="{{ env('THEME') }}/js/playback.bundle.js" charset="utf-8"></script>
     <script type="text/javascript" src="{{ env('THEME') }}/js/wombat.js" charset="utf-8"></script> -->
 
-    <!-- Bootstrap core CSS -->
-<!-- <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.css"></script>
 
     <style>
       .bd-placeholder-img {

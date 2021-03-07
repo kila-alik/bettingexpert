@@ -54,7 +54,7 @@
 <hr noshade align="left" size="2" width="15%">
 <br />
 
-<div class="flipclock"></div>
+<div class="flipclock" style="margin:2em;"></div>
 <div class="flipclockmessage"></div>
 
 <script type="text/javascript">
@@ -64,6 +64,7 @@
    clock = $('.flipclock').FlipClock({
     clockFace: 'DailyCounter',
     autoStart: false,
+    // autoStart: true,
     callbacks: {
       stop: function() {
       $('.flipclockmessage').html('The clock has stopped!')
@@ -71,8 +72,8 @@
      }
     });
 
-    var dt = "Mart 04 2021 23:00:00"; //Дата матча из прогноза
-    alert(dt);
+    var dt = "{!! \Carbon\Carbon::parse($forecasts->date_game) !!}"; //Дата матча из прогноза
+    // alert(dt);ы
     var dt_date = new Date(dt); //Переводит в формат классна Date
     var now_date = Date.now(); //текущая дата в формате класса Date
     var raznica = dt_date - now_date; // разница В МИЛЛИСЕКУНДАХ
@@ -84,7 +85,6 @@
   });
 </script>
 
-{!! \Carbon\Carbon::parse($forecasts->date_game) !!}
 <br />
 <hr noshade align="left" size="2" width="15%">
 
