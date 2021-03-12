@@ -54,26 +54,31 @@
 <hr noshade align="left" size="2" width="15%">
 <br />
 
-<div class="flipclock" style="margin:2em;"></div>
-<div class="flipclockmessage"></div>
+<div class="clock" style="margin:2em;"></div>
+<div class="clockmessage"></div>
+<!-- <div id="flipclockmessage"></div> -->
 
 <script type="text/javascript">
   var clock;
   $(document).ready(function() {
    var clock;
-   clock = $('.flipclock').FlipClock({
+   clock = $('.clock').FlipClock({
     clockFace: 'DailyCounter',
+    language: 'ru',
     autoStart: false,
     // autoStart: true,
-    callbacks: {
-      stop: function() {
-      $('.flipclockmessage').html('The clock has stopped!')
-      }
-     }
+    // if(raznica < 0) {
+      callbacks: {
+        stop: function() {
+          $('.clockmessage').html('The clock has stopped!');
+          $('.clock').css('display', 'none');
+        }
+       }
+     // }
     });
 
+    // alert('{!! \Carbon\Carbon::parse($forecasts->date_game) !!}');
     var dt = "{!! \Carbon\Carbon::parse($forecasts->date_game) !!}"; //Дата матча из прогноза
-    // alert(dt);ы
     var dt_date = new Date(dt); //Переводит в формат классна Date
     var now_date = Date.now(); //текущая дата в формате класса Date
     var raznica = dt_date - now_date; // разница В МИЛЛИСЕКУНДАХ
@@ -81,7 +86,11 @@
 
     clock.setTime(raznica); //Устанавливаем нужное время в секундах
     clock.setCountdown(true); //Устанавливаем отсчет времени назад
-    clock.start(); //Запускаем отсчет
+    // if(raznica > 0) {
+    clock.start();//Запускаем отсчет
+
+    // }
+
   });
 </script>
 

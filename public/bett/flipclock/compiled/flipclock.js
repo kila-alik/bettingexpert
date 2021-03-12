@@ -2111,16 +2111,16 @@ var FlipClock;
 			}
 
 			if(this.showSeconds) {
-				$(this.createDivider('Секунды')).insertBefore(this.lists[this.lists.length - 2].$el);
+				$(this.createDivider('Seconds')).insertBefore(this.lists[this.lists.length - 2].$el);
 			}
 			else
 			{
 				offset = 2;
 			}
 
-			$(this.createDivider('Минуты')).insertBefore(this.lists[this.lists.length - 4 + offset].$el);
-			$(this.createDivider('Часы')).insertBefore(this.lists[this.lists.length - 6 + offset].$el);
-			$(this.createDivider('Дни', true)).insertBefore(this.lists[0].$el);
+			$(this.createDivider('Minutes')).insertBefore(this.lists[this.lists.length - 4 + offset].$el);
+			$(this.createDivider('Hours')).insertBefore(this.lists[this.lists.length - 6 + offset].$el);
+			$(this.createDivider('Days', true)).insertBefore(this.lists[0].$el);
 
 			this.base();
 		},
