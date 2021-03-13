@@ -61,21 +61,6 @@
 <script type="text/javascript">
   var clock;
   $(document).ready(function() {
-   var clock;
-   clock = $('.clock').FlipClock({
-    clockFace: 'DailyCounter',
-    language: 'ru',
-    autoStart: false,
-    // autoStart: true,
-    // if(raznica < 0) {
-      callbacks: {
-        stop: function() {
-          $('.clockmessage').html('The clock has stopped!');
-          $('.clock').css('display', 'none');
-        }
-       }
-     // }
-    });
 
     // alert('{!! \Carbon\Carbon::parse($forecasts->date_game) !!}');
     var dt = "{!! \Carbon\Carbon::parse($forecasts->date_game) !!}"; //Дата матча из прогноза
@@ -83,11 +68,29 @@
     var now_date = Date.now(); //текущая дата в формате класса Date
     var raznica = dt_date - now_date; // разница В МИЛЛИСЕКУНДАХ
     raznica /=1000; //разница В СЕКУНДАХ
+    raznica = (raznica > 0) ? raznica : 0;
 
-    clock.setTime(raznica); //Устанавливаем нужное время в секундах
-    clock.setCountdown(true); //Устанавливаем отсчет времени назад
+    clock = $('.clock').FlipClock(raznica, {
+      clockFace: 'DailyCounter',
+      language: 'ru',
+      countdown: true,
+      autoStart: true,
+      callbacks: {
+        stop: function() {
+          $('.clockmessage').html('The clock has stopped!');
+          $('.clock').css('display', 'none');
+        }
+       }
+    });
+    if (raznica == 0) {
+      clock.stop();
+    }
+
+
+    // clock.setTime(raznica); //Устанавливаем нужное время в секундах
+    // clock.setCountdown(true); //Устанавливаем отсчет времени назад
     // if(raznica > 0) {
-    clock.start();//Запускаем отсчет
+    // clock.start();//Запускаем отсчет
 
     // }
 
