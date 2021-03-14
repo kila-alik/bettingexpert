@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" async="" src="{{ asset(env('THEME')) }}/js/J5trncW2TZ)"></script>
-<script type="text/javascript" src="{{ asset(env('THEME')) }}/js/25054244" async=""></script>
+<!-- <script type="text/javascript" async="" src="{{ asset(env('THEME')) }}/js/J5trncW2TZ"></script> -->
+<!-- <script type="text/javascript" src="{{ asset(env('THEME')) }}/js/25054244" async=""></script> -->
 <script type="text/javascript" async="" src="{{ asset(env('THEME')) }}/js/runtime.2.8.5.js"></script>
 <script async="" src="{{ asset(env('THEME')) }}/js/script.js"></script>
 <script type="text/javascript" async="" src="{{ asset(env('THEME')) }}/js/recaptcha__ru.js"></script>
@@ -15,8 +15,8 @@ __wm.init("https://web.archive.org/web");
 __wm.wombat("https://betfaq.ru/","20190828062649","https://web.archive.org/","web","/_static/",
     "1566973609");
 </script> -->
-<link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/js/banner-styles.css">
-<link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/js/iconochive.css">
+<link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/iconochive.css">
 <!-- End Wayback Rewrite JS Include -->
 
 
@@ -97,24 +97,29 @@ __wm.wombat("https://betfaq.ru/","20190828062649","https://web.archive.org/","we
     <script src="{{ asset(env('THEME')) }}/js/js.js"></script>
     <script src="{{ asset(env('THEME')) }}/js/mobile.js"></script>
     <script src="{{ asset(env('THEME')) }}/js/jquery.mask.js"></script>
+    <script src="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.js"></script>
+
     <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/grid.css">
     <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/reset.css">
     <link rel="stylesheet" href="{{ asset(env('THEME')) }}/css/topbanner.css" type="text/css">
     <link rel="stylesheet" href="{{ asset(env('THEME')) }}/css/landing.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/flipclock.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/flipclock.css"> -->
     <link href="{{ asset(env('THEME')) }}/css/style-last-update.css" rel="stylesheet">
-    <link href="{{ asset(env('THEME')) }}/css/css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/css(1)">
-    <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/css(2)">
-    <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/css(3)">
+    <!-- <link href="{{ asset(env('THEME')) }}/css/css" rel="stylesheet" type="text/css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/css(1)"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/css(2)"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset(env('THEME')) }}/css/css(3)"> -->
 
     <!--[if IE]>="
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-                <script src="{{ asset(env('THEME')) }}/js/api.js" async="" defer=""></script>
+        <script src="{{ asset(env('THEME')) }}/js/api.js" async="" defer=""></script>
         <script>
             window.recaptchaLoaded = function() {
                 Controller_Profile._recaptcha = grecaptcha;

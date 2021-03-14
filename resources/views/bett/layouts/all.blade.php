@@ -343,7 +343,7 @@
 
 
         </script>
-        <script src="c/js/arcticmodal.js"></script>
+        <script src="{{ asset(env('THEME')) }}/js/arcticmodal.js"></script>
 
         <script>
             localStorage.removeItem ('jv_store_J5trncW2TZ_client');

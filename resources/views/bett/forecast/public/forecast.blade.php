@@ -12,12 +12,49 @@
 </div>
 
 <div class="clear"></div>
+
+<script type="text/javascript">
+  var clock;
+  $(document).ready(function() {
+    var dt = "{!! \Carbon\Carbon::parse($forecast->date_game) !!}"; //Дата матча из прогноза
+    var dt_date = new Date(dt); //Переводит в формат классна Date
+    var now_date = Date.now(); //текущая дата в формате класса Date
+    var raznica = dt_date - now_date; // разница В МИЛЛИСЕКУНДАХ
+    raznica /=1000; //разница В СЕКУНДАХ
+    raznica = (raznica > 0) ? raznica : 0;
+
+    clock = $('.clock').FlipClock(raznica, {
+      clockFace: 'DailyCounter',
+      language: 'ru',
+      countdown: true,
+      autoStart: true,
+      callbacks: {
+        stop: function() {
+          // $('.clockmessage').html('The clock has stopped!');
+          $('.clock').css('display', 'none');
+          $('.res').css('display', 'block');
+        }
+       }
+    });
+    if (raznica == 0) {
+      clock.stop();
+    }
+    // clock.setTime(raznica); //Устанавливаем нужное время в секундах
+    // clock.setCountdown(true); //Устанавливаем отсчет времени назад
+    // clock.start();//Запускаем отсчет
+  });
+</script>
+
 <div class="grid_10">
   <div class="gray-bg">
+
+    <div class="clock" style="padding-left: 3%;"></div>
     <div class="prognoz {{$forecast->status > 0 ? $forecast->status == 1 ? "vip" : "premium" : ""}}">
       <div class="teams">
-        <div class="res">{{ MyHalper::tablo($forecast->result) }}</div>
-        <!-- <div class="res">{ { MyHalper::tablo($forecast->result) } }</div> -->
+        <div class="res" style="display: none">{{ MyHalper::tablo($forecast->result) }}</div>
+
+        <!-- <div class="clockmessage"></div> -->
+
         <div class="loss">Прогноз не сбылся</div>
         <div class="team1 " style="background-image: url('{{ MyHalper::flag_logoResize('logos', $forecast->command_one->logo, 120, 120) }}')">
           <div class="title opensans">{{$forecast->command_one->name}}</div>
@@ -133,10 +170,10 @@
   });
 </script>
 
-<script src="./КАРДИФФ(КАРДИФФ) - ЛИДС(ЛИДС) подробный аналитический прогноз на футбольный матч 08.03.2016 22_45_files/flipclock.js.Без названия"></script>
-<script src="./КАРДИФФ(КАРДИФФ) - ЛИДС(ЛИДС) подробный аналитический прогноз на футбольный матч 08.03.2016 22_45_files/countdown.js.Без названия"></script>
+<!-- <script src="./КАРДИФФ(КАРДИФФ) - ЛИДС(ЛИДС) подробный аналитический прогноз на футбольный матч 08.03.2016 22_45_files/flipclock.js.Без названия"></script> -->
+<!-- <script src="./КАРДИФФ(КАРДИФФ) - ЛИДС(ЛИДС) подробный аналитический прогноз на футбольный матч 08.03.2016 22_45_files/countdown.js.Без названия"></script> -->
 
-<script>
+<!-- <script>
 
   $(function() {
 
@@ -166,7 +203,7 @@
   });
   });
   });
-</script>
+</script> -->
 
 
 <div class="grid_4">
@@ -199,7 +236,7 @@
     </div>
   </div>
 
-  <script src="./КАРДИФФ(КАРДИФФ) - ЛИДС(ЛИДС) подробный аналитический прогноз на футбольный матч 08.03.2016 22_45_files/knob.js.Без названия"></script>
+  <!-- <script src="./КАРДИФФ(КАРДИФФ) - ЛИДС(ЛИДС) подробный аналитический прогноз на футбольный матч 08.03.2016 22_45_files/knob.js.Без названия"></script> -->
   <script>
     function processVIPBlock() {
     var top = $(window).scrollTop() - 350;

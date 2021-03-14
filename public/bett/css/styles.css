@@ -2808,9 +2808,9 @@ body .prognoz .teams.blackout {
     height: 80px;
 }
 
-.flip-clock-divider.hours {
+/* .flip-clock-divider.hours {
     display: none;
-}
+} */
 
 .flip-clock-wrapper.big-clock .flip-clock-divider.hours > span,
 .flip-clock-wrapper.big-clock .flip-clock-divider.minutes > span,
