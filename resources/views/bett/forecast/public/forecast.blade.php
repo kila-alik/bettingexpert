@@ -33,6 +33,8 @@
           // $('.clockmessage').html('The clock has stopped!');
           $('.clock').css('display', 'none');
           $('.res').css('display', 'block');
+          $('.marker').css('display', 'block');
+          $('.loss').css('display', 'block');
         }
        }
     });
@@ -55,20 +57,20 @@
 
         <!-- <div class="clockmessage"></div> -->
 
-        <div class="loss">Прогноз не сбылся</div>
+        <div class="loss" style="display: none">Прогноз не сбылся</div>
         <div class="team1 " style="background-image: url('{{ MyHalper::flag_logoResize('logos', $forecast->command_one->logo, 120, 120) }}')">
           <div class="title opensans">{{$forecast->command_one->name}}</div>
           @if (MyHalper::resultGame($forecast->result) > 0)
-            <div class="marker">Победа </div>
+            <div class="marker" style="display: none">Победа </div>
           @endif
         </div>
         <div class="team2 " style="background-image: url('{{ MyHalper::flag_logoResize('logos', $forecast->command_two->logo, 120, 120) }}')">
           <div class="title opensans">{{$forecast->command_two->name}}</div>
           @if (MyHalper::resultGame($forecast->result) < 0)
-            <div class="marker">Победа </div>
+            <div class="marker" style="display: none">Победа </div>
           @endif
         </div>
-        <div class="var lwin {{MyHalper::resultGame($forecast->result)>0 ? 'active' : ''}}">Победа 1.91</div>
+        <div class="var lwin {{MyHalper::resultGame($forecast->result)>0 && MyHalper::timeOn(\Carbon\Carbon::parse($forecast->date_game)) ? 'active' : ''}}">Победа 1.91</div>
         <div class="var draw {{MyHalper::resultGame($forecast->result)==0 ? 'active' : ''}}">Ничья 3.5</div>
         <div class="var rwin {{MyHalper::resultGame($forecast->result)<0 ? 'active' : ''}}">Победа 4.75</div>
         <div class="var lwdraw {{MyHalper::resultGame($forecast->result)>=0 ? 'active' : ''}}">Победа или ничья 1.22</div>

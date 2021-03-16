@@ -77,7 +77,7 @@
       autoStart: true,
       callbacks: {
         stop: function() {
-          $('.clockmessage').html('The clock has stopped!');
+          $('.clockmessage').html('Время обратного отсчета вышло!');
           $('.clock').css('display', 'none');
         }
        }

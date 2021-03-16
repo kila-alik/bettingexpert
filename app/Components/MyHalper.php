@@ -3,6 +3,8 @@
 namespace Bett\Components;
 
 use Intervention\Image\ImageManagerStatic;
+use Carbon\Carbon;
+use Date;
 
 class MyHalper {
 
@@ -70,4 +72,15 @@ class MyHalper {
       return $newResult;
     }
 
+    static public function timeOn($timeGame) {
+
+      $dt = $timeGame; //Дата матча из прогноза
+      // dd($dt);
+      $dt_date = new DateTime($dt); //Переводит в формат классна Date
+      $now_date = DateTime.now(); //текущая дата в формате класса Date
+      $raznica = dt_date - now_date; // разница В МИЛЛИСЕКУНДАХ
+      $Result = ($raznica>0) ? false : true ;
+
+      return $Result;
+    }
 }
