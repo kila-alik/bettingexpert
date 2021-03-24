@@ -269,7 +269,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'1',
                           'result'=>'0 : 3',
-                          'date_game'=>'2021-03-26' . ' ' . '15:30'
+                          'date_game'=>'2021-03-26' . ' ' . '15:40'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
