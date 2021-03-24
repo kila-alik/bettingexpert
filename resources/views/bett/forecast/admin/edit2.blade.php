@@ -61,19 +61,19 @@
                  <th>Победа 2-й команды</th>
                  <th>Победа 1-й или ничья</th>
                  <th>Победа 2-й или ничья</th>
-                 <th>Фото</th>
+                 <!-- <th>Фото</th> -->
                  <th>Результат игры</th>
                  <th>Платный статус</th>
                </tr>
              </tbody>
                <tr>
                  <td>{!! Form::text('coeff', $value = empty($forecast->coeff) ? '' : $forecast->coeff, ['size' => 10]) !!}</td>
-                 <td>{!! Form::text('lwin', $value = empty($forecast->lwin) ? '' : $forecast->lwin, ['size' => 8]) !!}</td>
-                 <td>{!! Form::text('draw', $value = empty($forecast->draw) ? '' : $forecast->draw, ['size' => 8]) !!}</td>
-                 <td>{!! Form::text('rwin', $value = empty($forecast->rwin) ? '' : $forecast->rwin, ['size' => 8]) !!}</td>
-                 <td>{!! Form::text('lwdraw', $value = empty($forecast->lwdraw) ? '' : $forecast->lwdraw, ['size' => 8]) !!}</td>
-                 <td>{!! Form::text('rwdraw', $value = empty($forecast->rwdraw) ? '' : $forecast->rwdraw, ['size' => 8]) !!}</td>
-                 <td>{!! Form::text('foto', $value = empty($forecast->foto) ? '' : $forecast->foto, ['size' => 20]) !!}</td>
+                 <td>{!! Form::text('lwin', $value = empty($forecast->lwin) ? '' : $forecast->lwin, ['size' => 10]) !!}</td>
+                 <td>{!! Form::text('draw', $value = empty($forecast->draw) ? '' : $forecast->draw, ['size' => 10]) !!}</td>
+                 <td>{!! Form::text('rwin', $value = empty($forecast->rwin) ? '' : $forecast->rwin, ['size' => 10]) !!}</td>
+                 <td>{!! Form::text('lwdraw', $value = empty($forecast->lwdraw) ? '' : $forecast->lwdraw, ['size' => 10]) !!}</td>
+                 <td>{!! Form::text('rwdraw', $value = empty($forecast->rwdraw) ? '' : $forecast->rwdraw, ['size' => 10]) !!}</td>
+                 <!-- <td>{!! Form::text('foto', $value = empty($forecast->foto) ? '' : $forecast->foto, ['size' => 20]) !!}</td> -->
                  <td><input type="text" name="result" size="6" value="{{empty($forecast->result) ? '' : $forecast->result}}"></td>
                  <td><input type="text" name="status" size="6" value="{{$forecast->status == 0 ? '0' : '1'}}"></td>
                </tr>
@@ -83,16 +83,14 @@
            <table width="600" border="1" align="center" style="font-size: 9pt">
                <tbody align="center">
                  <tr>
-                   <td colspan="11" align="center" bgcolor="#dbdbdb">Введите текст описания прогноза</td>
+                   <td colspan="11" align="center" bgcolor="#dbdbdb">Введите текст описания прогноза и вставте нужные картинки</td>
                  </tr>
                  <tr bgcolor="#c0c0c0">
-                   <th>Описание до фото</th>
-                   <th>Описание после фото</th>
+                   <th>Описание и фото</th>
                  </tr>
                </tbody>
                  <tr>
-                   <td><textarea rows="7" cols="45" name="text_before">{!! empty($forecast->text_before) ? '' : $forecast->text_before !!}</textarea></td>
-                   <td><textarea rows="7" cols="45" name="text_after">{!! empty($forecast->text_after) ? '' : $forecast->text_after !!}</textarea></td>
+                   <td><textarea id="editor" rows="7" cols="45" name="text_before">{!! empty($forecast->text_before) ? '' : $forecast->text_before !!}</textarea></td>
                  </tr>
             </table>
 
@@ -122,6 +120,31 @@
                     </td>
                  </tr>
              </table>
+             @ php
+               dd(public_path());
+             @ endphp
+     <script>
+       // CKEDITOR.replace('editor');
+       $('#editor').ckeditor({
+         height: 100,
+         filebrowserImageBrowseUrl: route_prefix + '?type=Images',
+         filebrowserImageUploadUrl: route_prefix + '/upload?type=Images&_token={{csrf_token()}}',
+         filebrowserBrowseUrl: route_prefix + '?type=Files',
+         filebrowserUploadUrl: route_prefix + '/upload?type=Files&_token={{csrf_token()}}'
+       });
+     </script>
+     <!-- <script>
+       ClassicEditor
+           .create( document.querySelector( '#editor' ), {
+                 language: 'ru'
+               } )
+           .then( editor => {
+                 window.editor = editor;
+               } )
+           .catch( err => {
+                 console.error( err.stack );
+               } );
+     </script> -->
 
 @else
     <p>Чемпионатов с таким видом спорта: <b>{{$sport_name}}</b>

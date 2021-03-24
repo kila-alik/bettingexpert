@@ -178,6 +178,7 @@ return [
         // Bett\Providers\BroadcastServiceProvider::class,
         Bett\Providers\EventServiceProvider::class,
         Bett\Providers\RouteServiceProvider::class,
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
 
     ],
 

@@ -17,19 +17,23 @@
 
     <!-- Scripts -->
     <!-- "Это подключение Джава скрипт , чтоб выпадало меню там где область регистрации" -->
-    <script src="{{ asset(env('THEME'))}}/js/app.js"></script>
+    <script type="text/javascript" src="{{ asset(env('THEME'))}}/js/app.js"></script>
 
-    <script src="{{ asset(env('THEME'))}}/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="{{ asset(env('THEME'))}}/js/jquery-1.10.2.min.js"></script>
     <!-- <script src="{{ asset(env('THEME'))}}/js/jquery.tools.min.js"></script> -->
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-    <script src="{{ asset(env('THEME'))}}/js/js.js"></script>
-    <script src="{{ asset(env('THEME'))}}/js/mobile.js"></script>
-    <script src="{{ asset(env('THEME'))}}/js/jquery.mask.js"></script>
-    <script src="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.js"></script>
+    <script type="text/javascript" src="{{ asset(env('THEME'))}}/js/js.js"></script>
+    <script type="text/javascript" src="{{ asset(env('THEME'))}}/js/mobile.js"></script>
+    <script type="text/javascript" src="{{ asset(env('THEME'))}}/js/jquery.mask.js"></script>
+    <!-- <script type="text/javascript" src="{{ asset(env('THEME'))}}/js/ckeditor5/ckeditor.js"></script> -->
+    <!-- <script type="text/javascript" src="{{ asset(env('THEME'))}}/js/ckeditor5/translations/ru.js"></script> -->
+    <script type="text/javascript" src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <!-- <script type="text/javascript" src="{{asset('bett/js/ckeditor5/ckeditor.js')}}"></script> -->
+    <script type="text/javascript" src="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.js"></script>
     <!-- Bootstrap core CSS -->
     <!-- <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset(env('THEME'))}}/flipclock/compiled/flipclock.css">
 
     <!-- <script src="{{ asset(env('THEME'))}}/js/bootstrap.min.js"></script> -->

@@ -3,8 +3,9 @@
 namespace Bett\Components;
 
 use Intervention\Image\ImageManagerStatic;
+// use Illuminate\Http\DateTime;
+use Illuminate\Support\Facades\Date;
 use Carbon\Carbon;
-use Date;
 
 class MyHalper {
 
@@ -74,13 +75,16 @@ class MyHalper {
 
     static public function timeOn($timeGame) {
 
-      $dt = $timeGame; //Дата матча из прогноза
-      // dd($dt);
-      $dt_date = new DateTime($dt); //Переводит в формат классна Date
-      $now_date = DateTime.now(); //текущая дата в формате класса Date
-      $raznica = dt_date - now_date; // разница В МИЛЛИСЕКУНДАХ
-      $Result = ($raznica>0) ? false : true ;
-
+      $game_date = $timeGame; //Дата матча из прогноза , формат классна Carbon
+      $now_date = \Carbon\Carbon::now(); //текущая дата в формате класса Carbon
+      // функция gt сравнимает больше ли дата $now_date чем дата $game_date
+      // подробно  https://webformyself.com/carbon-prostoj-i-funkcionalnyj-instrument-php-dlya-raboty-s-datoj-i-vremenem/
+      $Result = $now_date->gt($game_date);
+      // функция diff дает интервал между датой $now_date и датой $game_date
+      // $raznica = $now_date->diff($dt); // получается объект
+      // $raznicaI = $raznica->i;
+      // $raznicaS = $raznica->s;
+      // dd($Result);
       return $Result;
     }
 }

@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Route::get ('sport/{id}/{date}', 'ForecastController@indexsport')->name('IndexSport');
 Route::get ('forecast/{id}', 'ForecastController@forecast')->name('Forecast');
 
