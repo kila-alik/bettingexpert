@@ -107,7 +107,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'0',
                           'result'=>'0 : 4',
-                          'date_game'=>'2021-09-14' . ' ' . '15:30'
+                          'date_game'=>'2021-09-17' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'10',
@@ -125,7 +125,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'0',
                           'result'=>'2 : 2',
-                          'date_game'=>'2021-09-14' . ' ' . '09:30'
+                          'date_game'=>'2021-09-17' . ' ' . '09:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
@@ -197,7 +197,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'1',
                           'result'=>'1 : 1',
-                          'date_game'=>'2021-09-14' . ' ' . '15:30'
+                          'date_game'=>'2021-09-17' . ' ' . '15:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'13',
@@ -269,7 +269,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'1',
                           'result'=>'0 : 3',
-                          'date_game'=>'2021-09-14' . ' ' . '15:40'
+                          'date_game'=>'2021-09-17' . ' ' . '15:40'
                         ]);
       ForecastModel::create([
                           'command_1'=>'2',
@@ -323,7 +323,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'2',
                           'result'=>'4 : 3',
-                          'date_game'=>'2021-09-14' . ' ' . '19:00'
+                          'date_game'=>'2021-09-17' . ' ' . '19:00'
                         ]);
       ForecastModel::create([
                           'command_1'=>'7',
@@ -377,7 +377,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'0',
                           'result'=>'5 : 2',
-                          'date_game'=>'2021-09-14' . ' ' . '19:30'
+                          'date_game'=>'2021-09-17' . ' ' . '19:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'4',
@@ -449,7 +449,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'2',
                           'result'=>'3 : 0',
-                          'date_game'=>'2021-09-14' . ' ' . '09:30'
+                          'date_game'=>'2021-09-17' . ' ' . '09:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'1',
@@ -503,7 +503,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'2',
                           'result'=>'2 : 2',
-                          'date_game'=>'2021-09-14' . ' ' . '10:30'
+                          'date_game'=>'2021-09-17' . ' ' . '10:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'8',
@@ -521,7 +521,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'0',
                           'result'=>'4 : 6',
-                          'date_game'=>'2021-09-14' . ' ' . '13:00'
+                          'date_game'=>'2021-09-17' . ' ' . '13:00'
                         ]);
       ForecastModel::create([
                           'command_1'=>'8',
@@ -593,7 +593,7 @@ class ForecastSeeder extends Seeder
                           'foto'=>'kardiff-siti-lids_foto16.jpg',
                           'status'=>'2',
                           'result'=>'3 : 0',
-                          'date_game'=>'2021-09-14' . ' ' . '11:30'
+                          'date_game'=>'2021-09-17' . ' ' . '11:30'
                         ]);
       ForecastModel::create([
                           'command_1'=>'4',
