@@ -12,7 +12,7 @@
 */
 
 // Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-//     \UniSharp\LaravelFilemanager\Lfm::routes();
+    // \UniSharp\LaravelFilemanager\Lfm::routes();
 // });
 
 Route::get ('sport/{id}/{date}', 'ForecastController@indexsport')->name('IndexSport');
