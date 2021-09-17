@@ -151,3 +151,5 @@ You can also add it as a Facade in config/app.php:
 
 таймзона настраивается в config/app.php там меняем   'timezone' => 'Europe/Moscow',
 -----------------------------------
+003. Git — инструмент для совместной работы, с нуля и до регламента в команде — Сергей Сергеев
+https://www.youtube.com/watch?v=yDSs80lu3ak
