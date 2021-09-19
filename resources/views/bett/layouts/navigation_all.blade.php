@@ -16,20 +16,20 @@
             </ul>
         </li>
         <li class="nav-list__item">
-                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/win/premium/" class="nav-list__button  ">
+                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/" class="nav-list__button  ">
                 <span class="nav-list__text">
                     Премиум прогнозы
                 </span>
             </a>
                     </li>
         <li class="nav-list__item ">
-                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/school/" class="nav-list__button ">Школа ставок</a>
+                        <a href="#" class="nav-list__button ">Школа ставок</a>
                     </li>
         <li class="nav-list__item">
-                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/win/premium/#premium-reviews" class="nav-list__button">Отзывы</a>
+                        <a href="#" class="nav-list__button">Отзывы</a>
                     </li>
         <li class="nav-list__item ">
-                        <a href="https://web.archive.org/web/20190828062649/https://betfaq.ru/vopros-otvet/#garant" class="nav-list__button ">Гарантии</a>
+                        <a href="#" class="nav-list__button ">Гарантии</a>
                     </li>
     </ul>
 </nav>
