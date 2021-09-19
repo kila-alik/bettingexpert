@@ -64,6 +64,7 @@ class ForecastController extends Controller
       {
         $forecast = ForecastModel::find($id);
 
+
         // $idDataMenu = \Carbon\Carbon::now()->format('Y-m-d');
         // вариант с сессией
         $idDataMenu = \Carbon\Carbon::parse($forecast->date_game)->format('Y-m-d');
