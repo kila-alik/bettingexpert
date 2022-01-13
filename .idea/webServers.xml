@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="70eb21e2-be12-4751-b30a-9d4daccc7dbb" name="bettingexpert">
+        <fileTransfer rootFolder="/home/c/cu55364/bettingexpert.pro" accessType="SFTP" host="vh310.timeweb.ru" port="22" sshConfigId="e932f302-4b2c-4b1c-98f8-2ac0ba159e9e" sshConfig="cu55364@vh310.timeweb.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -16,6 +16,19 @@ __wm.wombat("https://betfaq.ru/","20190828062649","https://web.archive.org/","we
     "1566973609");
 </script> -->
 
+
+<link rel="stylesheet" href="https://media.adfinity.pro/foralls/interstiv2.css">
+<script defer src="https://yastatic.net/pcode/adfox/header-bidding.js"></script>
+<script src="https://media.adfinity.pro/partners/dizainvfoto.ru/hbconfig.js" defer></script>
+<script src="https://devmedia.adfinity.pro/foralls/insertsblocks.js" defer></script>
+<script type="text/javascript"
+        src="https://media.adfinity.pro/foralls/adfinity.js" defer></script>
+<script>window.yaContextCb = window.yaContextCb || []</script>
+<script src="https://yandex.ru/ads/system/context.js" defer></script>
+<link href="https://media.adfinity.pro/foralls/dtopsticky.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://media.adfinity.pro/foralls/overlay.css">
+
 <!-- Yandex.Metrika informer -->
 <a href="https://metrika.yandex.ru/stat/?id=85342297&amp;from=informer"
 target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/85342297/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
